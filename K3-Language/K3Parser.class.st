@@ -1,3 +1,10 @@
+"
+SmaCC parser for the K3  language.
+
+K3 is a language in the APL family of array-oriented languages. 
+There is an open source interpreter compatible with K3 at https://github.com/kevinlawler/kona ... 
+
+"
 Class {
 	#name : #K3Parser,
 	#superclass : #SmaCCParser,
@@ -259,6 +266,15 @@ K3Parser class >> transitionTable [
 #[0 1 121 0 2] 
 #[0 1 2 0 1 0 2]
 	).
+]
+
+{ #category : #accessing }
+K3Parser >> helloExample [
+  <gtExample>
+  |k3 nl|
+  nl := Character linefeed asString.
+  k3 := ('f:{[name] `0:,"Hello, ",$name}',nl,'f[`world]',nl).
+  ^ K3Parser parse: k3.
 ]
 
 { #category : #'generated-reduction actions' }
