@@ -13,6 +13,7 @@ Class {
 		'leftBraceToken',
 		'rightBraceToken',
 		'macro_rulesToken',
+		'bangToken',
 		'idenToken'
 	],
 	#category : #'Rust-Language'
@@ -31,6 +32,16 @@ RustASTMacroItemNode >> bangBangToken [
 { #category : #generated }
 RustASTMacroItemNode >> bangBangToken: aSmaCCToken [
 	bangBangToken := aSmaCCToken
+]
+
+{ #category : #generated }
+RustASTMacroItemNode >> bangToken [
+	^ bangToken
+]
+
+{ #category : #generated }
+RustASTMacroItemNode >> bangToken: aSmaCCToken [
+	bangToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -147,7 +158,7 @@ RustASTMacroItemNode >> semicolonToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTMacroItemNode >> tokenVariables [
-	^ #(#bangBangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #macro_rulesToken #idenToken #shebang)
+	^ #(#bangBangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #macro_rulesToken #bangToken #idenToken #shebang)
 ]
 
 { #category : #generated }

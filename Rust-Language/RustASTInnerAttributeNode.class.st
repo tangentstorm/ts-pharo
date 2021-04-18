@@ -2,7 +2,7 @@ Class {
 	#name : #RustASTInnerAttributeNode,
 	#superclass : #RustASTSourceNode,
 	#instVars : [
-		'_BangBangLeftBracketToken',
+		'_BangLeftBracketToken',
 		'tree',
 		'rightBracketToken'
 	],
@@ -10,13 +10,13 @@ Class {
 }
 
 { #category : #generated }
-RustASTInnerAttributeNode >> _BangBangLeftBracketToken [
-	^ _BangBangLeftBracketToken
+RustASTInnerAttributeNode >> _BangLeftBracketToken [
+	^ _BangLeftBracketToken
 ]
 
 { #category : #generated }
-RustASTInnerAttributeNode >> _BangBangLeftBracketToken: aSmaCCToken [
-	_BangBangLeftBracketToken := aSmaCCToken
+RustASTInnerAttributeNode >> _BangLeftBracketToken: aSmaCCToken [
+	_BangLeftBracketToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -41,7 +41,7 @@ RustASTInnerAttributeNode >> rightBracketToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTInnerAttributeNode >> tokenVariables [
-	^ #(#_BangBangLeftBracketToken #rightBracketToken #shebang)
+	^ #(#_BangLeftBracketToken #rightBracketToken #shebang)
 ]
 
 { #category : #generated }
