@@ -1,6 +1,6 @@
 Class {
 	#name : #RustASTBrackGroupNode,
-	#superclass : #RustASTTokenTreeNode,
+	#superclass : #RustASTSourceNode,
 	#instVars : [
 		'leftBracketToken',
 		'tree',
@@ -10,8 +10,8 @@ Class {
 }
 
 { #category : #generated }
-RustASTBrackGroupNode >> acceptVisitor: aTokenTreeVisitor [
-	^ aTokenTreeVisitor visitBrackGroup: self
+RustASTBrackGroupNode >> acceptVisitor: aSourceVisitor [
+	^ aSourceVisitor visitBrackGroup: self
 ]
 
 { #category : #generated }
@@ -41,7 +41,7 @@ RustASTBrackGroupNode >> rightBracketToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTBrackGroupNode >> tokenVariables [
-	^ #(#leftBracketToken #rightBracketToken)
+	^ #(#leftBracketToken #rightBracketToken #shebang)
 ]
 
 { #category : #generated }

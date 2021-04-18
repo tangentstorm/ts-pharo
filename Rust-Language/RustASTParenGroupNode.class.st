@@ -1,6 +1,6 @@
 Class {
 	#name : #RustASTParenGroupNode,
-	#superclass : #RustASTTokenTreeNode,
+	#superclass : #RustASTSourceNode,
 	#instVars : [
 		'leftParenToken',
 		'tree',
@@ -10,8 +10,8 @@ Class {
 }
 
 { #category : #generated }
-RustASTParenGroupNode >> acceptVisitor: aTokenTreeVisitor [
-	^ aTokenTreeVisitor visitParenGroup: self
+RustASTParenGroupNode >> acceptVisitor: aSourceVisitor [
+	^ aSourceVisitor visitParenGroup: self
 ]
 
 { #category : #generated }
@@ -41,7 +41,7 @@ RustASTParenGroupNode >> rightParenToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTParenGroupNode >> tokenVariables [
-	^ #(#leftParenToken #rightParenToken)
+	^ #(#leftParenToken #rightParenToken #shebang)
 ]
 
 { #category : #generated }

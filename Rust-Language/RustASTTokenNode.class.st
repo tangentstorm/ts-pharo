@@ -1,6 +1,6 @@
 Class {
 	#name : #RustASTTokenNode,
-	#superclass : #RustASTTokenTreeNode,
+	#superclass : #RustASTSourceNode,
 	#instVars : [
 		'commentToken',
 		'stringToken',
@@ -13,8 +13,8 @@ Class {
 }
 
 { #category : #generated }
-RustASTTokenNode >> acceptVisitor: aTokenTreeVisitor [
-	^ aTokenTreeVisitor visitToken: self
+RustASTTokenNode >> acceptVisitor: aSourceVisitor [
+	^ aSourceVisitor visitToken: self
 ]
 
 { #category : #generated }
@@ -79,5 +79,5 @@ RustASTTokenNode >> stringToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTTokenNode >> tokenVariables [
-	^ #(#commentToken #stringToken #charToken #numberToken #idenToken #otherToken)
+	^ #(#commentToken #stringToken #charToken #numberToken #idenToken #otherToken #shebang)
 ]
