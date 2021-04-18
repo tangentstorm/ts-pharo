@@ -456,5 +456,5 @@ K3Scanner >> scanForTokenX9 [
 
 { #category : #generated }
 K3Scanner >> tokenActions [
-	^ #(nil nil nil nil nil nil nil nil nil nil nil nil nil nil #whitespace)
+	^ #(nil nil nil nil nil nil nil nil nil nil nil nil nil nil #whitespace nil #comment)
 ]

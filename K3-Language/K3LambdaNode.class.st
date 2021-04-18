@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'leftBraceTokens',
 		'nlTokens',
-		'cmtTokens',
+		'commentTokens',
 		'cmdTokens',
 		'semicolonTokens',
 		'ifLeftBracketTokens',
@@ -16,15 +16,15 @@ Class {
 		'primTokens',
 		'builtinTokens',
 		'strTokens',
+		'colonTokens',
 		'leftParenTokens',
 		'rightParenTokens',
+		'leftBracketTokens',
 		'numTokens',
 		'symTokens',
 		'periodLeftParenTokens',
-		'colonTokens',
 		'rightBraceTokens',
-		'colonLeftBracketTokens',
-		'leftBracketTokens'
+		'colonLeftBracketTokens'
 	],
 	#category : #'K3-Language'
 }
@@ -65,16 +65,6 @@ K3LambdaNode >> cmdTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
-K3LambdaNode >> cmtTokens [
-	^ cmtTokens
-]
-
-{ #category : #generated }
-K3LambdaNode >> cmtTokens: anOrderedCollection [
-	cmtTokens := anOrderedCollection
-]
-
-{ #category : #generated }
 K3LambdaNode >> colonLeftBracketTokens [
 	^ colonLeftBracketTokens
 ]
@@ -95,8 +85,18 @@ K3LambdaNode >> colonTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
+K3LambdaNode >> commentTokens [
+	^ commentTokens
+]
+
+{ #category : #generated }
+K3LambdaNode >> commentTokens: anOrderedCollection [
+	commentTokens := anOrderedCollection
+]
+
+{ #category : #generated }
 K3LambdaNode >> compositeTokenVariables [
-	^ #(#leftBraceTokens #nlTokens #cmtTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #identTokens #advTokens #primTokens #builtinTokens #strTokens #colonTokens #leftParenTokens #rightParenTokens #leftBracketTokens #numTokens #symTokens #periodLeftParenTokens #rightBraceTokens #colonLeftBracketTokens)
+	^ #(#leftBraceTokens #nlTokens #commentTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #identTokens #advTokens #primTokens #builtinTokens #strTokens #colonTokens #leftParenTokens #rightParenTokens #leftBracketTokens #numTokens #symTokens #periodLeftParenTokens #rightBraceTokens #colonLeftBracketTokens)
 ]
 
 { #category : #generated }
@@ -134,7 +134,7 @@ K3LambdaNode >> initialize [
 	super initialize.
 	leftBraceTokens := OrderedCollection new: 2.
 	nlTokens := OrderedCollection new: 2.
-	cmtTokens := OrderedCollection new: 2.
+	commentTokens := OrderedCollection new: 2.
 	cmdTokens := OrderedCollection new: 2.
 	semicolonTokens := OrderedCollection new: 2.
 	ifLeftBracketTokens := OrderedCollection new: 2.

@@ -11,7 +11,7 @@ Class {
 		'symTokens',
 		'leftParenTokens',
 		'nlTokens',
-		'cmtTokens',
+		'commentTokens',
 		'cmdTokens',
 		'semicolonTokens',
 		'ifLeftBracketTokens',
@@ -21,10 +21,10 @@ Class {
 		'rightParenTokens',
 		'periodLeftParenTokens',
 		'colonTokens',
+		'leftBracketTokens',
 		'leftBraceTokens',
 		'rightBraceTokens',
-		'colonLeftBracketTokens',
-		'leftBracketTokens'
+		'colonLeftBracketTokens'
 	],
 	#category : #'K3-Language'
 }
@@ -65,16 +65,6 @@ K3ExprNode >> cmdTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
-K3ExprNode >> cmtTokens [
-	^ cmtTokens
-]
-
-{ #category : #generated }
-K3ExprNode >> cmtTokens: anOrderedCollection [
-	cmtTokens := anOrderedCollection
-]
-
-{ #category : #generated }
 K3ExprNode >> colonLeftBracketTokens [
 	^ colonLeftBracketTokens
 ]
@@ -95,8 +85,18 @@ K3ExprNode >> colonTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
+K3ExprNode >> commentTokens [
+	^ commentTokens
+]
+
+{ #category : #generated }
+K3ExprNode >> commentTokens: anOrderedCollection [
+	commentTokens := anOrderedCollection
+]
+
+{ #category : #generated }
 K3ExprNode >> compositeTokenVariables [
-	^ #(#identTokens #advTokens #primTokens #builtinTokens #strTokens #numTokens #symTokens #leftParenTokens #nlTokens #cmtTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #rightParenTokens #periodLeftParenTokens #colonTokens #leftBracketTokens #leftBraceTokens #rightBraceTokens #colonLeftBracketTokens)
+	^ #(#identTokens #advTokens #primTokens #builtinTokens #strTokens #numTokens #symTokens #leftParenTokens #nlTokens #commentTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #rightParenTokens #periodLeftParenTokens #colonTokens #leftBracketTokens #leftBraceTokens #rightBraceTokens #colonLeftBracketTokens)
 ]
 
 { #category : #generated }
@@ -141,7 +141,7 @@ K3ExprNode >> initialize [
 	symTokens := OrderedCollection new: 2.
 	leftParenTokens := OrderedCollection new: 2.
 	nlTokens := OrderedCollection new: 2.
-	cmtTokens := OrderedCollection new: 2.
+	commentTokens := OrderedCollection new: 2.
 	cmdTokens := OrderedCollection new: 2.
 	semicolonTokens := OrderedCollection new: 2.
 	ifLeftBracketTokens := OrderedCollection new: 2.

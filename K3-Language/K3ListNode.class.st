@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'leftParenTokens',
 		'nlTokens',
-		'cmtTokens',
+		'commentTokens',
 		'cmdTokens',
 		'semicolonTokens',
 		'ifLeftBracketTokens',
@@ -16,15 +16,15 @@ Class {
 		'primTokens',
 		'builtinTokens',
 		'strTokens',
+		'colonTokens',
 		'rightParenTokens',
+		'leftBracketTokens',
 		'numTokens',
 		'symTokens',
 		'periodLeftParenTokens',
-		'colonTokens',
 		'leftBraceTokens',
 		'rightBraceTokens',
-		'colonLeftBracketTokens',
-		'leftBracketTokens'
+		'colonLeftBracketTokens'
 	],
 	#category : #'K3-Language'
 }
@@ -65,16 +65,6 @@ K3ListNode >> cmdTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
-K3ListNode >> cmtTokens [
-	^ cmtTokens
-]
-
-{ #category : #generated }
-K3ListNode >> cmtTokens: anOrderedCollection [
-	cmtTokens := anOrderedCollection
-]
-
-{ #category : #generated }
 K3ListNode >> colonLeftBracketTokens [
 	^ colonLeftBracketTokens
 ]
@@ -95,8 +85,18 @@ K3ListNode >> colonTokens: anOrderedCollection [
 ]
 
 { #category : #generated }
+K3ListNode >> commentTokens [
+	^ commentTokens
+]
+
+{ #category : #generated }
+K3ListNode >> commentTokens: anOrderedCollection [
+	commentTokens := anOrderedCollection
+]
+
+{ #category : #generated }
 K3ListNode >> compositeTokenVariables [
-	^ #(#leftParenTokens #nlTokens #cmtTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #identTokens #advTokens #primTokens #builtinTokens #strTokens #colonTokens #rightParenTokens #leftBracketTokens #numTokens #symTokens #periodLeftParenTokens #leftBraceTokens #rightBraceTokens #colonLeftBracketTokens)
+	^ #(#leftParenTokens #nlTokens #commentTokens #cmdTokens #semicolonTokens #ifLeftBracketTokens #rightBracketTokens #doLeftBracketTokens #whileLeftBracketTokens #identTokens #advTokens #primTokens #builtinTokens #strTokens #colonTokens #rightParenTokens #leftBracketTokens #numTokens #symTokens #periodLeftParenTokens #leftBraceTokens #rightBraceTokens #colonLeftBracketTokens)
 ]
 
 { #category : #generated }
@@ -134,7 +134,7 @@ K3ListNode >> initialize [
 	super initialize.
 	leftParenTokens := OrderedCollection new: 2.
 	nlTokens := OrderedCollection new: 2.
-	cmtTokens := OrderedCollection new: 2.
+	commentTokens := OrderedCollection new: 2.
 	cmdTokens := OrderedCollection new: 2.
 	semicolonTokens := OrderedCollection new: 2.
 	ifLeftBracketTokens := OrderedCollection new: 2.
