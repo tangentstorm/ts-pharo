@@ -3,7 +3,7 @@ Class {
 	#superclass : #RustASTSourceNode,
 	#instVars : [
 		'path',
-		'bangBangToken',
+		'bangToken',
 		'leftParenToken',
 		'tree',
 		'rightParenToken',
@@ -22,13 +22,13 @@ RustASTMacroInvocationSemiNode >> acceptVisitor: aSourceVisitor [
 ]
 
 { #category : #generated }
-RustASTMacroInvocationSemiNode >> bangBangToken [
-	^ bangBangToken
+RustASTMacroInvocationSemiNode >> bangToken [
+	^ bangToken
 ]
 
 { #category : #generated }
-RustASTMacroInvocationSemiNode >> bangBangToken: aSmaCCToken [
-	bangBangToken := aSmaCCToken
+RustASTMacroInvocationSemiNode >> bangToken: aSmaCCToken [
+	bangToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -68,7 +68,7 @@ RustASTMacroInvocationSemiNode >> nodeVariables [
 
 { #category : #generated }
 RustASTMacroInvocationSemiNode >> otherVariables [
-	^ #(#path)
+	^ #(#path #items)
 ]
 
 { #category : #generated }
@@ -125,7 +125,7 @@ RustASTMacroInvocationSemiNode >> semicolonToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTMacroInvocationSemiNode >> tokenVariables [
-	^ #(#bangBangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #shebang)
+	^ #(#bangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #shebang)
 ]
 
 { #category : #generated }

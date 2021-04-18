@@ -28,7 +28,7 @@ RustASTSourceNode >> attrs: anOrderedCollection [
 
 { #category : #generated }
 RustASTSourceNode >> compositeNodeVariables [
-	^ #(#attrs #items)
+	^ #(#attrs)
 ]
 
 { #category : #'generated-initialize-release' }
@@ -45,9 +45,14 @@ RustASTSourceNode >> items [
 
 { #category : #generated }
 RustASTSourceNode >> items: anOrderedCollection [
-	self setParents: self items to: nil.
+	self setParent: self items to: nil.
 	items := anOrderedCollection.
-	self setParents: self items to: self
+	self setParent: self items to: self
+]
+
+{ #category : #generated }
+RustASTSourceNode >> otherVariables [
+	^ #(#items)
 ]
 
 { #category : #generated }

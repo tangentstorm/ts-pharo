@@ -3,7 +3,7 @@ Class {
 	#superclass : #RustASTSourceNode,
 	#instVars : [
 		'path',
-		'bangBangToken',
+		'bangToken',
 		'leftParenToken',
 		'tree',
 		'rightParenToken',
@@ -13,7 +13,6 @@ Class {
 		'leftBraceToken',
 		'rightBraceToken',
 		'macro_rulesToken',
-		'bangToken',
 		'idenToken'
 	],
 	#category : #'Rust-Language'
@@ -22,16 +21,6 @@ Class {
 { #category : #generated }
 RustASTMacroItemNode >> acceptVisitor: aSourceVisitor [
 	^ aSourceVisitor visitMacroItem: self
-]
-
-{ #category : #generated }
-RustASTMacroItemNode >> bangBangToken [
-	^ bangBangToken
-]
-
-{ #category : #generated }
-RustASTMacroItemNode >> bangBangToken: aSmaCCToken [
-	bangBangToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -101,7 +90,7 @@ RustASTMacroItemNode >> nodeVariables [
 
 { #category : #generated }
 RustASTMacroItemNode >> otherVariables [
-	^ #(#path)
+	^ #(#path #items)
 ]
 
 { #category : #generated }
@@ -158,7 +147,7 @@ RustASTMacroItemNode >> semicolonToken: aSmaCCToken [
 
 { #category : #generated }
 RustASTMacroItemNode >> tokenVariables [
-	^ #(#bangBangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #macro_rulesToken #bangToken #idenToken #shebang)
+	^ #(#bangToken #leftParenToken #rightParenToken #semicolonToken #leftBracketToken #rightBracketToken #leftBraceToken #rightBraceToken #macro_rulesToken #idenToken #shebang)
 ]
 
 { #category : #generated }
