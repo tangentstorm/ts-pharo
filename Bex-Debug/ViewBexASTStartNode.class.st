@@ -3,23 +3,23 @@ Class {
 	#superclass : #SmaCCParseNode,
 	#instVars : [
 		'label',
-		'_Token',
-		'dvars',
-		'percentToken',
-		'mvars',
+		'_LeftBracketToken',
+		'vids',
+		'commaTokens',
+		'rightBracketToken',
 		'rows'
 	],
 	#category : #'Bex-Debug'
 }
 
 { #category : #generated }
-ViewBexASTStartNode >> _Token [
-	^ _Token
+ViewBexASTStartNode >> _LeftBracketToken [
+	^ _LeftBracketToken
 ]
 
 { #category : #generated }
-ViewBexASTStartNode >> _Token: aSmaCCToken [
-	_Token := aSmaCCToken
+ViewBexASTStartNode >> _LeftBracketToken: aSmaCCToken [
+	_LeftBracketToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -28,27 +28,30 @@ ViewBexASTStartNode >> acceptVisitor: aStartVisitor [
 ]
 
 { #category : #generated }
+ViewBexASTStartNode >> commaTokens [
+	^ commaTokens
+]
+
+{ #category : #generated }
+ViewBexASTStartNode >> commaTokens: anOrderedCollection [
+	commaTokens := anOrderedCollection
+]
+
+{ #category : #generated }
 ViewBexASTStartNode >> compositeNodeVariables [
 	^ #(#rows)
 ]
 
 { #category : #generated }
-ViewBexASTStartNode >> dvars [
-	^ dvars
-]
-
-{ #category : #generated }
-ViewBexASTStartNode >> dvars: aViewBexASTVarsNode [
-	self dvars notNil
-		ifTrue: [ self dvars parent: nil ].
-	dvars := aViewBexASTVarsNode.
-	self dvars notNil
-		ifTrue: [ self dvars parent: self ]
+ViewBexASTStartNode >> compositeTokenVariables [
+	^ #(#vids #commaTokens)
 ]
 
 { #category : #'generated-initialize-release' }
 ViewBexASTStartNode >> initialize [
 	super initialize.
+	vids := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	rows := OrderedCollection new: 2.
 ]
 
@@ -63,32 +66,13 @@ ViewBexASTStartNode >> label: aSmaCCToken [
 ]
 
 { #category : #generated }
-ViewBexASTStartNode >> mvars [
-	^ mvars
+ViewBexASTStartNode >> rightBracketToken [
+	^ rightBracketToken
 ]
 
 { #category : #generated }
-ViewBexASTStartNode >> mvars: aViewBexASTVarsNode [
-	self mvars notNil
-		ifTrue: [ self mvars parent: nil ].
-	mvars := aViewBexASTVarsNode.
-	self mvars notNil
-		ifTrue: [ self mvars parent: self ]
-]
-
-{ #category : #generated }
-ViewBexASTStartNode >> nodeVariables [
-	^ #(#dvars #mvars)
-]
-
-{ #category : #generated }
-ViewBexASTStartNode >> percentToken [
-	^ percentToken
-]
-
-{ #category : #generated }
-ViewBexASTStartNode >> percentToken: aSmaCCToken [
-	percentToken := aSmaCCToken
+ViewBexASTStartNode >> rightBracketToken: aSmaCCToken [
+	rightBracketToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -105,5 +89,15 @@ ViewBexASTStartNode >> rows: anOrderedCollection [
 
 { #category : #generated }
 ViewBexASTStartNode >> tokenVariables [
-	^ #(#label #_Token #percentToken)
+	^ #(#label #_LeftBracketToken #rightBracketToken)
+]
+
+{ #category : #generated }
+ViewBexASTStartNode >> vids [
+	^ vids
+]
+
+{ #category : #generated }
+ViewBexASTStartNode >> vids: anOrderedCollection [
+	vids := anOrderedCollection
 ]

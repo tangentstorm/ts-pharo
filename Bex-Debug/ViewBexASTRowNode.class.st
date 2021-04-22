@@ -3,7 +3,7 @@ Class {
 	#superclass : #ViewBexASTStartNode,
 	#instVars : [
 		'ix',
-		'vid',
+		'v',
 		'hi',
 		'lo',
 		'leftParenrcColonToken',
@@ -68,7 +68,7 @@ ViewBexASTRowNode >> lo: aViewBexASTRefNode [
 
 { #category : #generated }
 ViewBexASTRowNode >> nodeVariables [
-	^ #(#hi #lo #dvars #mvars)
+	^ #(#hi #lo)
 ]
 
 { #category : #generated }
@@ -93,15 +93,15 @@ ViewBexASTRowNode >> rightParenToken: aSmaCCToken [
 
 { #category : #generated }
 ViewBexASTRowNode >> tokenVariables [
-	^ #(#ix #vid #leftParenrcColonToken #rc #rightParenToken #label #_Token #percentToken)
+	^ #(#ix #v #leftParenrcColonToken #rc #rightParenToken #label #_LeftBracketToken #rightBracketToken)
 ]
 
 { #category : #generated }
-ViewBexASTRowNode >> vid [
-	^ vid
+ViewBexASTRowNode >> v [
+	^ v
 ]
 
 { #category : #generated }
-ViewBexASTRowNode >> vid: aSmaCCToken [
-	vid := aSmaCCToken
+ViewBexASTRowNode >> v: aSmaCCToken [
+	v := aSmaCCToken
 ]

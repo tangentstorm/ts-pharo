@@ -3,10 +3,21 @@ Class {
 	#superclass : #ViewBexASTStartNode,
 	#instVars : [
 		'nid',
+		'_Token',
 		'inv'
 	],
 	#category : #'Bex-Debug'
 }
+
+{ #category : #generated }
+ViewBexASTRefNode >> _Token [
+	^ _Token
+]
+
+{ #category : #generated }
+ViewBexASTRefNode >> _Token: aSmaCCToken [
+	_Token := aSmaCCToken
+]
 
 { #category : #generated }
 ViewBexASTRefNode >> acceptVisitor: aStartVisitor [
@@ -35,5 +46,5 @@ ViewBexASTRefNode >> nid: aSmaCCToken [
 
 { #category : #generated }
 ViewBexASTRefNode >> tokenVariables [
-	^ #(#nid #inv #label #_Token #percentToken)
+	^ #(#nid #_Token #inv #label #_LeftBracketToken #rightBracketToken)
 ]

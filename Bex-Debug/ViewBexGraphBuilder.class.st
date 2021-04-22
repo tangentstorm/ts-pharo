@@ -2,7 +2,8 @@ Class {
 	#name : #ViewBexGraphBuilder,
 	#superclass : #ViewBexASTStartNodeVisitor,
 	#instVars : [
-		'vhls'
+		'vhls',
+		'vids'
 	],
 	#category : #'Bex-Debug-Bex-Debug'
 }
@@ -22,7 +23,7 @@ ViewBexGraphBuilder >> gtGraphFor: aView [
   <gtView>
   ^ aView mondrian
     title: 'BDD Graph';
-    priority: 10;
+    priority: 50;
     painting: [:g| |edge|
       g nodes
         shape: [:x| BlTextElement new
@@ -48,6 +49,22 @@ ViewBexGraphBuilder >> gtGraphFor: aView [
 ]
 
 { #category : #accessing }
+ViewBexGraphBuilder >> gtRowSizesFor: aView [
+  <gtView>
+  |counts|
+  counts := ((vids,{'NoV'}) collect: [:v| v -> 0]) asDictionary.
+  vhls do:[:vhl| |v| v:=(vhl at:#v). counts at: v put: 1 +(counts at: v)].
+  ^ aView explicit
+    priority: 10; 
+    title: 'Row Sizes';
+    stencil: [ GtPlotterHorizontalBarChart new
+        barWidthData: [:x | counts at: x];
+        barWidthScale: (GtPlotterLinearScale new 
+          domainFrom: 0 to: (counts values max));
+        with: (GtPlotterDataGroup new values: vids; labelled: [:x | x])]
+]
+
+{ #category : #accessing }
 ViewBexGraphBuilder >> gtVHLsFor: aView [
   <gtView>
   ^ aView columnedList
@@ -62,6 +79,7 @@ ViewBexGraphBuilder >> gtVHLsFor: aView [
 
 { #category : #accessing }
 ViewBexGraphBuilder >> initialize [
+  vids := OrderedCollection new.
   vhls := OrderedCollection new.
   super initialize.
 ]
@@ -70,10 +88,18 @@ ViewBexGraphBuilder >> initialize [
 ViewBexGraphBuilder >> visitRow: aRow [
   vhls add: ({
     #ix -> (aRow ix value).
-    #v  -> (aRow vid value).
+    #v  -> (aRow v value).
     #hi -> (aRow hi value).
     #lo -> (aRow lo value).
     #row -> aRow.
   } asDictionary).
   super visitRow: aRow.
+]
+
+{ #category : #accessing }
+ViewBexGraphBuilder >> visitStart: node [
+  super visitStart: node.
+  vids := node vids collect: [:v| v source].
+  Transcript show: vids.
+  
 ]

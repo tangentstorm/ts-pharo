@@ -19,8 +19,3 @@ TViewBexASTStartNodeVisitor >> visitRow: aRow [
 TViewBexASTStartNodeVisitor >> visitStart: aStart [
 	^ self visitSmaCCParseNode: aStart
 ]
-
-{ #category : #generated }
-TViewBexASTStartNodeVisitor >> visitVars: aVars [
-	^ self visitStart: aVars
-]
