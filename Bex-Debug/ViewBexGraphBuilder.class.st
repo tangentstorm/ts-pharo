@@ -51,9 +51,7 @@ ViewBexGraphBuilder >> gtGraphFor: aView [
 { #category : #accessing }
 ViewBexGraphBuilder >> gtRowSizesFor: aView [
   <gtView>
-  |counts|
-  counts := ((vids,{'NoV'}) collect: [:v| v -> 0]) asDictionary.
-  vhls do:[:vhl| |v| v:=(vhl at:#v). counts at: v put: 1 +(counts at: v)].
+  |counts| counts := self rowSizes.
   ^ aView explicit
     priority: 10; 
     title: 'Row Sizes';
@@ -61,6 +59,7 @@ ViewBexGraphBuilder >> gtRowSizesFor: aView [
         barWidthData: [:x | counts at: x];
         barWidthScale: (GtPlotterLinearScale new 
           domainFrom: 0 to: (counts values max));
+        barHeightScale: (GtPlotterConstantScale new constant: 10);
         with: (GtPlotterDataGroup new values: vids; labelled: [:x | x])]
 ]
 
@@ -82,6 +81,15 @@ ViewBexGraphBuilder >> initialize [
   vids := OrderedCollection new.
   vhls := OrderedCollection new.
   super initialize.
+]
+
+{ #category : #accessing }
+ViewBexGraphBuilder >> rowSizes [
+  |counts|
+  counts := ((vids,{'NoV'}) collect: [:v| v -> 0]) asDictionary.
+  vhls do:[:vhl| |v| v:=(vhl at:#v).
+    counts at: v put: 1 +(counts at: v)].
+  ^ counts
 ]
 
 { #category : #accessing }
