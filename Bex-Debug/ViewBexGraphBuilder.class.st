@@ -100,6 +100,4 @@ ViewBexGraphBuilder >> visitRow: aRow [
 ViewBexGraphBuilder >> visitStart: node [
   super visitStart: node.
   vids := node vids collect: [:v| v source].
-  Transcript show: vids.
-  
 ]
