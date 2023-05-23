@@ -1,0 +1,261 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:15:49.07-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:16:05.013-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "IMmE97C4DQC8/3l5DMV5EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Rainbow circles example"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:15:22.959-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:15:26.347-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sBzE27O4DQC/VGEGDMV5EQ=="
+				},
+				"code" : "stroke := (BlBorder paint: Color black).\r\nblue := (Color fromHexString: '3366cc').\r\nroot := BlElement new size: 640@480; border: stroke.\r\ncolors := #(#red #orange #yellow #green #blue #purple).\r\nColor named: #green.\r\nColor named: ((colors at: 4)  ).\r\n1 to: (colors size) do: [:i||r el|\r\n  r := (7-i) * 8.\r\n  el := BlElement new\r\n    geometry: BlCircleGeometry new;\r\n    background: (Color named: (colors at: i) );\r\n    border: stroke;\r\n    size: r@r * 10.\r\n  root addChild: el].\r\n\r\na := BlElement new\r\n  geometry: BlCircleGeometry new;\r\n  background: Color pink;\r\n  border: stroke. \r\na addEventHandler: (BlEventHandler on: BlMouseOverEvent do: [:e | \r  a background: Color pink]).\r\na addEventHandler: (BlEventHandler on: BlMouseOutEvent do: [:e | \r  a background: Color white ]).\r\n   \r\nroot addChild: a.",
+				"elementHeight" : 497,
+				"codeHeight" : 456,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:24:32.352-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:24:49.416-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GC+D/LO4DQCAY6YTDMV5EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Rainbow rainbow example :)"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:16:17.55-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:38:30.3-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yBoF37O4DQC//vkcDMV5EQ=="
+				},
+				"code" : "root := BlElement new size: (wh := (640@480)); background: (Color black).\r\nstroke := (BlBorder paint: Color black).\r\n\r\n\"Draw a rainbow\"\r\ncolors := #(#red #orange #yellow #green #blue #purple).\r\n1 to: (colors size) do: [:i||r el|\r\n  r := (colors size + 1-i) *400 **0.8.\r\n  el := BlElement new size: (r@r);\r\n    geometry: (BlAnnulusSector new startAngle:180; endAngle:360);\r\n    background: (Color named: (colors at: i)); border: stroke;\r\n    relocate: (root extent + wh - (r@r)/2 + (0@120)).\r\n  root addChild: el].\r\n\r\n\"Draggable card that says 'Rainbow!'\"\r\na := BlElement new\r\n  geometry: BlRectangleGeometry new;\r\n  size: 65@24; background: Color white; border: stroke;\r\n  addEventHandlerOn: BlMouseOverEvent do:[:e|a background: Color lightGray];\r\n  addEventHandlerOn: BlMouseOutEvent do:[:e|a background: Color white];\r\n  addEventHandler: BlPullHandler new disallowOutOfBounds;\r\n  addChild: (BlTextElement new relocate: 5@5;\r\n    text: ('Rainbow!' asRopedText attributes: {\r\n      BlTextForegroundAttribute paint: Color black})).\r\n\r\nroot addChild: a.",
+				"elementHeight" : 405,
+				"codeHeight" : 356,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:26:18.562-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:26:24.358-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6NHXArS4DQCBUTCvDMV5EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## bits example"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T21:39:09.769-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-22T22:05:07.636-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cHnPMLS4DQCCFIfXDMV5EQ=="
+				},
+				"code" : "\"demo: draggable bits that toggle when clicked\"\r\n\r\nbitColor := {\r\n  Color fromHexString: '333333'.\r\n  Color fromHexString: 'eeeeee'}.\r\nstroke := BlBorder paint: Color black.\r\n\r\nnewBit := [:initVal| |el val|\r\n  val := initVal.\r\n  el := BlElement new\r\n    geometry: BlCircleGeometry new;\r\n    background: (bitColor at: 1+val);\r\n    border: stroke;\r\n    size: 32@32;\r\n    addEventHandler: BlPullHandler new disallowOutOfBounds;\r\n    addEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r\n      el background: (bitColor at: (1 + (val := 1-val)))])].\r\n\r\nroot := BlElement new size: 640@480; border: stroke;\r\n  background: (Color fromHexString: '336699').\r\n0 to: 7 do: [:i| root addChild:\r  ((newBit value: 0) relocate: (i*50+50)@50)].\r\n\rroot addChildren:((1 to: 8) collect: [:i|\r  (newBit value: 1) relocate: (i*50+50)@100]).\r\r\nroot",
+				"elementHeight" : 346,
+				"codeHeight" : 520,
+				"codeVisible" : false
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-05-22T17:48:23.567-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-05-22T21:05:40.141-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Bloc Examples"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "983e83f7-b0b8-0d00-bcfe-21740cc57911"
+	}
+}
