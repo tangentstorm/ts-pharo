@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T21:25:42.072-04:00"
+						"dateAndTimeString" : "2023-05-23T23:23:56.847-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,82 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T21:45:00.612-04:00"
+						"dateAndTimeString" : "2023-05-23T23:24:11.041-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CF+CHsi4DQC7VO9VAHWuQg=="
+					"uidString" : "mBdkxcm4DQCAq+BKDL9AXA=="
 				},
-				"code" : "BexConst "
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+				"paragraphStyle" : {
+					"__type" : "textStyle"
 				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T21:14:10.115-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:02:17.906-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GO5D9ce4DQC6jpCQAHWuQg=="
-				},
-				"code" : "{ BexO new. \r  BexI new. }"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T20:49:04.721-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:40:19.873-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aICJm8e4DQC21EsdAHWuQg=="
-				},
-				"code" : "BexCanvas new\r  add: BexO new;\r  add: BexI new"
+				"string" : "{{gtExample: BexCanvas >> #constExample  | previewExpanded=true}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -139,43 +74,6 @@
 					"uidString" : "kKY/iMe4DQC2qgniAHWuQg=="
 				},
 				"code" : "\"coming soon: variables with click handlers\"\rBexVar stencil\r\naddEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r  el background: (bitColor at: (1 + (val := 1-val)))])].\r\n"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T20:40:46.227-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T20:40:46.227-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OBbTfce4DQC2qVvVAHWuQg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			}
 		]
 	},

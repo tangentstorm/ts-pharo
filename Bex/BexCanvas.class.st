@@ -2,7 +2,8 @@ Class {
 	#name : #BexCanvas,
 	#superclass : #Object,
 	#instVars : [
-		'nids'
+		'nids',
+		'bgColor'
 	],
 	#category : #Bex
 }
@@ -13,27 +14,30 @@ BexCanvas >> add: aNid [
 ]
 
 { #category : #accessing }
+BexCanvas >> constExample [
+  <gtExample>
+  ^ BexCanvas new
+    add: BexO new;
+    add: BexI new
+]
+
+{ #category : #accessing }
 BexCanvas >> gtDrawingFor: aView [
   <gtView>
-  ^ aView explicit
+  ^ aView mondrian
     title: 'Drawing';
-    stencil: [self stencil].
+    priority: 10;
+    painting: [:g|
+      g nodes
+        shape: [:x| x stencil];
+        with: nids.
+      g root
+        background: bgColor.
+      g layout tree]
 ]
 
 { #category : #accessing }
 BexCanvas >> initialize [
   nids := OrderedCollection new.
-]
-
-{ #category : #accessing }
-BexCanvas >> stencil [
-  |root|
-  root := BlElement new
-    size: 640@480;
-    border: (BlBorder paint: Color black);
-    background: (Color fromHexString: '336699').
-  nids do: [:each|
-    root addChild: (each stencil
-      addEventHandler: BlPullHandler new disallowOutOfBounds)].
-  ^ root
+  bgColor := Color fromHexString: '336699'.
 ]
