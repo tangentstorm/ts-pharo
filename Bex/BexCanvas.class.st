@@ -29,10 +29,11 @@ BexCanvas >> initialize [
 BexCanvas >> stencil [
   |root|
   root := BlElement new
-  size: 640@480;
-  border: (BlBorder paint: Color black);
-  background: (Color fromHexString: '336699').
+    size: 640@480;
+    border: (BlBorder paint: Color black);
+    background: (Color fromHexString: '336699').
   nids do: [:each|
-    root addChild: (each stencil)].
+    root addChild: (each stencil
+      addEventHandler: BlPullHandler new disallowOutOfBounds)].
   ^ root
 ]
