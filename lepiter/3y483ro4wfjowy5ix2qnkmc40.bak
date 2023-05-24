@@ -97,14 +97,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:15:27.025-04:00"
+						"dateAndTimeString" : "2023-05-23T22:17:15.877-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "aICJm8e4DQC21EsdAHWuQg=="
 				},
-				"code" : "BexCanvas new\r  add: BexO new;\r  stencil "
+				"code" : "BexCanvas new\r  add: BexO new;\r  add: BexI new;\r  stencil "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -131,14 +131,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T21:45:17.727-04:00"
+						"dateAndTimeString" : "2023-05-23T22:40:00.227-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "kKY/iMe4DQC2qgniAHWuQg=="
 				},
-				"code" : "\"demo: draggable bits that toggle when clicked\"\r\n\r\n\r\nnewBit := [:initVal| |el val|\r\n  val := initVal.\r\n  el := BlElement new\r\n    geometry: BlCircleGeometry new;\r\n    background: (bitColor at: 1+val);\r\n    border: stroke;\r\n    size: 32@32;\r\n    addEventHandler: BlPullHandler new disallowOutOfBounds;\r\n    addEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r\n      el background: (bitColor at: (1 + (val := 1-val)))])].\r\n\r\nroot := BlElement new size: 640@480; border: stroke;\r\n  background: (Color fromHexString: '336699').\r\n0 to: 7 do: [:i| root addChild:\r  ((newBit value: 0) relocate: (i*50+50)@50)].\r\nroot addChildren:((1 to: 8) collect: [:i|\r  (newBit value: 1) relocate: (i*50+50)@100]).\r\r\nroot"
+				"code" : "\"coming soon: variables with click handlers\"\rBexVar stencil\r\naddEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r  el background: (bitColor at: (1 + (val := 1-val)))])].\r\n"
 			},
 			{
 				"__type" : "textSnippet",
