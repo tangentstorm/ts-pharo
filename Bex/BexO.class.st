@@ -8,3 +8,8 @@ Class {
 BexO >> color [
   ^ Color fromHexString: '333333'.
 ]
+
+{ #category : #accessing }
+BexO >> nodeString [
+ ^ 'O'
+]
