@@ -10,6 +10,6 @@ BexO >> color [
 ]
 
 { #category : #accessing }
-BexO >> nodeString [
+BexO >> printString [
  ^ 'O'
 ]

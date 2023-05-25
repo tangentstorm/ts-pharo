@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #accessing }
-BexVar >> nodeString [
+BexVar >> printString [
   ^ 'x' , (vid asString)
 ]
 

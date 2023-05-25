@@ -39,74 +39,6 @@
 				"code" : "\"abstract syntax tree for (x0∧(x1≠x2))\"\rast := Bex and: {\r  Bex x: 0.\r  Bex xor: { Bex x:1. Bex x:2}  }"
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:57:11.861-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:05:31.846-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CK/9rNy4DQCbaPEVDL9AXA=="
-				},
-				"code" : "xs := OrderedCollection new.\rxs add: ast.\rxs addAll:{'a'. 'b'. 'c'}."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:54:12.552-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:54:24.364-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cEHheN24DQCh6ymsALPhRA=="
-				},
-				"code" : "\"code from my old visualization\"\r    g nodes\r        shape: [:x| BlTextElement new\r          text: ((x at: #v) asRopedText);\r            padding: (BlInsets all: 10);\r            border: (BlBorder paint: Color gray);\r          geometry: (BlCircle new) ];\r        with: vhls."
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -136,7 +68,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T22:58:54.458-04:00"
+									"dateAndTimeString" : "2023-05-24T23:18:04.945-04:00"
 								}
 							},
 							"uid" : {
@@ -146,7 +78,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "* fix the sizes"
+							"string" : "- fix the sizes"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-05-24T23:17:50.258-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-05-24T23:18:03.284-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aL9hzd24DQCjoDLRALPhRA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- fix the colors"
 						},
 						{
 							"__type" : "textSnippet",
@@ -173,7 +142,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T22:58:54.695-04:00"
+									"dateAndTimeString" : "2023-05-24T23:18:15.227-04:00"
 								}
 							},
 							"uid" : {
@@ -183,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "- arrows, maybe?"
 						}
 					]
 				},
@@ -195,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:58:40.427-04:00"
+						"dateAndTimeString" : "2023-05-24T23:17:56.162-04:00"
 					}
 				},
 				"editEmail" : {
@@ -206,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:58:45.063-04:00"
+						"dateAndTimeString" : "2023-05-24T23:17:58.645-04:00"
 					}
 				},
 				"uid" : {
@@ -216,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "TODO"
+				"string" : "# TODO List"
 			}
 		]
 	},
