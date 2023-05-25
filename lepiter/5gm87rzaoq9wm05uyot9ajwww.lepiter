@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T23:23:56.847-04:00"
+						"dateAndTimeString" : "2023-05-24T21:03:50.41-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T23:24:11.041-04:00"
+						"dateAndTimeString" : "2023-05-24T21:03:50.41-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mBdkxcm4DQCAq+BKDL9AXA=="
+					"uidString" : "+G4r7tu4DQCT5mLbDL9AXA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtExample: BexCanvas >> #constExample  | previewExpanded=true}}"
+				"string" : ""
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T20:43:41.114-04:00"
+						"dateAndTimeString" : "2023-05-24T21:03:33.116-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:40:00.227-04:00"
+						"dateAndTimeString" : "2023-05-24T21:03:33.116-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kKY/iMe4DQC2qgniAHWuQg=="
+					"uidString" : "YIgj7du4DQCT5aJIDL9AXA=="
 				},
-				"code" : "\"coming soon: variables with click handlers\"\rBexVar stencil\r\naddEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r  el background: (bitColor at: (1 + (val := 1-val)))])].\r\n"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
@@ -85,7 +88,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T20:40:46.178-04:00"
+			"dateAndTimeString" : "2023-05-24T21:03:50.406-04:00"
 		}
 	},
 	"editEmail" : {
@@ -96,15 +99,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T20:43:02.234-04:00"
+			"dateAndTimeString" : "2023-05-24T21:03:50.406-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Drawing Input Variables for Bex"
+		"title" : "Drawing Binary Expressions"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "d056d27d-c7b8-0d00-b6a8-2bdf0075ae42"
+		"uuid" : "600b23ed-dbb8-0d00-93e4-398a0cbf405c"
 	}
 }

@@ -96,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T20:43:02.234-04:00"
+			"dateAndTimeString" : "2023-05-24T21:02:19.501-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Drawing Input Variables for Bex"
+		"title" : "Drawing Constants for Bex"
 	},
 	"uid" : {
 		"__type" : "uuid",
