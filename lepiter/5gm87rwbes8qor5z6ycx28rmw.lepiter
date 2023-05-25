@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:06:43.647-04:00"
+						"dateAndTimeString" : "2023-05-25T01:40:10.82-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,14 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T22:17:58.699-04:00"
+						"dateAndTimeString" : "2023-05-25T01:40:10.82-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GM5++Nu4DQCVLfOlDL9AXA=="
+					"uidString" : "0F1wyt+4DQCrb6d3ALPhRA=="
 				},
-				"code" : "\"abstract syntax tree for (x0∧(x1≠x2))\"\rast := Bex and: {\r  Bex x: 0.\r  Bex xor: { Bex x:1. Bex x:2}  }"
+				"exampleSelector" : "abcXorAnd",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "BexExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,12 +214,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-24T21:03:07.515-04:00"
+			"dateAndTimeString" : "2023-05-24T23:43:56.093-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Drawing Variables for Bex"
+		"title" : "Drawing Bex Syntax Trees"
 	},
 	"uid" : {
 		"__type" : "uuid",

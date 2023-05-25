@@ -19,10 +19,16 @@ BexDef >> asNodes [
 ]
 
 { #category : #accessing }
+BexDef >> color [
+  ^ Color fromHexString: 'cccccc'
+]
+
+{ #category : #accessing }
 BexDef >> gtGraphFor: aView [
   <gtView>
   ^ aView mondrian
     title: 'Graph';
+    priority: 20;
     painting: [:m|
       |nodes| nodes := self asNodes.
       m nodes shape: #stencil; with: nodes.

@@ -10,6 +10,11 @@ BexI >> color [
 ]
 
 { #category : #accessing }
+BexI >> nodeString [
+ ^ '1'
+]
+
+{ #category : #accessing }
 BexI >> printString [
  ^ 'I'
 ]

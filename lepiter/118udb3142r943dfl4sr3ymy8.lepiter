@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T21:03:21.236-04:00"
+									"dateAndTimeString" : "2023-05-24T23:43:56.098-04:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Drawing Variables for Bex]]"
+							"string" : "[[Drawing Bex Syntax Trees]]"
 						}
 					]
 				},

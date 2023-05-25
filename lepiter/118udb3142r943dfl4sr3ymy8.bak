@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T21:03:21.236-04:00"
+									"dateAndTimeString" : "2023-05-24T23:43:45.881-04:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Drawing Variables for Bex]]"
+							"string" : "[[Drawing Bex ASTs]]"
 						}
 					]
 				},
@@ -93,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:49:16.73-04:00"
+						"dateAndTimeString" : "2023-05-24T21:04:26.509-04:00"
 					}
 				},
 				"editEmail" : {
@@ -104,7 +104,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:49:21.747-04:00"
+						"dateAndTimeString" : "2023-05-24T21:04:26.516-04:00"
 					}
 				},
 				"uid" : {
@@ -114,7 +114,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Bex stuff"
+				"string" : "[[Drawing Binary Expressions]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -205,7 +205,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:04:11.956-04:00"
+						"dateAndTimeString" : "2023-05-24T21:04:15.779-04:00"
 					}
 				},
 				"editEmail" : {
@@ -216,7 +216,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:04:12.956-04:00"
+						"dateAndTimeString" : "2023-05-24T21:04:15.786-04:00"
 					}
 				},
 				"uid" : {
@@ -226,7 +226,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[p"
+				"string" : "[[Pharo Stuff]]"
 			},
 			{
 				"__type" : "textSnippet",

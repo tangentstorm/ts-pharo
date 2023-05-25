@@ -8,6 +8,11 @@ Class {
 }
 
 { #category : #accessing }
+BexVar >> color [
+  ^ Color fromHexString: '99ccff'
+]
+
+{ #category : #accessing }
 BexVar >> printString [
   ^ 'x' , (vid asString)
 ]
