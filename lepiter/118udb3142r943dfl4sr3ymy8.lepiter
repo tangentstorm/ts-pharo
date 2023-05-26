@@ -286,12 +286,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T22:47:10.838-04:00"
+			"dateAndTimeString" : "2023-05-25T01:52:08.986-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Tangentstorm's Pharo Notebook"
+		"title" : "notes"
 	},
 	"uid" : {
 		"__type" : "uuid",

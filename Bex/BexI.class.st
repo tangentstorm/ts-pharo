@@ -11,7 +11,12 @@ BexI >> color [
 
 { #category : #accessing }
 BexI >> nodeString [
- ^ '1'
+ ^ '⊤'
+]
+
+{ #category : #accessing }
+BexI >> nodeText [
+  ^ super nodeText fontName: 'Cambria Math'
 ]
 
 { #category : #accessing }

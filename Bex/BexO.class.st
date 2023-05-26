@@ -11,15 +11,16 @@ BexO >> color [
 
 { #category : #accessing }
 BexO >> nodeString [
- ^ '0'
+ ^ '⊥'
 ]
 
 { #category : #accessing }
 BexO >> nodeText [
   |t|
-  t := Text fromString: self nodeString .
-  t addAttribute: TextColor white.
-  ^ t asRopedText
+  t := Text fromString: self nodeString.
+  t addAttribute: (TextColor white).
+  ^ t asRopedText fontName: 'Cambria Math'
+
 ]
 
 { #category : #accessing }

@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T23:43:45.881-04:00"
+									"dateAndTimeString" : "2023-05-24T23:43:56.098-04:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Drawing Bex ASTs]]"
+							"string" : "[[Drawing Bex Syntax Trees]]"
 						}
 					]
 				},
@@ -286,12 +286,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T22:47:10.838-04:00"
+			"dateAndTimeString" : "2023-05-25T01:51:53.094-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Tangentstorm's Pharo Notebook"
+		"title" : "ts-pharo notes"
 	},
 	"uid" : {
 		"__type" : "uuid",

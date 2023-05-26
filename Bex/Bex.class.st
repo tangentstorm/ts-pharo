@@ -51,7 +51,8 @@ Bex >> asNodes [
 
 { #category : #accessing }
 Bex >> border [
-  ^ BlBorder paint: Color black.
+  ^ nil.
+"  ^ BlBorder paint: Color black."
 ]
 
 { #category : #accessing }
@@ -95,11 +96,10 @@ Bex >> size [
 
 { #category : #accessing }
 Bex >> stencil [
-  ^ BlTextElement new
+  ^ BrVerticalPane new
+    alignCenter;
+    size: self size;
     geometry: self geometry;
     background: self color;
-    padding: (BlInsets all: 10);
-    border: self border;
-    text: self nodeText.
-    "size: self size."
+    addChild: (BlTextElement new text: self nodeText).
 ]
