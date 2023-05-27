@@ -194,6 +194,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "[[GT Questions]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-05-26T22:30:47.104-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-05-26T22:30:49.443-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MJLKYAW5DQCQmN1uCFktAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[["
 						}
 					]
 				},
@@ -286,12 +323,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-25T01:51:53.094-04:00"
+			"dateAndTimeString" : "2023-05-23T22:47:10.838-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "ts-pharo notes"
+		"title" : "Tangentstorm's Pharo Notebook"
 	},
 	"uid" : {
 		"__type" : "uuid",
