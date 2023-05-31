@@ -224,7 +224,7 @@
 				"code" : "\"demo: draggable bits that toggle when clicked\"\r\n\r\nbitColor := {\r\n  Color fromHexString: '333333'.\r\n  Color fromHexString: 'eeeeee'}.\r\nstroke := BlBorder paint: Color black.\r\n\r\nnewBit := [:initVal| |el val|\r\n  val := initVal.\r\n  el := BlElement new\r\n    geometry: BlCircleGeometry new;\r\n    background: (bitColor at: 1+val);\r\n    border: stroke;\r\n    size: 32@32;\r\n    addEventHandler: BlPullHandler new disallowOutOfBounds;\r\n    addEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r\n      el background: (bitColor at: (1 + (val := 1-val)))])].\r\n\r\nroot := BlElement new size: 640@480; border: stroke;\r\n  background: (Color fromHexString: '336699').\r\n0 to: 7 do: [:i| root addChild:\r  ((newBit value: 0) relocate: (i*50+50)@50)].\r\n\rroot addChildren:((1 to: 8) collect: [:i|\r  (newBit value: 1) relocate: (i*50+50)@100]).\r\r\nroot",
 				"elementHeight" : 346,
 				"codeHeight" : 520,
-				"codeVisible" : false
+				"codeVisible" : true
 			}
 		]
 	},

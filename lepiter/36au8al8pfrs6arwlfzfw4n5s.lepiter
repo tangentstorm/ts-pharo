@@ -1,0 +1,110 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-30T21:55:54.765-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-30T23:38:59.724-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yIpxW1W5DQCUjAz1D02hNQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "part 1: draw a truth table."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-30T21:59:37.544-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-30T23:34:22.358-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WN24aFW5DQCUks+SD02hNQ=="
+				},
+				"code" : "\"\r0 0 0 0 1 1 1 1\r0 0 1 1 0 0 1 1\r0 1 0 1 0 1 0 1\r\"\r\rbit := [:v|\r  |c dark light| \r  dark :=  Color fromHexString: '585858'.\r  light := Color fromHexString: 'eeeeee'.\r  c := GsCell new value: v.\r  (v = 1)\r    ifTrue: [ c fg: dark. c bg: light ]\r    ifFalse: [ c fg: light. c bg: dark ].\r  c asElement].\r\r\rtbl := BrHorizontalPane new\r  addChildren:\r    ((2r00110101 toBits: 8)\r      asOrderedCollection collect:bit);\r  fitContent.\r \rtbl"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Truth Table Animations"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "40fa705b-55b9-0d00-948b-09cf0f4da135"
+	}
+}
