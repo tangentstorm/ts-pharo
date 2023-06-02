@@ -23,6 +23,12 @@ LineEquation >> + k [
 ]
 
 { #category : #accessing }
+LineEquation >> at: x [
+  "Evaluate the expression at the given x value."
+  ^ (m * x) + b
+]
+
+{ #category : #accessing }
 LineEquation >> b [
   ^ b
 ]
