@@ -1,0 +1,107 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-01T20:10:14.63-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-02T00:11:17.168-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cII5HXy5DQCH5HvLDZ3mUw=="
+				},
+				"code" : "data := (0 to: 10) collect: [:x|\r   { #x -> x . #y -> (x * 3 + 1)} ].\r\rdata := {\r   #x -> (0 to: 10). \r   #y -> ((0 to: 10) collect: [:x| x * 3 + 1])}\r.\r\rGtPlotterLineChart new\r\t\twith: (GtPlotterDataGroup new values: data);\r\t\tvalueX: #x;\r\t\tscaleX: GtPlotterTimeScale new;\r\t\ttitleX: 'Date';\r\t\tticksX: 10;\r\t\tvalueY: #y;\r\t\tscaleY: GtPlotterLinearScale new;\r\t\ttitleY: 'Number of commits per day';\r\t\tticksY: 10."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-02T00:11:24.175-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-02T00:12:18.915-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cBute3+5DQClZEahB1efYw=="
+				},
+				"code" : "GtPlotterBuilder"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-01T20:09:57.436-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-01T20:09:57.436-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Line Plots"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "78dac11b-7cb9-0d00-879d-4f690d9de653"
+	}
+}
