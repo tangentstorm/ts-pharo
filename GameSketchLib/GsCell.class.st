@@ -15,7 +15,7 @@ Class {
 
 { #category : #'instance creation' }
 GsCell class >> for: item [
-  ^ self new data: item; yourself
+  ^ self new item: item; yourself
 ]
 
 { #category : #'instance creation' }
