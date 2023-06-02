@@ -30,7 +30,7 @@ GsCell >> asElement [
   background: bg;
   border: (BlBorder paint: Color black);
   addChild: (BlTextElement new text: (
-    (value asString) asRopedText
+    (item asString) asRopedText
       fontName:'consolas';
       foreground: fg))
 ]
@@ -72,10 +72,30 @@ GsCell >> gtSketchFor: aView [
     
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsCell >> initialize [
   super initialize.
   bg := Color white.
   fg := Color black.
-  value := ''
+  item := ''
+]
+
+{ #category : #accessing }
+GsCell >> item [
+	^ item
+]
+
+{ #category : #accessing }
+GsCell >> item: anObject [
+	item := anObject
+]
+
+{ #category : #roassal }
+GsCell >> rsLabel [
+	"build label for Roassal"
+	|lb|
+	lb := RSLabeled new fontSize: 5.
+	lb location inner; middle.
+	lb shapeBuilder textBlock: item asString.
+	^ lb
 ]

@@ -9,3 +9,8 @@ Class {
 	#superclass : #Object,
 	#category : #Tangentstorm
 }
+
+{ #category : #builder }
+TSL class >> ! n [
+	^ 0 to: n-1
+]
