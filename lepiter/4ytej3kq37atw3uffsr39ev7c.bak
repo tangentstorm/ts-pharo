@@ -39,6 +39,43 @@
 				"code" : "data := (0 to: 10) collect: [:x|\r   { #x -> x . #y -> (x * 3 + 1)} ].\r\rdata := {\r   #x -> (0 to: 10). \r   #y -> ((0 to: 10) collect: [:x| x * 3 + 1])}\r.\r\rGtPlotterLineChart new\r\t\twith: (GtPlotterDataGroup new values: data);\r\t\tvalueX: #x;\r\t\tscaleX: GtPlotterTimeScale new;\r\t\ttitleX: 'Date';\r\t\tticksX: 10;\r\t\tvalueY: #y;\r\t\tscaleY: GtPlotterLinearScale new;\r\t\ttitleY: 'Number of commits per day';\r\t\tticksY: 10."
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-02T13:52:35.76-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-02T13:52:45.21-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mPN99Iq5DQC53GnUB1efYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtExample:GTPlotterLineChartExamples>>commitsBasicChart}}"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -63,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-02T00:11:44.463-04:00"
+						"dateAndTimeString" : "2023-06-02T13:51:43.809-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "cBute3+5DQClZEahB1efYw=="
 				},
-				"code" : "GtPlotter"
+				"code" : ""
 			}
 		]
 	},
