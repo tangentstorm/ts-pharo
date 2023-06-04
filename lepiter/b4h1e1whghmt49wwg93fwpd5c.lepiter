@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T20:23:42.894-04:00"
+						"dateAndTimeString" : "2023-05-18T22:21:22.247-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T23:29:32.506-04:00"
+						"dateAndTimeString" : "2023-06-02T13:54:50.793-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
+					"uidString" : "iIlkUGS4DQCTPPr/Cu/muw=="
 				},
-				"code" : "GsApp new\r",
-				"elementHeight" : 482,
-				"codeHeight" : 29,
-				"codeVisible" : true
+				"code" : "graph := 'd:/ver/bex/test.dot'\r  asFileReference readStream contents.\rDOTParser parse: graph.\r"
 			}
 		]
 	},
@@ -51,7 +48,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T17:40:30.791-04:00"
+			"dateAndTimeString" : "2023-06-02T13:55:08.788-04:00"
 		}
 	},
 	"editEmail" : {
@@ -62,15 +59,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T19:46:35.262-04:00"
+			"dateAndTimeString" : "2023-06-02T13:55:08.788-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GameSketchLib"
+		"title" : "Parsing GraphViz DOT file"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "68d4a040-a2b9-0d00-a108-c5980814b393"
+		"uuid" : "d03a331f-64b8-0d00-8d0e-10510aefe6bb"
 	}
 }

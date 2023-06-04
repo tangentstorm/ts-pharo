@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T21:55:54.765-04:00"
+						"dateAndTimeString" : "2023-05-24T17:59:50.581-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T23:38:59.724-04:00"
+						"dateAndTimeString" : "2023-05-24T18:00:07.273-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yIpxW1W5DQCUjAz1D02hNQ=="
+					"uidString" : "CP8kXNm4DQCRVDBHDL9AXA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "part 1: draw a truth table."
+				"string" : "Parse all the *.vue files in my personal directory:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T21:59:37.544-04:00"
+						"dateAndTimeString" : "2023-05-24T17:35:45.505-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T23:45:07.921-04:00"
+						"dateAndTimeString" : "2023-05-24T18:00:57.338-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WN24aFW5DQCUks+SD02hNQ=="
+					"uidString" : "6OICBtm4DQCBWJj7DL9AXA=="
 				},
-				"code" : "bit := [:v|\r  |c dark light| \r  dark :=  Color fromHexString: '585858'.\r  light := Color fromHexString: 'eeeeee'.\r  c := GsCell new value: v.\r  (v = 1)\r    ifTrue: [ c fg: dark. c bg: light ]\r    ifFalse: [ c fg: light. c bg: dark ].\r  c asElement].\r\rrow := [:n | BrHorizontalPane new\r  addChildren:\r    ((n toBits: 8)\r      asOrderedCollection collect:bit);\r  fitContent].\r \rtbl := BrVerticalPane new\r  addChildren: {\r    row value: 2r00001111.\r    row value: 2r00110011.\r    row value: 2r01010101.\r    (BlElement new size: 10@10).\r    row value: 2r00110101};\r  fitContent\r"
+				"code" : "xmls := 'd:/ver/cg-michal/vue' asFileReference children.\rxmls := xmls select: [:x| \r  ((x base beginsWith: '.') not) and:\r  (x extension = 'vue')  ].\r\r\"vue adds xml comments before <?xml> and pharo gets mad.\"\rfix := [:xml|'<?xml',(('<?xml' split: xml ) at: 2)].\r\rxmls collect: [:x | \r  XMLDOMParser parse: (fix value:(x contents))]"
 			}
 		]
 	},
@@ -85,7 +85,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+			"dateAndTimeString" : "2023-05-24T17:36:08.013-04:00"
 		}
 	},
 	"editEmail" : {
@@ -96,15 +96,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+			"dateAndTimeString" : "2023-05-24T17:36:08.013-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Truth Table Animations"
+		"title" : "VUE XML"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "40fa705b-55b9-0d00-948b-09cf0f4da135"
+		"uuid" : "18db0206-d9b8-0d00-8157-67d40cbf405c"
 	}
 }

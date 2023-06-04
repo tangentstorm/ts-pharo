@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T21:55:54.765-04:00"
+						"dateAndTimeString" : "2023-06-04T00:00:16.277-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T23:38:59.724-04:00"
+						"dateAndTimeString" : "2023-06-04T00:00:33.92-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yIpxW1W5DQCUjAz1D02hNQ=="
+					"uidString" : "CK6Mj6e5DQCEhiuaBVu8Gw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "part 1: draw a truth table."
+				"string" : "Awesome graphics and visualization library for pharo."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T21:59:37.544-04:00"
+						"dateAndTimeString" : "2023-06-04T00:00:39.218-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T23:45:07.921-04:00"
+						"dateAndTimeString" : "2023-06-04T00:00:50.241-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WN24aFW5DQCUks+SD02hNQ=="
+					"uidString" : "UAyfkKe5DQCGCmdUBVu8Gw=="
 				},
-				"code" : "bit := [:v|\r  |c dark light| \r  dark :=  Color fromHexString: '585858'.\r  light := Color fromHexString: 'eeeeee'.\r  c := GsCell new value: v.\r  (v = 1)\r    ifTrue: [ c fg: dark. c bg: light ]\r    ifFalse: [ c fg: light. c bg: dark ].\r  c asElement].\r\rrow := [:n | BrHorizontalPane new\r  addChildren:\r    ((n toBits: 8)\r      asOrderedCollection collect:bit);\r  fitContent].\r \rtbl := BrVerticalPane new\r  addChildren: {\r    row value: 2r00001111.\r    row value: 2r00110011.\r    row value: 2r01010101.\r    (BlElement new size: 10@10).\r    row value: 2r00110101};\r  fitContent\r"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Has its own canvas system. Could potentially play wel"
 			}
 		]
 	},
@@ -85,7 +88,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+			"dateAndTimeString" : "2023-06-04T00:00:16.201-04:00"
 		}
 	},
 	"editEmail" : {
@@ -96,15 +99,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-30T21:56:23.526-04:00"
+			"dateAndTimeString" : "2023-06-04T00:00:16.201-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Truth Table Animations"
+		"title" : "Roassal"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "40fa705b-55b9-0d00-948b-09cf0f4da135"
+		"uuid" : "28858b8f-a7b9-0d00-8485-2c5f055bbc1b"
 	}
 }

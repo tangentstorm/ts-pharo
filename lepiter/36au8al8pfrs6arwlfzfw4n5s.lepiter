@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-30T23:45:07.921-04:00"
+						"dateAndTimeString" : "2023-06-04T00:03:18.976-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "WN24aFW5DQCUks+SD02hNQ=="
 				},
-				"code" : "bit := [:v|\r  |c dark light| \r  dark :=  Color fromHexString: '585858'.\r  light := Color fromHexString: 'eeeeee'.\r  c := GsCell new value: v.\r  (v = 1)\r    ifTrue: [ c fg: dark. c bg: light ]\r    ifFalse: [ c fg: light. c bg: dark ].\r  c asElement].\r\rrow := [:n | BrHorizontalPane new\r  addChildren:\r    ((n toBits: 8)\r      asOrderedCollection collect:bit);\r  fitContent].\r \rtbl := BrVerticalPane new\r  addChildren: {\r    row value: 2r00001111.\r    row value: 2r00110011.\r    row value: 2r01010101.\r    (BlElement new size: 10@10).\r    row value: 2r00110101};\r  fitContent\r"
+				"code" : "bit := [:v|\r  |c dark light| \r  dark :=  Color fromHexString: '585858'.\r  light := Color fromHexString: 'eeeeee'.\r  c := GsCell new item: v.\r  (v = 1)\r    ifTrue: [ c fg: dark. c bg: light ]\r    ifFalse: [ c fg: light. c bg: dark ].\r  c asElement].\r\rrow := [:n | BrHorizontalPane new\r  addChildren:\r    ((n toBits: 8)\r      asOrderedCollection collect:bit);\r  fitContent].\r \rtbl := BrVerticalPane new\r  addChildren: {\r    row value: 2r00001111.\r    row value: 2r00110011.\r    row value: 2r01010101.\r    (BlElement new size: 10@10).\r    row value: 2r00110101};\r  fitContent\r"
 			}
 		]
 	},

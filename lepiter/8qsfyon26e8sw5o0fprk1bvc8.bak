@@ -37,43 +37,9 @@
 					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
 				},
 				"code" : "GsApp new\r",
-				"elementHeight" : 403,
+				"elementHeight" : 482,
 				"codeHeight" : 29,
 				"codeVisible" : true
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T20:37:27.971-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T20:42:24.767-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GAFDuqS5DQCSO4XhCeYr6w=="
-				},
-				"code" : ""
 			}
 		]
 	},

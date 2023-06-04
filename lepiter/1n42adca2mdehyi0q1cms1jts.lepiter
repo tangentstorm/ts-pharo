@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T20:23:42.894-04:00"
+						"dateAndTimeString" : "2023-06-04T00:01:20.205-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T23:29:32.506-04:00"
+						"dateAndTimeString" : "2023-06-04T00:01:25.554-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
+					"uidString" : "mPMmk6e5DQCIbLQgBVu8Gw=="
 				},
-				"code" : "GsApp new\r",
-				"elementHeight" : 482,
-				"codeHeight" : 29,
-				"codeVisible" : true
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Animations I want to work on for my channel."
 			}
 		]
 	},
@@ -51,7 +51,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T17:40:30.791-04:00"
+			"dateAndTimeString" : "2023-06-04T00:01:16.645-04:00"
 		}
 	},
 	"editEmail" : {
@@ -62,15 +62,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T19:46:35.262-04:00"
+			"dateAndTimeString" : "2023-06-04T00:01:16.645-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GameSketchLib"
+		"title" : "Animations"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "68d4a040-a2b9-0d00-a108-c5980814b393"
+		"uuid" : "a0ce2593-a7b9-0d00-886b-def5055bbc1b"
 	}
 }
