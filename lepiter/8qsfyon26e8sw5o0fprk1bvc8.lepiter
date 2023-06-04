@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "textSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:09.735-04:00"
+						"dateAndTimeString" : "2023-06-03T20:23:42.894-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,51 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:09.735-04:00"
+						"dateAndTimeString" : "2023-06-03T20:32:24.068-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WNuh+6O5DQCtPwHwCBSzkw=="
+					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T17:40:45.58-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:13.619-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4GpPQqK5DQChEEIRCBSzkw=="
-				},
-				"code" : "GsApp new"
+				"code" : "GsApp new\r",
+				"elementHeight" : 482,
+				"codeHeight" : 29,
+				"codeVisible" : true
 			}
 		]
 	},

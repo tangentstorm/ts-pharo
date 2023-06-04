@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "textSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:09.735-04:00"
+						"dateAndTimeString" : "2023-06-03T20:23:42.894-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:09.735-04:00"
+						"dateAndTimeString" : "2023-06-03T20:32:24.068-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WNuh+6O5DQCtPwHwCBSzkw=="
+					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"code" : "GsApp new\r",
+				"elementHeight" : 403,
+				"codeHeight" : 29,
+				"codeVisible" : true
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T17:40:45.58-04:00"
+						"dateAndTimeString" : "2023-06-03T20:37:27.971-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-03T19:44:13.619-04:00"
+						"dateAndTimeString" : "2023-06-03T20:42:24.767-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "4GpPQqK5DQChEEIRCBSzkw=="
+					"uidString" : "GAFDuqS5DQCSO4XhCeYr6w=="
 				},
-				"code" : "GsApp new"
+				"code" : ""
 			}
 		]
 	},
@@ -96,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T19:44:09.727-04:00"
+			"dateAndTimeString" : "2023-06-03T19:46:35.262-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsApp"
+		"title" : "GameSketchLib"
 	},
 	"uid" : {
 		"__type" : "uuid",
