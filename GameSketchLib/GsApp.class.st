@@ -32,36 +32,15 @@ GsApp >> gtRunButtonFor: anAction [
   yourself
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsApp >> initialize [
   scene := self makeStartScene.
   ui := self makeUI.
 ]
 
 { #category : #'gsl - sketching' }
-GsApp >> makeNode [
-  |node|
-node := BrVerticalPane new size: 75@45;
-  background: Color white;
-  addEventHandler: BlPullHandler new;
-  when: BlDoubleClickEvent do: [:e|
-    e consumed: true.
-    node background: Color random].
-^ node
-]
-
-{ #category : #'gsl - sketching' }
 GsApp >> makeSketchScene [
-  |scn|
-scn := BlElement new constraintsDo: [ :c |
-    c horizontal matchParent.
-    c vertical matchParent ].
-scn background: GsColors defaultBg;
-  when: BlDoubleClickEvent do: [:e| |node|
-    e consumed: true.
-    scn addChild: (node := self makeNode).
-    node relocate: e localPosition - (5@5)].
-^ scn
+  ^ GsSketchScene new
 ]
 
 { #category : #'gsl - ui' }
@@ -77,11 +56,6 @@ GsApp >> makeToolBar [
     aptitude: BrMaterialToggleLabelledAptitude;
     label: 'Hello?'; 
     action: [ self inform: 'Hello!' ]);
-  addItem: (BrButton new 
-    aptitude: BrMaterialToggleLabelledAptitude;
-    label: '+'; 
-    action: [ self scene addChild: 
-      (self makeNode relocate: 10@10) ]);
   yourself
 ]
 
