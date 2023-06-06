@@ -8,17 +8,26 @@ Class {
 }
 
 { #category : #accessing }
+GsSketchScene >> current [
+	^ current
+]
+
+{ #category : #accessing }
+GsSketchScene >> current: anObject [
+	^ current := anObject
+]
+
+{ #category : #accessing }
 GsSketchScene >> initialize [
-  |scn|
-scn := BlElement new constraintsDo: [ :c |
+  super initialize.
+  self constraintsDo: [ :c |
     c horizontal matchParent.
-    c vertical matchParent ].
-scn background: GsColors defaultBg;
-  when: BlDoubleClickEvent do: [:e| |node|
+    c vertical matchParent ];
+  background: GsColors defaultBg;
+  when: BlDoubleClickEvent do: [:e|
     e consumed: true.
-    scn addChild: (node := self makeNode).
-    node relocate: e localPosition - (5@5)].
-^ scn
+    self addChild: (current := self makeNode).
+    current relocate: e localPosition - (5@5)].
 ]
 
 { #category : #accessing }
@@ -28,8 +37,7 @@ node := BrVerticalPane new size: 75@45;
   background: Color white;
   addEventHandler: BlPullHandler new;
   when: BlMouseDownEvent do: [:e|
-    
-     ];
+    current := node];
   when: BlDoubleClickEvent do: [:e|
     e consumed: true.
     node background: Color random].
