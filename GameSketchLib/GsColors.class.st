@@ -10,6 +10,11 @@ GsColors class >> defaultBg [
 ]
 
 { #category : #accessing }
+GsColors class >> gold [
+  ^ Color fromHexString: 'ffd700'
+]
+
+{ #category : #accessing }
 GsColors class >> toolBg [
   ^ Color veryVeryLightGray
 ]

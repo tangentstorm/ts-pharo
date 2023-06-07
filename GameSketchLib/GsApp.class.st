@@ -38,14 +38,19 @@ GsApp >> initialize [
   ui := self makeUI.
 ]
 
-{ #category : #'gsl - sketching' }
+{ #category : #'gsl - scenes' }
+GsApp >> makeEmptyScene [
+  ^ GsScene new
+]
+
+{ #category : #'gsl - scenes' }
 GsApp >> makeSketchScene [
   ^ GsSketchScene new
 ]
 
 { #category : #'gsl - ui' }
 GsApp >> makeStartScene [
- ^ scene := self makeSketchScene
+ ^ scene := self makeEmptyScene
 ]
 
 { #category : #'gsl - ui' }
