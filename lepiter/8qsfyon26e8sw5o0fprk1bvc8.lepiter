@@ -5,6 +5,40 @@
 		"__type" : "snippets",
 		"items" : [
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T22:10:26.915-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T22:10:35.439-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uH4ofva5DQCWRChHC28eiQ=="
+				},
+				"code" : "GsDemos new"
+			},
+			{
 				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -29,16 +63,16 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-06T23:55:38.157-04:00"
+						"dateAndTimeString" : "2023-06-07T22:12:41.848-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EFQViaS5DQCRFAoNCeYr6w=="
 				},
-				"code" : "GsBulletDemo new.\r\"GsOverlapDemo new.\"",
-				"elementHeight" : 382,
-				"codeHeight" : 73,
+				"code" : "GsPathmapDemo new",
+				"elementHeight" : 310,
+				"codeHeight" : 62,
 				"codeVisible" : true
 			},
 			{
