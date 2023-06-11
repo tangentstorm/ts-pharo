@@ -4,7 +4,7 @@ The intent is to visualize the contents of an array cell.
 "
 Class {
 	#name : #GsCell,
-	#superclass : #Object,
+	#superclass : #GsObject,
 	#instVars : [
 		'fg',
 		'bg',

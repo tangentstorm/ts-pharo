@@ -6,7 +6,7 @@ Class {
 		'depth',
 		'degree'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Demos'
 }
 
 { #category : #accessing }
