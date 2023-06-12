@@ -63,14 +63,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T00:30:13.055-04:00"
+						"dateAndTimeString" : "2023-06-12T09:07:43.775-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "6DWKbzS6DQC78RBCC4uBCQ=="
 				},
-				"code" : "GsObject subclass: #GsSprite\r  instanceVariableNames: ''\r  classVariableNames: ''\r  package: 'GameSketchLib'."
+				"code" : "GsGroup subclass: #GsSketch\r  instanceVariableNames: ''\r  classVariableNames: ''\r  package: 'GameSketchLib'."
 			}
 		]
 	},

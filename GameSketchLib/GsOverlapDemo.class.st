@@ -6,5 +6,5 @@ Class {
 
 { #category : #accessing }
 GsOverlapDemo >> makeStartScene [
-  ^ self makeSketchScene
+  ^ GsSketchScene new
 ]

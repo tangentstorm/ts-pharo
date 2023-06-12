@@ -42,3 +42,12 @@ GsDemos >> gtRawFor: aView [
   <gtView>
   ^ aView empty
 ]
+
+{ #category : #accessing }
+GsDemos >> gtSketchDemoFor: aView [
+  <gtView>
+  ^ aView explicit
+    priority: 30;
+    title: 'SketchDemo';
+    stencil: [GsSketchDemo new asElement]
+]

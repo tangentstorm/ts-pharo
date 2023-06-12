@@ -1,0 +1,141 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T01:13:31.982-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T02:03:49.442-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uFduZjW6DQClE97TAHg1Rg=="
+				},
+				"code" : "\"dawnbringer palette https://pixeljoint.com/forum/forum_posts.asp?TID=12795\"\r\ndawnbringer := {\r\n  16rff140c1c. 16rff442434. 16rff30346d. 16rff4e4a4e.\r\n  16rff854c30. 16rff346524. 16rffd04648. 16rff757161.\r\n  16rff597dce. 16rffd27d2c. 16rff8595a1. 16rff6daa2c.\r\n  16rffd2aa99. 16rff6dc2ca. 16rffdad45e. 16rffdeeed6}\r\n  collect: [:x| x asColorOfDepth: 32].\r\n"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T01:13:29.786-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T02:30:58.725-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wOZPZjW6DQClDHuGAHg1Rg=="
+				},
+				"code" : "arne := {\r\n  16rff000000. 16rff9d9d9d. 16rffffffff. 16rffbe2633.\r\n  16rffe06f8b. 16rff493c2b. 16rffa46422. 16rffeb8931.\r\n  16rfff7e26b. 16rff2f484e. 16rff44891a. 16rffa3ce27.\r\n  16rff1b2632. 16rff005784. 16rff31a2f2. 16rffb2dcef}\r\n  collect: [:x| x asColorOfDepth: 32]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T01:13:24.798-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-11T02:30:55.012-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MNIDZjW6DQClBBtkAHg1Rg=="
+				},
+				"code" : "pico := {\r\n  16rff000000. 16rff1d2b53. 16rff7e2553. 16rff008751.\r\n  16rffab5236. 16rff5f574f. 16rffc2c3c7. 16rfffff1e8.\r\n  16rffff004d. 16rffffa300. 16rffffec27. 16rff00e436.\r\n  16rff29adff. 16rff83769c. 16rffff77ab. 16rffffccaa}\r\n  collect: [:x| x asColorOfDepth: 32]."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-11T01:11:51.334-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-11T01:11:51.334-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Palettes for GsColors"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "20586e53-35ba-0d00-a388-7cdc00783546"
+	}
+}

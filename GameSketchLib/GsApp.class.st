@@ -3,7 +3,9 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'scene',
-		'ui'
+		'ui',
+		'tools',
+		'currentTool'
 	],
 	#category : #GameSketchLib
 }
@@ -11,6 +13,16 @@ Class {
 { #category : #'gt inspector' }
 GsApp >> asElement [
   ^ ui
+]
+
+{ #category : #'as yet unclassified' }
+GsApp >> currentTool [
+	^ currentTool
+]
+
+{ #category : #'as yet unclassified' }
+GsApp >> currentTool: anObject [
+	currentTool := anObject
 ]
 
 { #category : #'gt inspector' }
@@ -34,34 +46,32 @@ GsApp >> gtRunButtonFor: anAction [
 
 { #category : #initialization }
 GsApp >> initialize [
+  tools := self makeTools.
   scene := self makeStartScene.
   ui := self makeUI.
 ]
 
-{ #category : #'gsl - scenes' }
-GsApp >> makeEmptyScene [
-  ^ GsScene new
-]
-
-{ #category : #'gsl - scenes' }
-GsApp >> makeSketchScene [
-  ^ GsSketchScene new
-]
-
 { #category : #'gsl - ui' }
 GsApp >> makeStartScene [
- ^ scene := self makeEmptyScene
+ ^ GsScene new
 ]
 
 { #category : #'gsl - ui' }
 GsApp >> makeToolBar [
-^ BrToolbar new
-  aptitude: BrMaterialToolbarAptitude;
-  addItem: (BrButton new 
-    aptitude: BrMaterialToggleLabelledAptitude;
-    label: 'Hello?'; 
-    action: [ self inform: 'Hello!' ]);
-  yourself
+  |tb|
+  tb :=  BrToolbar new
+    aptitude: BrMaterialToolbarAptitude.
+  tools do: [:t |
+    tb addItem: (BrButton new 
+      aptitude: BrMaterialToggleLabelledAptitude;
+      label: t label; 
+      action: [ t onToolbarClick: self ])].
+^ tb.
+]
+
+{ #category : #'as yet unclassified' }
+GsApp >> makeTools [
+  ^ {GsSelectTool new}
 ]
 
 { #category : #'gsl - ui' }
