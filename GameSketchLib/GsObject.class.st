@@ -12,3 +12,10 @@ GsObject >> initialize [
   super initialize.
   active := false
 ]
+
+{ #category : #initialization }
+GsObject >> matchParentBounds [
+  self constraintsDo: [:c| 
+    c horizontal matchParent.
+	c vertical matchParent]
+]

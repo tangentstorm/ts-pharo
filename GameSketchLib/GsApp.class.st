@@ -5,7 +5,8 @@ Class {
 		'scene',
 		'ui',
 		'tools',
-		'currentTool'
+		'currentTool',
+		'sceneHolder'
 	],
 	#category : #GameSketchLib
 }
@@ -82,7 +83,9 @@ ui := BrVerticalPane new
 	c vertical matchParent ];
   background: GsColors toolBg;
   addChild: (self makeToolBar);
-  addChild: (self scene).
+  addChild: (sceneHolder :=
+    GsObject new matchParentBounds
+      addChild: scene).
 ^ ui
 ]
 

@@ -1,6 +1,9 @@
 Class {
 	#name : #GsTool,
 	#superclass : #Object,
+	#instVars : [
+		'startPoint'
+	],
 	#category : #'GameSketchLib-Tools'
 }
 

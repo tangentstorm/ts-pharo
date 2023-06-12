@@ -15,11 +15,9 @@ Class {
 
 { #category : #initialization }
 GsSketch >> initialize [
-  super initialize.
-  self constraintsDo: [ :c |
-    c horizontal matchParent.
-    c vertical matchParent ];
-  background: GsColors defaultBg.
+	super initialize.
+	self matchParentBounds.
+	self background: GsColors defaultBg
 ]
 
 { #category : #accessing }
