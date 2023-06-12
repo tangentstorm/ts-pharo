@@ -9,7 +9,7 @@ Class {
 
 { #category : #accessing }
 GsSketchDemo >> makeStartScene [
-  |dragging|
+  |dragging startPoint|
   scene := GsSketch new.
   1 to: 3 do: [:j |
     1 to: 3 do: [:i |
@@ -24,13 +24,16 @@ GsSketchDemo >> makeStartScene [
   scene when: BlMouseDownEvent do: [:e|
     dragging := true.
     selectangle
-      relocate: e localPosition;
+      relocate: (startPoint := e localPosition);
       size: 0@0;
       visibility: BlVisibilityVisible new].
   scene when: BlMouseMoveEvent do: [:e|
-    dragging ifTrue:[
-      selectangle size:
-        (e localPosition - selectangle position)]].
+    dragging ifTrue:[ |rect|
+      rect := Rectangle 
+        point: startPoint point: e localPosition.
+      selectangle
+        relocate: (rect topLeft);
+        size: rect extent]].
    scene when: BlMouseUpEvent do: [:e|
      dragging := false.
      selectangle visibility: BlVisibilityHidden new].
