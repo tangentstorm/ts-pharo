@@ -5,6 +5,114 @@
 		"__type" : "snippets",
 		"items" : [
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:33:50.811-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:35:10.815-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eIfPyGO6DQCY8MDoDThWww=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Each GsTool should be able to specify behavior for any mouse-related input event: right click, left click, dragging, etc."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:35:11.571-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:36:49.925-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UNCfzWO6DQCdQMQYDThWww=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Probably each tool should be a composition of various smaller objects, each of which handles events. "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:33:35.219-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-13T08:39:52.799-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OJ3hx2O6DQCY0Gq3DThWww=="
+				},
+				"code" : "GsOverlay new"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -29,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-12T07:32:33.881-04:00"
+						"dateAndTimeString" : "2023-06-13T08:37:54.73-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "WI2rtja6DQCmEfYXAHg1Rg=="
 				},
-				"code" : "GsApp new"
+				"code" : "GsSketchDemo new"
 			}
 		]
 	},
@@ -59,12 +167,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-11T02:45:53.641-04:00"
+			"dateAndTimeString" : "2023-06-13T08:34:05.286-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsSelectTool"
+		"title" : "GsTool Design"
 	},
 	"uid" : {
 		"__type" : "uuid",

@@ -20,6 +20,13 @@ GsSketchDemo >> childAtPoint: p [
 ]
 
 { #category : #initialization }
+GsSketchDemo >> drawCoords: aPoint [
+  coords text: (aPoint rounded asString, ' ',
+    ((self childAtPoint: aPoint) ifNil: ['']
+       ifNotNil: #asString)) asRopedText
+]
+
+{ #category : #initialization }
 GsSketchDemo >> initialize [
   super initialize.
   sceneHolder addChild: self makeCoords.
@@ -39,34 +46,23 @@ GsSketchDemo >> makeGlass [
  | dragging startPoint|
  dragging := false.
  selectangle := BlElement new
-      border: (BlBorder paint: Color cyan).
- glass := GsObject new matchParentBounds;
-   when: BlMouseDownEvent do: [:e|
-    dragging := true.
-    glass addChild: (selectangle
-      relocate: (startPoint := e localPosition);
-      size: 0@0)].
-
-  glass when: BlMouseMoveEvent do: [:e| |p|
-    p:= e localPosition rounded.
-    coords text: (p asString, ' ',
-      ((self childAtPoint: p) ifNil: ['']
-        ifNotNil: #asString)) asRopedText.
-    dragging ifTrue:[ |rect|
-      rect := Rectangle 
-        point: startPoint point: e localPosition.
-      selectangle
-        relocate: (rect topLeft);
-        size: rect extent]].
-   glass when: BlMouseUpEvent do: [:e| |rect|
-     dragging := false.
+   border: (BlBorder paint: Color cyan).
+ glass := GsOverlay new
+   onDragStart: [:p| glass addChild:(selectangle
+     relocate:(startPoint := p); size:0@0)];
+   onMouseMove: [:p| self drawCoords: p];
+   onDrag: [:p| |rect| self drawCoords: p.
+     rect := Rectangle point: startPoint point: p.
+     selectangle
+       relocate: rect topLeft; size: rect extent];
+   onDragEnd: [:p| |rect|
      rect := selectangle bounds asRectangle.
-     glass removeChildren.
      self selection: (scene children select: [:x|
-       x bounds asRectangle intersects: rect])].
-     
+       x bounds asRectangle intersects: rect])];
+   onClick: [:p|
+     self selection: (scene children select: [:x|
+       x bounds asRectangle containsPoint: p])].
 ^ glass
-
 ]
 
 { #category : #initialization }
@@ -87,6 +83,7 @@ GsSketchDemo >> selection [
 { #category : #accessing }
 GsSketchDemo >> selection: aCollection [
   selection := aCollection asArray.
+  glass removeChildren.
   glass addChildren: (selection collect: [:x| |rect|
     rect := x bounds asRectangle.
     BlElement new

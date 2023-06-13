@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-06-12T13:16:25.625-04:00"
+									"dateAndTimeString" : "2023-06-13T08:34:05.298-04:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[GsSelectTool]]"
+							"string" : "[[GsTool Design]]"
 						},
 						{
 							"__type" : "textSnippet",
