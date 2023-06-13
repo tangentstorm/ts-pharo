@@ -43,25 +43,28 @@ GsSketchDemo >> makeCoords [
 
 { #category : #initialization }
 GsSketchDemo >> makeGlass [
- | dragging startPoint|
- dragging := false.
+ | startPoint target|
  selectangle := BlElement new
    border: (BlBorder paint: Color cyan).
  glass := GsOverlay new
-   onDragStart: [:p| glass addChild:(selectangle
-     relocate:(startPoint := p); size:0@0)];
+   onDragStart: [:p| startPoint := p.
+    (target := scene childAtPoint: p)
+      ifNil: [glass addChild:
+        (selectangle relocate:p; size:0@0)]
+      ifNotNil: [startPoint := target position-p]];
    onMouseMove: [:p| self drawCoords: p];
    onDrag: [:p| |rect| self drawCoords: p.
-     rect := Rectangle point: startPoint point: p.
-     selectangle
-       relocate: rect topLeft; size: rect extent];
+     target ifNil: [
+       rect := Rectangle point: startPoint point: p.
+       selectangle relocate: rect topLeft; size: rect extent]
+     ifNotNil: [target relocate: p + startPoint]];
    onDragEnd: [:p| |rect|
-     rect := selectangle bounds asRectangle.
-     self selection: (scene children select: [:x|
-       x bounds asRectangle intersects: rect])];
-   onClick: [:p|
-     self selection: (scene children select: [:x|
-       x bounds asRectangle containsPoint: p])].
+     target ifNil: [
+       rect := selectangle bounds asRectangle.
+       self selection: (scene children select: [:x|
+         x bounds asRectangle intersects: rect])]];
+   onClick: [:p| self selection:
+     ((scene childAtPoint: p) ifNil:[{}] ifNotNil:[:x|{x}])].
 ^ glass
 ]
 
