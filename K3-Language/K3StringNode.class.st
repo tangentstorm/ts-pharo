@@ -2,7 +2,7 @@ Class {
 	#name : #K3StringNode,
 	#superclass : #K3StartNode,
 	#instVars : [
-		'strToken'
+		'stringToken'
 	],
 	#category : #'K3-Language'
 }
@@ -13,16 +13,16 @@ K3StringNode >> acceptVisitor: aStartVisitor [
 ]
 
 { #category : #generated }
-K3StringNode >> strToken [
-	^ strToken
+K3StringNode >> stringToken [
+	^ stringToken
 ]
 
 { #category : #generated }
-K3StringNode >> strToken: aSmaCCToken [
-	strToken := aSmaCCToken
+K3StringNode >> stringToken: aSmaCCToken [
+	stringToken := aSmaCCToken
 ]
 
 { #category : #generated }
 K3StringNode >> tokenVariables [
-	^ #(#strToken)
+	^ #(#stringToken)
 ]

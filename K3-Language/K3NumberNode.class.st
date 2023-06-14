@@ -2,7 +2,7 @@ Class {
 	#name : #K3NumberNode,
 	#superclass : #K3StartNode,
 	#instVars : [
-		'numberToken'
+		'number'
 	],
 	#category : #'K3-Language'
 }
@@ -13,16 +13,16 @@ K3NumberNode >> acceptVisitor: aStartVisitor [
 ]
 
 { #category : #generated }
-K3NumberNode >> numberToken [
-	^ numberToken
+K3NumberNode >> number [
+	^ number
 ]
 
 { #category : #generated }
-K3NumberNode >> numberToken: aSmaCCToken [
-	numberToken := aSmaCCToken
+K3NumberNode >> number: aSmaCCToken [
+	number := aSmaCCToken
 ]
 
 { #category : #generated }
 K3NumberNode >> tokenVariables [
-	^ #(#numberToken)
+	^ #(#number)
 ]
