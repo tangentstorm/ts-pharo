@@ -6,6 +6,11 @@ Trait {
 }
 
 { #category : #generated }
+TK3StartNodeVisitor >> visitAdverb: anAdverb [
+	^ self visitStart: anAdverb
+]
+
+{ #category : #generated }
 TK3StartNodeVisitor >> visitAssign: anAssign [
 	^ self visitStart: anAssign
 ]
@@ -13,6 +18,11 @@ TK3StartNodeVisitor >> visitAssign: anAssign [
 { #category : #generated }
 TK3StartNodeVisitor >> visitBlock: aBlock [
 	^ self visitStart: aBlock
+]
+
+{ #category : #generated }
+TK3StartNodeVisitor >> visitCall: aCall [
+	^ self visitStart: aCall
 ]
 
 { #category : #generated }
@@ -36,13 +46,13 @@ TK3StartNodeVisitor >> visitIfStmt: anIfStmt [
 ]
 
 { #category : #generated }
-TK3StartNodeVisitor >> visitItem: anItem [
-	^ self visitStart: anItem
+TK3StartNodeVisitor >> visitLValue: aLValue [
+	^ self visitStart: aLValue
 ]
 
 { #category : #generated }
-TK3StartNodeVisitor >> visitLValue: aLValue [
-	^ self visitStart: aLValue
+TK3StartNodeVisitor >> visitLambda: aLambda [
+	^ self visitStart: aLambda
 ]
 
 { #category : #generated }
@@ -61,6 +71,11 @@ TK3StartNodeVisitor >> visitNumArray: aNumArray [
 ]
 
 { #category : #generated }
+TK3StartNodeVisitor >> visitNumColon: aNumColon [
+	^ self visitStart: aNumColon
+]
+
+{ #category : #generated }
 TK3StartNodeVisitor >> visitNumber: aNumber [
 	^ self visitStart: aNumber
 ]
@@ -68,6 +83,11 @@ TK3StartNodeVisitor >> visitNumber: aNumber [
 { #category : #generated }
 TK3StartNodeVisitor >> visitPrim: aPrim [
 	^ self visitStart: aPrim
+]
+
+{ #category : #generated }
+TK3StartNodeVisitor >> visitSignature: aSignature [
+	^ self visitStart: aSignature
 ]
 
 { #category : #generated }
