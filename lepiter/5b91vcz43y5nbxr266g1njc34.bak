@@ -1,0 +1,107 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T18:58:29.258-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T22:23:25.027-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EP9hvpS6DQC71vXsDTW8WQ=="
+				},
+				"code" : "\"pot of RSAnimationExamples >> example05ElasticEllipses\"\rrandom := Random new.\rcanvas := GsCanvas new. \"BrVerticalPane new matchParent.\"\r\rmouseClick := [ | c1 c2 color |\r  canvas children copy do: #removeFromParent.\r  c1 := Color random.\r  c2 := Color random.\r  color := NSScale linear range: { c1. c2 }.\r  1 to: 10000 do: [ :i |\r    | shape radius ang overlapped origin |\r\tradius := random next * 250.\r    origin := canvas extent /2.\r\tang := random next * Float pi * 2.\r\tshape := GsEllipse new\r\t  radius: random next * 30 + 1;\r\t  position: origin + (radius * (ang cos @ ang sin)).\r\toverlapped := canvas children anySatisfy: [ :other |\r\t  (other position distanceTo: shape position)\r\t  < (shape radius + other radius * 1.4) ].\r\toverlapped ifFalse: [\r\t   canvas addChild: shape.\r\t   \"store the final radius for animation\"\r\t   shape userData at: #radius put: shape radius.\r\t   shape background:\r\t     (color scale:\r\t       (shape position distanceTo: origin) / 250) ] ].\r   canvas addAnimation:(BlNumberTransition new\r     \"!! why doesn't `from: 0; to: 1` work here?\"\r     from: 1; to: 2.5; by: 0.025;\r     duration:1 seconds;\r     \"!! bloc doesn't have elasticOut\"\r     easing: BlEasing bounceOut;\r     onStepDo: [:t|\r       canvas childrenDo: [:c| |rt sc|\r         sc := NSScale linear\r           range: {1. (c userData at: #radius)}.\r         c radius: (rt := sc scale: t).\r         \"Bloc ellipses aren't centered, so compensate\"\r         c transform\r           translateBy: (rt@rt)/ -2;\r           apply]])].\r\r canvas when: BlClickEvent do: mouseClick.\r canvas when: BlElementExtentChangedEvent do: mouseClick.\r"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T19:55:44.706-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T22:21:59.983-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0MUmi5W6DQCC/R1LDTW8WQ=="
+				},
+				"code" : "TonelWriter sourceCodeOf: GsEllipse"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-15T18:57:38.269-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-06-15T22:19:15.608-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "RSAnimationExamples port"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f05edaba-94ba-0d00-bb0b-c0fd0d35bc59"
+	}
+}

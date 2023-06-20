@@ -1,6 +1,8 @@
 Class {
 	#name : #GsObject,
 	#superclass : #BlElement,
+	#traits : 'TBrLayoutResizable',
+	#classTraits : 'TBrLayoutResizable classTrait',
 	#instVars : [
 		'active'
 	],
@@ -27,7 +29,5 @@ GsObject >> initialize [
 
 { #category : #initialization }
 GsObject >> matchParentBounds [
-  self constraintsDo: [:c| 
-    c horizontal matchParent.
-	c vertical matchParent]
+  self matchParent
 ]

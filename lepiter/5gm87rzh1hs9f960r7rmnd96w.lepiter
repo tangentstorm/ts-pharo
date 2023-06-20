@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:03:57.321-04:00"
+						"dateAndTimeString" : "2023-06-15T12:33:18.938-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:03:57.321-04:00"
+						"dateAndTimeString" : "2023-06-15T12:33:20.49-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KN+U7tu4DQCT6RNFDL9AXA=="
+					"uidString" : "kH/mXI+6DQCSv96DAFWAZA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+				"code" : "(Pragma all collect: [:x | x key asSymbol ]) asSet sorted"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
 				},
-				"string" : ""
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T10:22:14.643-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T10:22:20.752-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OOEmiI26DQCK68qYAFWAZA=="
+				},
+				"code" : "TonelWriter sourceCodeOf: GsApp"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T12:18:05.913-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-15T12:18:06.739-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wNN6Jo+6DQCSVXIOAFWAZA=="
+				},
+				"code" : "LeParser annotationParsers"
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +131,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T21:03:53.257-04:00"
+						"dateAndTimeString" : "2023-06-15T12:20:22.809-04:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +141,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "{{gtPage:Extending Lepiter with custom snippets and annotations|db=2j9m7db2i4oz116bexd7wbdxo}}"
 			}
 		]
 	},

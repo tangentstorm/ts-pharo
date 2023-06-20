@@ -854,7 +854,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-23T22:50:16.308-04:00"
+									"dateAndTimeString" : "2023-06-15T11:08:35.238-04:00"
 								}
 							},
 							"uid" : {
@@ -865,6 +865,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "[[GT Questions]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-06-15T11:10:06.15-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-06-15T11:10:17.062-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MNn0LY66DQCLKXpSAFWAZA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[GT Charting]]"
 						},
 						{
 							"__type" : "textSnippet",
