@@ -1,7 +1,7 @@
-Extension { #name : #Class }
+Extension { #name : #Object }
 
 { #category : #'*Tangentstorm' }
-Class >> gtBrowserFor: aView [
+Object class >> gtBrowserFor: aView [
   <gtView>
   <gtClassView>
   ^ aView explicit
