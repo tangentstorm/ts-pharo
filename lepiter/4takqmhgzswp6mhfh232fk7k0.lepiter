@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T17:59:50.581-04:00"
+						"dateAndTimeString" : "2023-06-23T08:02:06.723-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T18:00:07.273-04:00"
+						"dateAndTimeString" : "2023-06-23T08:07:43.349-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CP8kXNm4DQCRVDBHDL9AXA=="
+					"uidString" : "uDO7gSy7DQCeubYvADhPUQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Parse all the *.vue files in my personal directory:"
+				"string" : "{{gtMethod:GtDiagrammerElement>>initialize}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-23T08:07:28.673-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-23T08:07:36.413-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6MTrlCy7DQChKFSxADhPUQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtMethod:GtDiagrammerElement>>initializeTools}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-24T17:35:45.505-04:00"
+						"dateAndTimeString" : "2023-06-23T08:04:06.901-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-21T00:40:12.815-04:00"
+						"dateAndTimeString" : "2023-06-23T08:21:46.908-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6OICBtm4DQCBWJj7DL9AXA=="
+					"uidString" : "IPXkiCy7DQCffg/SADhPUQ=="
 				},
-				"code" : "xmls := 'd:/ver/cg-michal/vue' asFileReference\r  children select: [:x| \r    ((x base beginsWith: '.') not) and:\r    (x extension = 'vue')  ]."
+				"code" : "dg := GtDiagrammerElement new.\rdg canvas addChild: (GtFigure new) .\rdg\r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -89,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-21T00:10:22.342-04:00"
+						"dateAndTimeString" : "2023-06-23T08:02:28.065-04:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-21T00:33:17.421-04:00"
+						"dateAndTimeString" : "2023-06-23T14:35:21.565-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cN/5rv26DQCxgZkgBJkBkQ=="
+					"uidString" : "GNMAgyy7DQCeu5uhADhPUQ=="
 				},
-				"code" : "TuftsVueParser parse:\r  'd:/ver/cg-michal/vue/bex-addition.vue'\r    asFileReference contents"
+				"code" : "PileUpApp"
 			}
 		]
 	},
@@ -119,7 +156,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-24T17:36:08.013-04:00"
+			"dateAndTimeString" : "2023-06-23T08:02:21.639-04:00"
 		}
 	},
 	"editEmail" : {
@@ -130,15 +167,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-24T17:36:08.013-04:00"
+			"dateAndTimeString" : "2023-06-23T08:02:21.639-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "VUE XML"
+		"title" : "GTDiagrammer Exploration"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "18db0206-d9b8-0d00-8157-67d40cbf405c"
+		"uuid" : "40caba81-2cbb-0d00-9eb8-0ed000384f51"
 	}
 }

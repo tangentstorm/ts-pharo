@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-21T00:40:12.815-04:00"
+						"dateAndTimeString" : "2023-06-21T00:36:38.23-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "6OICBtm4DQCBWJj7DL9AXA=="
 				},
-				"code" : "xmls := 'd:/ver/cg-michal/vue' asFileReference\r  children select: [:x| \r    ((x base beginsWith: '.') not) and:\r    (x extension = 'vue')  ]."
+				"code" : "xmls := 'd:/ver/cg-michal/vue' asFileReference children.\rxmls := xmls select: [:x| \r  ((x base beginsWith: '.') not) and:\r  (x extension = 'vue')  ]."
 			},
 			{
 				"__type" : "pharoSnippet",
