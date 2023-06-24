@@ -9,7 +9,7 @@ GtHomeToolsSection >> newPileUpStencil [
 	  GtWorldUtility
         showSpaceWithTitle: 'pileUp'
     	inPagerWith: [
-		  GsSketchDemo new] asStencil
+		  PileUpApp new] asStencil
  		from: card ];
     description: 'Text in Space.'
 ]

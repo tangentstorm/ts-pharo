@@ -34,13 +34,18 @@ CouchDB >> db: anObject [
 CouchDB >> find: anArray [
   |json|
   json := { 'selector' -> (anArray asDictionary).
-  'sort' -> {{'ts'->'desc'} asDictionary}.
-  'limit' -> 100 } asDictionary asJson asJsonString.
+    'sort' -> {{'ts'->'desc'} asDictionary}.
+    'limit' -> 100 } asDictionary asJson asJsonString.
   json := ZnClient new
     url: url/'_find';
     entity: (ZnEntity json: json asString);
     post.
 ^ STONJSON fromString: json
+]
+
+{ #category : #accessing }
+CouchDB >> get: aString [
+  ^ STONJSON fromString: (ZnClient new get: url/aString)
 ]
 
 { #category : #'gt inspector' }

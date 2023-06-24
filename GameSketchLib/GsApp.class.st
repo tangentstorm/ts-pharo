@@ -95,16 +95,6 @@ GsApp >> scene [
 ]
 
 { #category : #accessing }
-GsApp >> scene: anObject [
-	scene := anObject
-]
-
-{ #category : #accessing }
 GsApp >> ui [
 	^ ui
-]
-
-{ #category : #accessing }
-GsApp >> ui: anObject [
-	ui := anObject
 ]
