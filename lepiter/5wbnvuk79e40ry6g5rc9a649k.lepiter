@@ -66,20 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T21:09:18.968-04:00"
+						"dateAndTimeString" : "2023-06-23T23:40:05.993-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "yDYs7I+5DQCjeheGAwTgIw=="
 				},
-				"code" : "(GtInspector newOn: (OrderedDictionary new\r\r  \"a top-level directory, plus some explicit files\"\r  at: 'top' put: (pileup := 'd:/ver/pileup' asFileReference);\r  at: 'app.py' put: (pileup / 'app.py');\r  at: 'couch.py' put: (pileup / 'couch.py');\r  at: 'HTML' put: (pileup / 'static/index.html');\r  at: 'config.py' put: (cfg := pileup / 'config.py');\r\r  \"but you can bookmark anything you want...\"\r  at: 'couch' put: (couch := CouchDB new withConfig:cfg);\r  at: 'pileup' put: (PileUpApp new db: couch; yourself);  \r  yourself))\r\r\"make it show only the tree, instead of full inspecto:\"\robjectHolder viewSelector: #gtTreeFor:; view",
+				"code" : "(GtInspector newOn: (OrderedDictionary new\r\r  \"a top-level directory, plus some explicit files\"\r  at: 'top' put: (pileup := 'd:/ver/pileup' asFileReference);\r  at: 'app.py' put: (pileup / 'app.py');\r  at: 'couch.py' put: (pileup / 'couch.py');\r  at: 'HTML' put: (pileup / 'static/index.html');\r  at: 'config.py' put: (cfg := pileup / 'config.py');\r\r  \"but you can bookmark anything you want...\"\r  at: 'couch' put: (couch := CouchDB new withConfig:cfg);\r  at: 'pileup' put: ((PileUpApp new db: couch) loadPile: '@home');  \r  yourself))\r\r\"make it show only the tree, instead of full inspecto:\"\robjectHolder viewSelector: #gtTreeFor:; view",
 				"elementHeight" : 233,
 				"codeHeight" : 527,
-				"codeVisible" : false
+				"codeVisible" : true
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-02T13:57:05.326-04:00"
+						"dateAndTimeString" : "2023-06-23T23:36:27.161-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-02T13:57:05.326-04:00"
+						"dateAndTimeString" : "2023-06-23T23:41:19.652-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "sDePBIu5DQC6CQaCB1efYw=="
+					"uidString" : "CIoxjzm7DQCToiTnCxb/uQ=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"code" : "\"you can just click 'PileUp' above, but if you need to respawn use this:\"\rpileup := 'd:/ver/pileup' asFileReference.\rcfg := pileup / 'config.py'.\rcouch := CouchDB new withConfig:cfg.\r(PileUpApp new db: couch) loadPile: '@home'"
 			},
 			{
 				"__type" : "textSnippet",

@@ -46,3 +46,19 @@ PileUpApp >> initialize [
   super initialize.
   homeId := '@home'.
 ]
+
+{ #category : #accessing }
+PileUpApp >> loadPile: aCouchId [
+	| model |
+	scene removeChildren.
+	model := self getPileById: aCouchId.
+	(model at: 'scene')
+		do: [ :each | scene addChild: (PileupItemElement new forItem: each) ]
+]
+
+{ #category : #accessing }
+PileUpApp >> spawnPile: aCouchId [
+  self scene phlow spawnObject:
+    (PileUpApp new
+       db: (self db); loadPile: aCouchId)
+]
