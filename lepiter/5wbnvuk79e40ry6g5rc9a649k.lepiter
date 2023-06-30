@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:14:25.699-04:00"
+						"dateAndTimeString" : "2023-06-30T13:32:06.989-04:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Main classes:"
+				"string" : "## Main classes:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:15:12.037-04:00"
+						"dateAndTimeString" : "2023-06-30T13:42:13.486-04:00"
 					}
 				},
 				"uid" : {
@@ -221,7 +221,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:PileupItemElement}}"
+				"string" : "{{gtClass:PileupItemElement}}  {{gtMethod:PileupItemElement>>forItem:}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -248,14 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:16:25.741-04:00"
+						"dateAndTimeString" : "2023-06-30T13:31:57.946-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "WM2m37y7DQCI2qnMCndxrg=="
 				},
-				"code" : "textAlign:"
+				"code" : ""
 			}
 		]
 	},

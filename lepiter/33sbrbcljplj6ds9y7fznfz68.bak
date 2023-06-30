@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-06-30T16:24:57.584-04:00"
+									"dateAndTimeString" : "2023-06-30T16:09:09.433-04:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- drag onto pile"
+							"string" : "drag onto pile"
 						},
 						{
 							"__type" : "textSnippet",
@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-06-30T16:24:59.653-04:00"
+									"dateAndTimeString" : "2023-06-30T16:21:09.733-04:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- restore double click behavior - maybe by toggling the glass via a separate tool?"
+							"string" : "restore double click behavior - maybe by toggling the glass via a separate tool?"
 						},
 						{
 							"__type" : "textSnippet",
@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-06-30T16:25:01.404-04:00"
+									"dateAndTimeString" : "2023-06-30T16:22:08.637-04:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- show a sizer on selection"
+							"string" : "show a sizer on selection"
 						}
 					]
 				},
