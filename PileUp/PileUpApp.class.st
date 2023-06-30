@@ -44,6 +44,7 @@ PileUpApp >> getPileById: aCouchId [
 { #category : #accessing }
 PileUpApp >> initialize [
   super initialize.
+  scene background: (Color fromHexString: '5f9ea0'). "cadetblue"
   homeId := '@home'.
 ]
 
@@ -53,7 +54,7 @@ PileUpApp >> loadPile: aCouchId [
 	scene removeChildren.
 	model := self getPileById: aCouchId.
 	(model at: 'scene')
-		do: [ :each | scene addChild: (PileupItemElement new forItem: each) ]
+		do: [ :each | scene addChild: (PileupItemElement new app: self; forItem: each) ]
 ]
 
 { #category : #accessing }

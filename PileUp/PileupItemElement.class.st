@@ -2,10 +2,16 @@ Class {
 	#name : #PileupItemElement,
 	#superclass : #BlElement,
 	#instVars : [
-		'data'
+		'data',
+		'app'
 	],
 	#category : #PileUp
 }
+
+{ #category : #accessing }
+PileupItemElement >> app: aPileUpApp [
+  app := aPileUpApp
+]
 
 { #category : #accessing }
 PileupItemElement >> forItem: item [
@@ -26,8 +32,7 @@ PileupItemElement >> forItem: item [
     when: BlClickEvent do: [
       self background: Color red.
       self children first text: (item at: '_id') asRopedText.
-      self parent spawnPile: id.
-    ]
+      app ifNotNil: [ app spawnPile: id ]]
       
   
 ]
