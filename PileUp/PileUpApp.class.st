@@ -3,7 +3,8 @@ Class {
 	#superclass : #GsApp,
 	#instVars : [
 		'db',
-		'homeId'
+		'homeId',
+		'sceneEditor'
 	],
 	#category : #PileUp
 }
@@ -46,6 +47,7 @@ PileUpApp >> initialize [
   super initialize.
   scene background: (Color fromHexString: '5f9ea0'). "cadetblue"
   homeId := '@home'.
+  sceneHolder addChild: (GsSceneEditor for: scene)
 ]
 
 { #category : #accessing }
