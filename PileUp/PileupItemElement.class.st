@@ -23,7 +23,8 @@ PileupItemElement >> forItem: item [
   data := item at: 'o'.
   c := item at: 'c'.
   id := item at: '_id'. 
-  (c = 'pile') ifTrue: [self background: (Color fromHexString: 'ffe4c4') "bisque"].
+  (c = 'pile') ifTrue: [self background: (Color fromHexString:
+     ((id = '@home') ifFalse: ['ffe4c4' "bisque"] ifTrue:['96e9cf']))].
   (c = 'card') ifTrue: [self background: (Color fromHexString: 'f0f8ff') "aliceblue"].
   (c = 'list') ifTrue: [self background: (Color fromHexString: '0e3f4c')].
   self
