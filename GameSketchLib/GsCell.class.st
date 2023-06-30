@@ -29,8 +29,9 @@ GsCell >> asElement [
   size: 32@32;
   background: bg;
   border: (BlBorder paint: Color black);
-  addChild: (BlTextElement new text: (
-    (item asString) asRopedText
+  addChild: (BlTextElement new
+    padding: (BlInsets all: 5);
+    text: ((item asString) asRopedText
       fontName:'consolas';
       foreground: fg))
 ]
