@@ -21,13 +21,13 @@ GsSceneEditor >> childAtPoint: p [
   ^ scene allChildrenBreadthFirstDetect: [:x|
        x bounds asRectangle containsPoint: p]
      ifFound: #value
-     ifNone: [nil].
+     ifNone: [nil]. 
 
 ]
 
 { #category : #initialization }
 GsSceneEditor >> drawCoords: aPoint [
-  coords text: (aPoint rounded asString, ' ',
+  coords text: (aPoint rounded asString, ' ', 
     ((self childAtPoint: aPoint) ifNil: ['']
        ifNotNil: #asString)) asRopedText
 ]
