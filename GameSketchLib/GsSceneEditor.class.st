@@ -11,6 +11,11 @@ Class {
 	#category : #'GameSketchLib-SceneEditor'
 }
 
+{ #category : #initialization }
+GsSceneEditor class >> for: aGsScene [ 
+  ^ self new scene: aGsScene
+]
+
 { #category : #accessing }
 GsSceneEditor >> childAtPoint: p [
   ^ scene allChildrenBreadthFirstDetect: [:x|
