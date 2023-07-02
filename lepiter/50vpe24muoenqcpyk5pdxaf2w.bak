@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:02:06.723-04:00"
+						"dateAndTimeString" : "2023-07-02T14:26:07.017-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:07:43.349-04:00"
+						"dateAndTimeString" : "2023-07-02T14:41:51.265-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uDO7gSy7DQCeubYvADhPUQ=="
+					"uidString" : "KJCc6+a7DQCyBy5mA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtMethod:GtDiagrammerElement>>initialize}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:07:28.673-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:07:36.413-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6MTrlCy7DQChKFSxADhPUQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtMethod:GtDiagrammerElement>>initializeTools}}"
+				"string" : "created by a deleted user on pharo discord"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:04:06.901-04:00"
+						"dateAndTimeString" : "2023-07-02T14:41:43.91-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:21:46.908-04:00"
+						"dateAndTimeString" : "2023-07-02T14:41:45.361-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "IPXkiCy7DQCffg/SADhPUQ=="
+					"uidString" : "oGJ0I+e7DQC0nl8sA4beVA=="
 				},
-				"code" : "dg := GtDiagrammerElement new.\rdg canvas addChild: (GtFigure new) .\rdg\r"
+				"code" : "button := BlElement new\r\n\tbackground: (Color r: 63 g: 81 b: 181 range: 255);\r\n\tgeometry: (BlRectangle cornerRadius: 2);\r\n\trelocate: 100@100;\r\n\tpadding: (BlInsets top: 8 right: 16 bottom: 8 left: 16);\r\n\tlayout: BlLinearLayout horizontal;\r\n\teffect: (BlDropShadowEffect color: (Color black alpha: 0.3) width: 1 offset: 0@2);\r\n\tconstraintsDo: [ :c |\r\n\t\tc horizontal fitContent.\r\n\t\tc vertical fitContent ].\r\n\r\nlabelText := 'Button' asRopedText.\r\nlabelText attributes: {\r\n\tBrTextForegroundAttribute paint: Color white.\r\n\tBrFontSizeAttribute size: 16.\r\n\tBrFontFamilyAttribute named: 'Helvetica'.\r\n\tBrFontWeightAttribute thin\r\n}.\r\n\r\nlabel := BlTextElement new.\r\nlabel text: labelText.\r\n\r\nbutton addChild: label.\r\nbutton"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T08:02:28.065-04:00"
+						"dateAndTimeString" : "2023-07-02T14:26:13.487-04:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T14:35:21.565-04:00"
+						"dateAndTimeString" : "2023-07-02T14:41:11.936-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GNMAgyy7DQCeu5uhADhPUQ=="
+					"uidString" : "yEH/6+a7DQCyCnKzA4beVA=="
 				},
-				"code" : "PileUpApp"
+				"code" : "button := BlElement new\r\n\tbackground: (Color r: 255 g: 64 b: 129 range: 255);\r\n\tgeometry: BlEllipseGeometry new;\r\n\trelocate: 100@100;\r\n\tsize: 56@56;\r\n\tlayout: BlFrameLayout new;\r\n\teffect: (BlGaussianShadowEffect color: (Color black alpha: 0.3) width: 1 offset: 0@2).\r\n\r\nicon := (BlPolygon vertices: ({\r\n\t\t36@0. 48@0 . 48@36 . 84@36.\r\n\t\t84@48 . 48@48 . 48@84 . 36@84.\r\n\t\t36@48 . 0@48 . 0@36. 36@36\r\n\t} collect: [ :aPoint | aPoint / 6.0])) asElement.\r\n\r\nicon background: Color white; border: Color transparent.\r  \r\nicon constraintsDo: [ :c |\r\n\tc frame horizontal alignCenter.\r\n\tc frame vertical alignCenter ].\r\n\r\nbutton addChild: icon.\r\nbutton"
 			}
 		]
 	},
@@ -156,7 +119,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-23T08:02:21.639-04:00"
+			"dateAndTimeString" : "2023-07-02T14:26:06.936-04:00"
 		}
 	},
 	"editEmail" : {
@@ -167,15 +130,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-23T08:02:21.639-04:00"
+			"dateAndTimeString" : "2023-07-02T14:26:06.936-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GTDiagrammer Exploration"
+		"title" : "material examples"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "40caba81-2cbb-0d00-9eb8-0ed000384f51"
+		"uuid" : "d84f9beb-e6bb-0d00-b206-6b9d0386de54"
 	}
 }

@@ -165,7 +165,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T15:55:36.437-04:00"
+						"dateAndTimeString" : "2023-07-02T12:00:43.226-04:00"
 					}
 				},
 				"uid" : {
@@ -173,6 +173,43 @@
 					"uidString" : "uFIzOb+7DQCUw7EXA4beVA=="
 				},
 				"code" : "GsSceneEditor new "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T12:00:44.672-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T12:16:59.712-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GCC44+S7DQC/fy5iA4beVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtClass:GsScene}} | {{gtClass:GsSceneEditor}}| {{gtClass:GsOverlay}}\r\n{{gtClass:PileUpApp}} | {{gtClass:PileupItemElement}}"
 			},
 			{
 				"__type" : "textSnippet",

@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:14:17.465-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:41.116-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:14:17.465-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:46.879-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wFR/ywG5DQCV/k5pALPhRA=="
+					"uidString" : "YCfMmui7DQC5dosZA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It seems BlTextElement doesn't support fallback characters."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:12:03.612-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:14:34.091-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "YOmEwwG5DQCRb79MALPhRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You *could* use a BrEditor, which allows fallbacks.:"
+				"string" : "https://medium.com/feenk/one-rendering-tree-918eae49bcff"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:12:58.131-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:52.364-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:15:55.913-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:59.373-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UMrExgG5DQCSjpPDALPhRA=="
+					"uidString" : "KL13m+i7DQC5gZPbA4beVA=="
 				},
-				"code" : "\reditor := BrEditor new\r  aptitude: BrGlamorousEditorAptitude;\r  text: ('⊥' asRopedText\r     foreground: Color white);\r  fitContent.\r\rpane := BrVerticalPane new\r  alignCenter;\r  size: 32@32;\r  background: (Color fromHexString: '#333333');\r  geometry: BlCircleGeometry new;\r  addChild: editor"
+				"code" : "root := BlElement new constraintsDo: [:c | \r\n c horizontal fitContent. \r\n c vertical fitContent].\r\nclassToElement := Dictionary new.\r\nArrayedCollection \r\n withDeep: #subclasses\r\n do: [ :class | \r\n  element := BlTextElement new\r\n   text: class name asRopedText glamorousRegularFont;\r\n   background: Color white;\r\n   look: BrShadowLook new;\r\n   padding: (BlInsets all: 5);\r\n   margin: (BlInsets all: 5).\r\n  root addChild: element.\r\n  classToElement at: class put: element ]\r\n relationDo: [ :superclass :subclass |\r\n  | edge |\r\n  edge := GtGraphEdge new \r\n   from: (classToElement at: superclass)\r\n   to: (classToElement at: subclass).\r\n  (classToElement at: superclass) \r\n   constraints graph addConnectedEdge: edge.\r\n  (classToElement at: subclass) \r\n   constraints graph addConnectedEdge: edge ].\r\nroot layout: GtGraphHorizontalTreeLayout new.\r\nroot asPannableElement"
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:13:59.911-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:47.298-04:00"
 					}
 				},
 				"editEmail" : {
@@ -137,20 +100,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:14:47.786-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:47.298-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cHpzygG5DQCVinscALPhRA=="
+					"uidString" : "0Hsqm+i7DQC5fXYhA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But you could also just pick the right font in the first place:"
+				"string" : ""
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -163,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:14:51.49-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:37.359-04:00"
 					}
 				},
 				"editEmail" : {
@@ -174,14 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-26T18:22:05.285-04:00"
+						"dateAndTimeString" : "2023-07-02T16:26:37.359-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6IKGzQG5DQCX7m0cALPhRA=="
+					"uidString" : "mNOSmui7DQC5dWqlA4beVA=="
 				},
-				"code" : "BlTextElement new\r  text: ('⊥' asRopedText fontName: 'Cambria Math').\r\r   "
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
@@ -193,7 +159,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-26T18:12:11.29-04:00"
+			"dateAndTimeString" : "2023-07-02T16:26:41.098-04:00"
 		}
 	},
 	"editEmail" : {
@@ -204,15 +170,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-26T18:12:11.29-04:00"
+			"dateAndTimeString" : "2023-07-02T16:26:41.098-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Unicode Issues"
+		"title" : "tree graph"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "007c84c3-01b9-0d00-916e-9bb500b3e144"
+		"uuid" : "c84e929a-e8bb-0d00-b974-b7650386de54"
 	}
 }

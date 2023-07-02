@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:38:10.144-04:00"
+						"dateAndTimeString" : "2023-07-02T15:42:08.327-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:38:14.847-04:00"
+						"dateAndTimeString" : "2023-07-02T15:42:28.355-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GANC2S27DQCjykT9ADhPUQ=="
+					"uidString" : "WKF8++e7DQC4wvNKA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## viewModels"
+				"string" : "[[BrokenExamples]]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:41:49.393-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:41:58.67-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aLhb+ue7DQC4igxtA4beVA=="
+				},
+				"code" : "connector := GtConnector new.\nconnector addMethod: (BlBasicExamples>>#shapes).\n\n\ncontentElement := connector.\n\nzoomable := BlZoomableElement new.\nzoomable zoomLevel: 1.\nzoomable addEventHandler: BlPullHandler new.\nzoomable contentElement: contentElement.\nzoomable background: Color green veryMuchLighter.\nzoomable constraintsDo: [ :c |\n        c frame horizontal alignCenter.\n        c frame vertical alignCenter ].\n\ncontainer := BlElement new.\ncontainer constraintsDo: [ :c |\n        c horizontal matchParent.\n        c vertical matchParent ].\ncontainer background: Color red veryMuchLighter.\ncontainer addChild: zoomable.\ncontainer when: BlMouseWheelEvent do: [ :anEvent |\n    anEvent isScrollUp ifTrue: [ zoomable zoomIn ].\n    anEvent isScrollDown ifTrue: [ zoomable zoomOut ] ].\n\ncontainer"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:37:32.466-04:00"
+						"dateAndTimeString" : "2023-07-02T15:41:41.966-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +100,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:38:23.56-04:00"
+						"dateAndTimeString" : "2023-07-02T15:41:41.966-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yM+41i27DQCjSwgUADhPUQ=="
+					"uidString" : "sGTq+ee7DQC4idg+A4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtMethod:BlElement >> viewModel:|expanded}} "
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:37:20.985-04:00"
+						"dateAndTimeString" : "2023-07-02T15:41:32.05-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,54 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:41:43.17-04:00"
+						"dateAndTimeString" : "2023-07-02T15:41:32.05-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qOtT1i27DQCjSphFADhPUQ=="
+					"uidString" : "UBZT+ee7DQC4iOUVA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:BrWidgetModel}}seems to be the main viewModel, though it extends {{gtClass:BrActor}}."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:41:45.924-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-23T09:42:29.208-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yPf+5S27DQCmQE6nADhPUQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtMethod:BrActor>>onInstalledIn:}}"
+				"string" : ""
 			}
 		]
 	},
@@ -162,7 +159,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-23T09:37:27.587-04:00"
+			"dateAndTimeString" : "2023-07-02T15:41:41.948-04:00"
 		}
 	},
 	"editEmail" : {
@@ -173,15 +170,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-23T09:37:27.587-04:00"
+			"dateAndTimeString" : "2023-07-02T15:41:41.948-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Brick and Bloc"
+		"title" : "gtconnector example"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "a86e53d6-2dbb-0d00-a349-36c800384f51"
+		"uuid" : "689552f9-e7bb-0d00-b887-ae890386de54"
 	}
 }

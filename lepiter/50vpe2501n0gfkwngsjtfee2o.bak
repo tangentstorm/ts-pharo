@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-22T21:13:11.702-04:00"
+						"dateAndTimeString" : "2023-07-02T13:48:19.296-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-22T21:13:11.702-04:00"
+						"dateAndTimeString" : "2023-07-02T13:48:47.994-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8E3x07O4DQC9/HDPDMV5EQ=="
+					"uidString" : "AONxZOa7DQCi0qGCA4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "{{gtClass:BlElement}} is the primary class. Almost everything you see on the screen i"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-22T21:13:04.526-04:00"
+						"dateAndTimeString" : "2023-07-02T13:48:09.259-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-22T21:13:29.136-04:00"
+						"dateAndTimeString" : "2023-07-02T13:48:09.259-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "sM6D07O4DQC9+zAbDMV5EQ=="
+					"uidString" : "+LvYY+a7DQCi0WJ7A4beVA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "How do  I close an inspected example in a lepiter page?"
+				"string" : ""
 			}
 		]
 	},
@@ -88,7 +88,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-22T21:13:04.381-04:00"
+			"dateAndTimeString" : "2023-07-02T13:48:19.28-04:00"
 		}
 	},
 	"editEmail" : {
@@ -99,15 +99,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-22T21:13:11.693-04:00"
+			"dateAndTimeString" : "2023-07-02T13:48:19.28-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GT Questions"
+		"title" : "Foundations of Bloc"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "489881d3-b3b8-0d00-bdfa-c7b40cc57911"
+		"uuid" : "c071d863-e6bb-0d00-a2d0-a1a90386de54"
 	}
 }

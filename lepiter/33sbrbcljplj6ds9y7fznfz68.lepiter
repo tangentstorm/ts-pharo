@@ -253,7 +253,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T16:08:53.874-04:00"
+						"dateAndTimeString" : "2023-07-02T16:49:19.733-04:00"
 					}
 				},
 				"uid" : {
@@ -263,7 +263,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "- {{gtClass:GsSceneEditor}}:"
+				"string" : "Use the generic [[SceneEditor]]to edit"
 			},
 			{
 				"__type" : "textSnippet",

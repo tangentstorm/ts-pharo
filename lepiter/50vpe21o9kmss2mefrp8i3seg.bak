@@ -1,0 +1,144 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:22:31.167-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:22:31.167-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CK1msOe7DQC2aAJGA4beVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:21:20.653-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:22:53.193-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WIsesee7DQC2ekB2A4beVA=="
+				},
+				"code" : "content := BlTextElement text: 'Hello' asRopedText.\n    \nzoomable := BlZoomableElement new.\nzoomable zoomLevel: 1; zoomStep: 2.\nzoomable contentElement: content.\nzoomable constraintsDo: [ :c |\n        c frame horizontal alignCenter.\n        c frame vertical alignCenter ].\n\ncontainer := BlElement new.\ncontainer layout: BlFrameLayout new.\ncontainer constraintsDo: [ :c |\n        c horizontal matchParent.\n        c vertical matchParent ].\ncontainer addChild: zoomable.\ncontainer when: BlMouseWheelEvent do: [ :anEvent |\n    anEvent isScrollUp ifTrue: [ zoomable zoomIn ].\n    anEvent isScrollDown ifTrue: [ zoomable zoomOut ] ].\n\ncontainer"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:24:27.959-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-02T15:27:17.227-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8K5IvOe7DQC3PUYIA4beVA=="
+				},
+				"code" : "view := GtMondrianBasicExamples new nestedWithEdges.\nview root background: Color veryVeryLightGray.\n   \nzoomable := BlZoomableElement new.\nzoomable zoomLevel: 1.\nzoomable addEventHandler: BlPullHandler new.\nzoomable contentElement: view root.\nzoomable background: Color green veryMuchLighter.\nzoomable constraintsDo: [ :c |\n        c frame horizontal alignCenter.\n        c frame vertical alignCenter ].\n\ncontainer := BlElement new.\ncontainer layout: BlFlowLayout new.\ncontainer constraintsDo: [ :c |\n        c horizontal matchParent.\n        c vertical matchParent ].\ncontainer background: Color red veryMuchLighter.\ncontainer addChild: zoomable.\ncontainer when: BlMouseWheelEvent do: [ :anEvent |\n    anEvent isScrollUp ifTrue: [ zoomable zoomIn ].\n    anEvent isScrollDown ifTrue: [ zoomable zoomOut ] ].\n\ncontainer"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-07-02T15:21:08.517-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-07-02T15:21:08.517-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "zoomable example"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "887465b0-e7bb-0d00-b667-be3a0386de54"
+	}
+}
