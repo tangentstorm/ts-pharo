@@ -26,8 +26,3 @@ GsObject >> initialize [
   super initialize.
   active := false
 ]
-
-{ #category : #initialization }
-GsObject >> matchParentBounds [
-  self matchParent
-]

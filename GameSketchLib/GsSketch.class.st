@@ -16,7 +16,7 @@ Class {
 { #category : #initialization }
 GsSketch >> initialize [
 	super initialize.
-	self matchParentBounds.
+	self matchParent.
 	self background: GsColors defaultBg
 ]
 

@@ -84,7 +84,7 @@ ui := BrVerticalPane new
   background: GsColors toolBg;
   addChild: (self makeToolBar);
   addChild: (sceneHolder :=
-    GsObject new matchParentBounds
+    GsObject new matchParent
       addChild: scene).
 ^ ui
 ]
