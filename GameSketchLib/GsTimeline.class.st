@@ -14,7 +14,6 @@ Class {
 { #category : #initialization }
 GsTimeline >> initialize [
   super initialize.
-  cursor := self makeCursor.   
   timeline := GsGridUi new.
   scrollPane := self makeScrollPane.
   trackList := self makeTrackList.
@@ -24,9 +23,24 @@ GsTimeline >> initialize [
 
 { #category : #initialization }
 GsTimeline >> makeCursor [
- ^ BlElement new size: 8@16;
-   background: Color veryLightGray;
-   border: Color black.
+  |a cw ch|
+  a := 0.5.
+  cw := 20.
+  ch := 16.
+  cursor := BlElement new size: cw@ch;
+    background: (Color veryLightGray alpha: a);
+    border: (Color black alpha: a);
+    clipChildren: false;
+    relocate: 0@0;
+    addChild: (BlElement new
+      size: 1@65536;
+      relocate: (cw/2)@ch;
+      border: (Color black alpha: a)) as: #tail;
+    addEventHandler: (BlPullHandler new disallowOutOfBounds beHorizontal);
+    when: BlPullEndEvent do: [ "snap to closest frame"
+      cursor relocate:
+        (cw * (cursor position x + (cw//2) // cw) asInteger)@0].
+  ^ cursor
 ]
 
 { #category : #initialization }
@@ -35,7 +49,15 @@ GsTimeline >> makeScrollPane [
     border: (Color darkGray);
     aptitude: BrScrollPaneAptitude
       + BrGlamorousWithHorizontalScrollbarAptitude;
-    content: timeline.
+    content: timeline
+]
+
+{ #category : #accessing }
+GsTimeline >> makeScrollPaneHolder [
+  ^ BrWidgetContainer new
+    addChild: scrollPane;
+    addChild: self makeCursor as: #cursor;
+    matchParent
 ]
 
 { #category : #initialization }
@@ -51,14 +73,19 @@ GsTimeline >> makeTrackList [
 ]
 
 { #category : #accessing }
+GsTimeline >> makeTrackListHolder [
+ ^ BrVerticalPane new 
+   addChild: (BlElement new size: 10@10);
+   addChild: trackList;
+   fitContent
+]
+
+{ #category : #accessing }
 GsTimeline >> makeUi [
   ^ BrHorizontalPane new
     vExact: 100;
     hMatchParent;
       addChildren: {
-      BrVerticalPane new 
-        addChild: (BlElement new size: 10@10);
-        addChild: trackList;
-        fitContent.
-      scrollPane}
+        self makeTrackListHolder.
+        self makeScrollPaneHolder.}
 ]
