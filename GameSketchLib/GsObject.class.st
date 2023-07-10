@@ -21,7 +21,7 @@ GsObject >> childAtPoint: p ifNone: aBlock [
       ifNone: aBlock
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsObject >> initialize [
   super initialize.
   active := false

@@ -5,10 +5,45 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-05T10:48:29.089-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-10T12:17:46.038-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SHXSOiC8DQCG6mvVAtcEwg=="
+							},
+							"code" : "GsTimeline new \r  matchParent\r"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +53,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-05T10:48:29.089-04:00"
+						"dateAndTimeString" : "2023-07-10T07:50:04.469-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,14 +64,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-05T11:38:10.448-04:00"
+						"dateAndTimeString" : "2023-07-10T07:50:37.595-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SHXSOiC8DQCG6mvVAtcEwg=="
+					"uidString" : "wJw3UYK8DQCO2bKtD9NdPg=="
 				},
-				"code" : "timeline := GsGridUi new asElement.\r\rscrollPane := BrScrollPane new\r  border: (Color darkGray);\r  aptitude: BrScrollPaneAptitude\r    + BrGlamorousWithHorizontalScrollbarAptitude;\r  content: timeline.\r\rtrackList := BrSimpleList vertical\r  hExact: 100;\r  itemType: [:aFactory :anItem :anIndex | String];\r  itemStencil: [:anItem|\r    BrLabel new\r      aptitude: BrGlamorousLabelAptitude];\r  itemDataBinder: [ :anElement :anItem :anIndex |\r    anElement text: anItem asString ];\r  items: {'one'. 'two'. 'thrte'}.\r  \rBrHorizontalPane new\r  vExact: 100;\r  hMatchParent;\r  addChildren: {\r    BrVerticalPane new \r      addChild: (BlElement new size: 10@10);\r      addChild: trackList;\r      fitContent.\r    scrollPane}\r\r"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Here's a basic drawing of a timeline:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -52,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-04T20:14:33.363-04:00"
+						"dateAndTimeString" : "2023-07-10T07:50:57.163-04:00"
 					}
 				},
 				"editEmail" : {
@@ -63,7 +101,44 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-04T20:14:33.363-04:00"
+						"dateAndTimeString" : "2023-07-10T07:51:08.609-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EOMfVYK8DQCQet9ED9NdPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## The Cursor"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-10T07:51:12.517-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-10T07:51:34.205-04:00"
 					}
 				},
 				"uid" : {
@@ -73,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "## Adding Tweens"
 			}
 		]
 	},

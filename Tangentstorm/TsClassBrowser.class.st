@@ -98,3 +98,15 @@ TsClassBrowser >> makeListFor: items withLabel: getLabelStr onClick: onClick [
     when: BrSelectionChanged do:onClick.
 
 ]
+
+{ #category : #accessing }
+TsClassBrowser >> makeUi [
+  ^ BrVerticalPane new
+    addChild: crumbs;
+    addChild: (BrHorizontalPane new
+      addChild: (self label: 'Protocol' above: protoList);
+      addChild: (self label: 'Methods' above: methodList);
+      matchParent);
+    matchParent
+  
+]

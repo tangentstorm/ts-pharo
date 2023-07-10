@@ -1,9 +1,11 @@
 "
-I am a helper function to build grids.
+I draw a grid on the screen.
+(Actually, currently I only have vertical lines.)
+
 "
 Class {
 	#name : #GsGridUi,
-	#superclass : #Object,
+	#superclass : #GsObject,
 	#instVars : [
 		'cw',
 		'ch',
@@ -16,19 +18,15 @@ Class {
 }
 
 { #category : #initialization }
-GsGridUi >> asElement [
-  ^ BlElement new
-    addChild: self makeColumns as: #columns;
-    addChild: self makeLabels as: #labels;
-    size: nf*cw @ ch.
-]
-
-{ #category : #initialization }
 GsGridUi >> initialize [
   super initialize.
   cw := 20.  "column width"
   nf := 100. "num frames"
   ch := 65536. "column height (arbitrary big num)"
+  self
+    addChild: self makeColumns as: #columns;
+    addChild: self makeLabels as: #labels;
+    size: nf*cw @ ch.
 
 ]
 

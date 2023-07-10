@@ -10,7 +10,8 @@ Class {
 		'onClick',
 		'onMouseMove',
 		'onDragStart',
-		'onDragEnd'
+		'onDragEnd',
+		'lastMousePosition'
 	],
 	#category : #GameSketchLib
 }
