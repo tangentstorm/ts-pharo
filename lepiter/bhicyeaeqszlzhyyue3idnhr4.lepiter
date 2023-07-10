@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T07:51:34.205-04:00"
+						"dateAndTimeString" : "2023-07-10T17:51:25.932-04:00"
 					}
 				},
 				"uid" : {
@@ -149,6 +149,118 @@
 					"__type" : "textStyle"
 				},
 				"string" : "## Adding Tweens"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-10T17:51:38.497-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-10T17:53:16.861-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AABbuYq8DQCxURtYD/pcYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- don't scroll when the pull STARTS in the zone (unless you drag all the way to other side OR you drag away from edge and then back towards the edge)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-10T17:53:30.505-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-10T17:54:14.87-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QBsIwIq8DQC0f0+6D/pcYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- click a column to set the playhead"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-10T17:51:30.364-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-10T17:51:38.093-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mD2fuIq8DQCwojYyD/pcYQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## To Do"
 			}
 		]
 	},
