@@ -1,20 +1,37 @@
+"
+I provide a visual timeline for placing keyframes for animations.
+"
 Class {
 	#name : #GsTimeline,
 	#superclass : #GsObject,
 	#instVars : [
-		'grid',
 		'scrollPane',
 		'trackList',
-		'timeline',
 		'activeZone',
 		'dxScroll',
 		'autoScrollTask',
 		'curH',
 		'colW',
-		'playhead'
+		'playhead',
+		'grid',
+		'trackModel'
 	],
 	#category : #'GameSketchLib-UI'
 }
+
+{ #category : #accessing }
+GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [  
+  trackModel add: aNameAndProperty first asString, '.', aNameAndProperty second asString.
+  trackList items: trackModel.
+  grid addChild: (GsAnimationTrack new
+    addFrames: aCollection;
+    relocate: 0@ (20 * (trackModel size - 1) + 16))
+]
+
+{ #category : #accessing }
+GsTimeline >> colW [
+	^ colW
+]
 
 { #category : #initialization }
 GsTimeline >> initialize [
@@ -23,11 +40,19 @@ GsTimeline >> initialize [
   dxScroll := 0.
   curH := 16.
   colW := 20.
-  timeline := GsGridUi new.
+  trackModel := OrderedCollection new.
   scrollPane := self makeScrollPane.
-  trackList := self makeTrackList.
   self addChild: self makeUi as: #ui.
   self matchParent.
+]
+
+{ #category : #initialization }
+GsTimeline >> makeGrid [
+   ^ grid := GsGridUi new
+     addChild: (GsObject new
+       border: (Color darkGray);
+       vExact: 1; hMatchParent;
+       relocate: 0@16)
 ]
 
 { #category : #initialization }
@@ -55,7 +80,7 @@ GsTimeline >> makeScrollPane [
     border: (Color darkGray);
     aptitude: BrScrollPaneAptitude
       "+ BrGlamorousWithHorizontalScrollbarAptitude";
-    content: timeline
+    content: self makeGrid
 ]
 
 { #category : #accessing }
@@ -68,22 +93,21 @@ GsTimeline >> makeScrollPaneHolder [
 
 { #category : #initialization }
 GsTimeline >> makeTrackList [
-  ^ BrSimpleList vertical
+  ^ trackList := BrSimpleList vertical
     hExact: 100;
     itemType: [:aFactory :anItem :anIndex | String];
     itemStencil: [:anItem|
       BrLabel new aptitude: BrGlamorousLabelAptitude];
     itemDataBinder: [ :anElement :anItem :anIndex |
-      anElement text: anItem asString ];
-    items: {'one'. 'two'. 'three'}.
+      anElement text: anItem asString ].
 ]
 
 { #category : #accessing }
 GsTimeline >> makeTrackListHolder [
- ^ BrVerticalPane new 
-   addChild: (BlElement new size: 10@10);
-   addChild: trackList as: #trackList;
-   fitContent
+  ^ BrVerticalPane new 
+    addChild: (BlElement new size: 16@16);
+    addChild: self makeTrackList as: #trackList;
+    fitContent
 ]
 
 { #category : #accessing }

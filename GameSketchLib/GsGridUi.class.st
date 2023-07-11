@@ -42,7 +42,7 @@ GsGridUi >> makeColumns [
       BlElement new
         geometry: (BlLine from: x@y  to: x@ch);
         border: (((i % 5) = 0)
-          ifFalse: [Color veryVeryLightGray]
+          ifFalse: [Color fromHexString: 'cccccc']
           ifTrue: [Color darkGray])]).
 ]
 

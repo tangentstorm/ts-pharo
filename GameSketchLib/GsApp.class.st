@@ -49,7 +49,15 @@ GsApp >> gtRunButtonFor: anAction [
 GsApp >> initialize [
   tools := self makeTools.
   scene := self makeStartScene.
-  ui := self makeUI.
+  self makeUI.
+]
+
+{ #category : #'gsl - ui' }
+GsApp >> makeSceneHolder [
+  ^ sceneHolder :=
+    BrHorizontalPane new matchParent
+      addChild: scene;
+      alignCenter
 ]
 
 { #category : #'gsl - ui' }
@@ -58,7 +66,7 @@ GsApp >> makeStartScene [
 ]
 
 { #category : #'gsl - ui' }
-GsApp >> makeToolBar [
+GsApp >> makeToolbar [
   |tb|
   tb :=  BrToolbar new
     aptitude: BrMaterialToolbarAptitude.
@@ -82,10 +90,8 @@ ui := BrVerticalPane new
     c horizontal matchParent.
 	c vertical matchParent ];
   background: GsColors toolBg;
-  addChild: (self makeToolBar);
-  addChild: (sceneHolder :=
-    GsObject new matchParent
-      addChild: scene).
+  addChild: self makeToolbar as: #toolbar;
+  addChild: self makeSceneHolder as: #sceneHolder.
 ^ ui
 ]
 
