@@ -63,8 +63,8 @@ GsAnimator >> makeToolbar [
 { #category : #accessing }
 GsAnimator >> makeUI [
   ui := super makeUI addChild: self makeTimeline as: #timeline.
-  timeline onFrameChanged: [ :newFrame | 
-    frameCounter text: ('frame: ', newFrame asString) asRopedText ].
+  timeline when: GsFrameChangedEvent do: [ :e | 
+    frameCounter text: ('frame: ', e frame asString) asRopedText ].
   ^ ui
 ]
 

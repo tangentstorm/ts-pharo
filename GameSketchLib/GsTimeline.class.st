@@ -15,7 +15,6 @@ Class {
 		'playhead',
 		'grid',
 		'trackModel',
-		'onFrameChanged',
 		'currentFrame'
 	],
 	#category : #'GameSketchLib-UI'
@@ -30,12 +29,13 @@ GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [
     relocate: 0@ (20 * (trackModel size - 1) + 16))
 ]
 
-{ #category : #initialization }
+{ #category : #events }
 GsTimeline >> checkFrameChange [
   |frame|
   frame := self frameFromPlayhead.
   frame ~= currentFrame ifTrue: [
-    onFrameChanged cull: (currentFrame := frame)].
+    self fireEvent: (GsFrameChangedEvent new frame: frame)]
+
 ]
 
 { #category : #accessing }
@@ -60,7 +60,6 @@ GsTimeline >> initialize [
   trackModel := OrderedCollection new.
   scrollPane := self makeScrollPane.
   currentFrame := 0.
-  onFrameChanged := #value.
   self addChild: self makeUi as: #ui.
   self matchParent.
 ]
@@ -137,11 +136,6 @@ GsTimeline >> makeUi [
       addChildren: {
         self makeTrackListHolder.
         self makeScrollPaneHolder.}
-]
-
-{ #category : #accessing }
-GsTimeline >> onFrameChanged: anObject [
-	onFrameChanged := anObject
 ]
 
 { #category : #initialization }
