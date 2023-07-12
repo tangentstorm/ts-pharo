@@ -699,7 +699,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T13:27:09.29-04:00"
+									"dateAndTimeString" : "2023-07-11T13:29:15.756-04:00"
 								}
 							},
 							"uid" : {
@@ -710,6 +710,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "- [  ] auto-play entire animation"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T13:29:16.126-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T13:29:20.34-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MN/gLJu8DQC4lAl+DK/W9Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [   ] tweens "
 						},
 						{
 							"__type" : "textSnippet",

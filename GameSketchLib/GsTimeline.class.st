@@ -14,7 +14,9 @@ Class {
 		'colW',
 		'playhead',
 		'grid',
-		'trackModel'
+		'trackModel',
+		'onFrameChanged',
+		'currentFrame'
 	],
 	#category : #'GameSketchLib-UI'
 }
@@ -28,9 +30,24 @@ GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [
     relocate: 0@ (20 * (trackModel size - 1) + 16))
 ]
 
+{ #category : #initialization }
+GsTimeline >> checkFrameChange [
+  |frame|
+  frame := self frameFromPlayhead.
+  frame ~= currentFrame ifTrue: [
+    onFrameChanged cull: (currentFrame := frame)].
+]
+
 { #category : #accessing }
 GsTimeline >> colW [
 	^ colW
+]
+
+{ #category : #accessing }
+GsTimeline >> frameFromPlayhead [
+	| offset |
+	offset := scrollPane children first scrollPosition negated x.
+	^ playhead position x + offset + (colW//2) // colW asInteger
 ]
 
 { #category : #initialization }
@@ -42,6 +59,8 @@ GsTimeline >> initialize [
   colW := 20.
   trackModel := OrderedCollection new.
   scrollPane := self makeScrollPane.
+  currentFrame := 0.
+  onFrameChanged := #value.
   self addChild: self makeUi as: #ui.
   self matchParent.
 ]
@@ -120,6 +139,11 @@ GsTimeline >> makeUi [
         self makeScrollPaneHolder.}
 ]
 
+{ #category : #accessing }
+GsTimeline >> onFrameChanged: anObject [
+	onFrameChanged := anObject
+]
+
 { #category : #initialization }
 GsTimeline >> onPlayheadPull [
   "auto-scroll when cursor is dragged towards edge"
@@ -132,8 +156,11 @@ GsTimeline >> onPlayheadPull [
   playhead position x < activeZone
       ifTrue: [ dxScroll := 0.25].
   dxScroll ~= 0 ifTrue: [
-    autoScrollTask action: [scrollPane scrollBy: (colW * dxScroll)@0].
-    ([scrollPane enqueueTask: autoScrollTask ] ifErrorDo: []) value]
+    autoScrollTask action: [
+      scrollPane scrollBy: (colW * dxScroll)@0.
+      self checkFrameChange].
+    ([scrollPane enqueueTask: autoScrollTask ] ifErrorDo: []) value].
+  self checkFrameChange.
 ]
 
 { #category : #initialization }

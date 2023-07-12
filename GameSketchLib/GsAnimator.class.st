@@ -3,7 +3,8 @@ Class {
 	#superclass : #GsApp,
 	#instVars : [
 		'stage',
-		'timeline'
+		'timeline',
+		'frameCounter'
 	],
 	#category : #GameSketchLib
 }
@@ -16,6 +17,13 @@ GsAnimator >> addSceneChild: anElement as: aSymbol [
 { #category : #accessing }
 GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [ 
   timeline addTrackFor: aNameAndProperty withKeys: aCollection 
+]
+
+{ #category : #accessing }
+GsAnimator >> makeFrameCounter [
+  ^ frameCounter := BlTextElement new 
+    padding: (BlInsets all: 5);
+    text: 'frame: 0' asRopedText.
 ]
 
 { #category : #accessing }
@@ -41,10 +49,23 @@ GsAnimator >> makeStage [
 ]
 
 { #category : #accessing }
+GsAnimator >> makeTimeline [
+  ^ timeline := GsTimeline new hMatchParent vExact: 120
+]
+
+{ #category : #accessing }
+GsAnimator >> makeToolbar [
+  ^ super makeToolbar
+    addChild:  self makeFrameCounter.
+
+]
+
+{ #category : #accessing }
 GsAnimator >> makeUI [
-  ^ super makeUI
-    addChild: (timeline := GsTimeline new hMatchParent vExact: 120)
-    as: #timeline.
+  ui := super makeUI addChild: self makeTimeline as: #timeline.
+  timeline onFrameChanged: [ :newFrame | 
+    frameCounter text: ('frame: ', newFrame asString) asRopedText ].
+  ^ ui
 ]
 
 { #category : #accessing }
