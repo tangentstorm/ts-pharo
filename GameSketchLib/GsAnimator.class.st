@@ -19,14 +19,14 @@ GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [
   timeline addTrackFor: aNameAndProperty withKeys: aCollection 
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeFrameCounter [
   ^ frameCounter := BlTextElement new 
     padding: (BlInsets all: 5);
     text: 'frame: 0' asRopedText.
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeSceneHolder [
   ^ sceneHolder :=
     BrHorizontalPane new matchParent
@@ -35,7 +35,7 @@ GsAnimator >> makeSceneHolder [
       alignCenter
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeStage [
  ^ stage := BlElement new
    size: self stageSize; 
@@ -48,19 +48,19 @@ GsAnimator >> makeStage [
 
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeTimeline [
   ^ timeline := GsTimeline new hMatchParent vExact: 120
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeToolbar [
   ^ super makeToolbar
     addChild:  self makeFrameCounter.
 
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimator >> makeUI [
   ui := super makeUI addChild: self makeTimeline as: #timeline.
   timeline when: GsFrameChangedEvent do: [ :e | 
