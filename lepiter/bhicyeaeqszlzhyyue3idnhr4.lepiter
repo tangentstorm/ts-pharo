@@ -255,7 +255,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T11:25:15.559-04:00"
+									"dateAndTimeString" : "2023-07-13T11:57:13.119-04:00"
 								}
 							},
 							"uid" : {
@@ -442,14 +442,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T11:13:00.788-04:00"
+									"dateAndTimeString" : "2023-07-13T13:40:47.08-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GLSGs5i8DQCwJVLxC2rYKw=="
 							},
-							"code" : "app := GsAnimatorExamples bouncingSquare.\rapp \r"
+							"code" : "app := GsAnimatorExamples bouncingSquare."
 						}
 					]
 				},
@@ -614,6 +614,80 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T11:24:34.206-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-13T13:42:00.313-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eMnrbpm8DQCgwUyHDK/W9Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [ x ] click/ drag playhead  to preview animation (and reconfigure scene for that point in time)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T13:29:16.126-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-13T13:42:14.699-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MN/gLJu8DQC4lAl+DK/W9Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [ x ] tweens (interpolation)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-07-11T13:28:31.759-04:00"
 								}
 							},
@@ -651,7 +725,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T11:24:34.206-04:00"
+									"dateAndTimeString" : "2023-07-13T13:42:50.674-04:00"
 								}
 							},
 							"editEmail" : {
@@ -662,17 +736,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T13:28:55.414-04:00"
+									"dateAndTimeString" : "2023-07-13T13:43:06.588-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "eMnrbpm8DQCgwUyHDK/W9Q=="
+								"uidString" : "UKMcmcO8DQCfmmR4CxM/Cg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- [  ] click/ drag playhead  to preview animation (and reconfigure scene for that point in time)"
+							"string" : "- [  ] multiple tracks"
 						},
 						{
 							"__type" : "textSnippet",
@@ -688,7 +762,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T11:28:59.73-04:00"
+									"dateAndTimeString" : "2023-07-13T13:42:36.109-04:00"
 								}
 							},
 							"editEmail" : {
@@ -699,54 +773,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T13:29:15.756-04:00"
+									"dateAndTimeString" : "2023-07-13T13:42:44.062-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aGS/fpm8DQClRQS4DK/W9Q=="
+								"uidString" : "4GA+mMO8DQCe3Rm0CxM/Cg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- [  ] auto-play entire animation"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T13:29:16.126-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T13:29:20.34-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MN/gLJu8DQC4lAl+DK/W9Q=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- [   ] tweens "
+							"string" : "- [  ] scene editor / drawing tools"
 						},
 						{
 							"__type" : "textSnippet",
@@ -784,6 +821,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "##### -- soon --"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T11:28:59.73-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-11T13:29:15.756-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aGS/fpm8DQClRQS4DK/W9Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [  ] auto-play entire animation"
 						},
 						{
 							"__type" : "textSnippet",
