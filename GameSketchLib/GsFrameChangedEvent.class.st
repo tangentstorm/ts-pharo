@@ -5,7 +5,8 @@ Class {
 	#name : #GsFrameChangedEvent,
 	#superclass : #BlEvent,
 	#instVars : [
-		'frame'
+		'frame',
+		'oldFrame'
 	],
 	#category : #GameSketchLib
 }
@@ -18,4 +19,10 @@ GsFrameChangedEvent >> frame [
 { #category : #accessing }
 GsFrameChangedEvent >> frame: anObject [
 	frame := anObject
+]
+
+{ #category : #events }
+GsFrameChangedEvent >> old: frame0 new: frame1 [
+  oldFrame := frame0.
+  frame := frame1.
 ]
