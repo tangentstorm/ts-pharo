@@ -14,8 +14,8 @@ Class {
 		'colW',
 		'playhead',
 		'grid',
-		'trackModel',
-		'currentFrame'
+		'currentFrame',
+		'viewModel'
 	],
 	#category : #'GameSketchLib-UI'
 }
@@ -101,7 +101,7 @@ GsTimeline >> makeScrollPane [
     content: self makeGrid
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsTimeline >> makeScrollPaneHolder [
   ^ BrWidgetContainer new
     addChild: scrollPane as: #scrollPane;
@@ -120,7 +120,7 @@ GsTimeline >> makeTrackList [
       anElement text: anItem asString ].
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsTimeline >> makeTrackListHolder [
   ^ BrVerticalPane new 
     addChild: (BlElement new size: 16@16);
@@ -128,7 +128,7 @@ GsTimeline >> makeTrackListHolder [
     fitContent
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsTimeline >> makeUi [
   ^ BrHorizontalPane new
     vExact: 100;
@@ -138,7 +138,7 @@ GsTimeline >> makeUi [
         self makeScrollPaneHolder.}
 ]
 
-{ #category : #initialization }
+{ #category : #events }
 GsTimeline >> onPlayheadPull [
   "auto-scroll when cursor is dragged towards edge"
   dxScroll := 0.
@@ -157,7 +157,7 @@ GsTimeline >> onPlayheadPull [
   self checkFrameChange.
 ]
 
-{ #category : #initialization }
+{ #category : #events }
 GsTimeline >> onPlayheadPullEnd [
   "snap cursor and scrollPane to a column (frame) boundary"
   autoScrollTask ifNotNil: #stop.
@@ -165,7 +165,7 @@ GsTimeline >> onPlayheadPullEnd [
   self snapScrollpane.
 ]
 
-{ #category : #initialization }
+{ #category : #snapping }
 GsTimeline >> snapScrollpane [
   |sp sc xy0 xy1|  
   sp := self childNamed: #scrollPane.
@@ -175,7 +175,7 @@ GsTimeline >> snapScrollpane [
   sc scrollBy: xy1 - xy0.  
 ]
 
-{ #category : #initialization }
+{ #category : #snapping }
 GsTimeline >> snapToColumn: aPoint [
   ^ (colW * (aPoint x + (colW//2) // colW) asInteger) @ aPoint y
 ]
