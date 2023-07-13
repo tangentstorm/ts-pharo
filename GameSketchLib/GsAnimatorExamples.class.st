@@ -9,9 +9,9 @@ GsAnimatorExamples class >> bouncingSquare [
   ^ self sceneWithSquare
     addTrackFor: #( square position )
     withKeys: {
-      00 -> (-25@200).
-      10 -> (320@430).
-      20 -> (615@ 240)}
+      00 -> {-25@200. #linear}.
+      10 -> {320@430. #linear}.
+      20 -> {615@240. #linear}}
 ]
 
 { #category : #accessing }

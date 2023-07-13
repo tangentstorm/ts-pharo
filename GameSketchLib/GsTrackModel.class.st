@@ -54,5 +54,18 @@ GsTrackModel >> name [
 
 { #category : #accessing }
 GsTrackModel >> valueAtFrame: aNumber [
-  ^ cache at: (aNumber beBetween: 1 and: cache size)
+  |ix|
+  ix := (aNumber beBetween: 0 and: cache size).
+  ^ cache at: ix setRunOffsetAndValue: [:run :offset :value |
+    |thisKey|
+    thisKey := value first.
+    "the last keyframe never has interpolation."
+    run = keyFrames size
+      ifTrue: [^ thisKey]
+      ifFalse: [|nextKey easing fraction|
+        nextKey:= (keyFrames at: (keyFrames keyAtIndex: run+1)) first.
+        easing := BlEasing perform: value second.
+        fraction := easing interpolate: (offset / (cache runs at: run)).
+        ^ NSNumberInterpolator new start: thisKey; stop: nextKey;
+          interpolate: fraction]]
 ]
