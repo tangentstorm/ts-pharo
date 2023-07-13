@@ -21,12 +21,12 @@ Class {
 }
 
 { #category : #accessing }
-GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [  
-  trackModel add: aNameAndProperty first asString, '.', aNameAndProperty second asString.
-  trackList items: trackModel.
+GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [
+  viewModel addTrackFor: aNameAndProperty withKeys: aCollection.
+  trackList items: viewModel trackNames.
   grid addChild: (GsAnimationTrack new
     addFrames: aCollection;
-    relocate: 0@ (20 * (trackModel size - 1) + 16))
+    relocate: 0@ (20 * (viewModel trackCount - 1) + 16))
 ]
 
 { #category : #events }
@@ -57,7 +57,7 @@ GsTimeline >> initialize [
   dxScroll := 0.
   curH := 16.
   colW := 20.
-  trackModel := OrderedCollection new.
+  viewModel := GsTimelineModel new.
   scrollPane := self makeScrollPane.
   currentFrame := 0.
   self addChild: self makeUi as: #ui.
@@ -178,4 +178,9 @@ GsTimeline >> snapScrollpane [
 { #category : #snapping }
 GsTimeline >> snapToColumn: aPoint [
   ^ (colW * (aPoint x + (colW//2) // colW) asInteger) @ aPoint y
+]
+
+{ #category : #accessing }
+GsTimeline >> viewModel [
+  ^ viewModel
 ]
