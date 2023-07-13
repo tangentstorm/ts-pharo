@@ -25,7 +25,11 @@ GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [
 
 { #category : #events }
 GsAnimator >> frameChanged: anEvent [
-  frameCounter text: ('frame: ', anEvent frame asString) asRopedText.
+  | frame propValues|
+  frame := anEvent  frame.
+  frameCounter text: ('frame: ', frame asString) asRopedText.
+  propValues := timeline viewModel valuesForFrame: frame.
+  (self scene childNamed: #square) relocate: (propValues at: 1).
   
 ]
 
