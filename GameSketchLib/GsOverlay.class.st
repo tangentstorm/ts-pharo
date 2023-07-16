@@ -50,7 +50,7 @@ GsOverlay >> initialize [
   super initialize.
   self resetFlags.
   self initCallbacks.
-  self matchParentBounds
+  self matchParent
     when: BlMouseDownEvent do: [:e|
       self resetFlags.
       startPoint := e localPosition.
