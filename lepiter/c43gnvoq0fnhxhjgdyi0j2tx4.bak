@@ -76,43 +76,6 @@
 				"string" : "##recap"
 			},
 			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:53:00.892-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:53:29.17-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kA9jFve5DQCzfv8xDMmdzA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "GameSketchlib is the library I'm making for interactive graphics."
-			},
-			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -182,6 +145,80 @@
 					"__type" : "textStyle"
 				},
 				"string" : "I'm working towards animations for my other channel."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T23:44:40.975-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T23:44:58.295-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mJoqz/e5DQCCyFpLC4uBCQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The smalltalk programming environment is called Glamorous Toolkit."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T22:53:00.892-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-07T22:53:29.17-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kA9jFve5DQCzfv8xDMmdzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "GameSketchlib is the library I'm making for interactive graphics."
 			},
 			{
 				"__type" : "textSnippet",
@@ -319,14 +356,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:58:56.71-04:00"
+						"dateAndTimeString" : "2023-07-16T11:06:51.818-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sH3o+Pa5DQCt6bmVDMmdzA=="
 				},
-				"code" : "GsPathmapDemo new\r  degree: 4;\r  depth: 3;\r  makeGraph: true layout: #tree"
+				"code" : "GsPathmapDemo new\r  degree: 4;\r  depth: 3;\r  makeGraph: true layout: #linear"
 			},
 			{
 				"__type" : "textSnippet",

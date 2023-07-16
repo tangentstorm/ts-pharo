@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T16:26:45.967-04:00"
+						"dateAndTimeString" : "2023-07-16T13:30:33.999-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:57:13.151-04:00"
+						"dateAndTimeString" : "2023-07-16T13:32:23.561-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mGxnX8C7DQC1eoNtA4beVA=="
+					"uidString" : "CJnkO9O8DQCQTKMvBOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Builds on {{gtClass:GsSceneEditor}} by adding a node tree and an inpsector"
+				"string" : "To handle mupltiple tracks, we need to \"zip\" the list of property values for the current frame (from {{gtMethod:GsTimelineModel>>valuesForFrame:}}) with the actual setters from {{gtMethod:GsAnimator>>trackSetters}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:45:32.224-04:00"
+						"dateAndTimeString" : "2023-07-16T13:33:36.636-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:04:23.362-04:00"
+						"dateAndTimeString" : "2023-07-16T13:36:18.165-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AGqW9cG8DQCGYEWJDK/W9Q=="
+					"uidString" : "qMSc0f+8DQCiVrx1BOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsTimeline}}owns the {{gtClass:GsTimelineModel}}, which contains {{gtClass:GsTrackModel}} objects that specifiy property changes for any {{gtClass:BlElement}}  on each frame. The elements should be named objects in a {{gtClass:GsScene}}."
+				"string" : "Track setters don't necessarily correspond directly to an actual setter name. For example, {{gtMethod:GsRotationSetter>>set:}}uses an intermediate builder object, and {{gtMethod:BlElement>>position:}} is explicitly deprecated in favor of {{gtMethod:BlElement>>relocate:}}, which makes for a weird track name."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:51:47.354-04:00"
+						"dateAndTimeString" : "2023-07-16T13:32:29.811-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:04:30.141-04:00"
+						"dateAndTimeString" : "2023-07-16T13:36:59.781-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2GXyC8K8DQCJSF39DK/W9Q=="
+					"uidString" : "UCGhzf+8DQCfF8Z+BOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : " {{gtClass:GsAnimator}} has the responsibility to display the {{gtClass:GsTimeline}} and the {{gtClass:GsScene}} and to update the scene when the playhead moves on the timeline."
+				"string" : "Also smalltalk doesn't actually have a `zip` function, but we can instead use a `readStream` on one of the collections to iterate through both in parallel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:05:21.237-04:00"
+						"dateAndTimeString" : "2023-07-14T08:21:46.335-04:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:05:23.48-04:00"
+						"dateAndTimeString" : "2023-07-16T13:37:22.648-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CFB1PMK8DQCI7RhJCxM/Cg=="
+					"uidString" : "gPLzMtO8DQCPV7QRBOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Tracks"
+				"string" : "All of this logic is performed in {{gtMethod:GsAnimator>>frameChanged:}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -166,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:03:59.799-04:00"
+						"dateAndTimeString" : "2023-07-16T13:33:25.613-04:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +177,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:06:00.755-04:00"
+						"dateAndTimeString" : "2023-07-16T13:33:29.139-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wDIgM8K8DQCFhrlGCxM/Cg=="
+					"uidString" : "4Jn00P+8DQCiL05NBOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsTrackModel}}contains the complete timeline for a single property on a single object across the entire timeline. The timeline represents a single animation."
+				"string" : "##demo:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-16T12:29:56.532-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-16T13:33:08.985-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UJ/q7f68DQC1e1XiBOPd8g=="
+				},
+				"code" : "GsAnimatorExamples twoMovingSquares."
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +237,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:06:00.988-04:00"
+						"dateAndTimeString" : "2023-07-16T13:37:37.664-04:00"
 					}
 				},
 				"editEmail" : {
@@ -214,17 +248,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:07:41.261-04:00"
+						"dateAndTimeString" : "2023-07-16T13:37:38.897-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YN3TPsK8DQCMCHYHCxM/Cg=="
+					"uidString" : "8HtfEP+8DQCAY86iBOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The trackmodel maintains a cache of the poperty's value at any given frame. It builds the cache (in {{gtMethod:GsTrackModel>>buildCache}}) by looping through the track's associated keyframes."
+				"string" : "## notes"
 			},
 			{
 				"__type" : "textSnippet",
@@ -240,7 +274,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:07:41.434-04:00"
+						"dateAndTimeString" : "2023-07-16T12:39:39.549-04:00"
 					}
 				},
 				"editEmail" : {
@@ -251,17 +285,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:08:33.563-04:00"
+						"dateAndTimeString" : "2023-07-16T12:40:18.654-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qIjQRMK8DQCQXoG3CxM/Cg=="
+					"uidString" : "YMWqEP+8DQCAtxt4BOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A **keyframe** associates a frame number with a particular value."
+				"string" : "should I check whether the setter is actually changing the value? (check whether the old and new are the same?) - this may or may not be an optimization."
 			},
 			{
 				"__type" : "textSnippet",
@@ -277,7 +311,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:06:30.471-04:00"
+						"dateAndTimeString" : "2023-07-16T12:40:11.678-04:00"
 					}
 				},
 				"editEmail" : {
@@ -288,86 +322,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:06:30.471-04:00"
+						"dateAndTimeString" : "2023-07-16T12:40:11.678-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iLWVQMK8DQCN8rsRCxM/Cg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:47.609-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:47.609-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wImSKMK8DQCq6yrKDUynvQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:48.255-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:48.255-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SGGcKMK8DQCq8FsyDUynvQ=="
+					"uidString" : "MAmVEv+8DQCDwv54BOPd8g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -388,7 +348,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:15:11.841-04:00"
+						"dateAndTimeString" : "2023-07-16T12:20:28.406-04:00"
 					}
 				},
 				"editEmail" : {
@@ -399,88 +359,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:15:27.693-04:00"
+						"dateAndTimeString" : "2023-07-16T13:38:04.149-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GC+pX8K8DQCVBf5ECxM/Cg=="
+					"uidString" : "CLkNzP68DQCsMWZEBOPd8g=="
 				},
-				"code" : "GsAnimatorExamples bouncingSquare"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:58:19.565-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:46.419-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4BdTI8K8DQC4maKnA/a7OA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "##see also"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:39.522-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:59:39.525-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "IK6PXsC7DQC1eHXgA4beVA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Animation Timeline]]"
+				"code" : ""
 			}
 		]
 	},
@@ -492,7 +378,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-30T16:26:38.573-04:00"
+			"dateAndTimeString" : "2023-07-14T08:19:36.119-04:00"
 		}
 	},
 	"editEmail" : {
@@ -503,15 +389,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-30T16:26:45.952-04:00"
+			"dateAndTimeString" : "2023-07-14T08:19:49.654-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Animation App"
+		"title" : "GsAnimator: multiple tracks"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "60508f5e-c0bb-0d00-b577-2fa20386de54"
+		"uuid" : "d896f232-d3bc-0d00-8f56-098f04e3ddf2"
 	}
 }

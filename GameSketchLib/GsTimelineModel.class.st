@@ -57,6 +57,12 @@ GsTimelineModel >> trackNames [
 ]
 
 { #category : #accessing }
+GsTimelineModel >> trackSymbols [
+  "the element name and property name for each track, as symbols"
+  ^ trackData values  collect: [:x| {x elementName. x propertyName.}]
+]
+
+{ #category : #accessing }
 GsTimelineModel >> valuesForFrame: aNumber [
   ^ trackData values collect: [:track | track valueAtFrame: aNumber+1]
 ]

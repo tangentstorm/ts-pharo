@@ -8,7 +8,8 @@ Class {
 	#instVars : [
 		'stage',
 		'timeline',
-		'frameCounter'
+		'frameCounter',
+		'trackSetters'
 	],
 	#category : #GameSketchLib
 }
@@ -25,12 +26,12 @@ GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [
 
 { #category : #events }
 GsAnimator >> frameChanged: anEvent [
-  | frame propValues|
+  | frame propValues |
   frame := anEvent  frame.
   frameCounter text: ('frame: ', frame asString) asRopedText.
-  propValues := timeline viewModel valuesForFrame: frame.
-  (self scene childNamed: #square) relocate: (propValues at: 1).
-  
+  propValues := (timeline viewModel valuesForFrame: frame)
+    readStream.
+  self trackSetters do: [:setter| setter set: propValues next].
 ]
 
 { #category : #initialization }
@@ -54,11 +55,11 @@ GsAnimator >> makeStage [
  ^ stage := BlElement new
    size: self stageSize; 
    clipChildren: false;
-   addChild: (scene clipChildren: false) as: #scene;
    addChild: (BlElement new
      size: self stageSize;
      border: Color black)
-   as: #bounds
+   as: #bounds;
+   addChild: (scene clipChildren: false) as: #scene
 
 ]
 
@@ -89,4 +90,16 @@ GsAnimator >> stageSize [
 { #category : #accessing }
 GsAnimator >> timeline [
   ^ timeline
+]
+
+{ #category : #accessing }
+GsAnimator >> trackSetters [
+  "return a GsSetter for each track in the timeline, bound to a specific property on an element in the scene"
+   ^ timeline viewModel trackSymbols
+     collect: [:nameAndProp|
+       |elementName propName|
+       elementName := nameAndProp first.
+       propName := nameAndProp second.
+       GsSetter for: propName on: (scene childNamed: elementName)]
+  
 ]

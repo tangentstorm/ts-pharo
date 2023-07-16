@@ -356,14 +356,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:58:56.71-04:00"
+						"dateAndTimeString" : "2023-07-16T11:07:20.27-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sH3o+Pa5DQCt6bmVDMmdzA=="
 				},
-				"code" : "GsPathmapDemo new\r  degree: 4;\r  depth: 3;\r  makeGraph: true layout: #tree"
+				"code" : "GsPathmapDemo new\r  degree: 4;\r  depth: 3;\r  makeGraph: true layout: #horizontal"
 			},
 			{
 				"__type" : "textSnippet",

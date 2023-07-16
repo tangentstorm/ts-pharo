@@ -28,6 +28,16 @@ GsTrackModel >> buildCache [
 ]
 
 { #category : #accessing }
+GsTrackModel >> elementName [
+	^ elementName
+]
+
+{ #category : #accessing }
+GsTrackModel >> elementName: anObject [
+	elementName := anObject
+]
+
+{ #category : #accessing }
 GsTrackModel >> for: aNameAndProperty withKeys: aCollection [
   elementName := aNameAndProperty  first.
   propertyName := aNameAndProperty second.
@@ -50,6 +60,16 @@ GsTrackModel >> keyFrames [
 { #category : #accessing }
 GsTrackModel >> name [
   ^ elementName, '.', propertyName
+]
+
+{ #category : #accessing }
+GsTrackModel >> propertyName [
+	^ propertyName
+]
+
+{ #category : #accessing }
+GsTrackModel >> propertyName: anObject [
+	^ propertyName := anObject
 ]
 
 { #category : #accessing }
