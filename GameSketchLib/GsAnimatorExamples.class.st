@@ -5,7 +5,17 @@ Class {
 }
 
 { #category : #accessing }
+GsAnimatorExamples class >> blueSquare [
+  <gtExample>
+  ^ BlElement new size: 32@32;
+      background: Color blue;
+      border: Color black;
+      relocate: 320@ -16.
+]
+
+{ #category : #accessing }
 GsAnimatorExamples class >> bouncingSquare [
+  <gtExample>
   ^ self sceneWithSquare
     addTrackFor: #( square position )
     withKeys: {
@@ -20,15 +30,8 @@ GsAnimatorExamples class >> bouncingSquare [
 ]
 
 { #category : #accessing }
-GsAnimatorExamples class >> makeBlueSquare [
-  ^ BlElement new size: 32@32;
-      background: Color blue;
-      border: Color black;
-      relocate: 320@ -16.
-]
-
-{ #category : #accessing }
 GsAnimatorExamples class >> sceneWithSquare [
+  <gtExample>
   <returns:#GsAnimator>
   |square|
   square := BlElement new
@@ -43,8 +46,9 @@ GsAnimatorExamples class >> sceneWithSquare [
 
 { #category : #accessing }
 GsAnimatorExamples class >> twoMovingSquares [
+  <gtExample>
   ^ self bouncingSquare
-    addSceneChild: self makeBlueSquare as: #blueSquare;
+    addSceneChild: self blueSquare as: #blueSquare;
     addTrackFor: #( blueSquare position )
     withKeys: {
       00 -> {320@ -16. #bounceOut}.
