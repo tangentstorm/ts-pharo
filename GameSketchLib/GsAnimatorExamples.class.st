@@ -29,35 +29,8 @@ GsAnimatorExamples class >> bouncingSquare [
       20 -> {120. #linear}}      
 ]
 
-{ #category : #accessing }
-GsAnimatorExamples class >> sceneWithSquare [
-  <gtExample>
-  <returns:#GsAnimator>
-  |square|
-  square := BlElement new
-    size: 50@50;
-    background: Color red;
-    border: (Color  fromHexString: '990000' );
-    relocate: -25@200.
-  square transform rotateBy: 30; apply.
-  ^ GsAnimator new
-      addSceneChild: square as: #square
-]
-
-{ #category : #accessing }
-GsAnimatorExamples class >> twoMovingSquares [
-  <gtExample>
-  ^ self bouncingSquare
-    addSceneChild: self blueSquare as: #blueSquare;
-    addTrackFor: #( blueSquare position )
-    withKeys: {
-      00 -> {320@ -16. #bounceOut}.
-      20 -> {320@ 448. #linear}}
-    
-]
-
 { #category : #examples }
-GsAnimatorExamples >> pathmapAnimation [
+GsAnimatorExamples class >> pathmapAnimation [
   <gtExample>
   ^ self pathmapScene
   addTrackFor: #(root position) withKeys: {
@@ -85,7 +58,7 @@ GsAnimatorExamples >> pathmapAnimation [
 ]
 
 { #category : #accessing }
-GsAnimatorExamples >> pathmapScene [
+GsAnimatorExamples class >> pathmapScene [
   <gtExample>
   <returns:#GsAnimator>
   |demo gsa root|
@@ -107,4 +80,31 @@ GsAnimatorExamples >> pathmapScene [
       zIndex: -1].
   demo makeGraph: true layout: #horizontal.
   ^gsa
+]
+
+{ #category : #accessing }
+GsAnimatorExamples class >> sceneWithSquare [
+  <gtExample>
+  <returns:#GsAnimator>
+  |square|
+  square := BlElement new
+    size: 50@50;
+    background: Color red;
+    border: (Color  fromHexString: '990000' );
+    relocate: -25@200.
+  square transform rotateBy: 30; apply.
+  ^ GsAnimator new
+      addSceneChild: square as: #square
+]
+
+{ #category : #accessing }
+GsAnimatorExamples class >> twoMovingSquares [
+  <gtExample>
+  ^ self bouncingSquare
+    addSceneChild: self blueSquare as: #blueSquare;
+    addTrackFor: #( blueSquare position )
+    withKeys: {
+      00 -> {320@ -16. #bounceOut}.
+      20 -> {320@ 448. #linear}}
+    
 ]
