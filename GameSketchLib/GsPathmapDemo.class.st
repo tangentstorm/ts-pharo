@@ -2,9 +2,9 @@ Class {
 	#name : #GsPathmapDemo,
 	#superclass : #GsApp,
 	#instVars : [
-		'mon',
 		'depth',
-		'degree'
+		'degree',
+		'mondrian'
 	],
 	#category : #'GameSketchLib-Demos'
 }
@@ -32,6 +32,9 @@ GsPathmapDemo >> depth: anObject [
 { #category : #accessing }
 GsPathmapDemo >> initialize [
   degree := 3. depth := 3.
+  mondrian := GsMondrian new.
+  mondrian nodes stencil: [:i|
+    (GsCell for: i+1) asElement background: GsColors gold ].
   super initialize.
 
 ]
@@ -40,19 +43,14 @@ GsPathmapDemo >> initialize [
 GsPathmapDemo >> makeGraph: connected layout: aSymbol [
   | xs |
   xs := 0 to: (degree ** depth  - 1 / (degree-1))-1.
-  mon := GtMondrian new.
-  mon nodes
-    shape: [:i| (GsCell for: i+1) asElement
-                   background: GsColors gold];
-	with: xs.
-
+  mondrian nodes with: xs.
   connected ifTrue:[
-	1 to: degree do: [:j| mon
+	1 to: degree do: [:j| mondrian
 	  edges connect: xs from: #yourself to: [:i|
 	    degree * i + j ]]].
 
-  mon layout perform: aSymbol.
-^ mon
+  mondrian layout perform: aSymbol.
+  ^ mondrian
 ]
 
 { #category : #accessing }
@@ -70,4 +68,9 @@ GsPathmapDemo >> makeStartScene [
 { #category : #accessing }
 GsPathmapDemo >> makeUI [
   ^ self makeStartScene
+]
+
+{ #category : #accessing }
+GsPathmapDemo >> mondrian [
+  ^ mondrian
 ]

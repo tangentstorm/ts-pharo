@@ -55,3 +55,56 @@ GsAnimatorExamples class >> twoMovingSquares [
       20 -> {320@ 448. #linear}}
     
 ]
+
+{ #category : #examples }
+GsAnimatorExamples >> pathmapAnimation [
+  <gtExample>
+  ^ self pathmapScene
+  addTrackFor: #(root position) withKeys: {
+    00 -> { 208 @224. #linear }.
+    05 -> { 208 @224. #linear }.
+    10 -> { (208 -16) @224. #linear }.
+    15 -> { (208 -16) @224. #linear }.
+    20 -> { (208 -48) @224. #linear }.};
+  addTrackFor: #(n1 position) withKeys: {
+    00 -> { 0@0. #linear }.
+    05 -> { 0@ -48. #linear }.
+    10 -> { 48@ -48. #linear}.
+    15 -> { 48@ -96. #linear}.
+    20 -> { 144@ -96. #linear}};
+  addTrackFor: #(n2 position) withKeys: {
+    00 -> { 32@0. #linear }.
+    10 -> { 32@ 0. #linear}.
+    15 -> { 32@ -48. #linear}.
+    20 -> { 112@ -48. #linear}};
+  addTrackFor: #(n3 position) withKeys: {
+    00 -> { 64@0. #linear }.
+    10 -> { 64@ 0. #linear}.
+    15 -> { 64@ -48. #linear}.
+    20 -> { 176@ -48. #linear}}.
+]
+
+{ #category : #accessing }
+GsAnimatorExamples >> pathmapScene [
+  <gtExample>
+  <returns:#GsAnimator>
+  |demo gsa root|
+  gsa := GsAnimator new
+    addSceneChild: (root := GsObject new
+      relocate: 208@224;
+      clipChildren: false)
+    as: #root.
+  demo := GsPathmapDemo new degree: 2; depth: 3.
+  demo mondrian topStep root: root.
+  demo mondrian nodes stencil: [:i|
+    (GsCell for: i+1) asElement
+      background: GsColors gold;
+      id: ('n', (i + 1) asString) asSymbol].
+  demo mondrian edges stencil: [
+    BlLineElement new
+      border: Color black;
+      constraintsDo: [:c | c ignoreByLayout ];
+      zIndex: -1].
+  demo makeGraph: true layout: #horizontal.
+  ^gsa
+]
