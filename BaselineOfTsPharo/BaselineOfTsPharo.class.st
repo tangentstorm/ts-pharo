@@ -5,14 +5,7 @@ Class {
 }
 
 { #category : #accessing }
-BaselineOfTsPharo >> baseline: spec [
-  <baseline>
-  ^ spec for: #common do: [
-  	spec package: 'TsPharo' ]
-]
-
-{ #category : #accessing }
-BaselineOfTsPharo >> loadLepiter [
+BaselineOfTsPharo class >> loadLepiter [
 	IceRepository registry  
 		detect: [ :aRepository |
 			aRepository name = 'ts-pharo' ]
@@ -24,4 +17,11 @@ BaselineOfTsPharo >> loadLepiter [
 			defaultDatabase reload ]
 		ifNone: [
 			self inform: 'Repository not found.' ]
+]
+
+{ #category : #accessing }
+BaselineOfTsPharo >> baseline: spec [
+  <baseline>
+  ^ spec for: #common do: [
+  	spec package: 'TsPharo' ]
 ]
