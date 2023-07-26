@@ -8,7 +8,7 @@ Class {
 BaselineOfTsPharo >> baseline: spec [
   <baseline>
   ^ spec for: #common do: [
-  	spec package: 'Tangentstorm' ]
+  	spec package: 'TsPharo' ]
 ]
 
 { #category : #accessing }
