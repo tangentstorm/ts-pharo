@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:30:33.999-04:00"
+						"dateAndTimeString" : "2023-07-25T15:36:56.686-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,165 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:32:23.561-04:00"
+						"dateAndTimeString" : "2023-07-26T18:49:25.254-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CJnkO9O8DQCQTKMvBOPd8g=="
+					"uidString" : "sP1Cl7a9DQCDQoGoDsI35g=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To handle mupltiple tracks, we need to \"zip\" the list of property values for the current frame (from {{gtMethod:GsTimelineModel>>valuesForFrame:}}) with the actual setters from {{gtMethod:GsAnimator>>trackSetters}}."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:33:36.636-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:36:18.165-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qMSc0f+8DQCiVrx1BOPd8g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Track setters don't necessarily correspond directly to an actual setter name. For example, {{gtMethod:GsRotationSetter>>set:}}uses an intermediate builder object, and {{gtMethod:BlElement>>position:}} is explicitly deprecated in favor of {{gtMethod:BlElement>>relocate:}}, which makes for a weird track name."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:32:29.811-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:36:59.781-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UCGhzf+8DQCfF8Z+BOPd8g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Also smalltalk doesn't actually have a `zip` function, but we can instead use a `readStream` on one of the collections to iterate through both in parallel."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T08:21:46.335-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:37:22.648-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gPLzMtO8DQCPV7QRBOPd8g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "All of this logic is performed in {{gtMethod:GsAnimator>>frameChanged:}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:33:25.613-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:33:29.139-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4Jn00P+8DQCiL05NBOPd8g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "##demo:"
+				"code" : "addLocalRepo := [:path0|\r  |repo path|\r  path := path0 asFileReference.\r  IceRepository registry detect: [:r | r location = path ]\r  ifNone: [\r    repo := IceRepositoryCreator new location: path; createRepository.\r    repo register.\r    Iceberg announcer announce: (IceRepositoryAnnouncement for: repo).\r    repo]]"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -203,7 +52,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T12:29:56.532-04:00"
+						"dateAndTimeString" : "2023-07-26T19:47:15.684-04:00"
 					}
 				},
 				"editEmail" : {
@@ -214,14 +63,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:33:08.985-04:00"
+						"dateAndTimeString" : "2023-07-27T18:41:19.143-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UJ/q7f68DQC1e1XiBOPd8g=="
+					"uidString" : "uBJONM69DQCsm+fHB+PpCQ=="
 				},
-				"code" : "GsAnimatorExamples twoMovingSquares."
+				"code" : "addLocalRepo value: 'd:/src/Roassal3'."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-27T18:41:29.424-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-27T18:41:29.424-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WEtsZuG9DQCcvcy8CE4J+g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -237,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:27:12.143-04:00"
+						"dateAndTimeString" : "2023-07-25T15:35:30.696-04:00"
 					}
 				},
 				"editEmail" : {
@@ -248,58 +134,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:27:16.963-04:00"
+						"dateAndTimeString" : "2023-07-26T18:45:59.791-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mL5gYca9DQCOlyk/CTnb6A=="
+					"uidString" : "QOMikra9DQCCkc6CDsI35g=="
 				},
-				"code" : "GsAnimatio"
+				"code" : "addLocalRepo value: 'd:/ten/1010pharo'."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-16T12:39:39.549-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-16T12:40:18.654-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "YMWqEP+8DQCAtxt4BOPd8g=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "should I check whether the setter is actually changing the value? (check whether the old and new are the same?) - this may or may not be an optimization."
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -309,7 +157,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:37:37.664-04:00"
+						"dateAndTimeString" : "2023-07-25T15:37:04.075-04:00"
 					}
 				},
 				"editEmail" : {
@@ -320,17 +168,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:37:38.897-04:00"
+						"dateAndTimeString" : "2023-07-26T18:53:21.725-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8HtfEP+8DQCAY86iBOPd8g=="
+					"uidString" : "+Lyzl7a9DQCDVaL3DsI35g=="
+				},
+				"code" : "addLocalRepo value: 'd:/ver/ts-pharo'.\r\rMetacello new\r\trepository: 'github://tangentstorm/ts-pharo:main/src';\r\tbaseline: 'TsPharo';\r\tload.\r\r#BaselineOfTsPharo asClass loadLepiter"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-26T18:04:03.778-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-26T18:45:56.994-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6BU9w8y9DQCiZALXCTnb6A=="
+				},
+				"code" : "addLocalRepo value: 'd:/ver/bloc-book'.\r\rMetacello new\r\trepository: 'github://tangentstorm/bloc-book:main/src';\r\tbaseline: 'BlocBook';\r\tload.\r\r#BaselineOfBlocBook asClass loadLepiter"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-26T18:36:15.346-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-26T18:36:15.346-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qC7JNc29DQCkx6zTB+PpCQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## notes"
+				"string" : ""
 			}
 		]
 	},
@@ -342,7 +258,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-14T08:19:36.119-04:00"
+			"dateAndTimeString" : "2023-07-25T15:36:53.824-04:00"
 		}
 	},
 	"editEmail" : {
@@ -353,15 +269,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-14T08:19:49.654-04:00"
+			"dateAndTimeString" : "2023-07-26T19:02:19.897-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsAnimator: multiple tracks"
+		"title" : "load my local git repos"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "d896f232-d3bc-0d00-8f56-098f04e3ddf2"
+		"uuid" : "40e32292-b6bd-0d00-8290-53b20ec237e6"
 	}
 }

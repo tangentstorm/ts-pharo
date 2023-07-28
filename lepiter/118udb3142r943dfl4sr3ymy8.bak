@@ -533,43 +533,6 @@
 											"__type" : "textStyle"
 										},
 										"string" : "[[GsAnimator: multiple tracks]]"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-16T15:45:31.363-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-16T15:45:31.363-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "0PJdqQG9DQC17tyOBOPd8g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : ""
 									}
 								]
 							},
