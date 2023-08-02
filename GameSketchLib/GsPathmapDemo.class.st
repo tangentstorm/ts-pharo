@@ -56,8 +56,7 @@ GsPathmapDemo >> makeGraph: connected layout: aSymbol [
 { #category : #accessing }
 GsPathmapDemo >> makeStartScene [
  ^ BrVerticalPane new 
-"   addChild: (self makeGraph: false layout: #horizontal) asElement;
-"   addChild: (self makeGraph: true layout: #tree) asElement;
+   addChild: (self makeGraph: true layout: #tree) asElement;
    constraintsDo: [:c|
      c vertical matchParent.
      c horizontal matchParent ]
@@ -67,7 +66,7 @@ GsPathmapDemo >> makeStartScene [
 
 { #category : #accessing }
 GsPathmapDemo >> makeUI [
-  ^ self makeStartScene
+  ^ ui := scene
 ]
 
 { #category : #accessing }

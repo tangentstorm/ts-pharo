@@ -10,7 +10,7 @@ GsDemos >> gtBulletDemoFor: aView [
   ^ aView explicit
     priority: 20;
     title: 'BulletDemo';
-    stencil: [GsBulletDemo new asElement]
+    stencil: [GsBulletDemo new]
 ]
 
 { #category : #accessing }
@@ -19,7 +19,7 @@ GsDemos >> gtOverlapDemoFor: aView [
   ^ aView explicit
     priority: 10;
     title: 'OverlapDemo';
-    stencil: [GsOverlapDemo new asElement]
+    stencil: [GsOverlapDemo new]
 ]
 
 { #category : #accessing }
@@ -28,7 +28,7 @@ GsDemos >> gtPathmapDemoFor: aView [
   ^ aView explicit
     priority: 30;
     title: 'PathmapDemo';
-    stencil: [GsPathmapDemo new asElement]
+    stencil: [GsPathmapDemo new]
 ]
 
 { #category : #accessing }
