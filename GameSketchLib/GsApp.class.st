@@ -54,10 +54,11 @@ GsApp >> initialize [
 
 { #category : #'gsl - ui' }
 GsApp >> makeSceneHolder [
+  "note: I removed BrHorizontalPane so the scene editor overlays can work for pileup, etc."
   ^ sceneHolder :=
-    BrHorizontalPane new matchParent
-      addChild: scene;
-      alignCenter
+    GsObject new matchParent
+      addChild: scene
+      "alignCenter"
 ]
 
 { #category : #'gsl - ui' }
