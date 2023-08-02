@@ -166,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T15:17:08.804-04:00"
+						"dateAndTimeString" : "2023-08-02T15:29:01.857-04:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T15:17:08.804-04:00"
+						"dateAndTimeString" : "2023-08-02T16:19:22.818-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CL34PFe+DQCq62lLAe8czw=="
+					"uidString" : "AKmwaVe+DQCvWkd4Ae8czw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "{{gtMethod:TsHomeStartPageSection>>#create|expanded}}"
 			}
 		]
 	},

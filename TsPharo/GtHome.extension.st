@@ -3,7 +3,7 @@ Extension { #name : #GtHome }
 { #category : #'*TsPharo-Gt' }
 GtHome >> tsPharoSection [
 	<gtHomeSection>
-	^ GtHomeStartPageSection new
+	^ TsHomeStartPageSection new
 		title: 'TsPharo';
 		description: 'Tangentstorm''s Extensions';
 		databaseName: 'TsPharo';
