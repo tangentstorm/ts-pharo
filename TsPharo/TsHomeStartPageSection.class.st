@@ -17,8 +17,21 @@ TsHomeStartPageSection >> create [
 	    content: [ GtInspector forObject: GsDemos new].    
 	  self newCard: 'GsAnimator' description: 'animator example' 
 	    content: [ GtInspector forObject: (
-	      GsAnimatorExamples pathmapAnimation)].	})
+	      GsAnimatorExamples pathmapAnimation)].
+	  self newCard: 'Roassal3' description: 'roassal' 
+	    content: [ 
+	      |found|
+	      found := true.
+	      #'Roassal3-GToolkit' asPackageIfAbsent: [found := false].
+	      found
+	        ifTrue: [ (GtCoder forObject: RSBlocExamples) ]
+	        ifFalse: [ self loadingRoassal3Page asLepiterPagePhlowTool ]].})
 	
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> loadingRoassal3Page [
+  ^ self database pageNamed: 'Getting Roassal3 to run in GT'
 ]
 
 { #category : #accessing }
