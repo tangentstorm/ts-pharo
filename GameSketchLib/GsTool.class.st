@@ -24,6 +24,6 @@ GsTool >> label [
 ]
 
 { #category : #'as yet unclassified' }
-GsTool >> onToolbarClick: anApp [
+GsTool >> makeCurrentFor: anApp [
   anApp currentTool: self
 ]

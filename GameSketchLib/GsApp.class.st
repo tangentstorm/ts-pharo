@@ -79,7 +79,7 @@ GsApp >> makeToolbar [
     tb addItem: (BrButton new 
       aptitude: BrMaterialToggleLabelledAptitude;
       label: t label; 
-      action: [ t onToolbarClick: self ])].
+      action: [ t makeCurrentFor: self ])].
 ^ tb.
 ]
 
