@@ -1,3 +1,6 @@
+"
+I am a {{gtClass:GsSetter}}for rotation.
+"
 Class {
 	#name : #GsRotationSetter,
 	#superclass : #GsSetter,

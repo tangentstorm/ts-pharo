@@ -1,3 +1,9 @@
+"
+I contain a {{gtClass:GsTrackModel}} for each ({{gtClass:GsObject}}, property) pair to be animated.
+
+I am displayed by a {{gtClass:GsAnimator}}. When its playhead moves to a new frame, I return a list of closures - one per track - that the animator calls to update the actual scene elements.
+
+"
 Class {
 	#name : #GsTimelineModel,
 	#superclass : #Object,

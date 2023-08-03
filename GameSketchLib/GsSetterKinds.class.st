@@ -1,3 +1,12 @@
+"
+I am a builder for {{gtClass:GsSetter}} subclasses.
+
+example usage:
+```
+GsSetterKinds setterFor: #position
+```
+
+"
 Class {
 	#name : #GsSetterKinds,
 	#superclass : #Object,

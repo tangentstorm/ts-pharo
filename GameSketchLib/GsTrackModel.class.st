@@ -1,3 +1,10 @@
+"
+I hold an ordered list of keyframes for a particular property in a {{gtClass:GsTimeline}} animation.
+From these, I generate a cached value for each frame of the animation.
+
+I am displayed by  {{gtClass:GsAnimationTrack}}
+
+"
 Class {
 	#name : #GsTrackModel,
 	#superclass : #Object,

@@ -1,3 +1,6 @@
+"
+I provide some examples for using {{gtClass:GsAnimator}}.
+"
 Class {
 	#name : #GsAnimatorExamples,
 	#superclass : #Object,

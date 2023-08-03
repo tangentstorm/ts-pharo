@@ -1,3 +1,7 @@
+"
+I am an application for displaying and editing a {{gtClass:GsScene}}.
+
+"
 Class {
 	#name : #GsApp,
 	#superclass : #Object,

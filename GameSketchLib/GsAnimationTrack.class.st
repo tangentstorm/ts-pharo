@@ -1,3 +1,7 @@
+"
+I am a {{gtClass:BlElement}} that displays information about a single {{gtClass:GsTrackModel}}.
+I draw one row of the timeline in a {{gtClass:GsTimeline}}
+"
 Class {
 	#name : #GsAnimationTrack,
 	#superclass : #GsObject,

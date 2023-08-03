@@ -1,3 +1,6 @@
+"
+I am a {{gtClass:GsSetter}}for position.
+"
 Class {
 	#name : #GsPositionSetter,
 	#superclass : #GsSetter,

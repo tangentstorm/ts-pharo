@@ -1,3 +1,6 @@
+"
+I define some colors and palettes.
+"
 Class {
 	#name : #GsColors,
 	#superclass : #Object,
