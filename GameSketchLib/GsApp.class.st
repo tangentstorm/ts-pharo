@@ -106,6 +106,13 @@ GsApp >> scene [
 ]
 
 { #category : #accessing }
+GsApp >> scene: aScene [
+	scene := aScene.
+	sceneHolder removeChildNamed: #scene.
+	sceneHolder addChild: scene as: #scene.	
+]
+
+{ #category : #accessing }
 GsApp >> ui [
 	^ ui
 ]
