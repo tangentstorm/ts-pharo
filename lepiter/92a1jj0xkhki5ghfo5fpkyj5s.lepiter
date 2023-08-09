@@ -1,0 +1,219 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-09T01:31:48.563-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-09T01:32:23.1-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OBBxiNi+DQCUh1UmDREXmQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[plot.deck](https://github.com/JohnEarnest/Decker/blob/main/examples/decks/plot.deck) by John Earnest"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T01:32:56.824-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T01:33:20.936-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2KCCjNi+DQCVutXQDREXmQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "```lil\r\non label ticks x y do\r\n # Paul Heckbert's \"loose labels\" method\r\n # for generating axis labels and ranges:\r\n on nice x round do\r\n  f:x/10^e:floor(ln x)/(ln n:10)\r\n  if round\r\n   if f<7   n:5 end\r\n   if f<3   n:2 end\r\n   if f<1.5 n:1 end\r\n  else\r\n   if !f>5  n:5 end\r\n   if !f>2  n:2 end\r\n   if !f>1  n:1 end\r\n  end\r\n  n*10^e\r\n end\r\n d:nice[nice[y-x 0]/ticks 1]\r\n a:d* floor x/d\r\n b:d*-floor-y/d\r\n v:() while a<b+.5*d  v:v,a  a:a+d end v\r\nend\r\n```"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T02:44:37.055-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T02:49:41.485-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SO7SjNm+DQC07/jaDREXmQ=="
+							},
+							"code" : "nice := [:x :round|  |f n e|\r  \"paul heckbert's loose labels method for axis labels\"\r  e := (x ln/ ((n:=10) ln)) floor.\r  f := x / (10 ** e).\r  n := true caseOf: (round\r   ifTrue:  [{[f<1.5]->1. [f<3] -> 2. [f<7]->5}]\r   ifFalse: [{[f<=1]->1. [f<=2] -> 2. [f<=5]->5}])\r   otherwise:[n].\r  n*(10**e)].\rlabel := [:ticks :x :y | |d a b v|\r  d := nice value: (nice value: y-x value: false)/ticks value: true.\r  a := d * (x/d) floor.\r  b := d * (y/d) negated floor negated.\r  v := OrderedCollection new. [0.5*d+b>a] whileTrue: [v add: a. a:=a+d].\r  v ]."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T01:56:05.614-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-09T02:43:41.905-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sOVJ39i+DQClYt1LDREXmQ=="
+							},
+							"code" : "\"test suite\"\rself assert: (nice value: 55 value: true) equals: 50.\rself assert: (label value: 10 value: 241 value: 999) asArray\r     equals: #(200 300 400 500 600 700 800 900 1000)"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-09T01:32:23.454-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-09T01:32:38.058-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SHGFiti+DQCVM/zDDREXmQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## nice labels"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-08-09T01:31:42.57-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-08-09T01:31:42.57-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Decker's Plotting Library"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "805d0087-d8be-0d00-9476-e21c0d111799"
+	}
+}
