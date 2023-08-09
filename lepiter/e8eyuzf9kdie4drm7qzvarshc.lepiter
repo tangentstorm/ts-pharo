@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-03T16:55:59.23-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-03T17:08:36.367-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MNiCvmy+DQCfQt0eAJQ6Rw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GsBoxSketch}}   {{gtClass:GsNodeSketch}}"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:23:49.006-04:00"
+						"dateAndTimeString" : "2023-08-03T16:13:04.827-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +67,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:23:49.006-04:00"
+						"dateAndTimeString" : "2023-08-03T16:29:31.246-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "QGJPFmi+DQCVOLCgAO5s8A=="
+					"uidString" : "qIoQJWy+DQCVk7OkAJQ6Rw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Draw a scene with all the main things I want to be able to edit.\r\n {{gtClass:GsSceneExamples}} | {{gtClass:GsAnimatorExamples}} | {{gtClass:GsScene}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:22:54.347-04:00"
+						"dateAndTimeString" : "2023-08-03T16:55:52.607-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +104,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:24:16.178-04:00"
+						"dateAndTimeString" : "2023-08-03T16:55:52.607-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+LpRF2i+DQCVx0fqAO5s8A=="
+					"uidString" : "GMkdvmy+DQCfPaw3AJQ6Rw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Extract GsSceneExamples from {{gtClass:GsAnimatorExamples}}"
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -113,7 +151,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-03T11:26:23.571-04:00"
+												"dateAndTimeString" : "2023-08-03T16:55:50.407-04:00"
 											}
 										},
 										"uid" : {
