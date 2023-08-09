@@ -94,7 +94,7 @@ ui := BrVerticalPane new
   constraintsDo: [ :c |
     c horizontal matchParent.
 	c vertical matchParent ];
-  background: GsColors toolBg;
+  background: GsColor toolBg;
   addChild: self makeToolbar as: #toolbar;
   addChild: self makeSceneHolder as: #sceneHolder.
 ^ ui

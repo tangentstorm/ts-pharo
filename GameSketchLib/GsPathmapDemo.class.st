@@ -34,7 +34,7 @@ GsPathmapDemo >> initialize [
   degree := 3. depth := 3.
   mondrian := GsMondrian new.
   mondrian nodes stencil: [:i|
-    (GsCell for: i+1) asElement background: GsColors gold ].
+    (GsCell for: i+1) asElement background: GsColor gold ].
   super initialize.
 
 ]

@@ -45,7 +45,7 @@ GsAnimator >> makeFrameCounter [
 GsAnimator >> makeSceneHolder [
   ^ sceneHolder :=
     BrHorizontalPane new matchParent
-      background: GsColors defaultBg;
+      background: GsColor defaultBg;
       addChild: self makeStage as: #stage;
       alignCenter
 ]

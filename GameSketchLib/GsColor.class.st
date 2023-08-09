@@ -2,22 +2,27 @@
 I define some colors and palettes.
 "
 Class {
-	#name : #GsColors,
+	#name : #GsColor,
 	#superclass : #Object,
 	#category : #GameSketchLib
 }
 
 { #category : #accessing }
-GsColors class >> defaultBg [
+GsColor class >> defaultBg [
 ^ Color lightGray
 ]
 
 { #category : #accessing }
-GsColors class >> gold [
+GsColor class >> from: aString [
+  ^ Color fromString: aString 
+]
+
+{ #category : #accessing }
+GsColor class >> gold [
   ^ Color fromHexString: 'ffd700'
 ]
 
 { #category : #accessing }
-GsColors class >> toolBg [
+GsColor class >> toolBg [
   ^ Color veryVeryLightGray
 ]

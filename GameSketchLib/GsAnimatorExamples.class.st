@@ -74,7 +74,7 @@ GsAnimatorExamples class >> pathmapScene [
   demo mondrian topStep root: root.
   demo mondrian nodes stencil: [:i|
     (GsCell for: i+1) asElement
-      background: GsColors gold;
+      background: GsColor gold;
       id: ('n', (i + 1) asString) asSymbol].
   demo mondrian edges stencil: [
     BlLineElement new

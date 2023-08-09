@@ -15,5 +15,5 @@ GsBullet >> initialize [
   self 
     geometry: BlRectangleGeometry new;
     size: (3@5) * 4;
-    background: GsColors gold.
+    background: GsColor gold.
 ]
