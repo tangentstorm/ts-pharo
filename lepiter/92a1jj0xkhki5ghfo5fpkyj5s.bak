@@ -108,14 +108,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:12:30.009-04:00"
+									"dateAndTimeString" : "2023-08-09T20:11:11.373-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "SO7SjNm+DQC07/jaDREXmQ=="
 							},
-							"code" : "nice := [:x :round|  |f n e|\r  \"paul heckbert's loose labels method for axis labels\"\r  e := (x ln/ ((n:=10) ln)) floor.\r  f := x / (10 ** e).\r  n := true caseOf: (round\r   ifTrue:  [{[f<1.5]->1. [f<3] -> 2. [f<7]->5}]\r   ifFalse: [{[f<=1]->1. [f<=2] -> 2. [f<=5]->5}])\r   otherwise:[n].\r  n*(10**e)].\r  \rlabel := [:numTicks :min :max | |d a b v|\r  d := nice value: (nice value: max-min value: false)/numTicks value: true.\r  a := d * (min/d) floor.\r  b := d * (max/d) negated floor negated.\r  v := OrderedCollection new. [0.5*d+b>a] whileTrue: [v add: a. a:=a+d].\r  v ]."
+							"code" : "nice := [:x :round|  |f n e|\r  \"paul heckbert's loose labels method for axis labels\"\r  e := (x ln/ ((n:=10) ln)) floor.\r  f := x / (10 ** e).\r  n := true caseOf: (round\r   ifTrue:  [{[f<1.5]->1. [f<3] -> 2. [f<7]->5}]\r   ifFalse: [{[f<=1]->1. [f<=2] -> 2. [f<=5]->5}])\r   otherwise:[n].\r  n*(10**e)].\r  \rlabel := [:ticks :x :y | |d a b v|\r  d := nice value: (nice value: y-x value: false)/ticks value: true.\r  a := d * (x/d) floor.\r  b := d * (y/d) negated floor negated.\r  v := OrderedCollection new. [0.5*d+b>a] whileTrue: [v add: a. a:=a+d].\r  v ]."
 						},
 						{
 							"__type" : "pharoSnippet",
