@@ -34,7 +34,7 @@ GsNodeSketch >> gtSceneFor: aView [
   <gtView>
   ^ aView explicit
     title: 'Scene';
-    stencil: [GsScene new addChild: self asElement]
+    stencil: [GsSketch new addChild: self asElement]
 ]
 
 { #category : #accessing }

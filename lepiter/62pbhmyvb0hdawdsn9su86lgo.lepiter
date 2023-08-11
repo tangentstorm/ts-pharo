@@ -104,14 +104,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T23:43:07.144-04:00"
+						"dateAndTimeString" : "2023-08-11T00:24:36.482-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "AHRpXP6+DQCEDLOOC5idZg=="
 				},
-				"code" : "s := GsScene new\r  background: Color veryVeryLightGray;\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 \r"
+				"code" : "s := GsSketch new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 \r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -138,14 +138,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T22:44:22.966-04:00"
+						"dateAndTimeString" : "2023-08-11T00:25:09.31-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
 				},
-				"code" : "GsSceneEditor for:(\r  GsScene new\r  \tbackground: Color veryVeryLightGray;\r  \tcircle: #c1 at: 250@250 radius: 90;\r  \trect: #s1 at: 250@250 size: 150@90)"
+				"code" : "GsSceneEditor for:(\r  GsSketch new\r  \tbackground: Color veryVeryLightGray;\r  \tcircle: #c1 at: 250@250 radius: 90;\r  \trect: #s1 at: 250@250 size: 150@90)"
 			},
 			{
 				"__type" : "pharoSnippet",

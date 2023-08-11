@@ -35,7 +35,7 @@ GsSceneEditor >> drawCoords: aPoint [
 { #category : #initialization }
 GsSceneEditor >> initialize [
   super initialize.
-  scene := GsScene new.
+  scene := GsSketch new.
   self matchParent.
   self addChild: self makeGlass.
   self addChild: self makeCoords.

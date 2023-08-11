@@ -2,13 +2,13 @@
 I am a {{gtClass:GsGroup}} that  (in the future) can have attached scripts and be saved to disk. 
 "
 Class {
-	#name : #GsScene,
-	#superclass : #GsShape,
+	#name : #GsSketch,
+	#superclass : #GsObject,
 	#category : #GameSketchLib
 }
 
 { #category : #accessing }
-GsScene class >> fromJSON: aString [ 
+GsSketch class >> fromJSON: aString [ 
   "build a scene from a json string"
   |items |  
   items := (STONJSON fromString: aString).
@@ -19,7 +19,7 @@ GsScene class >> fromJSON: aString [
 ]
 
 { #category : #accessing }
-GsScene >> circle: aName at: aPoint radius: aRadius [
+GsSketch >> circle: aName at: aPoint radius: aRadius [
   self addChild: (GsCircleShape new 
   		relocate: aPoint - (aRadius asPoint/2);
   		r: aRadius )
@@ -27,15 +27,15 @@ GsScene >> circle: aName at: aPoint radius: aRadius [
 ]
 
 { #category : #accessing }
-GsScene >> initialize [
-  super initialize matchParent.
+GsSketch >> initialize [
+  super initialize matchParent background: GsColor defaultBg
 ]
 
 { #category : #accessing }
-GsScene >> rect: aName at: aPoint size: aSize [
+GsSketch >> rect: aName at: aPoint size: aSize [
   self addChild: (GsRectShape new relocate: aPoint; size: aSize) as: aName
 ]
 
 { #category : #accessing }
-GsScene >> square: aString at: anObject size: anObject1 [ 
+GsSketch >> square: aString at: anObject size: anObject1 [ 
 ]
