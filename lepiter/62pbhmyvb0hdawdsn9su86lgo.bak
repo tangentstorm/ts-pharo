@@ -104,14 +104,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-11T00:24:36.482-04:00"
+						"dateAndTimeString" : "2023-08-11T02:13:10.883-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "AHRpXP6+DQCEDLOOC5idZg=="
 				},
-				"code" : "s := GsSketch new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 \r"
+				"code" : "s := GsSketch new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-11T02:13:13.404-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-11T02:14:09.483-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eHY7WAG/DQC61mr1C5idZg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Here's the same thing, but with an editor on top:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -138,14 +175,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T22:44:22.966-04:00"
+						"dateAndTimeString" : "2023-08-11T02:14:19.667-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
 				},
-				"code" : "GsSceneEditor for:(\r  GsScene new\r  \tbackground: Color veryVeryLightGray;\r  \tcircle: #c1 at: 250@250 radius: 90;\r  \trect: #s1 at: 250@250 size: 150@90)"
+				"code" : "s := GsSketch new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90.\r  \t\rGsObject new matchParent\r  addChildren: { s;\r  addChild: (GsSceneEditor for:s) "
 			},
 			{
 				"__type" : "pharoSnippet",
