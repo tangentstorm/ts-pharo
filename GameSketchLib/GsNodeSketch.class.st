@@ -7,7 +7,7 @@ Other than that I am more or less a knockoff of {{gtClass:GsCell}}
 "
 Class {
 	#name : #GsNodeSketch,
-	#superclass : #GsSketch,
+	#superclass : #GsShape,
 	#instVars : [
 		'rect',
 		'label',

@@ -1,5 +1,5 @@
 Class {
-	#name : #GsTextSketch,
+	#name : #GsPathShape,
 	#superclass : #GsShape,
 	#category : #GameSketchLib
 }

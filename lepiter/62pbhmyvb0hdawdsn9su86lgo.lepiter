@@ -5,6 +5,81 @@
 		"__type" : "snippets",
 		"items" : [
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T19:57:20.387-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T19:59:25.765-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uL/3F/y+DQCvkqq7C5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A scene is just a basic element. It can build sub-elements."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T19:57:10.569-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T19:58:00.989-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wKk+Fvy+DQCu00CbC5idZg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# The Basics: draggable, clickable shapes in a scene"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -18,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:39:40.631-04:00"
+						"dateAndTimeString" : "2023-08-10T22:39:38.625-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,14 +104,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:39:40.631-04:00"
+						"dateAndTimeString" : "2023-08-10T23:43:07.144-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CBwxGAS9DQCAbiveCWQM0w=="
+					"uidString" : "AHRpXP6+DQCEDLOOC5idZg=="
 				},
-				"code" : "node := GsNode new\r  x: 55; y: 50;\r  label: 'hello';\r  bgColor: Color lightMagenta."
+				"code" : "s := GsScene new\r  background: Color veryVeryLightGray;\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 \r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -52,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:47:38.803-04:00"
+						"dateAndTimeString" : "2023-08-10T20:16:32.312-04:00"
 					}
 				},
 				"editEmail" : {
@@ -63,14 +138,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:39:44.386-04:00"
+						"dateAndTimeString" : "2023-08-10T22:44:22.966-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UCuKhwK9DQCAC0TiBOPd8g=="
+					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
 				},
-				"code" : "node asElement"
+				"code" : "GsSceneEditor for:(\r  GsScene new\r  \tbackground: Color veryVeryLightGray;\r  \tcircle: #c1 at: 250@250 radius: 90;\r  \trect: #s1 at: 250@250 size: 150@90)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:32:28.777-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:32:34.31-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QH7KQv6+DQCBsPH6C5idZg=="
+				},
+				"code" : "GsStyle default"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T20:25:54.038-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:15:23.42-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CPkbfvy+DQC6KvMJC5idZg=="
+				},
+				"code" : "#'BlocPac-Geometry' asPackage"
 			},
 			{
 				"__type" : "textSnippet",
@@ -86,7 +229,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:47:43.294-04:00"
+						"dateAndTimeString" : "2023-08-10T19:57:13.106-04:00"
 					}
 				},
 				"editEmail" : {
@@ -97,128 +240,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:23:27.248-04:00"
+						"dateAndTimeString" : "2023-08-10T22:15:09.447-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8O/ahgK9DQC/1jNDBOPd8g=="
+					"uidString" : "aKKIF/y+DQCvGwv4C5idZg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##todo"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:24:22.826-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:24:34.687-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KIh84QO9DQC8+qKlCWQM0w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "how do i make it update the scene tab each time?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:23:30.209-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:23:55.998-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "AKlZ3gO9DQC6opNfCWQM0w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "why do i need `asNumber` on every field in `asElement`? how do i make this system store numbers?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:23:56.429-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T18:23:56.429-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yMLp3wO9DQC89eQ1CWQM0w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "Should shapes use {{gtClass:BlGeometryAnchor}}?"
 			}
 		]
 	},
@@ -230,7 +262,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-16T16:47:27.271-04:00"
+			"dateAndTimeString" : "2023-08-10T19:57:01.308-04:00"
 		}
 	},
 	"editEmail" : {
@@ -241,15 +273,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-16T16:47:27.271-04:00"
+			"dateAndTimeString" : "2023-08-10T19:57:01.308-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsNode: the base scene element"
+		"title" : "GSL Trail"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "5838da86-02bd-0d00-bfd5-352504e3ddf2"
+		"uuid" : "28f23d16-fcbe-0d00-aed2-8c970b989d66"
 	}
 }

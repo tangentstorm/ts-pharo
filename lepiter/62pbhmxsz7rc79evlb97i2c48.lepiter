@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T22:00:26.223-04:00"
+									"dateAndTimeString" : "2023-08-10T09:07:32.747-04:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T22:00:26.223-04:00"
+									"dateAndTimeString" : "2023-08-10T09:09:23.475-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "gJiAXua+DQCUCUkdAuyuDw=="
+								"uidString" : "+JIfBPO+DQC5RehqC5idZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A plot generally lives in a rectangular area with some insets, and then some axes with ticks on them. "
+							"string" : "Sketches are bloc elements that behave differently depending on their containers."
 						},
 						{
 							"__type" : "textSnippet",
@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:10:43.762-04:00"
+									"dateAndTimeString" : "2023-08-10T09:08:37.647-04:00"
 								}
 							},
 							"editEmail" : {
@@ -71,17 +71,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:13:03.36-04:00"
+									"dateAndTimeString" : "2023-08-10T09:08:49.108-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "gH53fOa+DQCpsSmlBOMaBg=="
+								"uidString" : "ULkgB/O+DQC7+WTsC5idZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Generally, the axes  are along two edges of the drawing area (generally left and bottom) but that could change for (e.g, polar plots, mathematical plots showing an origin, or complex plots that have more than one scale). "
+							"string" : "When placed in an editor, they can generate handles for editing."
 						},
 						{
 							"__type" : "textSnippet",
@@ -97,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:14:39.323-04:00"
+									"dateAndTimeString" : "2023-08-10T09:08:49.466-04:00"
 								}
 							},
 							"editEmail" : {
@@ -108,17 +108,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:19:40.437-04:00"
+									"dateAndTimeString" : "2023-08-10T09:08:59.073-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SFg7hea+DQCtJaj+BOMaBg=="
+								"uidString" : "kDayCPO+DQC958lvC5idZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The drawing area may or may not have a grid as a background. It is generally a rectangular area scaled to fit the overall plot element."
+							"string" : "When placed in a game, they can respond to physics and input events."
 						},
 						{
 							"__type" : "textSnippet",
@@ -134,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:19:55.354-04:00"
+									"dateAndTimeString" : "2023-08-10T09:08:59.399-04:00"
 								}
 							},
 							"editEmail" : {
@@ -145,17 +145,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:23:18.798-04:00"
+									"dateAndTimeString" : "2023-08-10T09:10:15.893-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "GDBglea+DQCwNaO4BOMaBg=="
+								"uidString" : "cMNJCfO+DQC/e3cSC5idZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The plot area has two sets of coordinates: the scene coordinates within the parent Elemen, and the \"data space\" coordinates. These are generally determined by min and max values along the axes. The axes themselves are generally drawn by dividing them into segments with nice labeled ticks."
+							"string" : "Sketches can contain complex sub-sketches made of arbitrary elements."
 						},
 						{
 							"__type" : "textSnippet",
@@ -171,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:24:09.318-04:00"
+									"dateAndTimeString" : "2023-08-10T09:10:16.53-04:00"
 								}
 							},
 							"editEmail" : {
@@ -182,236 +182,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T19:22:08.03-04:00"
+									"dateAndTimeString" : "2023-08-10T09:11:50.472-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "eCmiqea+DQC1f16lBOMaBg=="
+								"uidString" : "ULTiDfO+DQCCXUIpC5idZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The viewport can then be used to map data points to x-y scene coordinates."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T19:28:17.859-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-10T19:24:49.982-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "6HlDkue+DQC4NWzLBOMaBg=="
-							},
-							"code" : "GsChart new min: 0@0; max: 10@10; ticks: 10@10;\r  add: (GsScatterPlot for: { 10@11. 23@8. 19@7. -9@ -2})\r  as: #a;\r  add: (GsScatterPlot for: { 15@12. 12@11})\r  as: #b;\r  rebuild"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:50:52.154-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:50:55.185-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "qAiQuei+DQCDWK+PBOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "# todo"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:52:01.312-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:52:47.237-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "GE2vvei+DQCFJzJFBOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- draw the tick marks using min x / max x / ticks x"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:52:50.187-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:53:12.166-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "EBOZwOi+DQCGcI4tBOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "{{gtMethod:GsChart>>buildAxis:}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:50:56.134-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:51:50.889-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "oL/Muei+DQCDepi6BOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- calculate min/max from the plotted data\r\n   - GsPlot >> ranges"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:51:22.748-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:51:22.748-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "eNxiu+i+DQCEZIjeBOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"string" : "Sketches serialize themselves via mementos, rather than naive object serialization. Thus we don't have to save the entire bloc scene."
 						}
 					]
 				},
@@ -423,7 +204,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:08:49.517-04:00"
+						"dateAndTimeString" : "2023-08-10T09:23:20.047-04:00"
 					}
 				},
 				"editEmail" : {
@@ -434,23 +215,246 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:09:07.582-04:00"
+						"dateAndTimeString" : "2023-08-10T09:23:33.054-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8DPnc+a+DQCn6eHWBOMaBg=="
+					"uidString" : "sDWWPPO+DQCWQreeC5idZg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Basic Layout"
+				"string" : "# Sketches are shapes that behave differently in context."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:18:23.522-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:18:44.524-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6JjpKvO+DQCIOAmIC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Nearly everything in a scene is controlled by dragging the mouse."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:20:01.13-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:20:18.849-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EP66MPO+DQCMXP8QC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dragging a GsObject moves it (unless it's locked)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:19:44.528-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:20:35.654-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QA5SLPO+DQCJrMDfC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dragging the canvas makes a selectangle, which may produce a selection when done."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:19:51.94-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:20:47.046-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0LsuMPO+DQCLx7rmC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dragging the selection moves groups of objects."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:20:49.938-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:22:00.504-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kNN7M/O+DQCPe1KqC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Clicking any object produces handles. Dragging a handle changes associated properties in the object."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:22:00.785-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:22:35.728-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gMTcN/O+DQCS+ePhC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In some scenes/containers, dragging one object onto another triggers behavior."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -460,7 +464,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:01:12.734-04:00"
+						"dateAndTimeString" : "2023-08-10T09:18:12.427-04:00"
 					}
 				},
 				"editEmail" : {
@@ -471,17 +475,203 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T22:00:26.3-04:00"
+						"dateAndTimeString" : "2023-08-10T09:26:10.592-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MG3SWua+DQCSGf92AuyuDw=="
+					"uidString" : "EK1nDPO+DQCBvm0RC5idZg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "see also [[Decker's Plotting Library]]"
+				"string" : "# Dragging is the primary form of interaction."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:27:31.83-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:28:44.59-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oNRjP/O+DQCYmQrZC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Properties are named slots that hold simple data types. (strings, numbers, matrices, colors)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:31:46.035-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:33:02.065-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oI6dWvO+DQCj1AJsC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Properties may reference other objects by name or path (rather than direct pointers)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:29:25.268-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:31:40.858-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MH7nSvO+DQCbAmpXC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "An object's properties can be collected and serialized to serve as a memento that completely reconstructs the object. (Though it may depend on references to other objects in the scene.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:29:37.092-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T09:42:46.485-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oHkPU/O+DQCfysqeC5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In smalltalk, properties are described with Magritte, and this can be used to generate a form."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T09:22:47.707-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T09:25:50.776-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eMGoOvO+DQCVD4twC5idZg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Properties give fine grained control."
 			}
 		]
 	},
@@ -493,7 +683,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-09T18:01:07.632-04:00"
+			"dateAndTimeString" : "2023-08-10T09:07:42.179-04:00"
 		}
 	},
 	"editEmail" : {
@@ -504,15 +694,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-09T22:00:26.324-04:00"
+			"dateAndTimeString" : "2023-08-10T09:07:42.179-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Plotting"
+		"title" : "Core ideas of GSL"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "f8319759-e6be-0d00-9213-60bf02ecae0f"
+		"uuid" : "d8c71e04-f3be-0d00-b944-11740b989d66"
 	}
 }

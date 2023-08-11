@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T19:57:20.387-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-10T19:59:25.765-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uL/3F/y+DQCvkqq7C5idZg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A scene is just a basic element. It can build sub-elements."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T11:08:33.612-04:00"
+						"dateAndTimeString" : "2023-08-10T19:57:10.569-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +67,153 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:57:32.126-04:00"
+						"dateAndTimeString" : "2023-08-10T19:58:00.989-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gIV57Lu7DQC72ZuJCndxrg=="
+					"uidString" : "wKk+Fvy+DQCu00CbC5idZg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You need a stage on which to present everything. Any {{gtClass:BlElement}} could serve this purpose, but I generally use {{gtClass:GsCanvas}}, even though it doesn't add much."
+				"string" : "# The Basics: draggable, clickable shapes in a scene"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:39:38.625-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:49:03.704-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AHRpXP6+DQCEDLOOC5idZg=="
+				},
+				"code" : "s := GsSketch new\r  background: Color veryVeryLightGray;\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #s1 at: 250@250 size: 150@90 \r"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T20:16:32.312-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:44:22.966-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
+				},
+				"code" : "GsSceneEditor for:(\r  GsScene new\r  \tbackground: Color veryVeryLightGray;\r  \tcircle: #c1 at: 250@250 radius: 90;\r  \trect: #s1 at: 250@250 size: 150@90)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:32:28.777-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:32:34.31-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QH7KQv6+DQCBsPH6C5idZg=="
+				},
+				"code" : "GsStyle default"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T20:25:54.038-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-10T22:15:23.42-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CPkbfvy+DQC6KvMJC5idZg=="
+				},
+				"code" : "#'BlocPac-Geometry' asPackage"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +229,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T11:09:41.972-04:00"
+						"dateAndTimeString" : "2023-08-10T19:57:13.106-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,202 +240,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:57:42.593-04:00"
+						"dateAndTimeString" : "2023-08-10T22:15:09.447-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+Ch88bu7DQC/HgI3Cndxrg=="
+					"uidString" : "aKKIF/y+DQCvGwv4C5idZg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we want to put things in the scene. Again, this can be any {{gtClass:BlElement}}but a common thing to put in the scene is a {{gtClass:GsCard}}, which is basically a box with text in it."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T11:14:57.998-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T11:14:57.998-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KOlV67u7DQC72JKVCndxrg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T14:41:18.585-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T14:52:31.226-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2DRD5r67DQCNngx5A4beVA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# The Scene Editor"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T14:59:06.283-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T23:00:02.144-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OCphDr+7DQCPBQZ6A4beVA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You should be able to draw any scene and then put it into a scene editor.That way, all the editor stuff is pre-made and can just be added to whatever scene you like."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T15:01:05.509-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T15:01:05.509-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "iEICLb+7DQCTbcHmA4beVA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T14:52:07.421-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T14:52:07.421-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4Ows5767DQCOAd3WA4beVA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "Should shapes use {{gtClass:BlGeometryAnchor}}?"
 			}
 		]
 	},
@@ -273,7 +262,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-30T11:07:56.823-04:00"
+			"dateAndTimeString" : "2023-08-10T19:57:01.308-04:00"
 		}
 	},
 	"editEmail" : {
@@ -284,15 +273,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-10T22:50:38.694-04:00"
+			"dateAndTimeString" : "2023-08-10T19:57:01.308-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Glossary"
+		"title" : "GSL Trail"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "804137eb-bbbb-0d00-bbd7-65e40a7771ae"
+		"uuid" : "28f23d16-fcbe-0d00-aed2-8c970b989d66"
 	}
 }

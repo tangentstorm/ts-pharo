@@ -1,16 +1,14 @@
 "
 I decorate  a {{gtClass:GsScene}} with a {{gtClass:GsTool}}and a selection, as well as a special ""glass"" layer for providing ""design time"" UI decorations.
-
 "
 Class {
-	#name : #GsSketch,
+	#name : #GsShape,
 	#superclass : #GsObject,
 	#instVars : [
 		'x',
 		'y',
 		'w',
 		'h',
-		'bgColor',
 		'borderWidth',
 		'element'
 	],
@@ -18,29 +16,29 @@ Class {
 }
 
 { #category : #accessing }
-GsSketch class >> newFromData: dict [
+GsShape class >> newFromData: dict [
   | sketch |
   sketch :=  (dict at: 't') caseOf: {
-    ['rect'] -> [GsBoxSketch new].
-    ['ellipse'] -> [GsEllipseSketch new].
+    ['rect'] -> [GsRectShape new].
+    ['ellipse'] -> [GsEllipseShape new].
     ['text'] -> [GsTextSketch new].
-    ['path'] -> [GsPathSketch new]}
+    ['path'] -> [GsPathShape new]}
   otherwise: [self error: 'unknown sketch type:', dict asString].
   ^ sketch id: (dict at: 'id'); fromData: dict
 ]
 
 { #category : #accessing }
-GsSketch >> bgColor [
+GsShape >> bgColor [
 	^ bgColor
 ]
 
 { #category : #accessing }
-GsSketch >> bgColor: anObject [
-	bgColor := anObject
+GsShape >> bgColor: aColor [
+	bgColor := aColor
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionBgColor [
+GsShape >> descriptionBgColor [
   "<magritteDescription>"
   ^ MAColorDescription new
     accessor: #bgColor;
@@ -50,7 +48,7 @@ GsSketch >> descriptionBgColor [
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionH [
+GsShape >> descriptionH [
   <magritteDescription>
   ^ MANumberDescription new
     accessor: #h;
@@ -61,7 +59,7 @@ GsSketch >> descriptionH [
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionLabel [
+GsShape >> descriptionLabel [
   <magritteDescription>
   ^ MAStringDescription new
     accessor: #label;
@@ -71,7 +69,7 @@ GsSketch >> descriptionLabel [
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionW [
+GsShape >> descriptionW [
   <magritteDescription>
   ^ MANumberDescription new
     accessor: #w;
@@ -82,7 +80,7 @@ GsSketch >> descriptionW [
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionX [
+GsShape >> descriptionX [
   <magritteDescription>
   ^ MANumberDescription new
     accessor: #x;
@@ -93,7 +91,7 @@ GsSketch >> descriptionX [
 ]
 
 { #category : #accessing }
-GsSketch >> descriptionY [
+GsShape >> descriptionY [
   <magritteDescription>
   ^ MANumberDescription new
     accessor: #y;
@@ -105,54 +103,55 @@ GsSketch >> descriptionY [
 ]
 
 { #category : #accessing }
-GsSketch >> h [
+GsShape >> h [
 	^ h
 ]
 
 { #category : #accessing }
-GsSketch >> h: anObject [
+GsShape >> h: anObject [
 	h := anObject
 ]
 
 { #category : #initialization }
-GsSketch >> initialize [
+GsShape >> initialize [
   super initialize.
   x := y := w := h := 0.
   element := self makeElement.
+  visuals := GsStyle default.
 ]
 
 { #category : #initialization }
-GsSketch >> makeElement [
+GsShape >> makeElement [
   "each subclass should override/extend this"
   ^ BlElement new
 ]
 
 { #category : #accessing }
-GsSketch >> w [
+GsShape >> w [
 	^ w
 ]
 
 { #category : #accessing }
-GsSketch >> w: anObject [
+GsShape >> w: anObject [
 	w := anObject
 ]
 
 { #category : #accessing }
-GsSketch >> x [
+GsShape >> x [
 	^ x
 ]
 
 { #category : #accessing }
-GsSketch >> x: anObject [
+GsShape >> x: anObject [
 	x := anObject
 ]
 
 { #category : #accessing }
-GsSketch >> y [
+GsShape >> y [
 	^ y
 ]
 
 { #category : #accessing }
-GsSketch >> y: anObject [
+GsShape >> y: anObject [
 	y := anObject
 ]

@@ -1,19 +1,19 @@
 Class {
-	#name : #GsBoxSketch,
-	#superclass : #GsSketch,
+	#name : #GsRectShape,
+	#superclass : #GsShape,
 	#category : #'GameSketchLib-Examples'
 }
 
 { #category : #accessing }
-GsBoxSketch >> bg: aColor [ 
+GsRectShape >> bg: aColor [ 
 ]
 
 { #category : #accessing }
-GsBoxSketch >> fg: aColor [ 
+GsRectShape >> fg: aColor [ 
 ]
 
 { #category : #accessing }
-GsBoxSketch >> fromData: dict [
+GsRectShape >> fromData: dict [
   self xy: (dict at: 'x')@(dict at: 'y').
   self wh: (dict at:'w')@(dict at:'h').
   self bg: (GsColor from: (dict at:'bg')).
@@ -22,14 +22,14 @@ GsBoxSketch >> fromData: dict [
 ]
 
 { #category : #accessing }
-GsBoxSketch >> makeElement [
+GsRectShape >> makeElement [
   ^ BlElement new
 ]
 
 { #category : #accessing }
-GsBoxSketch >> wh: aPoint [ 
+GsRectShape >> wh: aPoint [ 
 ]
 
 { #category : #accessing }
-GsBoxSketch >> xy: aPoint [ 
+GsRectShape >> xy: aPoint [ 
 ]

@@ -1,5 +1,5 @@
 Class {
-	#name : #GsTextSketch,
+	#name : #GsEllipseShape,
 	#superclass : #GsShape,
 	#category : #GameSketchLib
 }

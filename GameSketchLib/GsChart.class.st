@@ -33,7 +33,7 @@ GsChart >> buildAxis: aName [
   axis :=  (axes at:  aName).
   aName = #y ifTrue: [|yScale parentHeight|
     "TODO: query actual values from bloc"
-    parentHeight := 456. yScale := parentHeight / ticks. 
+    parentHeight := 456. yScale := parentHeight / ticks y. 
     
     "build the ticks for y axis"
     (min y to: max y count: ticks y) do: [:i |

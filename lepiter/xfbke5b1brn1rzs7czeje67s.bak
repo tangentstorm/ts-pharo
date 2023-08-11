@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:09:19.731-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:09:19.731-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OGnZd+a+DQCob1s/BOMaBg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -60,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:09:11.527-04:00"
+									"dateAndTimeString" : "2023-08-09T22:00:26.223-04:00"
 								}
 							},
 							"editEmail" : {
@@ -71,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:10:20.87-04:00"
+									"dateAndTimeString" : "2023-08-09T22:00:26.223-04:00"
 								}
 							},
 							"uid" : {
@@ -232,43 +195,6 @@
 							"string" : "The viewport can then be used to map data points to x-y scene coordinates."
 						},
 						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T19:23:34.798-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T19:23:34.798-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "aPo/fOe+DQC39MGQBOMaBg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -293,14 +219,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:45:25.503-04:00"
+									"dateAndTimeString" : "2023-08-09T22:04:49.54-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "6HlDkue+DQC4NWzLBOMaBg=="
 							},
-							"code" : "GsChart new min: 0@0; max: 10@10; ticks: 11@11;\r  add: (GsScatterPlot for: { 10@11. 23@8. 19@7. -9@ -2})\r  as: #a;\r  add: (GsScatterPlot for: { 15@12. 12@11})\r  as: #b;\r  rebuild\r  \"add: (GsLinePlot for: #( 5 7 12 6 9))\"\r    "
+							"code" : "GsChart new min: 0@0; max: 10@10; ticks: 11@11;\r  add: (GsScatterPlot for: { 10@11. 23@8. 19@7. -9@ -2})\r  as: #a;\r  add: (GsScatterPlot for: { 15@12. 12@11})\r  as: #b;\r  rebuild"
 						},
 						{
 							"__type" : "textSnippet",
@@ -401,7 +327,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T20:52:55.412-04:00"
+									"dateAndTimeString" : "2023-08-09T20:53:12.166-04:00"
 								}
 							},
 							"uid" : {
@@ -411,7 +337,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{GsChart"
+							"string" : "{{gtMethod:GsChart>>buildAxis:}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -545,7 +471,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-09T18:08:12.538-04:00"
+						"dateAndTimeString" : "2023-08-09T22:00:26.3-04:00"
 					}
 				},
 				"uid" : {
@@ -578,7 +504,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-09T18:09:19.689-04:00"
+			"dateAndTimeString" : "2023-08-09T22:00:26.324-04:00"
 		}
 	},
 	"pageType" : {
