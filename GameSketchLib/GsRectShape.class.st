@@ -1,3 +1,7 @@
+"
+I represent a rectangle.
+
+"
 Class {
 	#name : #GsRectShape,
 	#superclass : #GsShape,

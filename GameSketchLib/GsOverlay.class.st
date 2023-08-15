@@ -1,3 +1,9 @@
+"
+I am a big transparent rectangle that covers a {{gtClass:GsScene}}, listens for mouse events, and relays them to the current {{gtClass:GsTool}}.
+
+I am used by {{gtClass:GsToolApp}} instances to edit a scene.
+
+"
 Class {
 	#name : #GsOverlay,
 	#superclass : #GsObject,

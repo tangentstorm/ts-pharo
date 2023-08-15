@@ -1,3 +1,7 @@
+"
+I represent a named style in a scene.
+
+"
 Class {
 	#name : #GsStyle,
 	#superclass : #Object,

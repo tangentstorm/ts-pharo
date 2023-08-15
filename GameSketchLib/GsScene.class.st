@@ -1,3 +1,9 @@
+"
+I am a top-level {{gtClass:GsSketch}}, with a background.
+
+My instances can be chained together to make complex games or presentations.
+
+"
 Class {
 	#name : #GsScene,
 	#superclass : #GsSketch,

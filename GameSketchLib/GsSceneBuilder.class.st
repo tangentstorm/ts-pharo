@@ -1,3 +1,8 @@
+"
+I provide a stateful builder for GsScene objects.
+
+I can be used either with  {{gtClass:GtBuildTool}} inside a {{gtClass:GsToolApp}} for adding new shapes interactively, or invoked directly from smalltalk code.
+"
 Class {
 	#name : #GsSceneBuilder,
 	#superclass : #Object,

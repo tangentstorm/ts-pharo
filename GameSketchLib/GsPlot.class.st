@@ -1,3 +1,6 @@
+"
+I draw an individual data series in a {{gtClass:GsChart}}.
+"
 Class {
 	#name : #GsPlot,
 	#superclass : #GsObject,

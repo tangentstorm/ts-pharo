@@ -1,3 +1,9 @@
+"
+I am a tool for editing scenes. 
+
+Probably I will be refactored into {{gtClass:GsSketchApp}}.
+
+"
 Class {
 	#name : #GsSceneEditor,
 	#superclass : #GsObject,

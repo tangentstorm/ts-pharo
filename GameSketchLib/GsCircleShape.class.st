@@ -1,3 +1,7 @@
+"
+I represent a circle.
+
+"
 Class {
 	#name : #GsCircleShape,
 	#superclass : #GsShape,

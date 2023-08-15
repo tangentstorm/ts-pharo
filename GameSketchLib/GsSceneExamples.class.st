@@ -1,3 +1,6 @@
+"
+I provide example scenes for demos and tests.
+"
 Class {
 	#name : #GsSceneExamples,
 	#superclass : #Object,
