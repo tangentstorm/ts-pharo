@@ -21,7 +21,7 @@ GsShape class >> newFromData: dict [
   sketch :=  (dict at: 't') caseOf: {
     ['rect'] -> [GsRectShape new].
     ['ellipse'] -> [GsEllipseShape new].
-    ['text'] -> [GsTextSketch new].
+    ['text'] -> [GsTextShape new].
     ['path'] -> [GsPathShape new]}
   otherwise: [self error: 'unknown sketch type:', dict asString].
   ^ sketch id: (dict at: 'id'); fromData: dict
