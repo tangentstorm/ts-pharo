@@ -114,6 +114,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "We shouldn't have to make a new class for each scene / app / demo."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:36:59.691-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:37:10.61-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EBCIM1y/DQCrs75LDeD4xQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "bloc does not provide any size information until the element is added to a container. (except for the constraints)"
 			}
 		]
 	},
@@ -136,12 +173,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-12T06:44:47.194-04:00"
+			"dateAndTimeString" : "2023-08-15T14:38:10.749-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GameSketchLib Design Constraints"
+		"title" : "GSL Design Constraints"
 	},
 	"uid" : {
 		"__type" : "uuid",

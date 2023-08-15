@@ -45,6 +45,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:38:34.612-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:38:35.533-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "IHUwOVy/DQCr6QmRDeD4xQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Each GsTool should be able to specify behavior for any mouse-related input event: right click, left click, dragging, etc."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -475,7 +512,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:54:54.463-04:00"
+						"dateAndTimeString" : "2023-08-15T14:32:58.339-04:00"
 					}
 				},
 				"uid" : {
@@ -485,7 +522,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "whtat is a {{gtClass:GsSketch}}? It claims to hold the overlay but that's not true. "
+				"string" : "what is a {{gtClass:GsSketch}}? It claims to hold the overlay but that's not true. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -523,6 +560,74 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:39:12.337-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:39:16.636-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gBRwO1y/DQCr+QpSDeD4xQ=="
+				},
+				"code" : "GsOverlay new"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:39:17.13-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-15T14:39:21.465-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KDe5O1y/DQCsSWI+DeD4xQ=="
+				},
+				"code" : "GsSketchDemo new"
 			}
 		]
 	},
@@ -545,12 +650,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-03T11:15:48.288-04:00"
+			"dateAndTimeString" : "2023-08-15T14:40:33.156-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsTool hierarchy"
+		"title" : "GSL Tool hierarchy"
 	},
 	"uid" : {
 		"__type" : "uuid",

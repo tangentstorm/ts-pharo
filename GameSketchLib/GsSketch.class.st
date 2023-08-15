@@ -19,23 +19,6 @@ GsSketch class >> fromJSON: aString [
 ]
 
 { #category : #accessing }
-GsSketch >> circle: aName at: aPoint radius: aRadius [
-  self addChild: (GsCircleShape new 
-  		relocate: aPoint - (aRadius asPoint/2);
-  		r: aRadius )
-  	 as: aName
-]
-
-{ #category : #accessing }
 GsSketch >> initialize [
-  super initialize matchParent background: GsColor defaultBg
-]
-
-{ #category : #accessing }
-GsSketch >> rect: aName at: aPoint size: aSize [
-  self addChild: (GsRectShape new relocate: aPoint; size: aSize) as: aName
-]
-
-{ #category : #accessing }
-GsSketch >> square: aString at: anObject size: anObject1 [ 
+  super initialize
 ]

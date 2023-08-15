@@ -20,7 +20,7 @@ GsPlot >> data: aCollection [
 ]
 
 { #category : #accessing }
-GsPlot >> rebuild [
+GsPlot >> rebuildShape [
   "draw the markers"
   self subclassResponsibility
 ]

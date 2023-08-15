@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-13T08:33:50.811-04:00"
+						"dateAndTimeString" : "2023-08-15T14:38:30.798-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-13T08:35:10.815-04:00"
+						"dateAndTimeString" : "2023-08-15T14:38:30.798-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each GsTool should be able to specify behavior for any mouse-related input event: right click, left click, dragging, etc."
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-13T08:39:24.1-04:00"
+						"dateAndTimeString" : "2023-06-13T08:39:52.799-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "OJ3hx2O6DQCY0Gq3DThWww=="
 				},
-				"code" : "GsGlassL"
+				"code" : "GsOverlay new"
 			},
 			{
 				"__type" : "pharoSnippet",

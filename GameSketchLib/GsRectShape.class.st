@@ -1,8 +1,17 @@
 Class {
 	#name : #GsRectShape,
 	#superclass : #GsShape,
+	#instVars : [
+		'xy',
+		'wh'
+	],
 	#category : #'GameSketchLib-Examples'
 }
+
+{ #category : #creating }
+GsRectShape class >> newAtPoint: aPoint [
+  ^ self new xy: aPoint
+]
 
 { #category : #accessing }
 GsRectShape >> bg: aColor [ 
@@ -22,14 +31,36 @@ GsRectShape >> fromData: dict [
 ]
 
 { #category : #accessing }
+GsRectShape >> initialize [
+  super initialize.
+  xy := 0@0.
+  wh := 1@1.
+  self rebuildShape
+]
+
+{ #category : #accessing }
 GsRectShape >> makeElement [
   ^ BlElement new
 ]
 
 { #category : #accessing }
-GsRectShape >> wh: aPoint [ 
+GsRectShape >> rebuildShape [
+  self relocate: xy; size: wh
 ]
 
 { #category : #accessing }
-GsRectShape >> xy: aPoint [ 
+GsRectShape >> secondPoint: aPoint [
+  self wh: (aPoint - xy)
+]
+
+{ #category : #accessing }
+GsRectShape >> wh: aPoint [
+  wh := aPoint.
+  self rebuildShape
+]
+
+{ #category : #accessing }
+GsRectShape >> xy: aPoint [
+  xy := aPoint.
+  self rebuildShape
 ]

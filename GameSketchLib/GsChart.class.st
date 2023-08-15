@@ -87,7 +87,7 @@ GsChart >> plotHolder [
 ]
 
 { #category : #accessing }
-GsChart >> rebuild [
+GsChart >> rebuildShape [
   self removeChildren;
     border: Color veryVeryLightGray;
     addChild: (BrHorizontalPane new
