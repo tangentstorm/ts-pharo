@@ -67,7 +67,7 @@ GsApp >> makeSceneHolder [
 
 { #category : #'gsl - ui' }
 GsApp >> makeStartScene [
- ^ GsSketch new
+ ^ GsScene new
 ]
 
 { #category : #'gsl - ui' }

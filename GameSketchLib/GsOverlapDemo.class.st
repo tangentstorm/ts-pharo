@@ -46,7 +46,7 @@ node := BrVerticalPane new size: 75@45;
 
 { #category : #accessing }
 GsOverlapDemo >> makeStartScene [
-  ^ GsSketch new
+  ^ GsScene new
     when: BlDoubleClickEvent do: [:e|
     	e consumed: true.
 	    scene addChild: (current := self makeNode).

@@ -17,7 +17,7 @@ GsBulletDemo >> makeBullet [
 { #category : #accessing }
 GsBulletDemo >> makeStartScene [
   |s|
-  s := GsSketch new.
+  s := GsScene new.
   ammoClip := BrHorizontalPane new 
     cellSpacing: 5; relocate: 0@5.
   bullets := (1 to: 3) collect: [:i| self makeBullet].

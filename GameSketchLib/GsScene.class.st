@@ -1,6 +1,6 @@
 Class {
 	#name : #GsScene,
-	#superclass : #GsObject,
+	#superclass : #GsSketch,
 	#category : #'GameSketchLib-Core'
 }
 
