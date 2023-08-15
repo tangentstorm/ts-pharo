@@ -1,6 +1,6 @@
 Class {
 	#name : #GsPathmapDemo,
-	#superclass : #GsApp,
+	#superclass : #GsToolApp,
 	#instVars : [
 		'depth',
 		'degree',

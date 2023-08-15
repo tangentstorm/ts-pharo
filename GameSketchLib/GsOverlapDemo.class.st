@@ -1,6 +1,6 @@
 Class {
 	#name : #GsOverlapDemo,
-	#superclass : #GsApp,
+	#superclass : #GsToolApp,
 	#instVars : [
 		'current'
 	],

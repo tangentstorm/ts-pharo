@@ -1,68 +1,52 @@
 "
-I am an application for displaying and editing a {{gtClass:GsScene}}.
+I am an application for displaying a {{gtClass:GsScene}}.
 
 "
 Class {
 	#name : #GsApp,
-	#superclass : #Object,
+	#superclass : #GsObject,
 	#instVars : [
 		'scene',
-		'ui',
-		'tools',
-		'currentTool',
-		'sceneHolder'
+		'sceneHolder',
+		'ui'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Apps'
 }
 
-{ #category : #'gt inspector' }
+{ #category : #'gt - inspector' }
 GsApp >> asElement [
   ^ ui
-]
-
-{ #category : #'as yet unclassified' }
-GsApp >> currentTool [
-	^ currentTool
-]
-
-{ #category : #'as yet unclassified' }
-GsApp >> currentTool: anObject [
-	currentTool := anObject
 ]
 
 { #category : #'gt inspector' }
 GsApp >> gtLiveFor: aView [
   <gtView>
-^ aView explicit
-  title: 'Live';
-  priority: 10;
-  stencil: [self ui]
+  ^ aView explicit
+    title: 'Live';
+    priority: -1;
+    stencil: [self ui]
 ]
 
 { #category : #'gt inspector' }
 GsApp >> gtRunButtonFor: anAction [
   <gtAction>
-^ anAction button
-  icon: BrGlamorousVectorIcons play;
-  action: [ :aButton |
-    aButton phlow spawnObject: self class new];
-  yourself
+  ^ anAction button
+    icon: BrGlamorousVectorIcons play;
+    action: [ :aButton | aButton phlow spawnObject: self class new];
+    yourself
 ]
 
 { #category : #initialization }
 GsApp >> initialize [
-  tools := self makeTools.
+  super initialize.
   scene := self makeStartScene.
-  self makeUI.
+  ui := self makeUI
 ]
 
 { #category : #'gsl - ui' }
 GsApp >> makeSceneHolder [
   "note: I removed BrHorizontalPane so the scene editor overlays can work for pileup, etc."
-  ^ sceneHolder :=
-    GsObject new matchParent
-      addChild: scene
-      "alignCenter"
+  ^ sceneHolder := GsObject new matchParent addChild: scene
 ]
 
 { #category : #'gsl - ui' }
@@ -70,34 +54,10 @@ GsApp >> makeStartScene [
  ^ GsScene new
 ]
 
-{ #category : #'gsl - ui' }
-GsApp >> makeToolbar [
-  |tb|
-  tb :=  BrToolbar new
-    aptitude: BrMaterialToolbarAptitude.
-  tools do: [:t |
-    tb addItem: (BrButton new 
-      aptitude: BrMaterialToggleLabelledAptitude;
-      label: t label; 
-      action: [ t makeCurrentFor: self ])].
-^ tb.
-]
-
-{ #category : #'as yet unclassified' }
-GsApp >> makeTools [
-  ^ {GsSelectTool new}
-]
-
-{ #category : #'gsl - ui' }
+{ #category : #accessing }
 GsApp >> makeUI [
-ui := BrVerticalPane new
-  constraintsDo: [ :c |
-    c horizontal matchParent.
-	c vertical matchParent ];
-  background: GsColor toolBg;
-  addChild: self makeToolbar as: #toolbar;
-  addChild: self makeSceneHolder as: #sceneHolder.
-^ ui
+  ^ BrVerticalPane new matchParent
+    addChild: self makeSceneHolder as: #sceneHolder.
 ]
 
 { #category : #accessing }

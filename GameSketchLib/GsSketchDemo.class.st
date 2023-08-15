@@ -1,6 +1,6 @@
 Class {
 	#name : #GsSketchDemo,
-	#superclass : #GsApp,
+	#superclass : #GsToolApp,
 	#category : #'GameSketchLib-Demos'
 }
 

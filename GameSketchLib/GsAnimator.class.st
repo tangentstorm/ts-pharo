@@ -4,7 +4,7 @@ I bind a {{gtClass:GsTimeline}}  to a {{gtClass:GsScene}} and update the scene w
 "
 Class {
 	#name : #GsAnimator,
-	#superclass : #GsApp,
+	#superclass : #GsToolApp,
 	#instVars : [
 		'stage',
 		'timeline',
