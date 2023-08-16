@@ -137,14 +137,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T18:37:19.935-04:00"
+						"dateAndTimeString" : "2023-08-10T23:56:49.405-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "6DWKbzS6DQC78RBCC4uBCQ=="
 				},
-				"code" : "GsObject subclass: #GsSketch\r  instanceVariableNames: ''\r  classVariableNames: ''\r  package: 'GameSketchLib'."
+				"code" : "GsObject subclass: #GsShape\r  instanceVariableNames: ''\r  classVariableNames: ''\r  package: 'GameSketchLib'."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-16T13:40:46.659-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-16T13:41:37.75-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0A1TiG+/DQCycDLjB4BWXQ=="
+				},
+				"code" : "#GameSketchLib asPackage actualClassTags"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-16T13:43:56.062-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-16T13:49:31.847-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SB2dk2+/DQCzNcMQB4BWXQ=="
+				},
+				"code" : "GtPhlowProtoView new columnedTree\r\t\ttitle: 'Items' translated;\r\t\tpriority: 50;\r\t\titems: [ #GameSketchLib asPackage actualClassTags asOrderedCollection ];\r\t\tchildren: [:item | item class = RPackage ifTrue: [ item classes] ifFalse: [ nil ] ];\r\t\tcolumn: 'Item' text: [ :eachItem | eachItem gtDisplayText ];\r\t\tactionUpdateButtonTooltip: 'Update item list'"
 			}
 		]
 	},

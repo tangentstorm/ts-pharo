@@ -9,7 +9,7 @@ Class {
 		'xy',
 		'wh'
 	],
-	#category : #'GameSketchLib-Examples'
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #creating }

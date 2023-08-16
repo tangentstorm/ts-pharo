@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'active'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Core'
 }
 
 { #category : #accessing }

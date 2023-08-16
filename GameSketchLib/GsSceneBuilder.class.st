@@ -12,7 +12,7 @@ Class {
 		'shape',
 		'shapeClass'
 	],
-	#category : #'GameSketchLib-Editor'
+	#category : #'GameSketchLib-Core'
 }
 
 { #category : #'high level builders' }

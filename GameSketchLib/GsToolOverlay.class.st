@@ -5,7 +5,7 @@ I am used by {{gtClass:GsToolApp}} instances to edit a scene.
 
 "
 Class {
-	#name : #GsOverlay,
+	#name : #GsToolOverlay,
 	#superclass : #GsObject,
 	#instVars : [
 		'scene',
@@ -19,31 +19,31 @@ Class {
 		'onDragEnd',
 		'lastMousePosition'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Tools'
 }
 
 { #category : #accessing }
-GsOverlay >> click: aPoint [
+GsToolOverlay >> click: aPoint [
   onClick cull: aPoint 
 ]
 
 { #category : #'event handling' }
-GsOverlay >> drag: aPoint [
+GsToolOverlay >> drag: aPoint [
   onDrag value: aPoint
 ]
 
 { #category : #'event handling' }
-GsOverlay >> dragEnd: aPoint [
+GsToolOverlay >> dragEnd: aPoint [
   onDragEnd cull: aPoint 
 ]
 
 { #category : #'event handling' }
-GsOverlay >> dragStart: aPoint [ 
+GsToolOverlay >> dragStart: aPoint [ 
   onDragStart cull: aPoint
 ]
 
 { #category : #accessing }
-GsOverlay >> initCallbacks [
+GsToolOverlay >> initCallbacks [
   onClick := [:p|].
   onMouseMove := [:p|].
   onDragStart := [:p|].
@@ -52,7 +52,7 @@ GsOverlay >> initCallbacks [
 ]
 
 { #category : #accessing }
-GsOverlay >> initialize [
+GsToolOverlay >> initialize [
   super initialize.
   self resetFlags.
   self initCallbacks.
@@ -77,37 +77,37 @@ GsOverlay >> initialize [
 ]
 
 { #category : #accessing }
-GsOverlay >> mouseMove: aPoint [
+GsToolOverlay >> mouseMove: aPoint [
   onMouseMove cull: aPoint 
 ]
 
 { #category : #initialization }
-GsOverlay >> onClick: aBlock [
+GsToolOverlay >> onClick: aBlock [
   onClick := aBlock 
 ]
 
 { #category : #accessing }
-GsOverlay >> onDrag: aBlock [
+GsToolOverlay >> onDrag: aBlock [
   onDrag := aBlock
 ]
 
 { #category : #accessing }
-GsOverlay >> onDragEnd: aBlock [
+GsToolOverlay >> onDragEnd: aBlock [
   onDragEnd := aBlock
 ]
 
 { #category : #accessing }
-GsOverlay >> onDragStart: aBlock [
+GsToolOverlay >> onDragStart: aBlock [
   onDragStart := aBlock
 ]
 
 { #category : #initialization }
-GsOverlay >> onMouseMove: aBlock [
+GsToolOverlay >> onMouseMove: aBlock [
   onMouseMove := aBlock
 ]
 
 { #category : #accessing }
-GsOverlay >> resetFlags [
+GsToolOverlay >> resetFlags [
   mouseDown := false.
   mouseMoved := false.
   dragging := false.

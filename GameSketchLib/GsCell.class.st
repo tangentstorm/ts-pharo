@@ -10,7 +10,7 @@ Class {
 		'bg',
 		'item'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #'instance creation' }

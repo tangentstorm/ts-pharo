@@ -11,7 +11,7 @@ Class {
 		'frameCounter',
 		'trackSetters'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Apps'
 }
 
 { #category : #accessing }

@@ -9,7 +9,7 @@ Class {
 		'keyFrames',
 		'trackH'
 	],
-	#category : #'GameSketchLib-Animation'
+	#category : #'GameSketchLib-UI'
 }
 
 { #category : #accessing }

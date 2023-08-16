@@ -4,7 +4,7 @@ I allow selecting objects in a {{gtClass:GsSketch}}, either by clicking on them,
 Class {
 	#name : #GsSelectTool,
 	#superclass : #GsTool,
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Tools'
 }
 
 { #category : #accessing }

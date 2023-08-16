@@ -9,7 +9,7 @@ Class {
 		'tools',
 		'currentTool'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Apps'
 }
 
 { #category : #'as yet unclassified' }

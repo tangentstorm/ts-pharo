@@ -4,7 +4,7 @@ I define some colors and palettes.
 Class {
 	#name : #GsColor,
 	#superclass : #Object,
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Core'
 }
 
 { #category : #accessing }

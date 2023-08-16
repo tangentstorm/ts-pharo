@@ -15,7 +15,7 @@ Class {
 		'fontName',
 		'shape'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #accessing }

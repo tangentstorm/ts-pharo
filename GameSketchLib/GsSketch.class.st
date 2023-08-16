@@ -3,8 +3,8 @@ I am a {{gtClass:GsGroup}} that  (in the future) can have attached scripts and b
 "
 Class {
 	#name : #GsSketch,
-	#superclass : #GsObject,
-	#category : #GameSketchLib
+	#superclass : #GsShape,
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #accessing }
@@ -16,9 +16,4 @@ GsSketch class >> fromJSON: aString [
   ^ self new addChildren: (items collect: [:item|
     item isDictionary ifFalse: [ self error: 'invalid item in scene: ', item toString].
     GsShape newFromData: item ]).
-]
-
-{ #category : #accessing }
-GsSketch >> initialize [
-  super initialize
 ]

@@ -5,5 +5,5 @@ I represent a text string, rendered with a particular font at a particular locat
 Class {
 	#name : #GsTextShape,
 	#superclass : #GsShape,
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Shapes'
 }

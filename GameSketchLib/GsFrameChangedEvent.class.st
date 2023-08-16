@@ -8,7 +8,7 @@ Class {
 		'frame',
 		'oldFrame'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Events'
 }
 
 { #category : #accessing }

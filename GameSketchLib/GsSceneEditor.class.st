@@ -14,7 +14,7 @@ Class {
 		'coords',
 		'scene'
 	],
-	#category : #'GameSketchLib-SceneEditor'
+	#category : #'GameSketchLib-UI'
 }
 
 { #category : #initialization }
@@ -59,7 +59,7 @@ GsSceneEditor >> makeGlass [
  | startPoint target|
  selectangle := BlElement new
    border: (BlBorder paint: Color cyan).
- glass := GsOverlay new
+ glass := GsToolOverlay new
    onDragStart: [:p| startPoint := p.
     (target := scene childAtPoint: p)
       ifNil: [glass addChild:

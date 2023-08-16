@@ -12,7 +12,7 @@ Class {
 		'borderWidth',
 		'element'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #accessing }
