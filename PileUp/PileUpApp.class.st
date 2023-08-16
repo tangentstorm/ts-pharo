@@ -1,6 +1,6 @@
 Class {
 	#name : #PileUpApp,
-	#superclass : #GsToolApp,
+	#superclass : #GsApp,
 	#instVars : [
 		'db',
 		'homeId',
