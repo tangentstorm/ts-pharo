@@ -47,7 +47,9 @@ PileUpApp >> initialize [
   super initialize.
   scene background: (Color fromHexString: '5f9ea0'). "cadetblue"
   homeId := '@home'.
-  sceneHolder addChild: (GsSceneEditor for: scene)
+  sceneHolder addChild: (GsToolOverlay new
+    scene: scene;
+    tool: GsSelectTool new)
 ]
 
 { #category : #accessing }

@@ -482,7 +482,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-15T14:40:01.989-04:00"
+									"dateAndTimeString" : "2023-08-15T14:40:33.263-04:00"
 								}
 							},
 							"uid" : {
@@ -492,7 +492,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[GsTool hierarchy]]"
+							"string" : "[[GSL Tool hierarchy]]"
 						},
 						{
 							"__type" : "textSnippet",

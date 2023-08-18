@@ -246,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-11T02:14:09.483-04:00"
+						"dateAndTimeString" : "2023-08-18T18:11:08.313-04:00"
 					}
 				},
 				"uid" : {
@@ -256,7 +256,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here's the same thing, but with an editor on top:"
+				"string" : "Here's the same thing, but with a selection tool for moving the shapes around:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -283,14 +283,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T15:31:40.066-04:00"
+						"dateAndTimeString" : "2023-08-18T18:11:49.39-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
 				},
-				"code" : "s := GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene.\r  \t\rGsObject new matchParent\r  addChildren: { s. GsSceneEditor for:s }"
+				"code" : "s := GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene.\r  \t\rGsObject new matchParent\r  addChildren: { s. GsToolOverlay new scene:s; tool: GsSelectTool new }"
 			},
 			{
 				"__type" : "textSnippet",
@@ -317,7 +317,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-17T22:04:05.974-04:00"
+						"dateAndTimeString" : "2023-08-18T18:13:03.521-04:00"
 					}
 				},
 				"uid" : {
@@ -327,7 +327,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But also you can use {{gtClass:GsSketchApp}} to  do the same thing, and provide a toolbar:"
+				"string" : "But also you can use {{gtClass:GsSketchApp}} to  do the same thing. It also provides a toolbar:"
 			},
 			{
 				"__type" : "pharoSnippet",

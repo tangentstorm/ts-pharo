@@ -17,29 +17,47 @@ Class {
 		'onMouseMove',
 		'onDragStart',
 		'onDragEnd',
-		'lastMousePosition'
+		'lastMousePosition',
+		'tool',
+		'coords'
 	],
 	#category : #'GameSketchLib-Tools'
 }
 
 { #category : #accessing }
+GsToolOverlay class >> for: aScene [
+  ^ self new scene: aScene
+]
+
+{ #category : #accessing }
 GsToolOverlay >> click: aPoint [
-  onClick cull: aPoint 
+  onClick cull: aPoint.
+  tool click: aPoint.
 ]
 
 { #category : #'event handling' }
 GsToolOverlay >> drag: aPoint [
-  onDrag value: aPoint
+  onDrag value: aPoint.
+  tool dragStep: aPoint.
 ]
 
 { #category : #'event handling' }
 GsToolOverlay >> dragEnd: aPoint [
-  onDragEnd cull: aPoint 
+  onDragEnd cull: aPoint.
+  tool dragEnd: aPoint.
 ]
 
 { #category : #'event handling' }
 GsToolOverlay >> dragStart: aPoint [ 
-  onDragStart cull: aPoint
+  onDragStart cull: aPoint.
+  tool dragStart: aPoint.
+]
+
+{ #category : #debugging }
+GsToolOverlay >> drawCoords: aPoint [
+  coords text: (aPoint rounded asString, ' ', 
+    ((scene childAtPoint: aPoint) ifNil: ['']
+       ifNotNil: #asString)) asRopedText
 ]
 
 { #category : #accessing }
@@ -54,26 +72,37 @@ GsToolOverlay >> initCallbacks [
 { #category : #accessing }
 GsToolOverlay >> initialize [
   super initialize.
-  self resetFlags.
-  self initCallbacks.
-  self matchParent
+  tool := GsSelectTool new overlay: self.
+  self matchParent;
+    resetFlags;
+    initCallbacks; 
+    addChild: self makeCoords;
     when: BlMouseDownEvent do: [:e|
       self resetFlags.
       startPoint := e localPosition.
       mouseDown := true];
     when: BlMouseMoveEvent do: [:e|
+      |p| p:= e localPosition.
+      self drawCoords: p.
       mouseDown ifTrue: [
         dragging
           ifFalse: [
             dragging := true.
             self dragStart: startPoint  ].
-        self drag: e localPosition ]
-      ifFalse: [ self mouseMove: e localPosition]];
+        self drag:p. ]
+      ifFalse: [ self mouseMove: p]];
     when: BlMouseUpEvent do: [:e|
+      |p| p := e localPosition.
       mouseDown := false.
-      dragging ifTrue:
-        [ dragging := false. self dragEnd: e localPosition ]
-      ifFalse: [ self click: e localPosition]].
+      dragging ifTrue: [ dragging := false. self dragEnd: p ]
+      ifFalse: [ self click: p ]].
+]
+
+{ #category : #accessing }
+GsToolOverlay >> makeCoords [
+  ^ coords := BlTextElement new
+    text:'' asRopedText;
+    relocate: 5@5.
 ]
 
 { #category : #accessing }
@@ -111,4 +140,21 @@ GsToolOverlay >> resetFlags [
   mouseDown := false.
   mouseMoved := false.
   dragging := false.
+]
+
+{ #category : #accessing }
+GsToolOverlay >> scene: aScene [
+  scene := aScene.
+  tool scene: scene.
+]
+
+{ #category : #accessing }
+GsToolOverlay >> tool [
+  ^ tool
+]
+
+{ #category : #accessing }
+GsToolOverlay >> tool: aTool [
+  tool := aTool.
+  tool scene: scene; overlay: self.
 ]

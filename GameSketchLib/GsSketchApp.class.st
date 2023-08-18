@@ -2,8 +2,8 @@ Class {
 	#name : #GsSketchApp,
 	#superclass : #GsToolApp,
 	#instVars : [
-		'editor',
-		'sceneHolderHolder'
+		'sceneHolderHolder',
+		'overlay'
 	],
 	#category : #'GameSketchLib-Apps'
 }
@@ -14,8 +14,8 @@ GsSketchApp class >> for: aScene [
 ]
 
 { #category : #accessing }
-GsSketchApp >> makeEditor [
-  ^ editor := GsSceneEditor for: scene
+GsSketchApp >> makeOverlay [
+  ^ overlay := GsToolOverlay new scene: scene
 ]
 
 { #category : #accessing }
@@ -27,12 +27,12 @@ GsSketchApp >> makeTools [
 { #category : #accessing }
 GsSketchApp >> makeUI [
   ui := super makeUI.
-  appArea addChild: self makeEditor as: #editor.
+  appArea addChild: self makeOverlay as: #overlay.
   ^ ui
 ]
 
 { #category : #accessing }
 GsSketchApp >> scene: aScene [
   super scene: aScene.
-  editor scene: aScene.
+  overlay scene: aScene.
 ]
