@@ -52,3 +52,10 @@ GsOverlapDemo >> makeStartScene [
 	    scene addChild: (current := self makeNode).
     	current relocate: e localPosition - (5@5)].
 ]
+
+{ #category : #accessing }
+GsOverlapDemo >> scene: aScene [
+	scene := aScene.
+	sceneHolder removeChildNamed: #scene.
+	sceneHolder addChild: scene as: #scene.
+]

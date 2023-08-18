@@ -1,10 +1,8 @@
 "
-I process mouse events and manipulate a {{gtClass:GsScene}}
+I process mouse events from a {{gtClass:GsToolOverlay}} 
+and manipulate a {{gtClass:GsScene}}
 
-I represent some a of tool for manipulating a scene in a {{gtClass:GsSceneEditor}}
-
-Currently {{gtClass:GsApp}}seems to be what creates me.
-
+I represent some a of tool for manipulating a scene in a {{gtClass:GsToolApp}}
 
 See my subclasses for concrete instances.
 
@@ -42,11 +40,6 @@ GsTool >> label [
   ^ self class name
 ]
 
-{ #category : #'as yet unclassified' }
-GsTool >> makeCurrentFor: anApp [
-  anApp currentTool: self
-]
-
 { #category : #'event handling' }
 GsTool >> move: aPoint [
 ]
@@ -64,14 +57,4 @@ GsTool >> scene [
 { #category : #accessing }
 GsTool >> scene: aScene [
 	scene := aScene
-]
-
-{ #category : #accessing }
-GsTool >> startPoint [
-	^ startPoint
-]
-
-{ #category : #accessing }
-GsTool >> startPoint: anObject [
-	startPoint := anObject
 ]

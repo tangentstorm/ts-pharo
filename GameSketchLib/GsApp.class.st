@@ -69,7 +69,7 @@ GsApp >> scene [
 GsApp >> scene: aScene [
 	scene := aScene.
 	sceneHolder removeChildNamed: #scene.
-	sceneHolder addChild: scene as: #scene.	
+	sceneHolder addChild: scene as: #scene.
 ]
 
 { #category : #accessing }

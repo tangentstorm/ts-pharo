@@ -7,20 +7,20 @@ Class {
 	#superclass : #GsApp,
 	#instVars : [
 		'tools',
-		'currentTool',
-		'appArea'
+		'appArea',
+		'overlay'
 	],
 	#category : #'GameSketchLib-Apps'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 GsToolApp >> currentTool [
-	^ currentTool
+	^ overlay tool
 ]
 
-{ #category : #'as yet unclassified' }
-GsToolApp >> currentTool: anObject [
-	currentTool := anObject
+{ #category : #accessing }
+GsToolApp >> currentTool: aTool [
+	overlay tool: aTool
 ]
 
 { #category : #initialization }
@@ -33,7 +33,15 @@ GsToolApp >> initialize [
 GsToolApp >> makeAppArea [
   ^ appArea := GsObject new matchParent
     background: GsColor toolBg;
-    addChild: self makeSceneHolder as: #sceneHolder
+    addChild: self makeSceneHolder as: #sceneHolder;
+    addChild: self makeOverlay as: #overlay.
+]
+
+{ #category : #accessing }
+GsToolApp >> makeOverlay [
+  ^ overlay := GsToolOverlay new
+    scene: scene;
+    tool: tools first
 ]
 
 { #category : #'gsl - ui' }
@@ -44,10 +52,10 @@ GsToolApp >> makeToolbar [
       BrButton new 
         aptitude: BrMaterialToggleLabelledAptitude;
         label: t label; 
-        action: [ t makeCurrentFor: self ]])
+        action: [ self currentTool: t ]])
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 GsToolApp >> makeTools [
   ^ {GsSelectTool new}
 ]
@@ -58,4 +66,10 @@ GsToolApp >> makeUI [
     background: GsColor toolBg;
     addChild: self makeToolbar as: #toolbar;
     addChild: self makeAppArea as: #appArea
+]
+
+{ #category : #accessing }
+GsToolApp >> scene: aScene [
+  super scene: aScene.
+  overlay scene: aScene
 ]

@@ -73,3 +73,10 @@ GsPathmapDemo >> makeUI [
 GsPathmapDemo >> mondrian [
   ^ mondrian
 ]
+
+{ #category : #accessing }
+GsPathmapDemo >> scene: aScene [
+	scene := aScene.
+	sceneHolder removeChildNamed: #scene.
+	sceneHolder addChild: scene as: #scene.
+]

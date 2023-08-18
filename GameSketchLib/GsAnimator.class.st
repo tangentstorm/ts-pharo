@@ -83,6 +83,13 @@ GsAnimator >> makeUI [
 ]
 
 { #category : #accessing }
+GsAnimator >> scene: aScene [
+	scene := aScene.
+	sceneHolder removeChildNamed: #scene.
+	sceneHolder addChild: scene as: #scene.
+]
+
+{ #category : #accessing }
 GsAnimator >> stageSize [
   ^ 640@480
 ]
