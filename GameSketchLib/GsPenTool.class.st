@@ -6,3 +6,8 @@ Class {
 	#superclass : #GsTool,
 	#category : #'GameSketchLib-Tools'
 }
+
+{ #category : #accessing }
+GsPenTool >> label [
+  ^ 'pen'
+]

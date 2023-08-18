@@ -650,12 +650,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-03T11:15:48.288-04:00"
+			"dateAndTimeString" : "2023-08-15T14:40:33.156-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsTool hierarchy"
+		"title" : "GSL Tool hierarchy"
 	},
 	"uid" : {
 		"__type" : "uuid",

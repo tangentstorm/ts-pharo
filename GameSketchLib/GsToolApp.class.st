@@ -7,7 +7,8 @@ Class {
 	#superclass : #GsApp,
 	#instVars : [
 		'tools',
-		'currentTool'
+		'currentTool',
+		'appArea'
 	],
 	#category : #'GameSketchLib-Apps'
 }
@@ -26,6 +27,13 @@ GsToolApp >> currentTool: anObject [
 GsToolApp >> initialize [
   tools := self makeTools.
   super initialize.
+]
+
+{ #category : #'gsl - ui' }
+GsToolApp >> makeAppArea [
+  ^ appArea := GsObject new matchParent
+    background: GsColor toolBg;
+    addChild: self makeSceneHolder as: #sceneHolder
 ]
 
 { #category : #'gsl - ui' }
@@ -49,5 +57,5 @@ GsToolApp >> makeUI [
   ^ BrVerticalPane new matchParent
     background: GsColor toolBg;
     addChild: self makeToolbar as: #toolbar;
-    addChild: self makeSceneHolder as: #sceneHolder.
+    addChild: self makeAppArea as: #appArea
 ]

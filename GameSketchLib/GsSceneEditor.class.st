@@ -42,7 +42,7 @@ GsSceneEditor >> drawCoords: aPoint [
 GsSceneEditor >> initialize [
   super initialize.
   scene := GsSketch new.
-  self matchParent.
+  self matchParent constraintsDo: [:c | c ignoreByLayout].
   self addChild: self makeGlass.
   self addChild: self makeCoords.
 ]
