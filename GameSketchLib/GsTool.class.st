@@ -1,8 +1,7 @@
 "
-I process mouse events from a {{gtClass:GsToolOverlay}} 
-and manipulate a {{gtClass:GsScene}}
+I represent some a of tool in a {{gtClass:GsToolApp}}
 
-I represent some a of tool for manipulating a scene in a {{gtClass:GsToolApp}}
+I process mouse events from a {{gtClass:GsToolOverlay}} and manipulate a {{gtClass:GsScene}}
 
 See my subclasses for concrete instances.
 
