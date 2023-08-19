@@ -68,19 +68,27 @@ GsSelectTool >> selectangle: anObject [
 GsSelectTool >> selection: aCollection [
   selection := aCollection asArray.
   overlay removeChildren.
-  overlay addChildren: (selection collect: [:x| |rect b|
-    rect := x bounds asRectangle.
-    b := BlElement new
+  "TODO: select a single item: just show handles"
+  "(otherwise this acts like temporary group)" 
+  (selection size >= 1) ifTrue: [
+    |rect startPosition|
+    rect := selection first bounds asRectangle.
+    selection do: [:x| rect := rect merge: x bounds asRectangle].
+    overlay addChild: (BlElement new
       border: (BlBorder paint: Color cyan);
       background: (Color cyan alpha: 0.2);
       size: rect extent;
       relocate: rect topLeft;
       addEventHandler: BlPullHandler new;
       when: BlMouseDownEvent do: [:e| 
-        "without this, overlay gets mouse events."
+        startPosition := e source position.
         e  consumed: true];
       when: BlElementPositionChangedEvent do: [:e|
-          x relocate: b position]])
+        "ignore the initial positioning event."
+        startPosition ifNotNil: [ |diff|
+          diff := e source position - startPosition.
+          startPosition := e source position.
+          selection do: [:x | x relocate: x position + diff]]])]
 ]
 
 { #category : #accessing }
