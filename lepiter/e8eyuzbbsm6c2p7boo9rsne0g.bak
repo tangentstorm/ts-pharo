@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:34:38.467-04:00"
+						"dateAndTimeString" : "2023-08-19T11:21:25.464-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The  {{gtClass:GsApp}}  toolbar lets you select a {{gtClass:GsTool}}. {{gtClass:GsSceneEditor}}"
+				"string" : "The  {{gtClass:GsToolApp}}  toolbar lets you select a {{gtClass:GsTool}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:38:35.533-04:00"
+						"dateAndTimeString" : "2023-08-19T11:21:25.464-04:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each GsTool should be able to specify behavior for any mouse-related input event: right click, left click, dragging, etc."
+				"string" : "Each tool specifies behavior for any mouse-related input event: right click, left click, dragging, etc."
 			},
 			{
 				"__type" : "textSnippet",
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:09:08.501-04:00"
+									"dateAndTimeString" : "2023-08-19T11:21:25.464-04:00"
 								}
 							},
 							"uid" : {
@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:09:44.375-04:00"
+									"dateAndTimeString" : "2023-08-18T19:10:16.789-04:00"
 								}
 							},
 							"uid" : {
@@ -155,155 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtClass:GsShapeTool}} creates {{gtClass:GsShape}} instances."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:09:02.455-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:09:04.923-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2ND3WZy/DQCoKiTxDxuS2A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "planned:"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:18:47.431-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:19:45.939-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "WBeaCGi+DQCSK/j0AO5s8A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- {{gtClass:GsGraphTool}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:19:17.06-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:19:53.393-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ACJeCmi+DQCSNau+AO5s8A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- {{gtClass:GsPenTool}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:08:58.158-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T19:08:58.158-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "aJ3qOmi+DQCg9QfNAO5s8A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"string" : "{{gtClass:GsBuildTool}} creates {{gtClass:GsShape}} instances using a {{gtClass:GsSceneBuilder}}"
 						}
 					]
 				},
@@ -352,7 +204,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:53:09.366-04:00"
+						"dateAndTimeString" : "2023-08-03T11:19:17.06-04:00"
 					}
 				},
 				"editEmail" : {
@@ -363,17 +215,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:53:43.495-04:00"
+						"dateAndTimeString" : "2023-08-03T11:19:53.393-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8LiAg2i+DQC+Rb+aCFKpdw=="
+					"uidString" : "ACJeCmi+DQCSNau+AO5s8A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Right now the SceneEditor is specific to a given scene, but the scene is assigned at the App level. "
+				"string" : "- {{gtClass:GsPenTool}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -389,7 +241,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:53:50.81-04:00"
+						"dateAndTimeString" : "2023-08-03T11:18:47.431-04:00"
 					}
 				},
 				"editEmail" : {
@@ -400,17 +252,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:54:04.335-04:00"
+						"dateAndTimeString" : "2023-08-03T11:19:45.939-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MDyOhWi+DQCAoi0eCFKpdw=="
+					"uidString" : "WBeaCGi+DQCSK/j0AO5s8A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Presumably the SceneEditor should just be a "
+				"string" : "- {{gtClass:GsGraphTool}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -426,7 +278,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:54:06.404-04:00"
+						"dateAndTimeString" : "2023-08-18T19:09:02.455-04:00"
 					}
 				},
 				"editEmail" : {
@@ -437,17 +289,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-17T21:03:23.407-04:00"
+						"dateAndTimeString" : "2023-08-18T19:09:04.923-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AP7mhmi+DQCB8HHwCFKpdw=="
+					"uidString" : "2ND3WZy/DQCoKiTxDxuS2A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "what is a {{gtClass:GsSketch}}? It claims to hold the overlay but that's not true. "
+				"string" : "planned:"
 			}
 		]
 	},

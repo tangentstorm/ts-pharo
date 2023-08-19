@@ -331,7 +331,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-15T14:29:25.469-04:00"
+									"dateAndTimeString" : "2023-08-19T11:41:42.23-04:00"
 								}
 							},
 							"uid" : {
@@ -341,7 +341,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Plotting]]"
+							"string" : "[[GSL Charts and Plots]]"
 						}
 					]
 				},

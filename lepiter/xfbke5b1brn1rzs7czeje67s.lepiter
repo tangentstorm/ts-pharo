@@ -219,14 +219,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-10T19:24:49.982-04:00"
+									"dateAndTimeString" : "2023-08-19T11:41:24.044-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "6HlDkue+DQC4NWzLBOMaBg=="
 							},
-							"code" : "GsChart new min: 0@0; max: 10@10; ticks: 10@10;\r  add: (GsScatterPlot for: { 10@11. 23@8. 19@7. -9@ -2})\r  as: #a;\r  add: (GsScatterPlot for: { 15@12. 12@11})\r  as: #b;\r  rebuild"
+							"code" : "GsChart new min: 0@0; max: 10@10; ticks: 10@10;\r  add: (GsScatterPlot for: { 10@11. 23@8. 19@7. -9@ -2})\r  as: #a;\r  add: (GsScatterPlot for: { 15@12. 12@11})\r  as: #b;\r  rebuildShape"
 						},
 						{
 							"__type" : "textSnippet",
@@ -504,12 +504,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-09T22:00:26.324-04:00"
+			"dateAndTimeString" : "2023-08-19T11:41:42.213-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Plotting"
+		"title" : "GSL Charts and Plots"
 	},
 	"uid" : {
 		"__type" : "uuid",

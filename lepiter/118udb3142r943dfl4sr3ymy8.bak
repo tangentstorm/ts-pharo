@@ -65,43 +65,6 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-02T14:04:24.683-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-02T14:04:24.7-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "UNS1nea7DQCnnPgLA4beVA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[GSL HowTo]]"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2023-06-12T13:15:53.879-04:00"
 											}
 										},
@@ -368,7 +331,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-15T14:29:25.469-04:00"
+									"dateAndTimeString" : "2023-08-19T11:40:51.058-04:00"
 								}
 							},
 							"uid" : {
@@ -378,7 +341,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Plotting]]"
+							"string" : "[[GSL Plots]]"
 						}
 					]
 				},

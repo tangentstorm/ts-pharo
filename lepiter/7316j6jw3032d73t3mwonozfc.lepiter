@@ -18,80 +18,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:56:32.58-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:56:50.118-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GPYKj2i+DQCE5rmjCFKpdw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtPackage:GameSketchLib}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:56:45.255-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:56:45.255-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uN1ekGi+DQCFztINCFKpdw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-03T11:56:22.159-04:00"
 					}
 				},
@@ -103,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:57:07.083-04:00"
+						"dateAndTimeString" : "2023-08-19T11:21:25.432-04:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What is a Sketch?"
+				"string" : "What is a Sketch? A compound shape."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:58:26.466-04:00"
+						"dateAndTimeString" : "2023-08-19T11:21:25.432-04:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What is a Scene? (A sketch with a script attached?) (What about animations?)"
+				"string" : "What is a Scene? A top-level sketch with background."
 			},
 			{
 				"__type" : "textSnippet",
@@ -166,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:57:11.593-04:00"
+						"dateAndTimeString" : "2023-08-19T11:10:10.775-04:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:57:55.952-04:00"
+						"dateAndTimeString" : "2023-08-19T11:10:57.978-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iMDwkWi+DQCGwW0wCFKpdw=="
+					"uidString" : "4Canxqm/DQCJU09pDxuS2A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What do we call the items in the scene?  Element?  / Figure? / Shape?"
+				"string" : "What is a Shape? A visual figure that produces handles when selected."
 			},
 			{
 				"__type" : "textSnippet",
@@ -342,43 +268,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:58:49.408-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T12:02:13.807-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "MFLFl2i+DQCLq3GUCFKpdw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Something holds the shapes and gets saved/loaded. (GsScene)"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -405,7 +294,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T12:03:45.37-04:00"
+									"dateAndTimeString" : "2023-08-19T11:21:25.432-04:00"
 								}
 							},
 							"uid" : {
@@ -415,7 +304,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This would serialize as pure STON."
+							"string" : "This would (maybe?) serialize as pure STON."
 						}
 					]
 				},
@@ -438,7 +327,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T12:03:31.302-04:00"
+						"dateAndTimeString" : "2023-08-19T11:21:25.432-04:00"
 					}
 				},
 				"uid" : {
@@ -448,44 +337,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Need some way to hold an arbitrary BlElement (GsElementWrapper?)"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T12:03:45.563-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T12:04:16.555-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eFFsqWi+DQCVYrTLCFKpdw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Scenes should be composites, very much like Godot scenes."
+				"string" : "Need some way to hold an arbitrary BlElement (GsBlocShape?)"
 			},
 			{
 				"__type" : "textSnippet",
