@@ -18,8 +18,14 @@ GsBuildTool >> click: aPoint [
 ]
 
 { #category : #accessing }
+GsBuildTool >> dragEnd: aPoint [
+  overlay removeChildren
+]
+
+{ #category : #accessing }
 GsBuildTool >> dragStart: aPoint [
-  self click: aPoint
+  self click: aPoint.
+  overlay addChild: (GsHandle new point: aPoint)
 ]
 
 { #category : #accessing }

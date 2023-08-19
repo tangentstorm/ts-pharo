@@ -23,6 +23,11 @@ GsColor class >> gold [
 ]
 
 { #category : #accessing }
+GsColor class >> handleColor [
+  ^ Color veryVeryLightGray
+]
+
+{ #category : #accessing }
 GsColor class >> toolBg [
   ^ Color veryVeryLightGray
 ]
