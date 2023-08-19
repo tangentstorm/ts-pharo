@@ -1,6 +1,12 @@
+"
+Drag any rectangle around to detect overlaps. Only the active rectangle (colored gold) is considered.
+
+Double click background to create new rectangles.
+
+"
 Class {
 	#name : #GsOverlapDemo,
-	#superclass : #GsToolApp,
+	#superclass : #GsApp,
 	#instVars : [
 		'current'
 	],
@@ -20,10 +26,9 @@ GsOverlapDemo >> current: anObject [
 { #category : #accessing }
 GsOverlapDemo >> makeNode [
   |node|
-node := BrVerticalPane new size: 75@45;
-  background: Color white;
+node := GsRectShape new size: 75@45;
   addEventHandler: BlPullHandler new;
-  when: BlDragEvent do: [:e| |rect hits|
+  when: BlElementPositionChangedEvent do: [:e| |rect hits|
     rect := node bounds asRectangle.
     hits := 0.
     scene children copy
@@ -31,7 +36,7 @@ node := BrVerticalPane new size: 75@45;
       do: [:x| (rect intersects: x bounds asRectangle)
         ifTrue: [
           hits := hits + 1.
-          x background: Color black] 
+          x background: Color veryDarkGray] 
         ifFalse: [x background: Color white]].
     node background: (hits > 0
       ifTrue:[Color fromHexString: 'ffd700']
@@ -41,21 +46,19 @@ node := BrVerticalPane new size: 75@45;
   when: BlDoubleClickEvent do: [:e|
     e consumed: true.
     node background: Color random].
-^ node
+^ current := node
 ]
 
 { #category : #accessing }
 GsOverlapDemo >> makeStartScene [
   ^ GsScene new
+    addChildren: {
+      self makeNode relocate: 20@20.
+      self makeNode relocate: 44@44.
+      self makeNode relocate: 68@68.
+      self makeNode relocate: 92@92};
     when: BlDoubleClickEvent do: [:e|
     	e consumed: true.
-	    scene addChild: (current := self makeNode).
-    	current relocate: e localPosition - (5@5)].
-]
-
-{ #category : #accessing }
-GsOverlapDemo >> scene: aScene [
-	scene := aScene.
-	sceneHolder removeChildNamed: #scene.
-	sceneHolder addChild: scene as: #scene.
+	    scene addChild: (self makeNode 
+	     relocate: e localPosition - (5@5))].
 ]
