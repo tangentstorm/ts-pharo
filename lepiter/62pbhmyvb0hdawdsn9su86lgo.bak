@@ -246,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T18:11:08.313-04:00"
+						"dateAndTimeString" : "2023-08-18T18:33:20.312-04:00"
 					}
 				},
 				"uid" : {
@@ -283,7 +283,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T18:11:49.39-04:00"
+						"dateAndTimeString" : "2023-08-18T18:33:20.473-04:00"
 					}
 				},
 				"uid" : {
@@ -317,7 +317,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T18:12:59.299-04:00"
+						"dateAndTimeString" : "2023-08-18T18:33:20.552-04:00"
 					}
 				},
 				"uid" : {
@@ -327,7 +327,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But also you can use {{gtClass:GsSketchApp}} to  do the same thing.provide a toolbar:"
+				"string" : "But also you can use {{gtClass:GsSketchApp}} to  do the same thing. It also provides a toolbar:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -501,40 +501,6 @@
 					"uidString" : "CExb+Vy/DQCwM/t3DeD4xQ=="
 				},
 				"code" : "GsScene new"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T20:25:54.038-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-10T22:15:23.42-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CPkbfvy+DQC6KvMJC5idZg=="
-				},
-				"code" : "#'BlocPac-Geometry' asPackage"
 			},
 			{
 				"__type" : "textSnippet",

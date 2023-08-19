@@ -14,7 +14,7 @@ Class {
 
 { #category : #creating }
 GsRectShape class >> newAtPoint: aPoint [
-  ^ self new xy: aPoint
+  ^ self new xy: aPoint; wh: 10@10
 ]
 
 { #category : #accessing }

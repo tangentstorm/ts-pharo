@@ -15,6 +15,11 @@ Class {
 	#category : #'GameSketchLib-Core'
 }
 
+{ #category : #accessing }
+GsSceneBuilder class >> for: aScene [
+  ^ self new scene:aScene 
+]
+
 { #category : #'high level builders' }
 GsSceneBuilder >> circle: name at: center radius: r [
   ^ self shapeClass: GsCircleShape;
@@ -27,6 +32,7 @@ GsSceneBuilder >> circle: name at: center radius: r [
 GsSceneBuilder >> initialize [
   super initialize.
   scene := GsScene new.
+  self shapeClass: GsRectShape
 ]
 
 { #category : #accessing }
@@ -61,6 +67,11 @@ GsSceneBuilder >> scene: anObject [
 { #category : #accessing }
 GsSceneBuilder >> secondPoint: xy [
   shape secondPoint: xy
+]
+
+{ #category : #accessing }
+GsSceneBuilder >> shapeClass [
+  ^ shapeClass
 ]
 
 { #category : #accessing }

@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:18:37.951-04:00"
+									"dateAndTimeString" : "2023-08-18T19:09:08.501-04:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,81 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- {{gtClass:GsSelectTool}}"
+							"string" : "{{gtClass:GsSelectTool}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T19:09:12.845-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T19:09:44.375-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yFqWWpy/DQCoYVKmDxuS2A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GsShapeTool}} creates {{gtClass:GsShape}} instances."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T19:09:02.455-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T19:09:04.923-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2ND3WZy/DQCoKiTxDxuS2A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "planned:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -198,82 +272,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-03T11:33:00.354-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-03T11:33:39.175-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "cJMjO2i+DQChT9fdAO5s8A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "create (for given class)"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-03T11:33:02.369-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-03T11:33:02.369-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "6GiPO2i+DQCho6qSAO5s8A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : ""
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -283,7 +282,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:32:51.573-04:00"
+									"dateAndTimeString" : "2023-08-18T19:08:58.158-04:00"
 								}
 							},
 							"editEmail" : {
@@ -294,7 +293,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-03T11:32:54.946-04:00"
+									"dateAndTimeString" : "2023-08-18T19:08:58.158-04:00"
 								}
 							},
 							"uid" : {
@@ -304,7 +303,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "from hotdraw:"
+							"string" : ""
 						}
 					]
 				},
@@ -338,80 +337,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Current tools:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:52:06.14-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:52:18.962-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "0NcjD2i+DQCULmlXAO5s8A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Right now, {{gtClass:GsSceneEditor}} is doing all the work."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:52:19.191-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:52:41.845-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OA2DgGi+DQC8jVi/CFKpdw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:GsSketchDemo}} just adds a scene editor to the scene holder."
 			},
 			{
 				"__type" : "textSnippet",
@@ -512,7 +437,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:32:58.339-04:00"
+						"dateAndTimeString" : "2023-08-17T21:03:23.407-04:00"
 					}
 				},
 				"uid" : {
@@ -523,111 +448,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "what is a {{gtClass:GsSketch}}? It claims to hold the overlay but that's not true. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:20:41.484-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:20:41.484-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KFtmD2i+DQCUeMUvAO5s8A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:39:12.337-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:39:16.636-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gBRwO1y/DQCr+QpSDeD4xQ=="
-				},
-				"code" : "GsOverlay new"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:39:17.13-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:39:21.465-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KDe5O1y/DQCsSWI+DeD4xQ=="
-				},
-				"code" : "GsSketchDemo new"
 			}
 		]
 	},
@@ -650,7 +470,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-15T14:40:33.156-04:00"
+			"dateAndTimeString" : "2023-08-17T21:03:23.415-04:00"
 		}
 	},
 	"pageType" : {

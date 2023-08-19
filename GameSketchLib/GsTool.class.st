@@ -35,9 +35,9 @@ GsTool >> dragStart: aPoint [
 GsTool >> dragStep: aPoint [
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 GsTool >> label [
-  ^ self class name
+  ^ self class name splitCamelCase second asLowercase
 ]
 
 { #category : #'event handling' }

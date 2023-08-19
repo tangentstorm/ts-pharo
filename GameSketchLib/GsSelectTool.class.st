@@ -55,11 +55,6 @@ GsSelectTool >> initialize [
 ]
 
 { #category : #accessing }
-GsSelectTool >> label [
-  ^ 'select'
-]
-
-{ #category : #accessing }
 GsSelectTool >> selectangle [
 	^ selectangle
 ]
