@@ -45,8 +45,8 @@ GsCircleShape >> radius: anObject [
 { #category : #accessing }
 GsCircleShape >> rebuildShape [
   |size| size := radius asPoint.
-  self relocate: center - (size/2);
-  size: size
+  self relocate: center - size;
+  size: size * 2
 ]
 
 { #category : #'shape - handles' }
