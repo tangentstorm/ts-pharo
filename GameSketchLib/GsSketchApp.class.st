@@ -12,5 +12,6 @@ GsSketchApp class >> for: aScene [
 { #category : #accessing }
 GsSketchApp >> makeTools [
   ^ { GsSelectTool new.
-      GsPenTool new}
+      GsBuildTool for: GsRectShape.
+      GsBuildTool for: GsCircleShape.}
 ]
