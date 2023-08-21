@@ -47,12 +47,12 @@ GsRectShape >> makeElement [
   ^ BlElement new
 ]
 
-{ #category : #accessing }
+{ #category : #'gsl - shapes' }
 GsRectShape >> rebuildShape [
   self relocate: xy; size: wh
 ]
 
-{ #category : #accessing }
+{ #category : #'gsl - shapes' }
 GsRectShape >> secondPoint: aPoint [
   self wh: (aPoint - xy)
 ]

@@ -7,7 +7,9 @@ Class {
 	#instVars : [
 		'selectangle',
 		'subject',
-		'selection'
+		'selection',
+		'startPos',
+		'offset'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -35,8 +37,7 @@ GsSelectTool >> dragStart: p [
   (subject := scene childAtPoint: p)
     ifNil: [overlay addChild:
       (selectangle relocate:p; size:0@0)]
-    ifNotNil: [
-      startPoint := subject position-p]
+    ifNotNil: [ offset := subject shapePosition - p. ].
 ]
 
 { #category : #accessing }
@@ -44,7 +45,7 @@ GsSelectTool >> dragStep: p [
   subject ifNil: [|rect|
     rect := Rectangle point: startPoint point: p.
     selectangle relocate: rect topLeft; size: rect extent]
-  ifNotNil: [subject relocate: p + startPoint]
+  ifNotNil: [subject shapePosition: p + offset ]
 ]
 
 { #category : #initialization }
@@ -74,21 +75,21 @@ GsSelectTool >> selection: aCollection [
     |rect startPosition|
     rect := selection first bounds asRectangle.
     selection do: [:x| rect := rect merge: x bounds asRectangle].
-    overlay addChild: (BlElement new
+    overlay addChild: (GsRectShape new
       border: (BlBorder paint: Color cyan);
       background: (Color cyan alpha: 0.2);
       size: rect extent;
       relocate: rect topLeft;
       addEventHandler: BlPullHandler new;
       when: BlMouseDownEvent do: [:e| 
-        startPosition := e source position.
+        startPosition := e source shapePosition.
         e  consumed: true];
       when: BlElementPositionChangedEvent do: [:e|
         "ignore the initial positioning event."
         startPosition ifNotNil: [ |diff|
-          diff := e source position - startPosition.
-          startPosition := e source position.
-          selection do: [:x | x relocate: x position + diff]]])]
+          diff := e source shapePosition - startPosition.
+          startPosition := e source shapePosition.
+          selection do: [:x | x shapePosition: x shapePosition + diff]]])]
 ]
 
 { #category : #accessing }

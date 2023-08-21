@@ -126,6 +126,22 @@ GsShape >> makeElement [
   ^ BlElement new
 ]
 
+{ #category : #'gsl - shapes' }
+GsShape >> moveBy: aPoint [
+  self relocate: self position + aPoint
+]
+
+{ #category : #'gsl - shapes' }
+GsShape >> shapePosition [
+  ^ self position
+]
+
+{ #category : #'gsl - shapes' }
+GsShape >> shapePosition: aPoint [
+  "this has to be a separate interface from 'position', because shapes know where they are regardless of layout. See GsLineShape for extreme example."
+  self relocate: aPoint
+]
+
 { #category : #accessing }
 GsShape >> w [
 	^ w

@@ -13,5 +13,6 @@ GsSketchApp class >> for: aScene [
 GsSketchApp >> makeTools [
   ^ { GsSelectTool new.
       GsBuildTool for: GsRectShape.
-      GsBuildTool for: GsCircleShape.}
+      GsBuildTool for: GsCircleShape.
+      GsBuildTool for: GsLineShape.}
 ]
