@@ -36,6 +36,14 @@ GsSceneBuilder >> initialize [
 ]
 
 { #category : #accessing }
+GsSceneBuilder >> line: aName from: p1 to: p2 [
+  ^ self shapeClass: GsLineShape;
+    newAtPoint: p1;
+    secondPoint: p2;
+    named: aName
+]
+
+{ #category : #accessing }
 GsSceneBuilder >> named: name [ 
   ^ shape id: name
 ]

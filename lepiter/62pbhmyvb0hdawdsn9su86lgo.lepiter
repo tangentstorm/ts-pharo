@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-15T16:00:29.612-04:00"
+									"dateAndTimeString" : "2023-08-21T20:35:48.797-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GHL1S12/DQC3F8WNDeD4xQ=="
 							},
-							"code" : "GsScene new addChildren: {\r  GsCircleShape new  id: #c1; center: 250@250; radius: 90.\r  GsRectShape new id: #r1; xy: 250@250; wh: 150@90. }"
+							"code" : "GsScene new addChildren: {\r  GsCircleShape new  id: #c1; center: 250@250; radius: 90.\r  GsRectShape new id: #r1; xy: 250@250; wh: 150@90.\r  GsLineShape new id: #l1; p1: 200@200; p2: 300@300 }"
 						},
 						{
 							"__type" : "textSnippet",
@@ -142,14 +142,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-15T16:00:23.245-04:00"
+									"dateAndTimeString" : "2023-08-21T20:35:07.985-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "sAF6RV2/DQC2JUnPDeD4xQ=="
 							},
-							"code" : "GsSceneBuilder new \r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene"
+							"code" : "GsSceneBuilder new \r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  line: #l1 from: 200@200 to: 300@300;\r  scene"
 						}
 					]
 				},
@@ -283,14 +283,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T18:33:20.473-04:00"
+						"dateAndTimeString" : "2023-08-21T20:34:59.922-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2LagXPy+DQC4NAKTC5idZg=="
 				},
-				"code" : "s := GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene.\r  \t\rGsObject new matchParent\r  addChildren: { s. GsToolOverlay new scene:s; tool: GsSelectTool new }"
+				"code" : "s := GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  line: #l1 from: 200@200 to: 300@300;\r  scene.\r  \t\rGsObject new matchParent\r  addChildren: { s. GsToolOverlay new scene:s; tool: GsSelectTool new }"
 			},
 			{
 				"__type" : "textSnippet",
@@ -354,14 +354,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-17T22:02:51.735-04:00"
+						"dateAndTimeString" : "2023-08-21T20:33:25.536-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ICkNnYq/DQCdbaIOB18m3A=="
 				},
-				"code" : "GsSketchApp new  scene: (GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene)"
+				"code" : "GsSketchApp new  scene: (GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  line: #l1 from: 200@200 to: 300@300;\r  scene)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -425,14 +425,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-17T22:06:05.325-04:00"
+						"dateAndTimeString" : "2023-08-21T20:36:08.393-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "QNEPr4q/DQCgOfO1B18m3A=="
 				},
-				"code" : "\"don't expect this to do much just yet...\"\rGsToolApp new  scene: (GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  scene)"
+				"code" : "\"don't expect this to do much just yet...\"\rGsToolApp new  scene: (GsSceneBuilder new\r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  line: #l1 from: 200@200 to: 300@300;\r  scene)"
 			},
 			{
 				"__type" : "textSnippet",
