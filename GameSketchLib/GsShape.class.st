@@ -37,6 +37,11 @@ GsShape >> initialize [
   visuals := GsStyle default.
 ]
 
+{ #category : #accessing }
+GsShape >> shapeContainsPoint: p [
+  ^ self bounds asRectangle containsPoint: p 
+]
+
 { #category : #'gsl - shapes' }
 GsShape >> shapePosition [
   ^ self position

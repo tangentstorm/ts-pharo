@@ -53,6 +53,11 @@ GsLineShape >> secondPoint: aPoint [
 ]
 
 { #category : #accessing }
+GsLineShape >> shapeContainsPoint: p [
+  ^ self geometry containsPoint: p - self position in: self parent
+]
+
+{ #category : #accessing }
 GsLineShape >> shapePosition [
   ^ p1
 ]
