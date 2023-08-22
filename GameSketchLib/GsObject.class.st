@@ -23,7 +23,7 @@ GsObject >> childAtPoint: p [
 { #category : #accessing }
 GsObject >> childAtPoint: p ifNone: aBlock [
   ^ children reversed
-      detect: [:x|x bounds asRectangle containsPoint: p]
+      detect: [:x|x geometry containsPoint: p - x position in: self]
       ifNone: aBlock
 ]
 
