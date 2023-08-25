@@ -16,9 +16,10 @@ Class {
 
 { #category : #accessing }
 GsSelectTool >> click: p [
-  self selection:(
-    (scene childAtPoint: p) ifNil:[{}]
-    ifNotNil:[:x|{x}])
+  selection := nil.
+  overlay removeChildren.
+  (scene childAtPoint: p) ifNotNil:[:x|
+    overlay addChildren: x shapeHandles ]
 ]
 
 { #category : #accessing }

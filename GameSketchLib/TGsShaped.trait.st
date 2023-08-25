@@ -19,6 +19,12 @@ TGsShaped >> shapeContainsPoint: p [
   ^ self bounds asRectangle containsPoint: p
 ]
 
+{ #category : #accessing }
+TGsShaped >> shapeHandles [
+  "return a collection of handles."
+  ^ { BlResizerElement new attachTo: self}
+]
+
 { #category : #'gsl - shapes' }
 TGsShaped >> shapePosition [
   ^ self position
