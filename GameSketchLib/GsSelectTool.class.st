@@ -66,6 +66,11 @@ GsSelectTool >> selectangle: anObject [
 ]
 
 { #category : #accessing }
+GsSelectTool >> selection [
+  ^ selection
+]
+
+{ #category : #accessing }
 GsSelectTool >> selection: aCollection [
   selection := aCollection asArray.
   overlay removeChildren.

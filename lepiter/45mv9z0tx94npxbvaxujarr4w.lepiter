@@ -5,108 +5,6 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T01:13:31.982-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T02:31:02.806-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uFduZjW6DQClE97TAHg1Rg=="
-				},
-				"code" : "\"dawnbringer palette https://pixeljoint.com/forum/forum_posts.asp?TID=12795\"\r\ndawnbringer := {\r\n  16rff140c1c. 16rff442434. 16rff30346d. 16rff4e4a4e.\r\n  16rff854c30. 16rff346524. 16rffd04648. 16rff757161.\r\n  16rff597dce. 16rffd27d2c. 16rff8595a1. 16rff6daa2c.\r\n  16rffd2aa99. 16rff6dc2ca. 16rffdad45e. 16rffdeeed6}\r\n  collect: [:x| x asColorOfDepth: 32]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T01:13:29.786-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T02:30:58.725-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wOZPZjW6DQClDHuGAHg1Rg=="
-				},
-				"code" : "arne := {\r\n  16rff000000. 16rff9d9d9d. 16rffffffff. 16rffbe2633.\r\n  16rffe06f8b. 16rff493c2b. 16rffa46422. 16rffeb8931.\r\n  16rfff7e26b. 16rff2f484e. 16rff44891a. 16rffa3ce27.\r\n  16rff1b2632. 16rff005784. 16rff31a2f2. 16rffb2dcef}\r\n  collect: [:x| x asColorOfDepth: 32]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T01:13:24.798-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-11T02:30:55.012-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "MNIDZjW6DQClBBtkAHg1Rg=="
-				},
-				"code" : "pico := {\r\n  16rff000000. 16rff1d2b53. 16rff7e2553. 16rff008751.\r\n  16rffab5236. 16rff5f574f. 16rffc2c3c7. 16rfffff1e8.\r\n  16rffff004d. 16rffffa300. 16rffffec27. 16rff00e436.\r\n  16rff29adff. 16rff83769c. 16rffff77ab. 16rffffccaa}\r\n  collect: [:x| x asColorOfDepth: 32]."
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -144,7 +42,7 @@
 				"string" : "## Start on a Palette Widget"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -157,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T17:11:59.315-04:00"
+						"dateAndTimeString" : "2023-08-25T14:18:51.45-04:00"
 					}
 				},
 				"editEmail" : {
@@ -168,14 +66,91 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T17:20:00.542-04:00"
+						"dateAndTimeString" : "2023-08-25T14:19:47.877-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gGjxjNG+DQCJl/pbDREXmQ=="
+					"uidString" : "qJIUHSXADQCFYQ5XAvNFCA=="
 				},
-				"code" : "vp := BrVerticalPane new. \r\r{#dawnbringer->dawnbringer. #arne->arne. #pico->pico. } do: [:kv|  \r  vp addChildren: {\r    BlTextElement new\r      text: kv key asString asRopedText;\r      padding: (BlInsets top: 10).\r    BrHorizontalGrid new\r      columnCount: 8; cellSpacing: 1;\r      addChildren: (kv value collect: [:color|\r        BlElement new size:20 asPoint; background: color]);\r     fitContent}].\rvp fitContent"
+				"code" : "GsPalette dawnbringer",
+				"elementHeight" : 86,
+				"codeHeight" : 38,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-25T14:19:48.499-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-25T14:19:58.861-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OBZ7ICXADQCFod8/AvNFCA=="
+				},
+				"code" : "GsPalette arne",
+				"elementHeight" : 100,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-25T14:24:36.058-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-25T14:24:39.365-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kOOeMSXADQCF+3pzAvNFCA=="
+				},
+				"code" : "GsPalette pico",
+				"elementHeight" : 100,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			}
 		]
 	},
