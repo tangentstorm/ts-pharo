@@ -4,7 +4,7 @@ I represent a text string, rendered with a particular font at a particular locat
 "
 Class {
 	#name : #GsTextShape,
-	#superclass : #BrLabel,
+	#superclass : #BrEditableLabel,
 	#traits : 'TGsShaped',
 	#classTraits : 'TGsShaped classTrait',
 	#category : #'GameSketchLib-Shapes'
@@ -14,7 +14,8 @@ Class {
 GsTextShape >> initialize [
   super initialize .
   self 
-    aptitude: BrGlamorousRegularEditorAptitude new;
+    aptitude: BrEditorAptitude new;
+    fitContent;
     text: 'new text'
 ]
 
@@ -26,14 +27,6 @@ GsTextShape >> shapeContainsPoint: p [
 
 { #category : #accessing }
 GsTextShape >> shapeHandles [
-  self hide.
-  ^ { BrEditableLabel new
-    fitContent;
-    aptitude: BrGlamorousRegularEditorAptitude new;
-    relocate: self shapePosition;
-	when: BrEditorAcceptWish
-    do: [ :aWish | 
-      self text: aWish text asString.
-      self show];
-    text: self text asString }
+  self switchToEditor; requestFocus.
+  ^ { BlResizerElement new attachTo: self }
 ]

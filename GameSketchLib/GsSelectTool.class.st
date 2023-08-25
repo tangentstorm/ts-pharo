@@ -16,10 +16,12 @@ Class {
 
 { #category : #accessing }
 GsSelectTool >> click: p [
-  selection := nil.
-  overlay removeChildren.
-  (scene childAtPoint: p) ifNotNil:[:x|
-    overlay addChildren: x shapeHandles ]
+  (scene childAtPoint: p)
+    ifNotNil:[:x|
+      selection := { x }. "we don't use selection: because we want custom handles" 
+      "(but we do want to be able apply colors, change z-order, etc."
+      overlay removeChildren; addChildren: x shapeHandles ]
+    ifNil: [ self selection: { }]
 ]
 
 { #category : #accessing }

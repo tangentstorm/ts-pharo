@@ -11,6 +11,7 @@ Trait {
 
 { #category : #'gsl - shapes' }
 TGsShaped >> hide [
+  self visibility: BlVisibilityHidden new
 ]
 
 { #category : #accessing }
@@ -38,4 +39,5 @@ TGsShaped >> shapePosition: aPoint [
 
 { #category : #'gsl - shapes' }
 TGsShaped >> show [
+  self visibility: BlVisibilityVisible new
 ]

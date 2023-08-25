@@ -77,7 +77,7 @@ GsToolOverlay >> initialize [
     resetFlags;
     initCallbacks; 
     addChild: self makeCoords;
-    when: BlMouseDownEvent do: [:e|
+    when: BlMouseDownEvent do: [:e|  e consumed: true.
       self resetFlags.
       startPoint := e localPosition.
       mouseDown := true];

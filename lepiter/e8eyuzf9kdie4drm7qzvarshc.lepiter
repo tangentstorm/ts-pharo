@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:06:52.5-04:00"
+						"dateAndTimeString" : "2023-08-25T18:22:52.802-04:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Simple text : {{gtClass:GsTextShape}} - see {{gtPage:Wardley Map snippet|db=2j9m7db2i4oz116bexd7wbdxo}}"
+				"string" : "Simple text : {{gtClass:GsTextShape}} - see {{gtPage:Wardley Map snippet|db=2j9m7db2i4oz116bexd7wbdxo}}, [[GSL Text Tool]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:10:48.111-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -362,7 +362,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:14:02.912-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -547,7 +547,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:16:41.492-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -880,7 +880,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:18:07.175-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -1065,7 +1065,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:19:29.038-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.794-04:00"
 					}
 				},
 				"uid" : {
@@ -1250,7 +1250,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:20:46.192-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.794-04:00"
 					}
 				},
 				"uid" : {

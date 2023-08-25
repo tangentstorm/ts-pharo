@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:06:52.5-04:00"
+						"dateAndTimeString" : "2023-08-25T18:22:43.441-04:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Simple text : {{gtClass:GsTextShape}} - see {{gtPage:Wardley Map snippet|db=2j9m7db2i4oz116bexd7wbdxo}}"
+				"string" : "Simple text : {{gtClass:GsTextShape}} - see {{gtPage:Wardley Map snippet|db=2j9m7db2i4oz116bexd7wbdxo}}, [[GSL Tex"
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:10:48.111-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -362,7 +362,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:14:02.912-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -547,7 +547,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:16:41.492-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -695,7 +695,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:27.797-04:00"
+						"dateAndTimeString" : "2023-08-22T11:20:57.619-04:00"
 					}
 				},
 				"uid" : {
@@ -705,7 +705,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "basic charts"
+				"string" : "basic charts : [[GSL Charts and Plots]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -880,7 +880,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:18:07.175-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.778-04:00"
 					}
 				},
 				"uid" : {
@@ -1065,7 +1065,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:19:29.038-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.794-04:00"
 					}
 				},
 				"uid" : {
@@ -1239,7 +1239,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T11:41:56.699-04:00"
+						"dateAndTimeString" : "2023-08-22T11:20:46.192-04:00"
 					}
 				},
 				"editEmail" : {
@@ -1250,81 +1250,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-21T19:07:23.704-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "+GTeOKq/DQCG53L9DcbYeg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[GSL Charts and Plots]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:08:14.279-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:08:14.279-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mMQdL1y/DQCq2nOdDeD4xQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-15T14:36:06.787-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-21T13:51:21.99-04:00"
+						"dateAndTimeString" : "2023-08-25T18:20:36.794-04:00"
 					}
 				},
 				"uid" : {
@@ -1334,7 +1260,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Demo sprites in a Game scene. (InvaderGame?)"
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",

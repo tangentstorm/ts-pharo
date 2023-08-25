@@ -13,6 +13,7 @@ Class {
 
 { #category : #'event handling' }
 GsTextTool >> click: aPoint [
-  scene addChild: (GsTextShape new
-    shapePosition: aPoint).
+  | ts |
+  scene addChild: (ts := GsTextShape new
+    shapePosition: aPoint). 
 ]
