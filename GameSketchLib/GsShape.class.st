@@ -15,6 +15,8 @@ I should probably be a trait instead.
 Class {
 	#name : #GsShape,
 	#superclass : #GsObject,
+	#traits : 'TGsShaped',
+	#classTraits : 'TGsShaped classTrait',
 	#category : #'GameSketchLib-Shapes'
 }
 
@@ -40,15 +42,4 @@ GsShape >> initialize [
 { #category : #accessing }
 GsShape >> shapeContainsPoint: p [
   ^ self bounds asRectangle containsPoint: p 
-]
-
-{ #category : #'gsl - shapes' }
-GsShape >> shapePosition [
-  ^ self position
-]
-
-{ #category : #'gsl - shapes' }
-GsShape >> shapePosition: aPoint [
-  "this has to be a separate interface from 'position', because shapes know where they are regardless of layout. See GsLineShape for extreme example."
-  self relocate: aPoint
 ]
