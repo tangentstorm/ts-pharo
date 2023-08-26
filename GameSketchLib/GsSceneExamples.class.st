@@ -8,6 +8,15 @@ Class {
 }
 
 { #category : #accessing }
+GsSceneExamples class >> allTheShapes [
+  ^ GsSceneBuilder new
+    circle: #c1 at: 250@250 radius: 90;
+    rect: #r1 at: 250@250 size: 150@90 ;
+    line: #l1 from: 200@200 to: 300@300;
+    scene.
+]
+
+{ #category : #accessing }
 GsSceneExamples class >> basicShapes [
   ^ GsScene fromJSON: '[
     {"id":"box", "t":"rect", "x":10, "y":10, "w":50, "h":30, "fg":"#333", "lw":2, "bg":"#c66"}]'

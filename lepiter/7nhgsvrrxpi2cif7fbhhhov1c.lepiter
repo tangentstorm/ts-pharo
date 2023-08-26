@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T16:42:41.776-04:00"
+						"dateAndTimeString" : "2023-08-26T15:53:32.147-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T16:42:50.52-04:00"
+						"dateAndTimeString" : "2023-08-26T15:54:29.088-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mIUvJNG+DQC/38VgB0DnOw=="
+					"uidString" : "OIWEjTrADQCuLGvVAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Start on a Palette Widget"
+				"string" : "You can add shapes to a scene directly using the normal Bloc protocol:"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:18:51.45-04:00"
+						"dateAndTimeString" : "2023-08-26T15:54:02.039-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,20 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:47.877-04:00"
+						"dateAndTimeString" : "2023-08-26T15:54:55.863-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qJIUHSXADQCFYQ5XAvNFCA=="
+					"uidString" : "gIdMjzrADQCySbWmAfZBgQ=="
 				},
-				"code" : "GsPalette dawnbringer",
-				"elementHeight" : 86,
-				"codeHeight" : 38,
-				"codeVisible" : false
+				"code" : "GsScene new addChildren: {\r  GsCircleShape new  id: #c1; center: 250@250; radius: 90.\r  GsRectShape new id: #r1; xy: 250@250; wh: 150@90.\r  GsLineShape new id: #l1; p1: 200@200; p2: 300@300 }"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:48.499-04:00"
+						"dateAndTimeString" : "2023-08-26T15:55:18.874-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,20 +100,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:58.861-04:00"
+						"dateAndTimeString" : "2023-08-26T15:56:21.718-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OBZ7ICXADQCFod8/AvNFCA=="
+					"uidString" : "UP7jkjrADQCCOKxBAfZBgQ=="
 				},
-				"code" : "GsPalette arne",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also use factory methods on the  {{gtClass:GsSceneBuilder}} to generate [[GSL Shapes]]."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:36.058-04:00"
+						"dateAndTimeString" : "2023-08-26T15:54:46.498-04:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +137,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:39.365-04:00"
+						"dateAndTimeString" : "2023-08-26T15:56:34.895-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kOOeMSXADQCF+3pzAvNFCA=="
+					"uidString" : "6ALzkTrADQC+1qXlAfZBgQ=="
 				},
-				"code" : "GsPalette pico",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"code" : "GsSceneBuilder new \r  circle: #c1 at: 250@250 radius: 90;\r  rect: #r1 at: 250@250 size: 150@90 ;\r  line: #l1 from: 200@200 to: 300@300;\r  scene"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:56:38.381-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:58:12.205-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cHVRmDrADQCqoSPuAfZBgQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When specifiying scenes with code, this has the advantage of re-using colors and other visual styles from step to step."
 			}
 		]
 	},
@@ -162,7 +193,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-11T01:11:51.334-04:00"
+			"dateAndTimeString" : "2023-08-26T15:53:31.988-04:00"
 		}
 	},
 	"editEmail" : {
@@ -173,15 +204,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-26T14:24:11.586-04:00"
+			"dateAndTimeString" : "2023-08-26T15:53:31.988-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsPalette constructors"
+		"title" : "GSL Scene Builder"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "20586e53-35ba-0d00-a388-7cdc00783546"
+		"uuid" : "2018828d-3ac0-0d00-ae2b-db6301f64181"
 	}
 }

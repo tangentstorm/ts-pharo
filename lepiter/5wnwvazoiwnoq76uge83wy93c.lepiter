@@ -502,12 +502,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-21T18:38:36.261-04:00"
+			"dateAndTimeString" : "2023-08-26T16:28:44.942-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Lines and Curves"
+		"title" : "Draw lines and curves with a mouse"
 	},
 	"uid" : {
 		"__type" : "uuid",

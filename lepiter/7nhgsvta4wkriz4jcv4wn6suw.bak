@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:22:29.846-04:00"
+						"dateAndTimeString" : "2023-08-26T15:45:10.48-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:17:47.36-04:00"
+						"dateAndTimeString" : "2023-08-26T15:48:43.421-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8N/bFWi+DQCU+cP7AO5s8A=="
+					"uidString" : "qO9FbzrADQCwY8SWAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtPackage:GameSketchLib}} package |  [[GameSketchLib UML Diagram]] | [[GSL Features]]"
+				"string" : "Shapes are editable {{gtClass:BlElement}} descendents that cooperate well with {{gtClass:GsToolApp}} and can be drawn with special factor methods  in {{gtClass:GsSceneBuilder}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:10:26.915-04:00"
+						"dateAndTimeString" : "2023-08-26T15:48:46.968-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T18:08:47.827-04:00"
+						"dateAndTimeString" : "2023-08-26T15:49:03.656-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uH4ofva5DQCWRChHC28eiQ=="
+					"uidString" : "wAiFfDrADQCe9FwHAfZBgQ=="
 				},
-				"code" : "GsDemos new"
+				"code" : "GsSceneBuilder methodsInProtocol: 'shape factories'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T15:04:30.051-04:00"
+						"dateAndTimeString" : "2023-08-26T15:50:03.086-04:00"
 					}
 				},
 				"editEmail" : {
@@ -100,58 +100,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T11:21:25.416-04:00"
+						"dateAndTimeString" : "2023-08-26T15:50:26.268-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uFIzOb+7DQCUw7EXA4beVA=="
+					"uidString" : "yHwOgTrADQCf5JDfAfZBgQ=="
 				},
-				"code" : "GsSketchApp new "
+				"code" : "GtFilter"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-19T11:45:01.904-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:06:57.6-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "AGboQ6q/DQCJTisKDcbYeg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : " {{gtClass:GsSceneExamples}} | {{gtClass:GsAnimatorExamples}} | {{gtClass:GsScene}}"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -161,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:30.748-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:18.755-04:00"
 					}
 				},
 				"editEmail" : {
@@ -172,61 +134,23 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:46.872-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:46.026-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "eF9Z5TnADQCWL5mYAfZBgQ=="
+					"uidString" : "uHuvczrADQCNTcctAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Example scenes"
+				"string" : "They may or may not subclass {{gtClass:GsShape}}."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-02T12:00:44.672-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:08:58.928-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "GCC44+S7DQC/fy5iA4beVA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**PileUp** lets you organize ideas by dragging and dropping. {{gtClass:PileUpApp}}  |   {{gtClass:PileupItemElement}}"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -236,7 +160,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:42.05-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:55.19-04:00"
 					}
 				},
 				"editEmail" : {
@@ -247,17 +171,88 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:45.506-04:00"
+						"dateAndTimeString" : "2023-08-26T15:47:17.223-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6NMF5jnADQCWTbf8AfZBgQ=="
+					"uidString" : "8G/bdTrADQCbfj27AfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Applications"
+				"string" : "Some that don't: {{gtClass:GsTextShape}}, {{gtClass:GsLineShape}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:47:17.402-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:47:17.402-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qFkudzrADQCctBrqAfZBgQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:47:21.588-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T15:47:21.588-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ODludzrADQCcuWa0AfZBgQ=="
+				},
+				"code" : ""
 			}
 		]
 	},
@@ -269,7 +264,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T17:40:30.791-04:00"
+			"dateAndTimeString" : "2023-08-26T15:45:04.655-04:00"
 		}
 	},
 	"editEmail" : {
@@ -280,15 +275,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T19:46:35.262-04:00"
+			"dateAndTimeString" : "2023-08-26T15:45:04.655-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GameSketchLib"
+		"title" : "GSL Shapes"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "68d4a040-a2b9-0d00-a108-c5980814b393"
+		"uuid" : "98ce446f-3ac0-0d00-b062-089601f64181"
 	}
 }

@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T15:51:58.067-04:00"
+						"dateAndTimeString" : "2023-08-25T15:52:14.286-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "MNYgZybADQCLrjaCAvNFCA=="
 				},
-				"code" : "GsToolApp new addTool: "
+				"code" : "GsToolApp new addTool: GsTextTool new"
 			}
 		]
 	},

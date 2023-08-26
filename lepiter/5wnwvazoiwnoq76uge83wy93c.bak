@@ -362,7 +362,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T19:49:53.97-04:00"
+									"dateAndTimeString" : "2023-08-21T19:50:14.438-04:00"
 								}
 							},
 							"uid" : {
@@ -372,7 +372,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Since BlLineElement is already a  {{gtClass:BlAnchoredElement}} it can't subclass Gs"
+							"string" : "Since BlLineElement is already a  {{gtClass:BlAnchoredElement}} it can't subclass GsLineShape, and doesn't really need to. Rather, we just have to implement the proper interface:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -502,12 +502,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-21T18:38:36.261-04:00"
+			"dateAndTimeString" : "2023-08-26T16:28:37.256-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Lines and Curves"
+		"title" : "Draw Lines and Curves with a mouse"
 	},
 	"uid" : {
 		"__type" : "uuid",

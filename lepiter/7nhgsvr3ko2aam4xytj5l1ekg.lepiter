@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:18:51.45-04:00"
+						"dateAndTimeString" : "2023-08-26T16:31:46.844-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:47.877-04:00"
+						"dateAndTimeString" : "2023-08-26T16:32:10.289-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qJIUHSXADQCFYQ5XAvNFCA=="
+					"uidString" : "4AGDFDvADQCvZiJwAfZBgQ=="
 				},
-				"code" : "GsPalette dawnbringer",
-				"elementHeight" : 86,
-				"codeHeight" : 38,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "These would be shapes that arrange their sub-shapes according to some layout rule."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:48.499-04:00"
+						"dateAndTimeString" : "2023-08-26T16:32:10.409-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,20 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:58.861-04:00"
+						"dateAndTimeString" : "2023-08-26T16:32:30.31-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OBZ7ICXADQCFod8/AvNFCA=="
+					"uidString" : "QGCyFzvADQCxoQEhAfZBgQ=="
 				},
-				"code" : "GsPalette arne",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Necessary to [[Replace Tufts VUE with GSL]]."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:36.058-04:00"
+						"dateAndTimeString" : "2023-08-26T16:32:35.288-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:39.365-04:00"
+						"dateAndTimeString" : "2023-08-26T16:33:42.006-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kOOeMSXADQCF+3pzAvNFCA=="
+					"uidString" : "GBDyGDvADQCymIldAfZBgQ=="
 				},
-				"code" : "GsPalette pico",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Also used as the central UI mechanism in [[PileUp]] (where some \"containers\" can move notes to other pages...)"
 			}
 		]
 	},
@@ -125,7 +125,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-11T01:11:51.334-04:00"
+			"dateAndTimeString" : "2023-08-26T16:31:16.897-04:00"
 		}
 	},
 	"editEmail" : {
@@ -136,15 +136,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-26T14:24:11.586-04:00"
+			"dateAndTimeString" : "2023-08-26T16:31:51.969-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsPalette constructors"
+		"title" : "Drag shapes into containers "
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "20586e53-35ba-0d00-a388-7cdc00783546"
+		"uuid" : "00d98114-3bc0-0d00-af65-4d4d01f64181"
 	}
 }

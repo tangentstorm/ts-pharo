@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T16:42:41.776-04:00"
+						"dateAndTimeString" : "2023-08-26T15:45:10.48-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-08T16:42:50.52-04:00"
+						"dateAndTimeString" : "2023-08-26T15:48:43.421-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mIUvJNG+DQC/38VgB0DnOw=="
+					"uidString" : "qO9FbzrADQCwY8SWAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Start on a Palette Widget"
+				"string" : "Shapes are editable {{gtClass:BlElement}} descendents that cooperate well with {{gtClass:GsToolApp}} and can be drawn with special factor methods  in {{gtClass:GsSceneBuilder}}"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:18:51.45-04:00"
+						"dateAndTimeString" : "2023-08-26T15:48:46.968-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,20 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:47.877-04:00"
+						"dateAndTimeString" : "2023-08-26T15:49:03.656-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qJIUHSXADQCFYQ5XAvNFCA=="
+					"uidString" : "wAiFfDrADQCe9FwHAfZBgQ=="
 				},
-				"code" : "GsPalette dawnbringer",
-				"elementHeight" : 86,
-				"codeHeight" : 38,
-				"codeVisible" : false
+				"code" : "GsSceneBuilder methodsInProtocol: 'shape factories'"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:48.499-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:18.755-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,20 +100,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:19:58.861-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:46.026-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OBZ7ICXADQCFod8/AvNFCA=="
+					"uidString" : "uHuvczrADQCNTcctAfZBgQ=="
 				},
-				"code" : "GsPalette arne",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "They may or may not subclass {{gtClass:GsShape}}."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:36.058-04:00"
+						"dateAndTimeString" : "2023-08-26T15:46:55.19-04:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T14:24:39.365-04:00"
+						"dateAndTimeString" : "2023-08-26T15:47:17.223-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kOOeMSXADQCF+3pzAvNFCA=="
+					"uidString" : "8G/bdTrADQCbfj27AfZBgQ=="
 				},
-				"code" : "GsPalette pico",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Some that don't: {{gtClass:GsTextShape}}, {{gtClass:GsLineShape}}."
 			}
 		]
 	},
@@ -162,7 +159,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-11T01:11:51.334-04:00"
+			"dateAndTimeString" : "2023-08-26T15:45:04.655-04:00"
 		}
 	},
 	"editEmail" : {
@@ -173,15 +170,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-26T14:24:11.586-04:00"
+			"dateAndTimeString" : "2023-08-26T15:45:04.655-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsPalette constructors"
+		"title" : "GSL Shapes"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "20586e53-35ba-0d00-a388-7cdc00783546"
+		"uuid" : "98ce446f-3ac0-0d00-b062-089601f64181"
 	}
 }

@@ -8,7 +8,82 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-26T16:18:39.692-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-26T16:26:51.878-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wLHG5jrADQCe528DAfZBgQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "selecting an item clears the overlay (good) but removes the status text that shows what you're pointing at (bad)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-26T16:26:52.171-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-26T16:26:52.171-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+Ha6BDvADQCpQ3a9AfZBgQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-03T11:22:29.846-04:00"
+						"dateAndTimeString" : "2023-08-26T16:18:26.502-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +104,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:17:47.36-04:00"
+						"dateAndTimeString" : "2023-08-26T16:18:29.27-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8N/bFWi+DQCU+cP7AO5s8A=="
+					"uidString" : "cMNk5jrADQCeZ/xcAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtPackage:GameSketchLib}} package |  [[GameSketchLib UML Diagram]] | [[GSL Features]]"
+				"string" : "#Known issues"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +130,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-07T22:10:26.915-04:00"
+						"dateAndTimeString" : "2023-08-26T16:26:55.922-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +141,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T18:08:47.827-04:00"
+						"dateAndTimeString" : "2023-08-26T16:27:09.264-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uH4ofva5DQCWRChHC28eiQ=="
+					"uidString" : "SJPBBDvADQCpSHbkAfZBgQ=="
 				},
-				"code" : "GsDemos new"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Open Questions "
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -89,7 +167,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T15:04:30.051-04:00"
+						"dateAndTimeString" : "2023-08-26T16:27:09.765-04:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +178,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T11:21:25.416-04:00"
+						"dateAndTimeString" : "2023-08-26T16:27:30.29-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uFIzOb+7DQCUw7EXA4beVA=="
+					"uidString" : "oOnGBTvADQCqHvFnAfZBgQ=="
 				},
-				"code" : "GsSketchApp new "
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "can I make better use of  {{gtClass:BlGeometryAnchor}}? (It's used in GsLineShape)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T16:27:30.893-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T16:27:30.893-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4EwJBzvADQCrNm4MAfZBgQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -128,7 +246,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-19T11:45:01.904-04:00"
+									"dateAndTimeString" : "2023-08-26T16:27:41.011-04:00"
 								}
 							},
 							"editEmail" : {
@@ -139,17 +257,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:06:57.6-04:00"
+									"dateAndTimeString" : "2023-08-26T16:27:53.174-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "AGboQ6q/DQCJTisKDcbYeg=="
+								"uidString" : "OLSjBzvADQCrrkz7AfZBgQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : " {{gtClass:GsSceneExamples}} | {{gtClass:GsAnimatorExamples}} | {{gtClass:GsScene}}"
+							"string" : "Write pages about how {{gtClass:GsBulletDemo}} and {{gtClass:GsOverlapDemo}} work. (and why they're important)"
 						}
 					]
 				},
@@ -161,7 +279,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:30.748-04:00"
+						"dateAndTimeString" : "2023-08-26T16:27:37.781-04:00"
 					}
 				},
 				"editEmail" : {
@@ -172,92 +290,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:46.872-04:00"
+						"dateAndTimeString" : "2023-08-26T16:27:46.097-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "eF9Z5TnADQCWL5mYAfZBgQ=="
+					"uidString" : "IGdyBzvADQCrQF/zAfZBgQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Example scenes"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-02T12:00:44.672-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:08:58.928-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "GCC44+S7DQC/fy5iA4beVA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**PileUp** lets you organize ideas by dragging and dropping. {{gtClass:PileUpApp}}  |   {{gtClass:PileupItemElement}}"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:42.05-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:06:45.506-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6NMF5jnADQCWTbf8AfZBgQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Applications"
+				"string" : "#Missing Documentation"
 			}
 		]
 	},
@@ -269,7 +312,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T17:40:30.791-04:00"
+			"dateAndTimeString" : "2023-08-26T16:18:23.166-04:00"
 		}
 	},
 	"editEmail" : {
@@ -280,15 +323,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-06-03T19:46:35.262-04:00"
+			"dateAndTimeString" : "2023-08-26T16:26:49.289-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GameSketchLib"
+		"title" : "GSL Issues"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "68d4a040-a2b9-0d00-a108-c5980814b393"
+		"uuid" : "30aa63e6-3ac0-0d00-9e66-d73101f64181"
 	}
 }
