@@ -22,6 +22,20 @@ GsLineShape >> gsContainsPoint: p [
   ^ self geometry containsPoint: p - self position in: self parent
 ]
 
+{ #category : #accessing }
+GsLineShape >> gsPosition [
+  ^ p1
+]
+
+{ #category : #accessing }
+GsLineShape >> gsPosition: aPoint [
+  |diff|
+  diff := (aPoint - p1).
+  self
+    p1: p1 + diff;
+    p2: p2 + diff.
+]
+
 { #category : #initialization }
 GsLineShape >> initialize [
   super initialize.
@@ -55,18 +69,4 @@ GsLineShape >> p2: aPoint [
 { #category : #accessing }
 GsLineShape >> secondPoint: aPoint [
   self p2: aPoint
-]
-
-{ #category : #accessing }
-GsLineShape >> shapePosition [
-  ^ p1
-]
-
-{ #category : #accessing }
-GsLineShape >> shapePosition: aPoint [
-  |diff|
-  diff := (aPoint - p1).
-  self
-    p1: p1 + diff;
-    p2: p2 + diff.
 ]
