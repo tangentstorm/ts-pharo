@@ -15,8 +15,6 @@ I should probably be a trait instead.
 Class {
 	#name : #GsShape,
 	#superclass : #GsObject,
-	#traits : 'TGsShaped',
-	#classTraits : 'TGsShaped classTrait',
 	#category : #'GameSketchLib-Shapes'
 }
 
@@ -37,9 +35,4 @@ GsShape >> initialize [
   super initialize.
   x := y := w := h := 0.
   visuals := GsStyle default.
-]
-
-{ #category : #accessing }
-GsShape >> shapeContainsPoint: p [
-  ^ self bounds asRectangle containsPoint: p 
 ]

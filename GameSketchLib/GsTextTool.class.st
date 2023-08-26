@@ -15,5 +15,5 @@ Class {
 GsTextTool >> click: aPoint [
   | ts |
   scene addChild: (ts := GsTextShape new
-    shapePosition: aPoint). 
+    gsPosition: aPoint). 
 ]

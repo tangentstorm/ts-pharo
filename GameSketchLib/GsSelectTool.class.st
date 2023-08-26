@@ -20,7 +20,7 @@ GsSelectTool >> click: p [
     ifNotNil:[:x|
       selection := { x }. "we don't use selection: because we want custom handles" 
       "(but we do want to be able apply colors, change z-order, etc."
-      overlay removeChildren; addChildren: x shapeHandles ]
+      overlay removeChildren; addChildren: x gsHandles ]
     ifNil: [ self selection: { }]
 ]
 
@@ -40,7 +40,7 @@ GsSelectTool >> dragStart: p [
   (subject := scene childAtPoint: p)
     ifNil: [overlay addChild:
       (selectangle relocate:p; size:0@0)]
-    ifNotNil: [ offset := subject shapePosition - p. ].
+    ifNotNil: [ offset := subject gsPosition - p. ].
 ]
 
 { #category : #accessing }
@@ -48,7 +48,7 @@ GsSelectTool >> dragStep: p [
   subject ifNil: [|rect|
     rect := Rectangle point: startPoint point: p.
     selectangle relocate: rect topLeft; size: rect extent]
-  ifNotNil: [subject shapePosition: p + offset ]
+  ifNotNil: [subject gsPosition: p + offset ]
 ]
 
 { #category : #initialization }
@@ -90,14 +90,14 @@ GsSelectTool >> selection: aCollection [
       relocate: rect topLeft;
       addEventHandler: BlPullHandler new;
       when: BlMouseDownEvent do: [:e| 
-        startPosition := e source shapePosition.
+        startPosition := e source gsPosition.
         e  consumed: true];
       when: BlElementPositionChangedEvent do: [:e|
         "ignore the initial positioning event."
         startPosition ifNotNil: [ |diff|
-          diff := e source shapePosition - startPosition.
-          startPosition := e source shapePosition.
-          selection do: [:x | x shapePosition: x shapePosition + diff]]])]
+          diff := e source gsPosition - startPosition.
+          startPosition := e source gsPosition.
+          selection do: [:x | x gsPosition: x gsPosition + diff]]])]
 ]
 
 { #category : #accessing }

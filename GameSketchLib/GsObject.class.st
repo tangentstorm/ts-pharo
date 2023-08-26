@@ -23,7 +23,7 @@ GsObject >> childAtPoint: p [
 { #category : #accessing }
 GsObject >> childAtPoint: p ifNone: aBlock [
   ^ children reversed
-      detect: [:x|x shapeContainsPoint: p]
+      detect: [:x|x gsContainsPoint: p]
       ifNone: aBlock
 ]
 

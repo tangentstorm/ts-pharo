@@ -17,6 +17,11 @@ GsLineShape class >> newAtPoint: aPoint [
   ^ self new p1: aPoint; p2: aPoint + 10@0
 ]
 
+{ #category : #accessing }
+GsLineShape >> gsContainsPoint: p [
+  ^ self geometry containsPoint: p - self position in: self parent
+]
+
 { #category : #initialization }
 GsLineShape >> initialize [
   super initialize.
@@ -50,11 +55,6 @@ GsLineShape >> p2: aPoint [
 { #category : #accessing }
 GsLineShape >> secondPoint: aPoint [
   self p2: aPoint
-]
-
-{ #category : #accessing }
-GsLineShape >> shapeContainsPoint: p [
-  ^ self geometry containsPoint: p - self position in: self parent
 ]
 
 { #category : #accessing }
