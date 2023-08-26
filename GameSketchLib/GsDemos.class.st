@@ -5,6 +5,15 @@ Class {
 }
 
 { #category : #accessing }
+GsDemos >> gtAnimationDemoFor: aView [
+  <gtView>
+  ^ aView explicit
+    priority: 50;
+    title: 'Animator';
+    stencil: [GsAnimatorExamples twoMovingSquares  ]
+]
+
+{ #category : #accessing }
 GsDemos >> gtBulletDemoFor: aView [
   <gtView>
   ^ aView explicit
@@ -47,7 +56,7 @@ GsDemos >> gtRawFor: aView [
 GsDemos >> gtSketchDemoFor: aView [
   <gtView>
   ^ aView explicit
-    priority: 30;
-    title: 'SketchDemo';
+    priority: 40;
+    title: 'SketchApp';
     stencil: [GsSketchApp for: GsSceneExamples basicShapes ]
 ]
