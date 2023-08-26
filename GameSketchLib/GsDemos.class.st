@@ -49,5 +49,5 @@ GsDemos >> gtSketchDemoFor: aView [
   ^ aView explicit
     priority: 30;
     title: 'SketchDemo';
-    stencil: [GsSketchApp for: GsSceneExamples nineSquares ]
+    stencil: [GsSketchApp for: GsSceneExamples basicShapes ]
 ]
