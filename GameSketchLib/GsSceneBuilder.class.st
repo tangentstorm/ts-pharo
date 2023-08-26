@@ -20,7 +20,7 @@ GsSceneBuilder class >> for: aScene [
   ^ self new scene:aScene 
 ]
 
-{ #category : #'high level builders' }
+{ #category : #'shape factories' }
 GsSceneBuilder >> circle: name at: center radius: r [
   ^ self shapeClass: GsCircleShape;
     newAtPoint: center;
@@ -35,7 +35,7 @@ GsSceneBuilder >> initialize [
   self shapeClass: GsRectShape
 ]
 
-{ #category : #accessing }
+{ #category : #'shape factories' }
 GsSceneBuilder >> line: aName from: p1 to: p2 [
   ^ self shapeClass: GsLineShape;
     newAtPoint: p1;
@@ -54,7 +54,7 @@ GsSceneBuilder >> newAtPoint: aPoint [
   scene addChild: shape.
 ]
 
-{ #category : #accessing }
+{ #category : #'shape factories' }
 GsSceneBuilder >> rect: name at: topLeft size: aSize [
   ^ self shapeClass: GsRectShape;
     newAtPoint: topLeft;
