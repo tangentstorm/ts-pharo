@@ -23,6 +23,16 @@ GsCircleShape >> center: aPoint [
   self rebuildShape
 ]
 
+{ #category : #accessing }
+GsCircleShape >> gsPosition [
+  ^ center
+]
+
+{ #category : #accessing }
+GsCircleShape >> gsPosition: aPoint [
+  self center: aPoint
+]
+
 { #category : #initialization }
 GsCircleShape >> initialize [
   super initialize.
