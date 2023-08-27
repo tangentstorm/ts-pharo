@@ -13,6 +13,7 @@ TsHomeStartPageSection >> create [
   ^ self newSectionContainer
     addChild: (self newSectionTitle: self sectionTitle);
     addChild: (cardContainer addChildren: {
+      self gslFeaturesCard.
       self lepiterCard.
       self pileupCard.
       self gsDemosCard.
@@ -34,6 +35,12 @@ TsHomeStartPageSection >> gsDemosCard [
   ^ self newCard: 'GsDemos'
 	description: 'GameSketchLib Demos'
 	content: [ GtInspector forObject: GsDemos new ]
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> gslFeaturesCard [
+  ^ self newCard: 'GSL Features' description: 'features list' 
+	content: [(self database pageNamed: 'GSL Features') asLepiterPagePhlowTool].
 ]
 
 { #category : #accessing }

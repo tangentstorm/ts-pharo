@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:21:03.821-04:00"
+									"dateAndTimeString" : "2023-08-26T20:18:23.078-04:00"
 								}
 							},
 							"uid" : {
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:20:44.08-04:00"
+									"dateAndTimeString" : "2023-08-26T20:18:23.079-04:00"
 								}
 							},
 							"uid" : {
@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:21:25.933-04:00"
+									"dateAndTimeString" : "2023-08-26T20:18:23.081-04:00"
 								}
 							},
 							"uid" : {
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:28:44.955-04:00"
+									"dateAndTimeString" : "2023-08-26T20:18:23.091-04:00"
 								}
 							},
 							"uid" : {
@@ -204,7 +204,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:09:02.983-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.077-04:00"
 					}
 				},
 				"editEmail" : {
@@ -215,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:26:10.367-04:00"
+						"dateAndTimeString" : "2023-08-26T20:25:10.835-04:00"
 					}
 				},
 				"uid" : {
@@ -225,7 +225,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Done (at least for initial version)"
+				"string" : "#Done (at least partially)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -289,7 +289,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:33:54.832-04:00"
+						"dateAndTimeString" : "2023-08-26T20:45:26.763-04:00"
 					}
 				},
 				"uid" : {
@@ -299,7 +299,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Combine shapes into groups"
+				"string" : "[[Combine shapes into groups]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -326,7 +326,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:33:52.147-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.093-04:00"
 					}
 				},
 				"uid" : {
@@ -363,7 +363,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:30:12.216-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.094-04:00"
 					}
 				},
 				"uid" : {
@@ -400,7 +400,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:29:19.631-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.094-04:00"
 					}
 				},
 				"uid" : {
@@ -437,7 +437,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:31:51.982-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.095-04:00"
 					}
 				},
 				"uid" : {
@@ -511,7 +511,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:34:24.751-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.096-04:00"
 					}
 				},
 				"uid" : {
@@ -548,7 +548,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:34:56.624-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.097-04:00"
 					}
 				},
 				"uid" : {
@@ -585,7 +585,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:18.059-04:00"
+						"dateAndTimeString" : "2023-08-26T20:51:51.074-04:00"
 					}
 				},
 				"uid" : {
@@ -595,7 +595,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "grids and axes"
+				"string" : "Draw grids and axes"
 			},
 			{
 				"__type" : "textSnippet",
@@ -622,7 +622,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:35:08.024-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.097-04:00"
 					}
 				},
 				"uid" : {
@@ -733,7 +733,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:35:39.956-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.098-04:00"
 					}
 				},
 				"uid" : {
@@ -770,7 +770,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:35:58.48-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.099-04:00"
 					}
 				},
 				"uid" : {
@@ -807,7 +807,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:36:10.667-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.099-04:00"
 					}
 				},
 				"uid" : {
@@ -844,7 +844,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:36:30.29-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.1-04:00"
 					}
 				},
 				"uid" : {
@@ -881,7 +881,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:36:57.902-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.1-04:00"
 					}
 				},
 				"uid" : {
@@ -918,7 +918,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:37:11.015-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.101-04:00"
 					}
 				},
 				"uid" : {
@@ -955,7 +955,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:37:43.094-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.101-04:00"
 					}
 				},
 				"uid" : {
@@ -992,7 +992,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:38:03.29-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.102-04:00"
 					}
 				},
 				"uid" : {
@@ -1029,7 +1029,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:38:31.331-04:00"
+						"dateAndTimeString" : "2023-08-26T20:18:23.102-04:00"
 					}
 				},
 				"uid" : {
@@ -1136,12 +1136,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-26T16:22:23.62-04:00"
+			"dateAndTimeString" : "2023-08-27T05:56:48.336-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Feature List"
+		"title" : "GSL Features"
 	},
 	"uid" : {
 		"__type" : "uuid",
