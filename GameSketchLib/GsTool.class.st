@@ -22,16 +22,16 @@ GsTool >> click: aPoint [
 ]
 
 { #category : #'event handling' }
-GsTool >> dragEnd: aPoint [
-]
-
-{ #category : #'event handling' }
 GsTool >> dragStart: aPoint [
   startPoint := aPoint
 ]
 
 { #category : #'event handling' }
 GsTool >> dragStep: aPoint [
+]
+
+{ #category : #'event handling' }
+GsTool >> dragStop: aPoint [
 ]
 
 { #category : #accessing }

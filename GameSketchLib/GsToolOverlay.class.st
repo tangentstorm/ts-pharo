@@ -42,15 +42,15 @@ GsToolOverlay >> drag: aPoint [
 ]
 
 { #category : #'event handling' }
-GsToolOverlay >> dragEnd: aPoint [
-  onDragEnd cull: aPoint.
-  tool dragEnd: aPoint.
-]
-
-{ #category : #'event handling' }
 GsToolOverlay >> dragStart: aPoint [ 
   onDragStart cull: aPoint.
   tool dragStart: aPoint.
+]
+
+{ #category : #'event handling' }
+GsToolOverlay >> dragStop: aPoint [
+  onDragEnd cull: aPoint.
+  tool dragStop: aPoint.
 ]
 
 { #category : #debugging }
@@ -94,7 +94,7 @@ GsToolOverlay >> initialize [
     when: BlMouseUpEvent do: [:e|
       |p| p := e localPosition.
       mouseDown := false.
-      dragging ifTrue: [ dragging := false. self dragEnd: p ]
+      dragging ifTrue: [ dragging := false. self dragStop: p ]
       ifFalse: [ self click: p ]].
 ]
 

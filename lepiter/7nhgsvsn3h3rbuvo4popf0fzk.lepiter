@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:29:11.843-04:00"
+						"dateAndTimeString" : "2023-08-27T08:02:06.505-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,200 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:29:47.642-04:00"
+						"dateAndTimeString" : "2023-08-27T08:02:44.287-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uLANDTvADQCtC0AOAfZBgQ=="
+					"uidString" : "oPMyBkfADQCsWVjeDXZ+Mg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "(  {{gtClass:GsNodeShape}}  ) and (  {{gtClass:GsEdgeShape}} ?"
+				"string" : "{{gtClass:GsGraphTool}}builds connected graph structures."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-27T06:54:18.688-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-27T06:54:46.442-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GEbxIkfADQCuhJW9DXZ+Mg=="
+				},
+				"code" : "GsToolApp new addTool: (GsGraphTool new)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:02:44.469-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:03:33.91-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CImqF0jADQCyPOCcDXZ+Mg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GsGraphTool>>dragStart:}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:03:55.447-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:04:01.613-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2JLlG0jADQCz9N/ODXZ+Mg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GsGraphTool>>dragStep:}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:04:15.124-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-27T08:05:36.175-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "INIRHUjADQC0ISFBDXZ+Mg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GsGraphTool>>dragStop:}}"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-27T08:06:08.323-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-27T08:06:16.89-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MAbRI0jADQC0q0DqDXZ+Mg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# how it works:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +238,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:29:48.808-04:00"
+						"dateAndTimeString" : "2023-08-27T06:35:15.464-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +249,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:30:17.286-04:00"
+						"dateAndTimeString" : "2023-08-27T06:35:15.464-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "QLtBDzvADQCtvmr9AfZBgQ=="
+					"uidString" : "QBPN3kbADQCsNnrbDXZ+Mg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "arrowheads"
+				"string" : ""
 			}
 		]
 	},

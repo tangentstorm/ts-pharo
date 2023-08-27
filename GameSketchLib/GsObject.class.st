@@ -27,6 +27,13 @@ GsObject >> childAtPoint: p ifNone: aBlock [
       ifNone: aBlock
 ]
 
+{ #category : #accessing }
+GsObject >> childAtPoint: p where: aConditionBlock ifNone: aBlock [
+  ^ children reversed
+      detect: [:x| (x gsContainsPoint: p) and: [aConditionBlock value: x]]
+      ifNone: aBlock
+]
+
 { #category : #initialization }
 GsObject >> initialize [
   super initialize.

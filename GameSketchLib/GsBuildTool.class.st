@@ -18,11 +18,6 @@ GsBuildTool >> click: aPoint [
 ]
 
 { #category : #accessing }
-GsBuildTool >> dragEnd: aPoint [
-  overlay removeChildren
-]
-
-{ #category : #accessing }
 GsBuildTool >> dragStart: aPoint [
   self click: aPoint.
   overlay addChild: (GsHandle new point: aPoint)
@@ -31,6 +26,11 @@ GsBuildTool >> dragStart: aPoint [
 { #category : #accessing }
 GsBuildTool >> dragStep: aPoint [
   builder secondPoint: aPoint
+]
+
+{ #category : #accessing }
+GsBuildTool >> dragStop: aPoint [
+  overlay removeChildren
 ]
 
 { #category : #initialization }

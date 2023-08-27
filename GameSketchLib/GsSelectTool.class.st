@@ -24,15 +24,6 @@ GsSelectTool >> click: p [
     ifNil: [ self selection: { }]
 ]
 
-{ #category : #accessing }
-GsSelectTool >> dragEnd: p [
-  |rect|
-  subject ifNil: [
-    rect := selectangle bounds asRectangle.
-    self selection: (scene children select: [:x|
-         x bounds asRectangle intersects: rect])]
-]
-
 { #category : #'event handling' }
 GsSelectTool >> dragStart: p [
   super dragStart: p.
@@ -49,6 +40,15 @@ GsSelectTool >> dragStep: p [
     rect := Rectangle point: startPoint point: p.
     selectangle relocate: rect topLeft; size: rect extent]
   ifNotNil: [subject gsPosition: p + offset ]
+]
+
+{ #category : #accessing }
+GsSelectTool >> dragStop: p [
+  |rect|
+  subject ifNil: [
+    rect := selectangle bounds asRectangle.
+    self selection: (scene children select: [:x|
+         x bounds asRectangle intersects: rect])]
 ]
 
 { #category : #initialization }
