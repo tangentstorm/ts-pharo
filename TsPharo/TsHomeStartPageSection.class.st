@@ -9,7 +9,7 @@ Class {
 
 { #category : #accessing }
 TsHomeStartPageSection >> create [
-  cardContainer := self makeCardContainer.
+  cardContainer := self newCardsContainer.
   ^ self newSectionContainer
     addChild: (self newSectionTitle: self sectionTitle);
     addChild: (cardContainer addChildren: {
