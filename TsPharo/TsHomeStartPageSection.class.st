@@ -1,32 +1,46 @@
 Class {
 	#name : #TsHomeStartPageSection,
 	#superclass : #GtHomeStartPageSection,
+	#instVars : [
+		'cardContainer'
+	],
 	#category : #TsPharo
 }
 
 { #category : #accessing }
 TsHomeStartPageSection >> create [
+  cardContainer := self makeCardContainer.
   ^ self newSectionContainer
     addChild: (self newSectionTitle: self sectionTitle);
-	addChild: (self newCardsContainer addChildren: {
-	  self newCard: 'TsPharo Notes' description: 'lepiter ToC' 
-	    content: [ self startPage asLepiterPagePhlowTool ].
-	  self newCard: 'PileUp' description: 'PileUp' 
-	    content: [ self pileUpApp].
-	  self newCard: 'GsDemos' description: 'GameSketchLib Demos' 
-	    content: [ GtInspector forObject: GsDemos new].    
-	  self newCard: 'GsAnimator' description: 'animator example' 
-	    content: [ GtInspector forObject: (
-	      GsAnimatorExamples pathmapAnimation)].
-	  self newCard: 'Roassal3' description: 'roassal' 
-	    content: [ 
-	      |found|
-	      found := true.
-	      #'Roassal3-GToolkit' asPackageIfAbsent: [found := false].
-	      found
-	        ifTrue: [ (GtCoder forObject: RSBlocExamples) ]
-	        ifFalse: [ self loadingRoassal3Page asLepiterPagePhlowTool ]].})
-	
+    addChild: (cardContainer addChildren: {
+      self lepiterCard.
+      self pileupCard.
+      self gsDemosCard.
+      self sketchAppCard.
+      self gsAnimatorCard.
+      self roassal3Card})
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> gsAnimatorCard [
+  ^ self newCard: 'GsAnimator'
+	description: 'animator example'
+	content: [ GtInspector forObject:
+	  GsAnimatorExamples pathmapAnimation ]
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> gsDemosCard [
+  ^ self newCard: 'GsDemos'
+	description: 'GameSketchLib Demos'
+	content: [ GtInspector forObject: GsDemos new ]
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> lepiterCard [
+  ^ self newCard: 'TsPharo Notes'
+	description: 'lepiter ToC'
+	content: [ self startPage asLepiterPagePhlowTool ]
 ]
 
 { #category : #accessing }
@@ -52,9 +66,31 @@ TsHomeStartPageSection >> newCard: aTitle description: aDescription content: aBl
 ]
 
 { #category : #accessing }
-TsHomeStartPageSection >> pileUpApp [
-  | dir couch |
-  dir := 'd:/ver/pileup' asFileReference.
-  couch := CouchDB new withConfig: dir / 'config.py'.
-  ^ PileUpApp new db: couch;  loadPile: '@home'.
+TsHomeStartPageSection >> pileupCard [
+  ^ self newCard: 'PileUp'
+	description: 'PileUp'
+	content: [
+	  | dir couch |
+      dir := 'd:/ver/pileup' asFileReference.
+      couch := CouchDB new withConfig: dir / 'config.py'.
+      PileUpApp new db: couch;  loadPile: '@home'. ]
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> roassal3Card [
+  ^ self newCard: 'Roassal3' description: 'roassal' 
+	content: [ 
+	  |found|
+	  found := true.
+	  #'Roassal3-GToolkit' asPackageIfAbsent: [found := false].
+	  found
+	    ifTrue: [(GtCoder forObject: (#RSBlocExamples asClass))]
+	    ifFalse: [self loadingRoassal3Page asLepiterPagePhlowTool ]].
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> sketchAppCard [
+  ^ self newCard: 'GsSketchApp'
+	description: 'Drawing Tool'
+	content: [ GtInspector forObject: (GsSketchApp new) ]
 ]
