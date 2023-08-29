@@ -1,5 +1,8 @@
 "
-I allow selecting objects in a {{gtClass:GsSketch}}, either by clicking on them, or by dragging on the canvas to manipulate a {{gtClass:GsSelectangle}}.
+I allow selecting objects in a {{gtClass:GsSketch}}, either by clicking on them, or by dragging on the canvas to manipulate a ""selectangle"".
+
+The list of selected shapes is stored in a {{gtClass:GsSelection}}provided by   {{gtClass:GsToolApp}} for sharing with other tools.
+
 "
 Class {
 	#name : #GsSelectTool,
@@ -7,21 +10,19 @@ Class {
 	#instVars : [
 		'selectangle',
 		'subject',
-		'selection',
 		'startPos',
-		'offset'
+		'offset',
+		'selectionBounds'
 	],
 	#category : #'GameSketchLib-Tools'
 }
 
 { #category : #accessing }
 GsSelectTool >> click: p [
-  (self scene childAtPoint: p)
-    ifNotNil:[:x|
-      selection := { x }. "we don't use selection: because we want custom handles" 
-      "(but we do want to be able apply colors, change z-order, etc."
-      overlay removeChildren; addChildren: x gsHandles ]
-    ifNil: [ self selection: { }]
+  self selectShapes:
+    ((self scene childAtPoint: p)
+      ifNil: [{}]
+      ifNotNil: [:x| {x}])
 ]
 
 { #category : #'event handling' }
@@ -46,44 +47,16 @@ GsSelectTool >> dragStep: p [
 GsSelectTool >> dragStop: p [
   |rect|
   subject ifNil: [
-    rect := selectangle bounds asRectangle.
-    self selection: (self scene children select: [:x|
-         x bounds asRectangle intersects: rect])]
+    rect := selectangle boundingRect asRectangle.
+    self selectShapes: (self scene children select: [:x|
+         x boundingRect asRectangle intersects: rect])]
 ]
 
-{ #category : #initialization }
-GsSelectTool >> initialize [
-  super initialize.
-  selection := {}.
-  selectangle := BlElement new
-    border: (BlBorder paint: Color cyan).
-]
-
-{ #category : #accessing }
-GsSelectTool >> selectangle [
-	^ selectangle
-]
-
-{ #category : #accessing }
-GsSelectTool >> selectangle: anObject [
-	selectangle := anObject
-]
-
-{ #category : #accessing }
-GsSelectTool >> selection [
-  ^ selection
-]
-
-{ #category : #accessing }
-GsSelectTool >> selection: aCollection [
-  selection := aCollection asArray.
-  overlay removeChildren.
-  "TODO: select a single item: just show handles"
-  "(otherwise this acts like temporary group)" 
-  (selection size >= 1) ifTrue: [
+{ #category : #ui }
+GsSelectTool >> drawSelectionBox [
+  selection ifNotEmpty: [
     |rect startPosition|
-    rect := selection first bounds asRectangle.
-    selection do: [:x| rect := rect merge: x bounds asRectangle].
+    rect := selection boundingRect.
     overlay addChild: (GsRectShape new
       border: (BlBorder paint: Color cyan);
       background: (Color cyan alpha: 0.2);
@@ -99,6 +72,34 @@ GsSelectTool >> selection: aCollection [
           diff := e source gsPosition - startPosition.
           startPosition := e source gsPosition.
           selection do: [:x | x gsPosition: x gsPosition + diff]]])]
+]
+
+{ #category : #initialization }
+GsSelectTool >> initialize [
+  super initialize.
+  selectangle := BlElement new
+    border: (BlBorder paint: Color cyan).
+]
+
+{ #category : #accessing }
+GsSelectTool >> selectShapes: aCollection [
+  overlay removeChildren.
+  selection reset; addAll: aCollection.
+  (aCollection size > 1)
+    ifTrue: [self drawSelectionBox]
+    ifFalse: [selection ifNotEmpty: [
+      overlay addChildren:
+        aCollection first gsHandles]]
+]
+
+{ #category : #accessing }
+GsSelectTool >> selectangle [
+	^ selectangle
+]
+
+{ #category : #accessing }
+GsSelectTool >> selectangle: anObject [
+	selectangle := anObject
 ]
 
 { #category : #accessing }

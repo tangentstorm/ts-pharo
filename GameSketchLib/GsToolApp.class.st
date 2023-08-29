@@ -1,6 +1,8 @@
 "
 I am an application for displaying and editing a {{gtClass:GsScene}}.
 
+I share a {{gtClass:GsSceneBuilder}} , {{gtClass:GsSelection}} , and {{gtClass:GsToolOverlay}} with one or more {{gtClass:GsTool}} objects to make this easier.
+
 "
 Class {
 	#name : #GsToolApp,
@@ -18,8 +20,9 @@ Class {
 
 { #category : #accessing }
 GsToolApp >> addTool: aTool [
-  aTool sceneBuilder: sceneBuilder.
-  tools add: aTool.
+  tools add: (aTool
+    sceneBuilder: sceneBuilder;
+    selection: selection).
   toolbar addItem: (self makeButtonFor: aTool).
 ]
 
@@ -37,10 +40,15 @@ GsToolApp >> currentTool: aTool [
 ]
 
 { #category : #initialization }
+GsToolApp >> initialTools [
+  ^ {GsSelectTool new}
+]
+
+{ #category : #initialization }
 GsToolApp >> initialize [
   sceneBuilder := GsSceneBuilder new .
-  tools := self makeTools.
-  selection := {}.
+  selection := GsSelection new.
+  tools := OrderedCollection new.
   super initialize.
   sceneBuilder scene: scene.
   self makeToolbar.
@@ -72,16 +80,10 @@ GsToolApp >> makeOverlay [
 
 { #category : #'gsl - ui' }
 GsToolApp >> makeToolbar [
-  ^ toolbar := BrToolbar new
-	aptitude: BrMaterialToolbarAptitude;
-	addItems: (tools collect: [:t|
-	   t sceneBuilder: sceneBuilder.
-	   self makeButtonFor: t])
-]
-
-{ #category : #accessing }
-GsToolApp >> makeTools [
-  ^ {GsSelectTool new}
+  toolbar := BrToolbar new
+	aptitude: BrMaterialToolbarAptitude.
+  self initialTools do: [:t| self addTool: t].
+  ^ toolbar
 ]
 
 { #category : #'gsl - ui' }
@@ -97,6 +99,11 @@ GsToolApp >> scene: aScene [
   super scene: aScene.
   sceneBuilder scene: aScene.
   overlay scene: aScene
+]
+
+{ #category : #ui }
+GsToolApp >> selection [
+  ^ selection
 ]
 
 { #category : #accessing }

@@ -13,20 +13,20 @@ GsSketchApp class >> for: aScene [
 ]
 
 { #category : #ui }
-GsSketchApp >> makePalette [
-  ^ GsPaletteElement new
-    when: GsColorChangedEvent do: [:e|
-      sceneBuilder background: e color.
-      self selection do: [:each | each background: e color]]
-]
-
-{ #category : #ui }
-GsSketchApp >> makeTools [
+GsSketchApp >> initialTools [
   ^ { GsSelectTool new.
       GsBuildTool for: GsRectShape.
       GsBuildTool for: GsCircleShape.
       GsBuildTool for: GsLineShape.
       GsTextTool new.}
+]
+
+{ #category : #ui }
+GsSketchApp >> makePalette [
+  ^ GsPaletteElement new
+    when: GsColorChangedEvent do: [:e|
+      sceneBuilder background: e color.
+      self selection do: [:each | each background: e color]]
 ]
 
 { #category : #ui }
@@ -37,11 +37,13 @@ GsSketchApp >> makeUI [
 ]
 
 { #category : #accessing }
-GsSketchApp >> selectangle [
-  ^ self tools first selectangle
+GsSketchApp >> selectTool [
+  ^ self tools
+    detect: [:t| t isKindOf: GsSelectTool]
+    ifNone: [ self error: 'no select tool found.']
 ]
 
-{ #category : #ui }
-GsSketchApp >> selection [
-  ^ self tools first selection
+{ #category : #accessing }
+GsSketchApp >> selectangle [
+  ^ self selectTool selectangle
 ]

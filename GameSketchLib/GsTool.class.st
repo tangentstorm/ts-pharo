@@ -12,7 +12,8 @@ Class {
 	#instVars : [
 		'startPoint',
 		'overlay',
-		'sceneBuilder'
+		'sceneBuilder',
+		'selection'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -61,4 +62,14 @@ GsTool >> sceneBuilder [
 { #category : #accessing }
 GsTool >> sceneBuilder: anObject [
 	sceneBuilder := anObject
+]
+
+{ #category : #accessing }
+GsTool >> selection [
+  ^ selection
+]
+
+{ #category : #accessing }
+GsTool >> selection: aSelection [
+  selection := aSelection.
 ]
