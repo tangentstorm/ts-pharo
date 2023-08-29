@@ -11,8 +11,7 @@ Class {
 		'selectangle',
 		'subject',
 		'startPos',
-		'offset',
-		'selectionBounds'
+		'offset'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -47,9 +46,9 @@ GsSelectTool >> dragStep: p [
 GsSelectTool >> dragStop: p [
   |rect|
   subject ifNil: [
-    rect := selectangle boundingRect asRectangle.
+    rect := selectangle bounds asRectangle.
     self selectShapes: (self scene children select: [:x|
-         x boundingRect asRectangle intersects: rect])]
+         x bounds asRectangle intersects: rect])]
 ]
 
 { #category : #ui }
@@ -84,7 +83,7 @@ GsSelectTool >> initialize [
 { #category : #accessing }
 GsSelectTool >> selectShapes: aCollection [
   overlay removeChildren.
-  selection reset; addAll: aCollection.
+  self selection reset; addAll: aCollection.
   (aCollection size > 1)
     ifTrue: [self drawSelectionBox]
     ifFalse: [selection ifNotEmpty: [

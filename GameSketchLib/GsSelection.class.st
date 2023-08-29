@@ -16,19 +16,9 @@ Class {
 }
 
 { #category : #accessing }
-GsSelection >> add: aShape [
-  |shapeRect|
-  shapeRect := aShape boundingRect asRectangle.
-  self
-    ifNotEmpty: [rect := rect merge: shapeRect]
-    ifEmpty: [rect := shapeRect].
-  super add: aShape.
-]
-
-{ #category : #accessing }
 GsSelection >> addLast: aShape [
   |shapeRect|
-  shapeRect := aShape boundingRect asRectangle.
+  shapeRect := aShape bounds asRectangle.
   self
     ifNotEmpty: [rect := rect merge: shapeRect]
     ifEmpty: [rect := shapeRect].

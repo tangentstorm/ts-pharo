@@ -12,25 +12,25 @@ GsBuildTool class >> for: aShapeClass [
   ^ self new shapeClass: aShapeClass
 ]
 
-{ #category : #accessing }
+{ #category : #'event handling' }
 GsBuildTool >> click: aPoint [
   sceneBuilder 
     shapeClass: shapeClass;
     newAtPoint: aPoint.
 ]
 
-{ #category : #accessing }
+{ #category : #'event handling' }
 GsBuildTool >> dragStart: aPoint [
   self click: aPoint.
   overlay addChild: (GsHandle new point: aPoint)
 ]
 
-{ #category : #accessing }
+{ #category : #'event handling' }
 GsBuildTool >> dragStep: aPoint [
   sceneBuilder secondPoint: aPoint
 ]
 
-{ #category : #accessing }
+{ #category : #'event handling' }
 GsBuildTool >> dragStop: aPoint [
   overlay removeChildren
 ]

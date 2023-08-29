@@ -60,8 +60,8 @@ GsTool >> sceneBuilder [
 ]
 
 { #category : #accessing }
-GsTool >> sceneBuilder: anObject [
-	sceneBuilder := anObject
+GsTool >> sceneBuilder: aSceneBuilder [
+	sceneBuilder := aSceneBuilder
 ]
 
 { #category : #accessing }

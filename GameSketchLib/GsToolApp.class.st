@@ -34,6 +34,9 @@ GsToolApp >> currentTool [
 { #category : #accessing }
 GsToolApp >> currentTool: aTool [
   overlay tool: aTool.
+  aTool
+    selection: selection;
+    sceneBuilder: sceneBuilder.
   toolbar children do: [:c| c border: BlBorder empty].
   (toolbar childAt: (tools indexOf: aTool))
      border: Color darkGray.
