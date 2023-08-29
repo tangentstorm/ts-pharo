@@ -10,7 +10,8 @@ Class {
 		'scene',
 		'counts',
 		'shape',
-		'shapeClass'
+		'shapeClass',
+		'prototype'
 	],
 	#category : #'GameSketchLib-Core'
 }
@@ -18,6 +19,16 @@ Class {
 { #category : #accessing }
 GsSceneBuilder class >> for: aScene [
   ^ self new scene:aScene 
+]
+
+{ #category : #accessing }
+GsSceneBuilder >> background [
+	^ prototype background
+]
+
+{ #category : #accessing }
+GsSceneBuilder >> background: anObject [
+	prototype background: anObject
 ]
 
 { #category : #'shape factories' }
@@ -32,6 +43,7 @@ GsSceneBuilder >> circle: name at: center radius: r [
 GsSceneBuilder >> initialize [
   super initialize.
   scene := GsScene new.
+  prototype := GsShape new.
   self shapeClass: GsRectShape
 ]
 
@@ -50,7 +62,9 @@ GsSceneBuilder >> named: name [
 
 { #category : #accessing }
 GsSceneBuilder >> newAtPoint: aPoint [
-  shape := shapeClass newAtPoint: aPoint.
+  shape := (shapeClass newAtPoint: aPoint)
+    background: prototype background;
+    border: prototype border.
   scene addChild: shape.
 ]
 

@@ -2,7 +2,7 @@ Class {
 	#name : #GsBuildTool,
 	#superclass : #GsTool,
 	#instVars : [
-		'builder'
+		'shapeClass'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -14,7 +14,9 @@ GsBuildTool class >> for: aShapeClass [
 
 { #category : #accessing }
 GsBuildTool >> click: aPoint [
-  builder newAtPoint: aPoint.
+  sceneBuilder 
+    shapeClass: shapeClass;
+    newAtPoint: aPoint.
 ]
 
 { #category : #accessing }
@@ -25,7 +27,7 @@ GsBuildTool >> dragStart: aPoint [
 
 { #category : #accessing }
 GsBuildTool >> dragStep: aPoint [
-  builder secondPoint: aPoint
+  sceneBuilder secondPoint: aPoint
 ]
 
 { #category : #accessing }
@@ -36,23 +38,14 @@ GsBuildTool >> dragStop: aPoint [
 { #category : #initialization }
 GsBuildTool >> initialize [
   super initialize.
-  builder := GsSceneBuilder new
-     scene: scene;
-     shapeClass: GsRectShape
 ]
 
 { #category : #accessing }
 GsBuildTool >> label [
-  ^ builder shapeClass name splitCamelCase second asLowercase
-]
-
-{ #category : #accessing }
-GsBuildTool >> scene: aScene [
-  super scene: aScene.
-  builder scene: aScene.
+  ^ shapeClass name splitCamelCase second asLowercase
 ]
 
 { #category : #accessing }
 GsBuildTool >> shapeClass: aShapeClass [ 
-  builder shapeClass: aShapeClass
+  shapeClass := aShapeClass
 ]

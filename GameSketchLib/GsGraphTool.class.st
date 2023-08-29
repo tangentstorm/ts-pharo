@@ -13,7 +13,7 @@ Class {
 
 { #category : #accessing }
 GsGraphTool >> click: aPoint [
-  scene addChild: (self newNodeAt: aPoint)
+  self scene addChild: (self newNodeAt: aPoint)
 ]
 
 { #category : #accessing }
@@ -35,7 +35,7 @@ GsGraphTool >> dragStop: aPoint [
 
 { #category : #accessing }
 GsGraphTool >> ensureNodeAt: aPoint [
-  ^ scene childAtPoint: aPoint where: [:child|
+  ^ self scene childAtPoint: aPoint where: [:child|
       child isKindOf: GsNodeShape] 
     ifNone: [ self newNodeAt: aPoint ]
 ]
@@ -52,13 +52,13 @@ GsGraphTool >> makeNewEdgeFrom: aNodeShape [
   newEdge := GsEdgeShape new
     src: aNodeShape;
     dst: handle.
-  scene addChild: newEdge.
+  self scene addChild: newEdge.
 ]
 
 { #category : #accessing }
 GsGraphTool >> newNodeAt: aPoint [ 
   |node|
   node := GsNodeShape new gsPosition: aPoint.
-  scene addChild: node.
+  self scene addChild: node.
   ^ node
 ]

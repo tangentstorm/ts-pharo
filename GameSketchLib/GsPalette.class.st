@@ -79,17 +79,6 @@ GsPalette >> gridWithSize: anInteger [
 ]
 
 { #category : #'gt-extensions' }
-GsPalette >> gridWithSize: anInteger onClick: aBlock [
-  ^ BrHorizontalGrid new
-	  columnCount: 8;
-	  cellSpacing: 1;
-	  addChildren: (colors collect: [ :c | 
-        BlElement new size: anInteger asPoint; background: c;
-          when: BlClickEvent do: [ aBlock value: c ] ]);
-      fitContent
-]
-
-{ #category : #'gt-extensions' }
 GsPalette >> gtPaletteFor: aView [
 	<gtView>
 	^ aView explicit
