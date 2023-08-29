@@ -215,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:25:10.835-04:00"
+						"dateAndTimeString" : "2023-08-27T10:28:28.854-04:00"
 					}
 				},
 				"uid" : {
@@ -278,6 +278,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-22T11:06:44.621-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T20:18:23.094-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4P6AFOa/DQC84IbHCgWsog=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[Draw connected graphs with the mouse]]  "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-22T11:08:20.465-04:00"
 					}
 				},
@@ -289,7 +326,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:45:26.763-04:00"
+						"dateAndTimeString" : "2023-08-27T10:28:28.856-04:00"
 					}
 				},
 				"uid" : {
@@ -326,7 +363,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:18:23.093-04:00"
+						"dateAndTimeString" : "2023-08-28T10:44:40.86-04:00"
 					}
 				},
 				"uid" : {
@@ -336,7 +373,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Cut, copy, and paste shapes"
+				"string" : "Copy, paste, and delete shapes."
 			},
 			{
 				"__type" : "textSnippet",
@@ -389,43 +426,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:06:44.621-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:18:23.094-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4P6AFOa/DQC84IbHCgWsog=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Draw connected graphs with the mouse]]  "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-26T16:30:59.084-04:00"
 					}
 				},
@@ -463,7 +463,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:16:09.215-04:00"
+						"dateAndTimeString" : "2023-08-28T10:45:48.398-04:00"
 					}
 				},
 				"editEmail" : {
@@ -474,7 +474,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:16:09.215-04:00"
+						"dateAndTimeString" : "2023-08-28T10:46:00.404-04:00"
 					}
 				},
 				"uid" : {
@@ -484,7 +484,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Show context menu on right click."
 			},
 			{
 				"__type" : "textSnippet",
@@ -511,7 +511,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:18:23.096-04:00"
+						"dateAndTimeString" : "2023-08-28T10:45:26.871-04:00"
 					}
 				},
 				"uid" : {
@@ -521,7 +521,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Align selected shapes"
+				"string" : "Align selected shapes."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-28T10:45:21.344-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-28T10:45:32.249-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oFTwel7ADQCWMDD1DsH+Vw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Layout shapes in the selection."
 			},
 			{
 				"__type" : "textSnippet",
@@ -585,7 +622,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:51:51.074-04:00"
+						"dateAndTimeString" : "2023-08-27T10:28:28.858-04:00"
 					}
 				},
 				"uid" : {
@@ -696,7 +733,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:48.308-04:00"
+						"dateAndTimeString" : "2023-08-28T15:44:39.502-04:00"
 					}
 				},
 				"uid" : {
@@ -706,7 +743,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "undo"
+				"string" : "Undo"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1066,7 +1103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:20:43.733-04:00"
+						"dateAndTimeString" : "2023-08-28T15:44:45.895-04:00"
 					}
 				},
 				"uid" : {
@@ -1076,7 +1113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "invader demo"
+				"string" : "Invader demo"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1136,7 +1173,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-27T05:56:48.336-04:00"
+			"dateAndTimeString" : "2023-08-27T10:28:28.859-04:00"
 		}
 	},
 	"pageType" : {

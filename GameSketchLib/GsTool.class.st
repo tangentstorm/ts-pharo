@@ -11,8 +11,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'startPoint',
-		'scene',
-		'overlay'
+		'overlay',
+		'sceneBuilder'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -50,10 +50,15 @@ GsTool >> overlay: anObject [
 
 { #category : #accessing }
 GsTool >> scene [
-	^ scene
+	^ sceneBuilder scene
 ]
 
 { #category : #accessing }
-GsTool >> scene: aScene [
-	scene := aScene
+GsTool >> sceneBuilder [
+	^ sceneBuilder
+]
+
+{ #category : #accessing }
+GsTool >> sceneBuilder: anObject [
+	sceneBuilder := anObject
 ]

@@ -105,7 +105,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-27T08:03:33.91-04:00"
+									"dateAndTimeString" : "2023-08-27T10:58:12.508-04:00"
 								}
 							},
 							"uid" : {
@@ -115,7 +115,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtMethod:GsGraphTool>>dragStart:}}"
+							"string" : "{{gtMethod:GsGraphTool>>dragStart:|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -142,7 +142,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-27T08:04:01.613-04:00"
+									"dateAndTimeString" : "2023-08-27T10:58:18.266-04:00"
 								}
 							},
 							"uid" : {
@@ -152,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtMethod:GsGraphTool>>dragStep:}}"
+							"string" : "{{gtMethod:GsGraphTool>>dragStep:|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -179,7 +179,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-27T08:05:36.175-04:00"
+									"dateAndTimeString" : "2023-08-27T10:58:22.475-04:00"
 								}
 							},
 							"uid" : {
@@ -189,7 +189,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtMethod:GsGraphTool>>dragStop:}}"
+							"string" : "{{gtMethod:GsGraphTool>>dragStop:|expanded}}"
 						}
 					]
 				},

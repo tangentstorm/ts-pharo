@@ -145,7 +145,6 @@ GsToolOverlay >> resetFlags [
 { #category : #accessing }
 GsToolOverlay >> scene: aScene [
   scene := aScene.
-  tool scene: scene.
 ]
 
 { #category : #accessing }
@@ -155,6 +154,5 @@ GsToolOverlay >> tool [
 
 { #category : #accessing }
 GsToolOverlay >> tool: aTool [
-  tool := aTool.
-  tool scene: scene; overlay: self.
+  tool := aTool overlay: self.
 ]

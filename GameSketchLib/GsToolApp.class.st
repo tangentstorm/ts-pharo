@@ -9,21 +9,23 @@ Class {
 		'tools',
 		'appArea',
 		'overlay',
-		'toolbar'
+		'toolbar',
+		'sceneBuilder',
+		'selection'
 	],
 	#category : #'GameSketchLib-Apps'
 }
 
 { #category : #accessing }
 GsToolApp >> addTool: aTool [
-  aTool scene: scene.
+  aTool sceneBuilder: sceneBuilder.
   tools add: aTool.
   toolbar addItem: (self makeButtonFor: aTool).
 ]
 
 { #category : #accessing }
 GsToolApp >> currentTool [
-	^ overlay tool
+  ^ overlay tool
 ]
 
 { #category : #accessing }
@@ -36,8 +38,12 @@ GsToolApp >> currentTool: aTool [
 
 { #category : #initialization }
 GsToolApp >> initialize [
-  tools := self makeTools asOrderedCollection.
+  sceneBuilder := GsSceneBuilder new .
+  tools := self makeTools.
+  selection := {}.
   super initialize.
+  sceneBuilder scene: scene.
+  self makeToolbar.
   self currentTool: tools first
 ]
 
@@ -68,7 +74,9 @@ GsToolApp >> makeOverlay [
 GsToolApp >> makeToolbar [
   ^ toolbar := BrToolbar new
 	aptitude: BrMaterialToolbarAptitude;
-	addItems: (tools collect: [:t| self makeButtonFor: t])
+	addItems: (tools collect: [:t|
+	   t sceneBuilder: sceneBuilder.
+	   self makeButtonFor: t])
 ]
 
 { #category : #accessing }
@@ -87,6 +95,7 @@ GsToolApp >> makeUI [
 { #category : #accessing }
 GsToolApp >> scene: aScene [
   super scene: aScene.
+  sceneBuilder scene: aScene.
   overlay scene: aScene
 ]
 

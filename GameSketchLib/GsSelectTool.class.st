@@ -16,7 +16,7 @@ Class {
 
 { #category : #accessing }
 GsSelectTool >> click: p [
-  (scene childAtPoint: p)
+  (self scene childAtPoint: p)
     ifNotNil:[:x|
       selection := { x }. "we don't use selection: because we want custom handles" 
       "(but we do want to be able apply colors, change z-order, etc."
@@ -28,7 +28,7 @@ GsSelectTool >> click: p [
 GsSelectTool >> dragStart: p [
   super dragStart: p.
   selectangle removeFromParent.
-  (subject := scene childAtPoint: p)
+  (subject := self scene childAtPoint: p)
     ifNil: [overlay addChild:
       (selectangle relocate:p; size:0@0)]
     ifNotNil: [ offset := subject gsPosition - p. ].
@@ -47,15 +47,16 @@ GsSelectTool >> dragStop: p [
   |rect|
   subject ifNil: [
     rect := selectangle bounds asRectangle.
-    self selection: (scene children select: [:x|
+    self selection: (self scene children select: [:x|
          x bounds asRectangle intersects: rect])]
 ]
 
 { #category : #initialization }
 GsSelectTool >> initialize [
   super initialize.
+  selection := {}.
   selectangle := BlElement new
-   border: (BlBorder paint: Color cyan).
+    border: (BlBorder paint: Color cyan).
 ]
 
 { #category : #accessing }

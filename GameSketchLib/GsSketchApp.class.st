@@ -1,6 +1,9 @@
 Class {
 	#name : #GsSketchApp,
 	#superclass : #GsToolApp,
+	#instVars : [
+		'palette'
+	],
 	#category : #'GameSketchLib-Apps'
 }
 
@@ -9,7 +12,15 @@ GsSketchApp class >> for: aScene [
   ^ self new scene: aScene
 ]
 
-{ #category : #accessing }
+{ #category : #ui }
+GsSketchApp >> makePalette [
+  ^ GsPaletteElement new
+    when: GsColorChangedEvent do: [:e|
+      sceneBuilder background: e color.
+      self selection do: [:each | each background: e color]]
+]
+
+{ #category : #ui }
 GsSketchApp >> makeTools [
   ^ { GsSelectTool new.
       GsBuildTool for: GsRectShape.
@@ -18,16 +29,19 @@ GsSketchApp >> makeTools [
       GsTextTool new.}
 ]
 
-{ #category : #accessing }
+{ #category : #ui }
 GsSketchApp >> makeUI [
   ui := super makeUI.
-  toolbar addChild: "primitive color palette tool"
-    (GsPalette arne gridWithSize: 14 onClick: [:color |
-      self selection do: [:e | e background: color ]]).
+  toolbar addChild: (self makePalette).
   ^ ui
 ]
 
 { #category : #accessing }
+GsSketchApp >> selectangle [
+  ^ self tools first selectangle
+]
+
+{ #category : #ui }
 GsSketchApp >> selection [
   ^ self tools first selection
 ]
