@@ -49,3 +49,9 @@ GsSelection >> reset [
     origin: 0@0
     extent: 0@0.
 ]
+
+{ #category : #accessing }
+GsSelection >> species [
+  "this is so collect: lets you collect non-shapes"
+  ^ OrderedCollection
+]
