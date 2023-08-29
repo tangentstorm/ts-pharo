@@ -54,9 +54,9 @@ GsSelectTool >> dragStop: p [
 { #category : #ui }
 GsSelectTool >> drawSelectionBox [
   selection ifNotEmpty: [
-    |rect startPosition|
+    |rect box startPosition|
     rect := selection boundingRect.
-    overlay addChild: (GsRectShape new
+    overlay addChild: (box := GsRectShape new
       border: (BlBorder paint: Color cyan);
       background: (Color cyan alpha: 0.2);
       size: rect extent;
@@ -68,6 +68,7 @@ GsSelectTool >> drawSelectionBox [
       when: BlElementPositionChangedEvent do: [:e|
         "ignore the initial positioning event."
         startPosition ifNotNil: [ |diff|
+          selection boundingRect: box bounds asRectangle.
           diff := e source gsPosition - startPosition.
           startPosition := e source gsPosition.
           selection do: [:x | x gsPosition: x gsPosition + diff]]])]

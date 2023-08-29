@@ -30,6 +30,12 @@ GsSelection >> boundingRect [
   ^ rect
 ]
 
+{ #category : #accessing }
+GsSelection >> boundingRect: aRectangle [
+  "helpful when the selectangle moves around"
+  rect := aRectangle.
+]
+
 { #category : #initialization }
 GsSelection >> initialize [
   super initialize.
