@@ -7,6 +7,16 @@ BlElement >> findChild: aPath [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsCenter [
+  ^ self position + (self extent / 2)
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsCenter: aPoint [
+  ^ self gsMoveBy: (aPoint - self gsCenter) 
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsContainsPoint: p [
   ^ self bounds asRectangle containsPoint: p 
 ]

@@ -24,6 +24,11 @@ GsCircleShape >> center: aPoint [
 ]
 
 { #category : #accessing }
+GsCircleShape >> gsCenter [
+  ^ center
+]
+
+{ #category : #accessing }
 GsCircleShape >> gsPosition [
   ^ center
 ]

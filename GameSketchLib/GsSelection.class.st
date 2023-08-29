@@ -10,7 +10,8 @@ Class {
 	#name : #GsSelection,
 	#superclass : #OrderedCollection,
 	#instVars : [
-		'rect'
+		'rect',
+		'scene'
 	],
 	#category : #'GameSketchLib-Core'
 }
@@ -36,6 +37,11 @@ GsSelection >> boundingRect: aRectangle [
   rect := aRectangle.
 ]
 
+{ #category : #accessing }
+GsSelection >> bringToFront [
+  self do: [:x| x removeFromParent. scene addChild: x].
+]
+
 { #category : #initialization }
 GsSelection >> initialize [
   super initialize.
@@ -51,7 +57,35 @@ GsSelection >> reset [
 ]
 
 { #category : #accessing }
+GsSelection >> scene [
+  ^ scene
+]
+
+{ #category : #accessing }
+GsSelection >> scene: aScene [
+  scene := aScene
+]
+
+{ #category : #accessing }
+GsSelection >> sendToBack [
+  self reversed do: [:x | x removeFromParent. scene addChildFirst: x ]
+]
+
+{ #category : #accessing }
 GsSelection >> species [
   "this is so collect: lets you collect non-shapes"
   ^ OrderedCollection
+]
+
+{ #category : #alignment }
+GsSelection >> vAlignCenters [
+  "align centers vertically"
+  |cy|
+  cy := self boundingRect center y.
+  self do: [:x| x gsCenter: (x gsCenter x) @ cy]
+]
+
+{ #category : #alignment }
+GsSelection >> vAlignTops [
+  self do: [:x | x gsTop: self boundingRect top]
 ]

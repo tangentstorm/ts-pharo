@@ -54,6 +54,7 @@ GsToolApp >> initialize [
   tools := OrderedCollection new.
   super initialize.
   sceneBuilder scene: scene.
+  selection scene: scene.
   self makeToolbar.
   self currentTool: tools first
 ]
@@ -101,6 +102,7 @@ GsToolApp >> makeUI [
 GsToolApp >> scene: aScene [
   super scene: aScene.
   sceneBuilder scene: aScene.
+  selection scene: aScene.
   overlay scene: aScene
 ]
 
