@@ -33,6 +33,11 @@ GsCircleShape >> gsPosition: aPoint [
   self center: aPoint
 ]
 
+{ #category : #accessing }
+GsCircleShape >> gsTop [
+  ^ center y - radius
+]
+
 { #category : #initialization }
 GsCircleShape >> initialize [
   super initialize.

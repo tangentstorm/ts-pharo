@@ -733,7 +733,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:48.308-04:00"
+						"dateAndTimeString" : "2023-08-28T15:44:39.502-04:00"
 					}
 				},
 				"uid" : {
@@ -743,7 +743,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "undo"
+				"string" : "Undo"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1103,7 +1103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:20:43.733-04:00"
+						"dateAndTimeString" : "2023-08-28T15:44:45.895-04:00"
 					}
 				},
 				"uid" : {
@@ -1113,7 +1113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "invader demo"
+				"string" : "Invader demo"
 			},
 			{
 				"__type" : "textSnippet",

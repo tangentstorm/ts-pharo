@@ -23,6 +23,11 @@ BlElement >> gsHide [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsMoveBy: aPoint [
+  self gsPosition: (self gsPosition + aPoint)
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsPosition [
   ^ self position
 ]
@@ -36,4 +41,14 @@ BlElement >> gsPosition: aPoint [
 { #category : #'*GameSketchLib' }
 BlElement >> gsShow [
   self visibility: BlVisibilityVisible new
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsTop [
+  ^ self position y
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsTop: y [
+  self gsMoveBy: 0 @ (y - self gsTop)
 ]

@@ -23,17 +23,25 @@ GsLineShape >> gsContainsPoint: p [
 ]
 
 { #category : #accessing }
+GsLineShape >> gsMoveBy: diff [
+  self
+    p1: p1 + diff;
+    p2: p2 + diff.
+]
+
+{ #category : #accessing }
 GsLineShape >> gsPosition [
   ^ p1
 ]
 
 { #category : #accessing }
 GsLineShape >> gsPosition: aPoint [
-  |diff|
-  diff := (aPoint - p1).
-  self
-    p1: p1 + diff;
-    p2: p2 + diff.
+  self gsMoveBy: aPoint - p1.
+]
+
+{ #category : #accessing }
+GsLineShape >> gsTop [
+  ^ (p1 y) min: (p2 y).
 ]
 
 { #category : #initialization }
