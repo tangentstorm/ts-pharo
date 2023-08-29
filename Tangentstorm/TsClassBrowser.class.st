@@ -26,12 +26,14 @@ TsClassBrowser >> asElement [
       addChild: (self label: 'Methods' above:
         (methodList stream: {} asAsyncStream));
       matchParent);
-    addChild: (editorFrame := BrFrame 
-      new matchParent);
+    addChild: (BrFrame new
+      matchParent;
+      addAptitude: (BrGlamorousWithVerticalResizerAptitude new beTop);
+      addChild: (editorFrame := BrFrame new matchParent));
     matchParent
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> editMethod: aMethod [
   editorFrame removeChildren;
     matchParent;
@@ -41,7 +43,7 @@ TsClassBrowser >> editMethod: aMethod [
     requestLayout
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> for: aClass [
   theClass := aClass.
   crumbs := self makeCrumbs.
@@ -63,13 +65,12 @@ TsClassBrowser >> label: str above: el [
   matchParent
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> listMethodsForProtocol: aProtocol [
   | items groups |
 
   items := theClass methodsInProtocol: aProtocol.
-  items := items groupedBy: [:x|
-    x traitSource ifNil: [theClass]].
+  items := items groupedBy: [:x| x traitSource ifNil: [x classBinding value]].
 
   groups := items associations asAsyncStream collect: [:x|
     BrGroup new
@@ -86,7 +87,7 @@ TsClassBrowser >> listMethodsForProtocol: aProtocol [
 
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> makeCrumbs [
 |makeSeparator|
 makeSeparator :=  [
@@ -125,7 +126,7 @@ TsClassBrowser >> makeLabel [
 	padding: (BlInsets all: 2)
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> makeListFor: items withLabel: getLabelStr onClick: onClick [
   ^ BrSimpleList new
     items: items;
@@ -136,7 +137,7 @@ TsClassBrowser >> makeListFor: items withLabel: getLabelStr onClick: onClick [
 
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> makeMethodList [
   ^ BrGroupedList new
     headerElementStencil: [ BrLabel new
@@ -149,7 +150,7 @@ TsClassBrowser >> makeMethodList [
     headerDataBinder: [:h :x| h text: x domainObject].
 ]
 
-{ #category : #'*Tangentstorm' }
+{ #category : #accessing }
 TsClassBrowser >> selectProtocol: aProtocol [
   methodList
     deselectAll;
