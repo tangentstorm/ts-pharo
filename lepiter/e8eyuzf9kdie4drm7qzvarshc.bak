@@ -511,7 +511,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-28T10:45:26.871-04:00"
+						"dateAndTimeString" : "2023-08-29T11:40:16.805-04:00"
 					}
 				},
 				"uid" : {
@@ -521,7 +521,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Align selected shapes."
+				"string" : "[[Align selected shapes.]]"
 			},
 			{
 				"__type" : "textSnippet",
