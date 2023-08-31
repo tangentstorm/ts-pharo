@@ -11,6 +11,14 @@ Class {
 }
 
 { #category : #accessing }
+GsScene >> childrenDescription [
+  <magritteDescription>
+  ^ MAToManyRelationDescription new
+    label: 'children';
+    accessor: #children
+]
+
+{ #category : #accessing }
 GsScene >> initialize [
   super initialize.
   self matchParent background: GsColor defaultBg

@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:50:48.834-04:00"
+						"dateAndTimeString" : "2023-08-26T20:50:55.876-04:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "- Logical groups that can be used to refer to groups of entities (especially for games: enemies, walls, bullets, etc...) ... This can also be used to move different groups of objects at different time"
+				"string" : "- Logical groups that can be used to refer to groups of entities (especially for games: enemies, walls, bullets, etc...) ... This can also be used to move different groupings of objects at different times during an animation."
 			}
 		]
 	},
