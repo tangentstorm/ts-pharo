@@ -2,7 +2,8 @@ Class {
 	#name : #GsJsonWriter,
 	#superclass : #MAWriter,
 	#instVars : [
-		'indent'
+		'indent',
+		'skipped'
 	],
 	#category : #'GameSketchLib-Magritte'
 }
@@ -16,6 +17,7 @@ GsJsonWriter >> defaultWriteStream [
 GsJsonWriter >> initialize [
   super initialize.
   indent := ''.
+  skipped := false.
 ]
 
 { #category : #accessing }
@@ -34,17 +36,13 @@ GsJsonWriter >> putKey: aKey val: aVal [
 ]
 
 { #category : #accessing }
-GsJsonWriter >> visit: anObject [
-  super visit: anObject
-]
-
-{ #category : #accessing }
 GsJsonWriter >> visitContainer: aDescription [
   stream nextPutAll: indent.
   stream nextPut: ${.
-  self putKey: #k val: object class name.
+  self putKey: #class val: object class name.
   aDescription children do: [:cd|
-    stream nextPutAll: ', '.
+    skipped  ifFalse: [stream nextPutAll: ', ']
+      ifTrue: [skipped := false].
     self visit: cd].
   stream nextPut: $}.
 ]
@@ -86,7 +84,7 @@ GsJsonWriter >> visitRelationDescription: d [
 GsJsonWriter >> visitSymbolDescription: aDescription [
    |v|
    v := aDescription read: object.
-   v ifNotNil: [
+   (v isKindOf: BlElementNoId) ifTrue: [skipped := true] ifFalse: [
      self putKey: aDescription accessor readSelector
           val: v ].
 ]

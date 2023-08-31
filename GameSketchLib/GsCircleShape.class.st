@@ -21,16 +21,6 @@ GsCircleShape class >> newAtPoint: aCenter [
   ^ self new center: aCenter
 ]
 
-{ #category : #magritte }
-GsCircleShape >> backgroundDescription [
-  <magritteDescription>
-  ^ MAElementDescription new
-    accessor: #background;
-    label: 'Background';
-    kind: BlBackground;
-    yourself
-]
-
 { #category : #accessing }
 GsCircleShape >> center [
   ^ center
@@ -70,15 +60,6 @@ GsCircleShape >> gsPosition: aPoint [
 { #category : #accessing }
 GsCircleShape >> gsTop [
   ^ center y - radius
-]
-
-{ #category : #magritte }
-GsCircleShape >> idDescription [
-  <magritteDescription>
-  ^ MASymbolDescription new
-    accessor: #id;
-    label: 'Id';
-    yourself
 ]
 
 { #category : #initialization }

@@ -15,7 +15,8 @@ GsScene >> childrenDescription [
   <magritteDescription>
   ^ MAToManyRelationDescription new
     label: 'children';
-    accessor: #children
+    accessor: #children;
+    priority: 100.
 ]
 
 { #category : #accessing }

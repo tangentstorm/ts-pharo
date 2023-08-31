@@ -15,6 +15,16 @@ Class {
 	#category : #'GameSketchLib-Core'
 }
 
+{ #category : #magritte }
+GsObject >> backgroundDescription [
+  <magritteDescription>
+  ^ MAElementDescription new
+    accessor: #background;
+    label: 'Background';
+    kind: BlBackground;
+    yourself
+]
+
 { #category : #accessing }
 GsObject >> childAtPoint: p [
   ^ self childAtPoint: p ifNone: [nil]
@@ -32,6 +42,15 @@ GsObject >> childAtPoint: p where: aConditionBlock ifNone: aBlock [
   ^ children reversed
       detect: [:x| (x gsContainsPoint: p) and: [aConditionBlock value: x]]
       ifNone: aBlock
+]
+
+{ #category : #magritte }
+GsObject >> idDescription [
+  <magritteDescription>
+  ^ MASymbolDescription new
+    accessor: #id;
+    label: 'Id';
+    yourself
 ]
 
 { #category : #initialization }
