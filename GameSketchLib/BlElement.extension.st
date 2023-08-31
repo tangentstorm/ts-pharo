@@ -22,6 +22,12 @@ BlElement >> gsContainsPoint: p [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsFill [
+  "only works for objects with a paint background"
+  ^ self background paint color
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsHandles [
   "return a collection of handles."
   ^ { BlResizerElement new attachTo: self}
