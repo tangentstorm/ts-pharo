@@ -1,3 +1,8 @@
+"
+An {{gtClass:GsToolApp}} for drawing scenes.
+
+Collaborators: {{gtClass:GsSelectTool}} {{gtClass:GsBuildTool}} {{gtClass:GsSelection}} {{gtClass:GsToolOverlay}}
+"
 Class {
 	#name : #GsSketchApp,
 	#superclass : #GsToolApp,
@@ -34,16 +39,4 @@ GsSketchApp >> makeUI [
   ui := super makeUI.
   toolbar addChild: (self makePalette).
   ^ ui
-]
-
-{ #category : #accessing }
-GsSketchApp >> selectTool [
-  ^ self tools
-    detect: [:t| t isKindOf: GsSelectTool]
-    ifNone: [ self error: 'no select tool found.']
-]
-
-{ #category : #accessing }
-GsSketchApp >> selectangle [
-  ^ self selectTool selectangle
 ]

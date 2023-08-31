@@ -22,7 +22,9 @@ Class {
 GsToolApp >> addTool: aTool [
   tools add: (aTool
     sceneBuilder: sceneBuilder;
-    selection: selection).
+    selection: selection;
+    overlay: overlay;
+    addedToApp: self).
   toolbar addItem: (self makeButtonFor: aTool).
 ]
 

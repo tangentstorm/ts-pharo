@@ -16,6 +16,12 @@ Class {
 	#category : #'GameSketchLib-Tools'
 }
 
+{ #category : #initialization }
+GsSelectTool >> addedToApp: aToolApp [
+  aToolApp selection
+    whenChangedDo: [self redrawSelection]
+]
+
 { #category : #accessing }
 GsSelectTool >> click: p [
   self selectShapes:
@@ -81,15 +87,19 @@ GsSelectTool >> initialize [
     border: (BlBorder paint: Color cyan).
 ]
 
-{ #category : #accessing }
-GsSelectTool >> selectShapes: aCollection [
+{ #category : #initialization }
+GsSelectTool >> redrawSelection [
   overlay removeChildren.
-  self selection reset; addAll: aCollection.
-  (aCollection size > 1)
+  (selection size > 1)
     ifTrue: [self drawSelectionBox]
     ifFalse: [selection ifNotEmpty: [
       overlay addChildren:
-        aCollection first gsHandles]]
+        selection first gsHandles]]
+]
+
+{ #category : #accessing }
+GsSelectTool >> selectShapes: aCollection [
+  self selection reset; addAll: aCollection.
 ]
 
 { #category : #accessing }
@@ -100,9 +110,4 @@ GsSelectTool >> selectangle [
 { #category : #accessing }
 GsSelectTool >> selectangle: anObject [
 	selectangle := anObject
-]
-
-{ #category : #accessing }
-GsSelectTool >> subject [
-	^ subject
 ]

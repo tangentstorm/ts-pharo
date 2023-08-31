@@ -11,10 +11,16 @@ Class {
 	#superclass : #OrderedCollection,
 	#instVars : [
 		'rect',
-		'scene'
+		'scene',
+		'announcer'
 	],
 	#category : #'GameSketchLib-Core'
 }
+
+{ #category : #accessing }
+GsSelection class >> basicNew [
+  ^ super basicNew basicInitialize
+]
 
 { #category : #accessing }
 GsSelection >> addLast: aShape [
@@ -24,6 +30,14 @@ GsSelection >> addLast: aShape [
     ifNotEmpty: [rect := rect merge: shapeRect]
     ifEmpty: [rect := shapeRect].
   super addLast: aShape.
+  self changed.
+]
+
+{ #category : #initialization }
+GsSelection >> basicInitialize [
+  "OrderedCollection never calls initialize"
+  announcer := Announcer new.
+  self reset.
 ]
 
 { #category : #accessing }
@@ -42,10 +56,9 @@ GsSelection >> bringToFront [
   self do: [:x| x removeFromParent. scene addChild: x].
 ]
 
-{ #category : #initialization }
-GsSelection >> initialize [
-  super initialize.
-  self reset.
+{ #category : #accessing }
+GsSelection >> changed [
+  announcer announce: GsSelectionChanged new
 ]
 
 { #category : #accessing }
@@ -54,6 +67,7 @@ GsSelection >> reset [
   rect := Rectangle
     origin: 0@0
     extent: 0@0.
+  self changed.
 ]
 
 { #category : #accessing }
@@ -88,4 +102,9 @@ GsSelection >> vAlignCenters [
 { #category : #alignment }
 GsSelection >> vAlignTops [
   self do: [:x | x gsTop: self boundingRect top]
+]
+
+{ #category : #accessing }
+GsSelection >> whenChangedDo: aBlock [
+  announcer when: GsSelectionChanged do: aBlock.
 ]

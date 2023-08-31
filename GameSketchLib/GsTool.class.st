@@ -18,6 +18,11 @@ Class {
 	#category : #'GameSketchLib-Tools'
 }
 
+{ #category : #initialization }
+GsTool >> addedToApp: aToolApp [
+  "override for tool-specific setup (like selectTool's selectangle)"
+]
+
 { #category : #'event handling' }
 GsTool >> click: aPoint [
 ]
