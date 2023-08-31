@@ -103,14 +103,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:12:58.438-04:00"
+						"dateAndTimeString" : "2023-08-29T19:24:25.593-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qD25qnnADQCqPqLeA2aa1g=="
 				},
-				"code" : "GsShape new storeOn:s.\rs"
+				"code" : "s := WriteStream on: String new.\rGsShape new gsStoreOn: s.\rs contents"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-29T19:23:45.608-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-29T19:23:52.789-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WMXc1nnADQCuEujdA2aa1g=="
+				},
+				"code" : "GsShape"
 			}
 		]
 	},

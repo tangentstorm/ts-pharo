@@ -8,7 +8,187 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T20:50:15.625-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T21:11:03.863-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+AWb93jADQCk7X0qA2aa1g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We provide an extension method in {{gtMethod:BlElement>>gsJson}}, which calls the more general {{gtMethod:BlElement>>gsJsonOn:|label=gsJsonOn:|expanded}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-29T19:10:01.209-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T21:12:45.149-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qHS5pXnADQCqEVdaA2aa1g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The real magic is in {{gtClass:GsJsonWriter}}, a Magritte visitor that traverses the whole scene tree. "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T21:15:33.692-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:27:17.074-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eGKJhI/ADQCgqApXAhKwJw=="
+							},
+							"code" : "c := GsCircleShape new id: #shape001.\rself assert: c gsJson\r     equals: '{\"class\":\"GsCircleShape\", \"id\":\"#shape001\", \"fill\":\"#FFFFFF\", \"center\":\"(0@0)\", \"radius\":\"10\"}'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T21:14:37.243-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:28:28.158-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kAosgY/ADQCfyjzOAhKwJw=="
+							},
+							"code" : "c := GsCircleShape new id: #shape001.\rs := GsScene new addChild: c. \"Note that scenes have a default background color.\"\rself assert: s gsJson\r     equals: '{\"class\":\"GsScene\", \"fill\":\"#9F9F9F\", \"children\":[\r  {\"class\":\"GsCircleShape\", \"id\":\"#shape001\", \"fill\":\"#FFFFFF\", \"center\":\"(0@0)\", \"radius\":\"10\"}]}'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T22:20:18.654-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:29:26.339-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SDMZbJDADQCkLUTSAhKwJw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is more complex because we need to recurse through the children, via {{gtMethod:GsJsonWriter>>#visitRelationDescription:|expanded}}"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +198,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T18:21:19.979-04:00"
+						"dateAndTimeString" : "2023-08-31T02:28:37.235-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,23 +209,101 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:10:13.728-04:00"
+						"dateAndTimeString" : "2023-08-31T02:28:49.744-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+AWb93jADQCk7X0qA2aa1g=="
+					"uidString" : "OIUf5JPADQC5wrzCAhKwJw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Shapes override {{gtMethod:Object>>storeOn:}}"
+				"string" : "## Save scenes with GsJsonWriter"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:29:46.849-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:29:46.849-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gLK/55PADQC7b4P/AhKwJw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:29:53.857-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-31T02:29:53.857-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GKaw6JPADQC7jOvTAhKwJw=="
+							},
+							"exampleSelector" : "spaceScene",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GsSceneExamples class",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : false
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,7 +313,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:10:01.209-04:00"
+						"dateAndTimeString" : "2023-08-31T02:29:26.933-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,85 +324,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:10:01.209-04:00"
+						"dateAndTimeString" : "2023-08-31T02:29:37.414-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qHS5pXnADQCqEVdaA2aa1g=="
+					"uidString" : "INYV55PADQC6xngpAhKwJw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:11:25.082-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:24:25.593-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qD25qnnADQCqPqLeA2aa1g=="
-				},
-				"code" : "s := WriteStream on: String new.\rGsShape new gsStoreOn: s.\rs contents"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:23:45.608-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T19:23:52.789-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WMXc1nnADQCuEujdA2aa1g=="
-				},
-				"code" : "GsShape"
+				"string" : "## Load scenes with GsJsonReader"
 			}
 		]
 	},
