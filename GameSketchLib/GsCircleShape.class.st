@@ -35,7 +35,7 @@ GsCircleShape >> center: aPoint [
 { #category : #magritte }
 GsCircleShape >> centerDescription [
   <magritteDescription>
-  ^ MAPointDescription new
+  ^ GsPointDescription new
     priority: 100;
     accessor: #center;
     label: 'Center';

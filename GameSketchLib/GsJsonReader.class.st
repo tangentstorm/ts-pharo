@@ -10,7 +10,7 @@ Class {
 		'object',
 		'values'
 	],
-	#category : #GameSketchLib
+	#category : #'GameSketchLib-Magritte'
 }
 
 { #category : #accessing }
@@ -39,22 +39,24 @@ GsJsonReader >> visitContainer: mc [
 
 { #category : #accessing }
 GsJsonReader >> visitElementDescription: d [
-  | key val |
+  | key  |
+  key := d asGsDescription jsonKey.
+  values at: key ifPresent:[:raw |
+    d write: raw to: object  ]
+]
 
-  key := d accessor readSelector.
-  (key = 'background')
-    ifTrue: [ val := (values at: #fill) asHexColor. ]
-    ifFalse: [ values at: key ifPresent:[:raw |
-      "this is for point. probably not right."
-      val := d class defaultKind readFrom: raw ]].
-
-  d write: val to: object.
+{ #category : #accessing }
+GsJsonReader >> visitNumberDescription: d [
+  "this allows parsing numbers wrapped in quotes"
+  values at: d asGsDescription jsonKey
+    ifPresent:[:raw |
+      d write: raw asNumber to: object  ]
 ]
 
 { #category : #accessing }
 GsJsonReader >> visitRelationDescription: d [
   |key|
-  key := (d accessor readSelector).
+  key := d asGsDescription jsonKey.
   self assert: key = 'children'
     description: 'don''t yet know how to handle other collections'.
   values at: key

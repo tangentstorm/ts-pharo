@@ -33,8 +33,24 @@ BlElement >> gsContainsPoint: p [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsFill [
-  "only works for objects with a paint background"
-  ^ self background paint color
+  "returns fill color as hex. !!TODO: add alpha if not opaque.
+   (Color fromHexString: can already handle this)"
+  ^ self background paint color asHTMLColor
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsFill: aHexString [
+  ^ self background: (Color fromHexString: aHexString)
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsFillDescription [
+  <magritteDescription>
+  ^ (GsDescriptionWrapper new for: MAStringDescription new)
+      accessor: #gsFill;
+      label: 'fill';
+      priority: 10;
+      jsonKey: 'fill'
 ]
 
 { #category : #'*GameSketchLib' }
@@ -63,11 +79,11 @@ BlElement >> gsId: aString [
 { #category : #'*GameSketchLib' }
 BlElement >> gsIdDescription [
   <magritteDescription>
-  ^ MAStringDescription new
-    accessor: #gsId;
-    label: 'Id';
-    priority: 0;
-    yourself
+  ^ (GsDescriptionWrapper new for: MAStringDescription new)
+      accessor: #gsId;
+      label: 'Id';
+      priority: 0;
+      jsonKey: 'id'
 ]
 
 { #category : #'*GameSketchLib' }

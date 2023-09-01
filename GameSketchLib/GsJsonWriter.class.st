@@ -28,18 +28,16 @@ GsJsonWriter >> putKey: aKey [
 ]
 
 { #category : #accessing }
-GsJsonWriter >> putKey: aKey val: aVal [
+GsJsonWriter >> putKey: aKey stringVal: aVal [
   self putKey: aKey.
-  stream nextPutAll: '"'.
-  stream nextPutAll: aVal asString.  
-  stream nextPut: $".  
+  stream nextPutAll: (aVal asString surroundedBy: '"')
 ]
 
 { #category : #accessing }
 GsJsonWriter >> visitContainer: aDescription [
   stream nextPutAll: indent.
   stream nextPut: ${.
-  self putKey: #class val: object class name.
+  self putKey: #class stringVal: object class name.
   aDescription children do: [:cd|
     skipped  ifFalse: [stream nextPutAll: ', ']
       ifTrue: [skipped := false].
@@ -49,22 +47,20 @@ GsJsonWriter >> visitContainer: aDescription [
 
 { #category : #accessing }
 GsJsonWriter >> visitElementDescription: d [
-  | key val |
+  self putKey: d asGsDescription jsonKey stringVal: (d read: object).
+]
 
-  key := d accessor readSelector.
-  val := d read: object.
-
-  key = 'background' ifTrue: [
-    key := 'fill'.
-    val := '#', val paint color asHexString ].
-    
-  self putKey: key val: val. 
+{ #category : #accessing }
+GsJsonWriter >> visitNumberDescription: d [
+  self putKey: d asGsDescription jsonKey.
+  "don't quote the number"
+  stream nextPutAll: (d read: object) asString.
 ]
 
 { #category : #accessing }
 GsJsonWriter >> visitRelationDescription: d [
   |key vals|
-  key := d accessor readSelector.
+  key := d asGsDescription jsonKey.
   vals := d read: object.
   vals ifNotEmpty: [ |first oldIndent|
     first := true.
@@ -81,10 +77,8 @@ GsJsonWriter >> visitRelationDescription: d [
 ]
 
 { #category : #accessing }
-GsJsonWriter >> visitSymbolDescription: aDescription [
-   |v|
-   v := aDescription read: object.
-   (v isKindOf: BlElementNoId) ifTrue: [skipped := true] ifFalse: [
-     self putKey: aDescription accessor readSelector
-          val: v ].
+GsJsonWriter >> visitStringDescription: d [
+  (d read: object)
+    ifEmpty: [ skipped := true ]
+    ifNotEmpty: [:val | self putKey: d asGsDescription jsonKey stringVal: val].
 ]

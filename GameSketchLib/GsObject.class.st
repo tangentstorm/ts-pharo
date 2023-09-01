@@ -15,16 +15,6 @@ Class {
 	#category : #'GameSketchLib-Core'
 }
 
-{ #category : #magritte }
-GsObject >> backgroundDescription [
-  <magritteDescription>
-  ^ MAElementDescription new
-    accessor: #background;
-    label: 'Background';
-    kind: BlBackground;
-    yourself
-]
-
 { #category : #accessing }
 GsObject >> childAtPoint: p [
   ^ self childAtPoint: p ifNone: [nil]

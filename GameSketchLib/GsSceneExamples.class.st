@@ -42,9 +42,9 @@ GsSceneExamples class >> spaceScene [
 { #category : #accessing }
 GsSceneExamples class >> spaceSceneJson [
   ^ '{"class":"GsScene", "fill":"#222222", "children":[
-  {"class":"GsCircleShape", "fill":"#F7E26B", "center":"(715.8333333333334@264.0)", "radius":"124.91107948367824"},
-  {"class":"GsCircleShape", "fill":"#9D9D9D", "center":"(805.9999999999999@268.33333333333337)", "radius":"20.833333333333325"},
-  {"class":"GsCircleShape", "fill":"#31A2F2", "center":"(846.8333333333333@268.33333333333337)", "radius":"44.29227421972773"},
+  {"class":"GsCircleShape", "id":"sun", "fill":"#F7E26B", "center":"(715.8333333333334@264.0)", "radius":"124.91107948367824"},
+  {"class":"GsCircleShape", "id":"moon", "fill":"#9D9D9D", "center":"(805.9999999999999@268.33333333333337)", "radius":"20.833333333333325"},
+  {"class":"GsCircleShape", "id":"earth", "fill":"#31A2F2", "center":"(846.8333333333333@268.33333333333337)", "radius":"44.29227421972773"},
   {"class":"GsCircleShape", "fill":"#FFFFFF", "center":"(107.5@53.18290615081787)", "radius":"5"},
   {"class":"GsCircleShape", "fill":"#FFFFFF", "center":"(190.0@186.51623948415124)", "radius":"5"},
   {"class":"GsCircleShape", "fill":"#FFFFFF", "center":"(302.5@418.18290615081787)", "radius":"5"},
