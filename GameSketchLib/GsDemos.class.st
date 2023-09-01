@@ -56,7 +56,7 @@ GsDemos >> gtRawFor: aView [
 GsDemos >> gtSketchDemoFor: aView [
   <gtView>
   ^ aView explicit
-    priority: 40;
+    priority: 0;
     title: 'SketchApp';
-    stencil: [GsSketchApp for: GsSceneExamples basicShapes ]
+    stencil: [GsSketchApp for: GsSceneExamples spaceScene ]
 ]
