@@ -8,7 +8,10 @@ Class {
 		'titleBar',
 		'offerElement',
 		'docked',
-		'pullHandler'
+		'pullHandler',
+		'resizeHandle',
+		'plannedSize',
+		'workArea'
 	],
 	#category : #'GameSketchLib-UI - Docking'
 }
@@ -52,9 +55,20 @@ GsDockable >> initialize [
   docked := false.
   self beUndocked.
   self makeOfferElement.
-  self size: 150@250;
-    addEventHandler: (pullHandler := BlPullHandler new disallowOutOfBounds); 
-    when: BlMouseDownEvent do: [:e | e consumed: true];
+  self
+
+
+    background: GsColor toolBg;
+    border: (BlBorder builder
+      paint: (GsColor toolBg darker darker);
+      width: 2;
+      build);
+    addChild: (self makeTitleBar
+        addEventHandler: (pullHandler := BlPullHandler new 
+          targetElement: self;
+          disallowOutOfBounds); 
+    when: BlMouseDownEvent do: [:e | 
+       e consumed: true];
     when: BlMouseUpEvent do: [:e |  e consumed: true];
     when: BlDragStartEvent do: [:e| 
       self beUndocked.
@@ -67,13 +81,12 @@ GsDockable >> initialize [
       self rescindOffers.
       self ifAtLeft: [ self dockIn: #leftDock ]
       ifAtRight: [ self dockIn: #rightDock ]
-      else: []];
-    background: GsColor toolBg;
-    border: (BlBorder builder
-      paint: (GsColor toolBg darker darker);
-      width: 2;
-      build);
-    addChild: self makeTitleBar as: #titleBar
+      else: []]
+    )  as: #titleBar;
+    addChild: self makeWorkArea as: #workArea;
+    addChild: self makeResizeHandle as: #resizeHandle;
+    size: (plannedSize := 150@250)
+
 ]
 
 { #category : #accessing }
@@ -85,6 +98,24 @@ GsDockable >> makeOfferElement [
 ]
 
 { #category : #accessing }
+GsDockable >> makeResizeHandle [
+  | updateHandle updateSize |
+  resizeHandle := GsHandle new.
+  updateSize := [
+      self size: resizeHandle gsCenter + resizeHandle extent].
+  resizeHandle
+    addEventHandler: BlPullHandler new;
+    when: BlPullEvent do: updateSize;
+    when: BlPullEndEvent do: updateSize.
+  self when: BlElementExtentChangedEvent do: [
+    resizeHandle 
+      gsCenter: self extent - resizeHandle extent;
+      constraintsDo: [:c | c ignoreByLayout]].
+  ^ resizeHandle
+
+]
+
+{ #category : #accessing }
 GsDockable >> makeTitleBar [
   ^ titleBar := BrLabel new
     aptitude: "(BrTextLabelAptitude new defaultFontName: 'Source Sans Pro');"
@@ -93,6 +124,12 @@ GsDockable >> makeTitleBar [
     padding: (BlInsets all: 2);
     hMatchParent;
     text: 'A GsDockable'
+]
+
+{ #category : #accessing }
+GsDockable >> makeWorkArea [
+  ^ workArea := BrWidgetContainer new matchParent
+    background: Color white
 ]
 
 { #category : #accessing }
