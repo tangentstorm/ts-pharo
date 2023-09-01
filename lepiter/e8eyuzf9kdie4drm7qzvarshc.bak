@@ -193,6 +193,117 @@
 								"__type" : "textStyle"
 							},
 							"string" : " [[Draw lines and curves with a mouse]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T20:49:31.681-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T20:49:31.683-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UPg8J4/ADQCUgMaVAhKwJw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Load and Save Scenes]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-26T16:24:43.591-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-30T14:42:54.554-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YHkdI+a/DQC+Biu3CgWsog=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Move shapes forward and backward.]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-22T11:16:30.768-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-29T11:40:16.805-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uPLCIWi+DQCYtWMyAO5s8A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Align selected shapes.]]"
 						}
 					]
 				},
@@ -278,7 +389,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-30T20:49:31.681-04:00"
+						"dateAndTimeString" : "2023-08-22T11:08:20.465-04:00"
 					}
 				},
 				"editEmail" : {
@@ -289,17 +400,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-30T20:49:31.683-04:00"
+						"dateAndTimeString" : "2023-08-27T10:28:28.856-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UPg8J4/ADQCUgMaVAhKwJw=="
+					"uidString" : "aHk3Gua/DQC9JPecCgWsog=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Load and Save Scenes]]"
+				"string" : "[[Combine shapes into groups]]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-22T11:17:18.102-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T20:18:23.097-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CCZDOua/DQCA+4JuCgWsog=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Render [[GSL Charts and Plots]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -352,7 +500,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:08:20.465-04:00"
+						"dateAndTimeString" : "2023-08-22T11:18:00.74-04:00"
 					}
 				},
 				"editEmail" : {
@@ -363,17 +511,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-27T10:28:28.856-04:00"
+						"dateAndTimeString" : "2023-08-30T10:31:48.44-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aHk3Gua/DQC9JPecCgWsog=="
+					"uidString" : "qIoQJWy+DQCVk7OkAJQ6Rw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Combine shapes into groups]]"
+				"string" : "[[Edit shapes with an inspector]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -389,7 +537,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T16:24:43.591-04:00"
+						"dateAndTimeString" : "2023-08-22T11:17:04.96-04:00"
 					}
 				},
 				"editEmail" : {
@@ -400,17 +548,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-30T14:42:54.554-04:00"
+						"dateAndTimeString" : "2023-08-27T10:28:28.858-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YHkdI+a/DQC+Biu3CgWsog=="
+					"uidString" : "GJ56Oea/DQCAz/AWCgWsog=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Move shapes forward and backward.]]"
+				"string" : "Draw grids and axes"
 			},
 			{
 				"__type" : "textSnippet",
@@ -437,7 +585,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-28T10:44:40.86-04:00"
+						"dateAndTimeString" : "2023-08-31T02:44:21.376-04:00"
 					}
 				},
 				"uid" : {
@@ -447,7 +595,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Copy, paste, and delete shapes."
+				"string" : "[[Copy, paste, and delete shapes.]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -537,43 +685,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:16:30.768-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T11:40:16.805-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uPLCIWi+DQCYtWMyAO5s8A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Align selected shapes.]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-28T10:45:21.344-04:00"
 					}
 				},
@@ -633,80 +744,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Toggle snapping to a grid"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:04.96-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-27T10:28:28.858-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GJ56Oea/DQCAz/AWCgWsog=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Draw grids and axes"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:17:18.102-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T20:18:23.097-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CCZDOua/DQCA+4JuCgWsog=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Render [[GSL Charts and Plots]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -818,43 +855,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Browse the scene as a tree"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-22T11:18:00.74-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-30T10:31:48.44-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qIoQJWy+DQCVk7OkAJQ6Rw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Edit shapes with an inspector]]"
 			},
 			{
 				"__type" : "textSnippet",
