@@ -131,6 +131,7 @@ GsDockable >> makeTitleBar [
 { #category : #accessing }
 GsDockable >> makeWorkArea [
   ^ workArea := BrWidgetContainer new matchParent
+    padding: (BlInsets all: 2);
     background: Color white
 ]
 
