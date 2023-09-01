@@ -8,10 +8,6 @@ Class {
 }
 
 { #category : #accessing }
-GsHandle >> atPoint: aPoint [ 
-]
-
-{ #category : #accessing }
 GsHandle >> initialize [
   super initialize.
   self size: 9 asPoint;

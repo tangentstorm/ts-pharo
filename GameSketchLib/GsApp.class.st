@@ -40,7 +40,7 @@ GsApp >> gtRunButtonFor: anAction [
 GsApp >> initialize [
   super initialize.
   scene := self makeStartScene.
-  ui := self makeUI
+  self makeUI
 ]
 
 { #category : #'gsl - ui' }
@@ -56,7 +56,7 @@ GsApp >> makeStartScene [
 
 { #category : #accessing }
 GsApp >> makeUI [
-  ^ BrVerticalPane new matchParent
+  ^ ui := BrVerticalPane new matchParent
     addChild: self makeSceneHolder as: #sceneHolder.
 ]
 
