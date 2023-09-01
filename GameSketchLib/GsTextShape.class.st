@@ -22,3 +22,11 @@ GsTextShape >> initialize [
     fitContent;
     text: 'new text'
 ]
+
+{ #category : #'as yet unclassified' }
+GsTextShape >> textDescription [
+  <magritteDescription>
+  ^ MAStringDescription new
+    label: 'Text';
+    accessor: #text
+]
