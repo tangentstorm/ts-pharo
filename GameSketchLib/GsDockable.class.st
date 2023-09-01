@@ -100,7 +100,9 @@ GsDockable >> makeOfferElement [
 { #category : #accessing }
 GsDockable >> makeResizeHandle [
   | updateHandle updateSize |
-  resizeHandle := GsHandle new.
+  resizeHandle := GsHandle new
+    border: Color veryLightGray;
+    background: Color transparent.
   updateSize := [
       self size: resizeHandle gsCenter + resizeHandle extent].
   resizeHandle

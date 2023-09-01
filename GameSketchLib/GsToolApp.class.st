@@ -13,7 +13,11 @@ Class {
 		'overlay',
 		'toolbar',
 		'sceneBuilder',
-		'selection'
+		'selection',
+		'inspector',
+		'leftDock',
+		'rightDock',
+		'dockHolder'
 	],
 	#category : #'GameSketchLib-Apps'
 }
@@ -58,15 +62,13 @@ GsToolApp >> initialize [
   sceneBuilder scene: scene.
   selection scene: scene.
   self makeToolbar.
-  self currentTool: tools first
+  self currentTool: tools first.
 ]
 
 { #category : #'gsl - ui' }
 GsToolApp >> makeAppArea [
   ^ appArea := GsObject new matchParent
-    background: GsColor toolBg;
-    addChild: self makeSceneHolder as: #sceneHolder;
-    addChild: self makeOverlay as: #overlay.
+    background: GsColor toolBg.
 ]
 
 { #category : #'gsl - ui' }
@@ -77,11 +79,30 @@ GsToolApp >> makeButtonFor: t [
 	action: [ self currentTool: t ].
 ]
 
+{ #category : #'gsl - ui' }
+GsToolApp >> makeDockHolder [
+  ^ BrHorizontalPane new matchParent background: GsColor toolBg
+]
+
+{ #category : #accessing }
+GsToolApp >> makeInspector [
+  inspector := GsInspector new relocate: 50@50.
+  selection whenChangedDo: [inspector inspectSelection: selection].
+  ^ inspector
+]
+
 { #category : #accessing }
 GsToolApp >> makeOverlay [
   ^ overlay := GsToolOverlay new
     scene: scene;
     tool: tools first
+]
+
+{ #category : #'gsl - ui' }
+GsToolApp >> makePanelOverlay [
+  ^ BrWidgetContainer new  matchParent 
+    constraintsDo: [:c| c ignoreByLayout];
+    relocate: 0@0
 ]
 
 { #category : #'gsl - ui' }
@@ -94,10 +115,20 @@ GsToolApp >> makeToolbar [
 
 { #category : #'gsl - ui' }
 GsToolApp >> makeUI [
-  ^ BrVerticalPane new matchParent
+  ^ ui := BrVerticalPane new matchParent
     background: GsColor toolBg;
     addChild: self makeToolbar as: #toolbar;
-    addChild: self makeAppArea as: #appArea
+    addChild: ((GsDockContainer
+      around: (self makeAppArea id: #appArea;
+        addChild: self makeSceneHolder as: #sceneHolder;
+        addChild: self makeOverlay as: #overlay))
+      addChild: self makeInspector as: #inspector)
+    as: #dockHolder.
+]
+
+{ #category : #'gsl - ui' }
+GsToolApp >> newDock [
+  ^ BrVerticalFlow new hFitContent vMatchParent
 ]
 
 { #category : #accessing }
