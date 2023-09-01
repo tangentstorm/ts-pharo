@@ -49,6 +49,28 @@ BlElement >> gsHide [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsId [
+  ^ (self id isKindOf: BlElementNoId)
+    ifTrue: ['']
+    ifFalse: [self id asSymbol asString]
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsId: aString [
+  self id: aString
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsIdDescription [
+  <magritteDescription>
+  ^ MAStringDescription new
+    accessor: #gsId;
+    label: 'Id';
+    priority: 0;
+    yourself
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsJson [
   | ws |
   ws := WriteStream on: String new.

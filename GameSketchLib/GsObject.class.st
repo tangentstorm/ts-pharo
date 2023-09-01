@@ -44,15 +44,6 @@ GsObject >> childAtPoint: p where: aConditionBlock ifNone: aBlock [
       ifNone: aBlock
 ]
 
-{ #category : #magritte }
-GsObject >> idDescription [
-  <magritteDescription>
-  ^ MASymbolDescription new
-    accessor: #id;
-    label: 'Id';
-    yourself
-]
-
 { #category : #initialization }
 GsObject >> initialize [
   super initialize.
