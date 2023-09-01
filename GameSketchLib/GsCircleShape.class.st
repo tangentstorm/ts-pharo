@@ -28,7 +28,7 @@ GsCircleShape >> center [
 
 { #category : #accessing }
 GsCircleShape >> center: aPoint [
-  center := aPoint.
+  center := aPoint roundTo: 0.001.
   self rebuildShape
 ]
 
@@ -38,8 +38,7 @@ GsCircleShape >> centerDescription [
   ^ GsPointDescription new
     priority: 100;
     accessor: #center;
-    label: 'Center';
-    yourself.
+    label: 'Center'
 ]
 
 { #category : #accessing }
@@ -76,8 +75,8 @@ GsCircleShape >> radius [
 ]
 
 { #category : #accessing }
-GsCircleShape >> radius: anObject [
-  radius := anObject.
+GsCircleShape >> radius: aNumber [
+  radius := aNumber roundTo: 0.001.
   self rebuildShape
 ]
 

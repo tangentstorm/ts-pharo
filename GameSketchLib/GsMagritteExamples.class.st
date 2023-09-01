@@ -13,7 +13,7 @@ GsMagritteExamples class >> circleShape [
   |c|
   c := GsCircleShape new id: #shape001.
   self assert: c gsJson
-     equals: '{"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0@0)", "radius":10}'.
+     equals: '{"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0.0@0.0)", "radius":10}'.
   ^ c
 ]
 
@@ -34,7 +34,7 @@ GsMagritteExamples class >> sceneWithCircle [
   s := GsScene new addChild: c. "Note that scenes have a default background color."
   self assert: s gsJson
      equals: '{"class":"GsScene", "fill":"#9F9F9F", "children":[
-  {"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0@0)", "radius":10}]}'
+  {"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0.0@0.0)", "radius":10}]}'
   
 ]
 

@@ -33,9 +33,7 @@ GsPointDescription >> acceptMagritte: aVisitor [
 
 { #category : #accessing }
 GsPointDescription >> read: aModel [
-  |aPoint|
-  aPoint := (super read: aModel) roundTo: 2.
-  ^ aPoint
+  ^ (super read: aModel) roundTo: 0.001.
 ]
 
 { #category : #accessing }

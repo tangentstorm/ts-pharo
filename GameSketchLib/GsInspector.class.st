@@ -7,13 +7,23 @@ Class {
 { #category : #accessing }
 GsInspector >> initialize [
   super initialize.
-  self size: 150@250;
+  self size: 200@240;
   title: 'Inspector'
 ]
 
 { #category : #accessing }
 GsInspector >> inspect: anObject [
   workArea removeChildren
+    layout: BlLinearLayout vertical;
+    addChild: (BrHorizontalPane new
+      hMatchParent vFitContent
+      alignCenterRight; 
+      addChild: (BrButton new
+        icon: BrGlamorousVectorIcons inspect;
+        label: 'Inspect shape';
+        aptitude: BrGlamorousButtonWithIconAptitude new;
+        action: [:aButton | 
+          aButton phlow spawnObject: anObject ] ));
     addChild: anObject asGtMagritteViewModel asElement
 ]
 
