@@ -7,6 +7,16 @@ BlElement >> findChild: aPath [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsBottom [
+  ^ self position y + self extent y
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsBottom: y [
+  self gsMoveBy: 0 @ (y - self gsBottom)
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsCenter [
   ^ self position + (self extent / 2)
 ]
@@ -55,6 +65,16 @@ BlElement >> gsJsonOn: aStream [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsLeft [
+  ^ self position x
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsLeft: x [
+  self gsMoveBy: (x - self gsLeft)@0
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsMoveBy: aPoint [
   self gsPosition: (self gsPosition + aPoint)
 ]
@@ -68,6 +88,16 @@ BlElement >> gsPosition [
 BlElement >> gsPosition: aPoint [
     "this has to be a separate interface from 'position', because shapes know where they are regardless of layout. See GsLineShape for extreme example."
     self relocate: aPoint
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsRight [
+  ^ self position x + self extent x
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsRight: x [
+  self gsMoveBy: (x - self gsRight)@0
 ]
 
 { #category : #'*GameSketchLib' }
