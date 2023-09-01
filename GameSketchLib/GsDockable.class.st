@@ -21,9 +21,9 @@ GsDockable >> beDocked [
 
 { #category : #accessing }
 GsDockable >> beUndocked [
-  | newTop | newTop := self gsTop.
-  docked ifTrue: [self parent parent addChild: (
-    self removeFromParent gsTop: newTop)].
+  docked ifTrue: [
+    | newPosition | newPosition := self parent gsLeft @ self gsTop.
+    self parent parent addChild: (self removeFromParent relocate: newPosition )].
   docked := false.
   self constraints ignoreByLayout.
 ]
@@ -69,7 +69,10 @@ GsDockable >> initialize [
       ifAtRight: [ self dockIn: #rightDock ]
       else: []];
     background: GsColor toolBg;
-    border: GsColor toolBg darker darker;
+    border: (BlBorder builder
+      paint: (GsColor toolBg darker darker);
+      width: 2;
+      build);
     addChild: self makeTitleBar as: #titleBar
 ]
 
@@ -110,6 +113,17 @@ GsDockable >> offerRightDock [
 ]
 
 { #category : #accessing }
+GsDockable >> relocate: aPoint [
+  "super relocate: requests layout so we have to turn it off again.
+   This is necessary if we want to set an initial position for the undocked widget."
+  super
+    when: BlElementPositionChangedEvent doOnce: [
+      docked ifFalse: [self constraints ignoreByLayout ]];
+    relocate: aPoint.
+  
+]
+
+{ #category : #accessing }
 GsDockable >> rescindOffers [
   offerElement removeFromParent
 ]
@@ -117,4 +131,14 @@ GsDockable >> rescindOffers [
 { #category : #accessing }
 GsDockable >> threshhold [
   ^ 10
+]
+
+{ #category : #accessing }
+GsDockable >> title [
+  ^ titleBar text asString
+]
+
+{ #category : #accessing }
+GsDockable >> title: aString [
+  titleBar text: aString asText
 ]
