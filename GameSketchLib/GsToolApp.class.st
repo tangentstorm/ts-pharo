@@ -61,7 +61,6 @@ GsToolApp >> initialize [
   super initialize.
   sceneBuilder scene: scene.
   selection scene: scene.
-  self makeToolbar.
   self currentTool: tools first.
 ]
 
