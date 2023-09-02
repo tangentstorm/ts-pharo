@@ -6,7 +6,7 @@ Class {
 		'name',
 		'link'
 	],
-	#category : #'GameSketchLib-Colors'
+	#category : #'GameSketchLib-Panels'
 }
 
 { #category : #accessing }

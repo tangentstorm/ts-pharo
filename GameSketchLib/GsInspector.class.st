@@ -1,7 +1,7 @@
 Class {
 	#name : #GsInspector,
 	#superclass : #GsDockable,
-	#category : #'GameSketchLib-Apps'
+	#category : #'GameSketchLib-Panels'
 }
 
 { #category : #accessing }
