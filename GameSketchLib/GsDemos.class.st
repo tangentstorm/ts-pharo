@@ -10,7 +10,11 @@ GsDemos >> gtAnimationDemoFor: aView [
   ^ aView explicit
     priority: 50;
     title: 'Animator';
-    stencil: [GsAnimatorExamples twoMovingSquares  ]
+    stencil: [GsAnimatorExamples twoMovingSquares  ];
+    actionButtonIcon: BrGlamorousIcons inspect
+    tooltip: 'Inspect Demo Class'
+    action: [:btn| btn phlow spawnObject:
+      GsAnimatorExamples twoMovingSquares]
 ]
 
 { #category : #accessing }
@@ -19,7 +23,10 @@ GsDemos >> gtBulletDemoFor: aView [
   ^ aView explicit
     priority: 20;
     title: 'BulletDemo';
-    stencil: [GsBulletDemo new]
+    stencil: [GsBulletDemo new];
+    actionButtonIcon: BrGlamorousIcons inspect
+    tooltip: 'Inspect Demo Class'
+    action: [:btn| btn phlow spawnObject: GsBulletDemo new]
 ]
 
 { #category : #accessing }
@@ -28,7 +35,10 @@ GsDemos >> gtOverlapDemoFor: aView [
   ^ aView explicit
     priority: 10;
     title: 'OverlapDemo';
-    stencil: [GsOverlapDemo new]
+    stencil: [GsOverlapDemo new];
+    actionButtonIcon: BrGlamorousIcons inspect
+    tooltip: 'Inspect Demo class'
+    action: [:btn| btn phlow spawnObject: GsOverlapDemo new]
 ]
 
 { #category : #accessing }
@@ -37,7 +47,10 @@ GsDemos >> gtPathmapDemoFor: aView [
   ^ aView explicit
     priority: 30;
     title: 'PathmapDemo';
-    stencil: [GsPathmapDemo new]
+    stencil: [GsPathmapDemo new];
+    actionButtonIcon: BrGlamorousIcons inspect
+    tooltip: 'Inspect Demo Class'
+    action: [:btn| btn phlow spawnObject: GsPathmapDemo new]
 ]
 
 { #category : #accessing }
@@ -58,5 +71,9 @@ GsDemos >> gtSketchDemoFor: aView [
   ^ aView explicit
     priority: 0;
     title: 'SketchApp';
-    stencil: [GsSketchApp for: GsSceneExamples spaceScene ]
+    stencil: [GsSketchApp for: GsSceneExamples spaceScene ];
+    actionButtonIcon: BrGlamorousIcons inspect
+    tooltip: 'Inspect Demo class'
+    action: [:btn| btn phlow spawnObject:
+      (GsSketchApp for: GsSceneExamples spaceScene)]
 ]
