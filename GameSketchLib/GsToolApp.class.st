@@ -114,7 +114,7 @@ GsToolApp >> makeToolbar [
 
 { #category : #'gsl - ui' }
 GsToolApp >> makeUI [
-  ^ ui := BrVerticalPane new matchParent
+  ui := BrVerticalPane new matchParent
     background: GsColor toolBg;
     addChild: self makeToolbar as: #toolbar;
     addChild: ((GsDockContainer
@@ -123,6 +123,8 @@ GsToolApp >> makeUI [
         addChild: self makeOverlay as: #overlay))
       addChild: self makeInspector as: #inspector)
     as: #dockHolder.
+  inspector dockIn: #rightDock.
+  ^ ui
 ]
 
 { #category : #'gsl - ui' }
