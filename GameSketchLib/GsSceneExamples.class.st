@@ -22,6 +22,18 @@ GsSceneExamples class >> basicShapes [
     {"id":"box", "t":"rect", "x":10, "y":10, "w":50, "h":30, "fg":"#333", "lw":2, "bg":"#c66"}]'
 ]
 
+{ #category : #accessing }
+GsSceneExamples class >> face [
+  <gtExample>
+  ^ GsJsonReader read: '{"class":"GsScene", "fill":"#9F9F9F", "children":[
+  {"class":"GsCircleShape", "fill":"#B2DCEF", "center":"(366.0@199.016)", "radius":173.911},
+  {"class":"GsCircleShape", "fill":"#BE2633", "center":"(363.66700000000003@251.35)", "radius":101.834},
+  {"class":"GsCircleShape", "fill":"#B2DCEF", "center":"(353.66700000000003@218.016)", "radius":106.498},
+  {"class":"GsCircleShape", "fill":"#000000", "center":"(311.833@108.183)", "radius":28.382},
+  {"class":"GsCircleShape", "fill":"#000000", "center":"(438.5@110.683)", "radius":31.502},
+  {"class":"GsCircleShape", "fill":"#31A2F2", "center":"(351.666@200.683)", "radius":46.71}]}'
+]
+
 { #category : #initialization }
 GsSceneExamples class >> nineSquares [
   | scene | 
