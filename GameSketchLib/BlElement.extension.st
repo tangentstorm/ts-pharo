@@ -35,9 +35,9 @@ BlElement >> gsContainsPoint: p [
 BlElement >> gsFill [
   "returns fill color as hex. !!TODO: add alpha if not opaque.
    (Color fromHexString: can already handle this)"
-  |c| c := self background paint color.
-  ^ (c = Color transparent)
-    ifTrue: [''] ifFalse: [c asHTMLColor]
+  |b|  b := self background.
+  ^ b isTransparent
+    ifTrue: [''] ifFalse: [b paint color asHTMLColor]
 ]
 
 { #category : #'*GameSketchLib' }

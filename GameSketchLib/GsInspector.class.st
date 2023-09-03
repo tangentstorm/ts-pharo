@@ -15,13 +15,8 @@ GsInspector >> inspect: anObject [
     layout: BlLinearLayout vertical;
     addChild: (BrHorizontalPane new
       hMatchParent vFitContent
-      alignCenterRight; 
-      addChild: (BrButton new
-        icon: BrGlamorousVectorIcons inspect;
-        label: 'Inspect shape';
-        aptitude: BrGlamorousButtonWithIconAptitude new;
-        action: [:aButton | 
-          aButton phlow spawnObject: anObject ] ));
+      alignCenterRight;
+      addChildren: anObject gsInspectorButtons);
     addChild: anObject asGtMagritteViewModel asElement
 ]
 
