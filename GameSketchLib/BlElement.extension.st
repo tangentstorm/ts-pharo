@@ -53,7 +53,7 @@ BlElement >> gsFillDescription [
   <magritteDescription>
   ^ (GsDescriptionWrapper new for: MAStringDescription new)
       accessor: #gsFill;
-      label: 'fill';
+      label: 'Fill color';
       priority: 10;
       jsonKey: 'fill'
 ]
@@ -146,6 +146,35 @@ BlElement >> gsRight: x [
 { #category : #'*GameSketchLib' }
 BlElement >> gsShow [
   self visibility: BlVisibilityVisible new
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeColor [
+  "returns stroke color as hex. !!TODO: add alpha if not opaque.
+   (Color fromHexString: can already handle this)"
+  |c| c := self border paint color.
+  ^ (c = Color transparent)
+    ifTrue: [''] ifFalse: [c asHTMLColor]
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeColor: aHexString [
+  |b c |
+  b := self border.
+  c := ((aHexString = '' or:[aHexString isNil])
+    ifTrue: [Color transparent]
+    ifFalse:[Color fromHexString: aHexString]).
+  self border: (BlBorder builder paint: c; width: b width; build)
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeColorDescription [
+  <magritteDescription>
+  ^ (GsDescriptionWrapper new for: MAStringDescription new)
+      accessor: #gsStrokeColor;
+      label: 'Stroke color';
+      priority: 10;
+      jsonKey: 'strokeColor'
 ]
 
 { #category : #'*GameSketchLib' }
