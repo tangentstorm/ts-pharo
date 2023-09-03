@@ -12,10 +12,6 @@ Class {
 	#category : #'GameSketchLib-Shapes'
 }
 
-{ #category : #accessing }
-GsCircleShape class >> centerDescription [
-]
-
 { #category : #creating }
 GsCircleShape class >> newAtPoint: aCenter [
   ^ self new center: aCenter
@@ -44,6 +40,14 @@ GsCircleShape >> centerDescription [
 { #category : #accessing }
 GsCircleShape >> gsCenter [
   ^ center
+]
+
+{ #category : #accessing }
+GsCircleShape >> gsHandles [
+  | p2h |
+  ^ { p2h := GsHandle new for: self prop: self secondPointDescription.
+      (GsHandle new for: self prop: self centerDescription)
+       when: BlPullEvent do: [ p2h refresh] }
 ]
 
 { #category : #accessing }
@@ -97,7 +101,21 @@ GsCircleShape >> rebuildShape [
   size: size * 2
 ]
 
+{ #category : #accessing }
+GsCircleShape >> secondPoint [
+  "for the radius handle"
+  ^ center + (radius @ 0)
+]
+
 { #category : #'shape - handles' }
 GsCircleShape >> secondPoint: aPoint [
   self radius: (center distanceTo: aPoint)
+]
+
+{ #category : #accessing }
+GsCircleShape >> secondPointDescription [
+  "this is only for the radius handle, so we don't annotate with <magritteDescription>"
+  ^ GsPointDescription new
+    accessor: #secondPoint;
+    label: 'radius handle'
 ]

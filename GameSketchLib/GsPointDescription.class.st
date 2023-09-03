@@ -37,6 +37,10 @@ GsPointDescription >> read: aModel [
 ]
 
 { #category : #accessing }
-GsPointDescription >> write: aString to: aModel [
-  super write: (Point readFrom: aString) to: aModel
+GsPointDescription >> write: anObject to: aModel [
+  "Inspector forms and json give us a string, but GsHandle gives me an actual point."
+  (anObject isKindOf: Point)
+    ifTrue: [ super write: anObject to: aModel]
+    ifFalse: [
+  super write: (Point readFrom: anObject) to: aModel]
 ]

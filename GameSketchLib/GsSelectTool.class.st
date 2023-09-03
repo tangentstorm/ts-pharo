@@ -55,6 +55,9 @@ GsSelectTool >> dragStop: p [
     rect := selectangle bounds asRectangle.
     self selectShapes: (self scene children select: [:x|
          x bounds asRectangle intersects: rect])]
+    ifNotNil: [
+      (selection includes: subject) ifTrue: [self refreshToolsForSelection] ]
+
 ]
 
 { #category : #ui }
@@ -94,7 +97,16 @@ GsSelectTool >> redrawSelection [
     ifTrue: [self drawSelectionBox]
     ifFalse: [selection ifNotEmpty: [
       overlay addChildren:
-        selection first gsHandles]]
+        (selection first gsHandles do:[:h|
+          h when: BlPullEndEvent do: [
+            self refreshToolsForSelection]];
+          yourself)]]
+]
+
+{ #category : #accessing }
+GsSelectTool >> refreshToolsForSelection [
+  "this triggers a refresh of the inspector and any handles"
+  self selectShapes: selection copy
 ]
 
 { #category : #accessing }

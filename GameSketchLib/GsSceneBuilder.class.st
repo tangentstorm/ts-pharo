@@ -66,6 +66,7 @@ GsSceneBuilder >> newAtPoint: aPoint [
     background: prototype background;
     border: prototype border.
   scene addChild: shape.
+  ^ shape
 ]
 
 { #category : #'shape factories' }

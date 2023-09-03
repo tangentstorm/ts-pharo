@@ -33,6 +33,5 @@ GsShape class >> newFromData: dict [
 { #category : #initialization }
 GsShape >> initialize [
   super initialize.
-  x := y := w := h := 0.
   visuals := GsStyle default.
 ]
