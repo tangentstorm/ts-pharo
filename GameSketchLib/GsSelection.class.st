@@ -93,6 +93,20 @@ GsSelection >> delete [
 ]
 
 { #category : #alignment }
+GsSelection >> distributeH [
+  <gsArrangeCmd>
+  "distribute horizontally"
+  |offset elementsWidth spacing |
+  elementsWidth := self sum: [:x | x gsRight - x gsLeft].
+  spacing := (self boundingRect width - elementsWidth) / (self size -1).
+  offset := 0.
+  self do: [:x | 
+      x gsLeft: self boundingRect left+offset.
+      offset := offset+spacing + x width]; 
+      updateBounds
+]
+
+{ #category : #alignment }
 GsSelection >> group [
   <gsArrangeCmd>
   "group selection as one item"
