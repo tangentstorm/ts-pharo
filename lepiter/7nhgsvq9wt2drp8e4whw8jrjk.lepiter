@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:26:52.171-04:00"
+									"dateAndTimeString" : "2023-09-02T20:59:24.113-04:00"
 								}
 							},
 							"editEmail" : {
@@ -71,17 +71,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T16:26:52.171-04:00"
+									"dateAndTimeString" : "2023-09-02T21:00:11.544-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "+Ha6BDvADQCpQ3a9AfZBgQ=="
+								"uidString" : "aOxEpMvADQC4yHBWDS3lzg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "animator timeline seems to scroll to the right without stopping."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-02T21:21:03.713-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-02T21:21:51.451-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6D678cvADQCOP5r0DS3lzg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "GsProp might be a reimplementation of {{gtClass:Slot}} ..?"
 						}
 					]
 				},

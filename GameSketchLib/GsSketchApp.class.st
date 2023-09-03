@@ -22,8 +22,8 @@ GsSketchApp >> initialTools [
   ^ { GsSelectTool new.
       GsBuildTool for: GsRectShape.
       GsBuildTool for: GsCircleShape.
-      GsBuildTool for: GsLineShape.
-      GsTextTool new.}
+      GsPenTool new.
+      GsTextTool new}
 ]
 
 { #category : #ui }

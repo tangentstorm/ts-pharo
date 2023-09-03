@@ -34,7 +34,7 @@ GsHandle >> initialize [
 { #category : #accessing }
 GsHandle >> point: aPoint [ 
   point := aPoint.
-  self relocate: point - (4.5 asPoint)
+  self gsCenter: point
 ]
 
 { #category : #accessing }

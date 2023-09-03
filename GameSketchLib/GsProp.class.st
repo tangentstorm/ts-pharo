@@ -53,6 +53,7 @@ GsProp >> printOn: aStream [
 
 { #category : #accessing }
 GsProp >> read: anObject [
+  self subclassResponsibility
 ]
 
 { #category : #accessing }
@@ -72,4 +73,5 @@ GsProp >> target: anObject [
 
 { #category : #accessing }
 GsProp >> write: aValue to: anObject [
+  self subclassResponsibility
 ]
