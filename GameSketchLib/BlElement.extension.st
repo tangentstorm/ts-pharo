@@ -98,6 +98,24 @@ BlElement >> gsIdDescription [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsInspectorButtons [
+  |methods|
+  methods := (self class gtMethodsInClass
+    & #gsInspectorCmd gtPragmas) contents.
+  ^ (methods collect: [:m|
+      BrButton new
+        aptitude: (BrGlamorousButtonWithLabelAptitude new);
+        label: m selector;
+        action: [self perform: m selector]]),
+    { GsInspectorButton new
+        icon: BrGlamorousVectorIcons inspect;
+        label: 'Inspect shape';
+        action: [:aButton | 
+          aButton phlow spawnTool: self gtDefaultInspectorTool ] }
+
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsJson [
   | ws |
   ws := WriteStream on: String new.
