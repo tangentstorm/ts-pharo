@@ -15,15 +15,20 @@ GsHandle >> for: aSubject prop: aProperty [
   "prop is a magritte description"
   subject := aSubject.
   prop := aProperty.
-  self point: (prop read: subject).
-  self when: BlPullEvent do: [
-    prop write: self gsCenter to: subject].
+  self refresh;
+    when: BlPullEvent do: [ prop write: self gsCenter to: subject];
+    when: BlPullEndEvent do: [ prop write: self gsCenter to: subject].
+]
+
+{ #category : #accessing }
+GsHandle >> gsCenter [
+  ^ self position + self radius asPoint
 ]
 
 { #category : #accessing }
 GsHandle >> initialize [
   super initialize.
-  self size: 9 asPoint;
+  self size: self radius * 2 asPoint;
     geometry: BlCircleGeometry new;
     background: GsColor handleColor;
     border: Color black;
@@ -33,8 +38,12 @@ GsHandle >> initialize [
 
 { #category : #accessing }
 GsHandle >> point: aPoint [ 
-  point := aPoint.
-  self gsCenter: point
+  self gsCenter: (point := aPoint)
+]
+
+{ #category : #accessing }
+GsHandle >> radius [
+  ^ 4.5
 ]
 
 { #category : #accessing }
