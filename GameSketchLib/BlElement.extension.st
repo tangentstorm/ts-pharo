@@ -32,6 +32,12 @@ BlElement >> gsContainsPoint: p [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsCopy [
+  "probably not great but it works" 
+  ^ GsJsonReader new read: self gsJson
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsFill [
   "returns fill color as hex. !!TODO: add alpha if not opaque.
    (Color fromHexString: can already handle this)"

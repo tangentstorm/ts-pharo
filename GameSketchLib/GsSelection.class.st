@@ -107,6 +107,16 @@ GsSelection >> distributeH [
 ]
 
 { #category : #alignment }
+GsSelection >> duplicate [
+  <gsArrangeCmd>
+  |dupes| dupes := self collect: #gsCopy.
+  self reset.
+  scene
+    addChildren: dupes;
+    when: BlElementLayoutComputedEvent doOnce: [self addAll: dupes]
+]
+
+{ #category : #alignment }
 GsSelection >> group [
   <gsArrangeCmd>
   "group selection as one item"
