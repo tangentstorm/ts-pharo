@@ -35,6 +35,14 @@ GsRectShape >> fromData: dict [
 ]
 
 { #category : #accessing }
+GsRectShape >> gsHandles [
+  |p2h|
+  ^ { p2h := GsHandle new for: self prop: self secondPointDescription.
+      (GsHandle new for: self prop: self xyDescription)
+      when: BlPullEvent do: [ p2h refresh] }
+]
+
+{ #category : #accessing }
 GsRectShape >> initialize [
   super initialize.
   xy := 0@0.
@@ -52,9 +60,36 @@ GsRectShape >> rebuildShape [
   self relocate: xy; size: wh
 ]
 
+{ #category : #accessing }
+GsRectShape >> relocate: aPoint [
+  super relocate: (xy := aPoint)
+]
+
+{ #category : #accessing }
+GsRectShape >> secondPoint [
+  ^ xy + wh
+]
+
 { #category : #'gsl - shapes' }
 GsRectShape >> secondPoint: aPoint [
   self wh: (aPoint - xy)
+]
+
+{ #category : #accessing }
+GsRectShape >> secondPointDescription [
+  ^ GsPointDescription new
+    accessor: #secondPoint;
+    label: 'width/height handle'
+]
+
+{ #category : #accessing }
+GsRectShape >> size: anExtent [
+  super size: (wh := anExtent)
+]
+
+{ #category : #accessing }
+GsRectShape >> wh [
+  ^ wh roundTo: 0.0001
 ]
 
 { #category : #accessing }
@@ -64,7 +99,28 @@ GsRectShape >> wh: aPoint [
 ]
 
 { #category : #accessing }
+GsRectShape >> whDescription [
+  <magritteDescription>
+  ^ GsPointDescription new
+      label: 'wh';
+      accessor: #wh
+]
+
+{ #category : #accessing }
+GsRectShape >> xy [
+  ^ xy roundTo: 0.0001
+]
+
+{ #category : #accessing }
 GsRectShape >> xy: aPoint [
   xy := aPoint.
   self rebuildShape
+]
+
+{ #category : #accessing }
+GsRectShape >> xyDescription [
+  <magritteDescription>
+  ^ GsPointDescription new
+      label: 'xy';
+      accessor: #xy
 ]
