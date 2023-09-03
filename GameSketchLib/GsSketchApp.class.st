@@ -7,7 +7,8 @@ Class {
 	#name : #GsSketchApp,
 	#superclass : #GsToolApp,
 	#instVars : [
-		'palette'
+		'palette',
+		'arranger'
 	],
 	#category : #'GameSketchLib-Apps'
 }
@@ -27,6 +28,12 @@ GsSketchApp >> initialTools [
 ]
 
 { #category : #ui }
+GsSketchApp >> makeArrangePanel [
+  ^ arranger := GsArrangePanel new
+    selection: selection.
+]
+
+{ #category : #ui }
 GsSketchApp >> makePalette [
   ^ GsPaletteElement new
     when: GsColorChangedEvent do: [:e|
@@ -37,6 +44,10 @@ GsSketchApp >> makePalette [
 { #category : #ui }
 GsSketchApp >> makeUI [
   ui := super makeUI.
+  dockHolder
+    addChild: self makeInspector as: #inspector;
+    addChild: self makeArrangePanel as: #arranger.
+  { inspector. arranger} do: [:each | each dockIn: #rightDock ].
   toolbar addChild: (self makePalette).
   ^ ui
 ]

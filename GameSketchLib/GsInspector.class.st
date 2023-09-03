@@ -1,14 +1,12 @@
 Class {
 	#name : #GsInspector,
 	#superclass : #GsDockable,
-	#category : #'GameSketchLib-Panels'
+	#category : #'GameSketchLib-UI - Panels'
 }
 
 { #category : #accessing }
 GsInspector >> initialize [
-  super initialize.
-  self size: 200@240;
-  title: 'Inspector'
+  super initialize title: 'Inspector'
 ]
 
 { #category : #accessing }

@@ -5,7 +5,7 @@ I represent a named style in a scene.
 Class {
 	#name : #GsStyle,
 	#superclass : #Object,
-	#category : #'GameSketchLib-Shapes'
+	#category : #'GameSketchLib-Core'
 }
 
 { #category : #accessing }

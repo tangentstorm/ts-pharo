@@ -85,7 +85,7 @@ GsDockable >> initialize [
     )  as: #titleBar;
     addChild: self makeWorkArea as: #workArea;
     addChild: self makeResizeHandle as: #resizeHandle;
-    size: (plannedSize := 150@250)
+    size: (plannedSize := 200@240)
 
 ]
 
@@ -130,7 +130,7 @@ GsDockable >> makeTitleBar [
 
 { #category : #accessing }
 GsDockable >> makeWorkArea [
-  ^ workArea := BrWidgetContainer new matchParent
+  ^ workArea := BrHorizontalFlow new matchParent
     padding: (BlInsets all: 2);
     background: Color white
 ]

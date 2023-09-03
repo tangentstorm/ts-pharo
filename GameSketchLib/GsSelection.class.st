@@ -33,6 +33,30 @@ GsSelection >> addLast: aShape [
   self changed.
 ]
 
+{ #category : #alignment }
+GsSelection >> alignBottoms [
+  <gsArrangeCmd>
+  self do: [:x | x gsBottom: self boundingRect bottom]; updateBounds
+]
+
+{ #category : #alignment }
+GsSelection >> alignLefts [
+  <gsArrangeCmd>
+  self do: [:x | x gsLeft: self boundingRect left]; updateBounds
+]
+
+{ #category : #alignment }
+GsSelection >> alignRights [
+  <gsArrangeCmd>
+  self do: [:x | x gsRight: self boundingRect right]; updateBounds
+]
+
+{ #category : #alignment }
+GsSelection >> alignTops [
+  <gsArrangeCmd>
+  self do: [:x | x gsTop: self boundingRect top]; updateBounds
+]
+
 { #category : #initialization }
 GsSelection >> basicInitialize [
   "OrderedCollection never calls initialize"
@@ -53,12 +77,28 @@ GsSelection >> boundingRect: aRectangle [
 
 { #category : #accessing }
 GsSelection >> bringToFront [
+  <gsArrangeCmd>
   self do: [:x| x removeFromParent. scene addChild: x].
 ]
 
 { #category : #accessing }
 GsSelection >> changed [
   announcer announce: GsSelectionChanged new
+]
+
+{ #category : #alignment }
+GsSelection >> delete [
+  <gsArrangeCmd>
+  self do: [:o | o removeFromParent]; reset
+]
+
+{ #category : #alignment }
+GsSelection >> hAlignCenters [
+  <gsArrangeCmd>
+  "align centers horizontally"
+  |cx| cx := self boundingRect center x.
+  self do: [:o| o gsCenter: cx@(o gsCenter y)]; updateBounds
+
 ]
 
 { #category : #accessing }
@@ -82,6 +122,7 @@ GsSelection >> scene: aScene [
 
 { #category : #accessing }
 GsSelection >> sendToBack [
+  <gsArrangeCmd>
   self reversed do: [:x | x removeFromParent. scene addChildFirst: x ]
 ]
 
@@ -91,17 +132,18 @@ GsSelection >> species [
   ^ OrderedCollection
 ]
 
-{ #category : #alignment }
-GsSelection >> vAlignCenters [
-  "align centers vertically"
-  |cy|
-  cy := self boundingRect center y.
-  self do: [:x| x gsCenter: (x gsCenter x) @ cy]
+{ #category : #accessing }
+GsSelection >> updateBounds [
+  |items| items := self copy.
+  self reset; addAll: items.
 ]
 
 { #category : #alignment }
-GsSelection >> vAlignTops [
-  self do: [:x | x gsTop: self boundingRect top]
+GsSelection >> vAlignCenters [
+  <gsArrangeCmd>
+  "align centers vertically"
+  |cy| cy := self boundingRect center y.
+  self do: [:o| o gsCenter: (o gsCenter x) @ cy]; updateBounds
 ]
 
 { #category : #accessing }
