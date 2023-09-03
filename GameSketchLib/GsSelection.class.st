@@ -93,6 +93,21 @@ GsSelection >> delete [
 ]
 
 { #category : #alignment }
+GsSelection >> group [
+  <gsArrangeCmd>
+  "group selection as one item"
+  | r shapes group |
+  r := rect.
+  shapes := self copy. self delete.
+  scene addChild: (group := BlElement new
+    relocate: r topLeft; size: r extent;
+    addChildren: (shapes collect: [:o|
+      o gsPosition: (o gsPosition - r topLeft)]);
+    when: BlElementExtentChangedEvent doOnce: [self add: group]).
+  
+]
+
+{ #category : #alignment }
 GsSelection >> hAlignCenters [
   <gsArrangeCmd>
   "align centers horizontally"
