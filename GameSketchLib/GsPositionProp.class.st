@@ -4,10 +4,10 @@ I am a {{gtClass:GsSetter}}for position.
 Class {
 	#name : #GsPositionProp,
 	#superclass : #GsProp,
-	#category : #'GameSketchLib-Setters'
+	#category : #'GameSketchLib-Props'
 }
 
 { #category : #accessing }
-GsPositionProp >> set: aPoint [
-  target relocate: aPoint
+GsPositionProp >> write: aPoint to: anObject [
+  anObject relocate: aPoint
 ]

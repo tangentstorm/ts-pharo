@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'target'
 	],
-	#category : #'GameSketchLib-Setters'
+	#category : #'GameSketchLib-Props'
 }
 
 { #category : #accessing }
@@ -39,11 +39,25 @@ GsProp class >> rotation [
 ]
 
 { #category : #accessing }
+GsProp >> get [
+  ^ self read: target 
+]
+
+{ #category : #accessing }
 GsProp >> printOn: aStream [
   super printOn: aStream.
   aStream nextPutAll: '(for: '.
   target id printOn: aStream.
   aStream nextPut: $).
+]
+
+{ #category : #accessing }
+GsProp >> read: anObject [
+]
+
+{ #category : #accessing }
+GsProp >> set: aValue [
+  ^ self write: aValue to: target 
 ]
 
 { #category : #accessing }
@@ -54,4 +68,8 @@ GsProp >> target [
 { #category : #accessing }
 GsProp >> target: anObject [
 	target := anObject
+]
+
+{ #category : #accessing }
+GsProp >> write: aValue to: anObject [
 ]
