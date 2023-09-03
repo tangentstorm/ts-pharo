@@ -2,12 +2,12 @@
 I am a {{gtClass:GsSetter}}for position.
 "
 Class {
-	#name : #GsPositionSetter,
-	#superclass : #GsSetter,
+	#name : #GsPositionProp,
+	#superclass : #GsProp,
 	#category : #'GameSketchLib-Setters'
 }
 
 { #category : #accessing }
-GsPositionSetter >> set: aPoint [
+GsPositionProp >> set: aPoint [
   target relocate: aPoint
 ]

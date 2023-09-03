@@ -2,13 +2,13 @@
 I am a {{gtClass:GsSetter}}for rotation.
 "
 Class {
-	#name : #GsRotationSetter,
-	#superclass : #GsSetter,
+	#name : #GsRotationProp,
+	#superclass : #GsProp,
 	#category : #'GameSketchLib-Setters'
 }
 
 { #category : #accessing }
-GsRotationSetter >> set: aDegreeValue [
+GsRotationProp >> set: aDegreeValue [
   target transform
     rotateBy: aDegreeValue;
     apply

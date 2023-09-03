@@ -1,5 +1,5 @@
 "
-I act like a setter for properties on objects in the scene.
+I act like an accessor for a property on objects in the scene.
 
 I am probably a bad idea, but basically I make {{gtClass:BlElement}} look like it has nice symmetrical getter/setter pairs.
 
@@ -10,7 +10,7 @@ Probably I will be replaced by simple symmetric setters in {{gtClass:GsObject}}t
 
 "
 Class {
-	#name : #GsSetter,
+	#name : #GsProp,
 	#superclass : #Object,
 	#instVars : [
 		'target'
@@ -19,17 +19,27 @@ Class {
 }
 
 { #category : #accessing }
-GsSetter class >> for: anObject [
+GsProp class >> for: anObject [
   ^ self new target: anObject
 ]
 
 { #category : #accessing }
-GsSetter class >> for: aSlotName on: anObject [
-  ^ (GsSetterKinds setterFor: aSlotName) new target: anObject
+GsProp class >> for: aSlotName on: anObject [
+  ^ (GsProp perform: aSlotName) target: anObject
+]
+
+{ #category : #creating }
+GsProp class >> position [
+  ^ GsPositionProp new
+]
+
+{ #category : #creating }
+GsProp class >> rotation [
+  ^ GsRotationProp new
 ]
 
 { #category : #accessing }
-GsSetter >> printOn: aStream [
+GsProp >> printOn: aStream [
   super printOn: aStream.
   aStream nextPutAll: '(for: '.
   target id printOn: aStream.
@@ -37,11 +47,11 @@ GsSetter >> printOn: aStream [
 ]
 
 { #category : #accessing }
-GsSetter >> target [
+GsProp >> target [
 	^ target
 ]
 
 { #category : #accessing }
-GsSetter >> target: anObject [
+GsProp >> target: anObject [
 	target := anObject
 ]

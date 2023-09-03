@@ -107,6 +107,6 @@ GsAnimator >> trackSetters [
        |elementName propName|
        elementName := nameAndProp first.
        propName := nameAndProp second.
-       GsSetter for: propName on: (scene childNamed: elementName)]
+       GsProp for: propName on: (scene childNamed: elementName)]
   
 ]
