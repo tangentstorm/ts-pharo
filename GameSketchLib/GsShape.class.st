@@ -18,18 +18,6 @@ Class {
 	#category : #'GameSketchLib-Shapes'
 }
 
-{ #category : #accessing }
-GsShape class >> newFromData: dict [
-  | sketch |
-  sketch :=  (dict at: 't') caseOf: {
-    ['rect'] -> [GsRectShape new].
-    ['ellipse'] -> [GsEllipseShape new].
-    ['text'] -> [GsTextShape new].
-    ['path'] -> [GsPathShape new]}
-  otherwise: [self error: 'unknown sketch type:', dict asString].
-  ^ sketch id: (dict at: 'id'); fromData: dict
-]
-
 { #category : #building }
 GsShape >> buildVisuals: anElement [
   "argument is a prototype shape with current style from scenebuilder"
