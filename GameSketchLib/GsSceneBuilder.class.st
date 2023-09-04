@@ -63,8 +63,7 @@ GsSceneBuilder >> named: name [
 { #category : #accessing }
 GsSceneBuilder >> newAtPoint: aPoint [
   shape := (shapeClass newAtPoint: aPoint)
-    background: prototype background;
-    border: prototype border.
+    buildVisuals: prototype.
   scene addChild: shape.
   ^ shape
 ]

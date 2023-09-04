@@ -30,6 +30,15 @@ GsShape class >> newFromData: dict [
   ^ sketch id: (dict at: 'id'); fromData: dict
 ]
 
+{ #category : #building }
+GsShape >> buildVisuals: anElement [
+  "argument is a prototype shape with current style from scenebuilder"
+  self
+    background: anElement background;
+    border: anElement border
+ 
+]
+
 { #category : #'gt-extensions' }
 GsShape >> gtChildrenShortcutsFor: aView [
   <gtView>
