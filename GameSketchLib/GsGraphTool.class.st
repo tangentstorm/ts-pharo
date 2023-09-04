@@ -13,7 +13,7 @@ Class {
 
 { #category : #accessing }
 GsGraphTool >> click: aPoint [
-  self scene addChild: (self newNodeAt: aPoint)
+  self newNodeAt: aPoint
 ]
 
 { #category : #accessing }
