@@ -30,6 +30,94 @@ GsShape class >> newFromData: dict [
   ^ sketch id: (dict at: 'id'); fromData: dict
 ]
 
+{ #category : #'gt-extensions' }
+GsShape >> gtChildrenShortcutsFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtJsonFor: aView [
+  <gtView>
+  ^ aView textEditor title: 'JSON'; text: [self gsJson]
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtMeasurementChainFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtOverviewFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtPreviewFor: aView [
+  <gtView>
+  ^ aView explicit
+    title: 'Preview';
+    priority: 10;
+    stencil: [|res copy|
+      res := GsSketchApp new.
+      copy := self gsCopy
+        relocate: 100@100;
+        when: BlElementAddedToParentEvent doOnce: [
+          res selection add: copy].
+      res scene addChild: copy.
+      res]
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtPrintFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtPropertiesFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtResizersFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtShortcutsFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtStatesFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtStylesFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtUserDataFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
+{ #category : #'gt-extensions' }
+GsShape >> gtWidgetGraphFor: aView [
+  <gtView>
+  ^ aView empty
+]
+
 { #category : #initialization }
 GsShape >> initialize [
   super initialize.
