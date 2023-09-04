@@ -48,11 +48,7 @@ TsClassBrowser >> for: aClass [
   theClass := aClass.
   crumbs := self makeCrumbs.
   methodList := self makeMethodList.
-  protoList := self makeListFor: (theClass protocols sorted)
-    withLabel: #value
-    onClick:[
-      protoList selectedItemDo: [:it|
-        self listMethodsForProtocol: it]].
+  protoList := self makeProtocolList.
 ]
 
 { #category : #accessing }
@@ -148,6 +144,23 @@ TsClassBrowser >> makeMethodList [
       methodList selectedEntityDo: [:it|
         self editMethod: it itemObject] ];
     headerDataBinder: [:h :x| h text: x domainObject].
+]
+
+{ #category : #accessing }
+TsClassBrowser >> makeProtocolList [
+  ^ self makeListFor: (theClass protocols
+    asSortedCollection: [:a0 :b0 | |a b|
+      "put extensions at bottom to avoid clutter"
+      a := a0 asString. b := b0 asString.
+      (a first = $* and: [b first ~= $*])
+        ifTrue: [false]
+        ifFalse: [(a first ~= $* and: [b first = $*])
+          ifTrue: [true]
+          ifFalse: [a < b]]])
+    withLabel: #value
+    onClick:[
+      protoList selectedItemDo: [:it|
+        self listMethodsForProtocol: it]].
 ]
 
 { #category : #accessing }
