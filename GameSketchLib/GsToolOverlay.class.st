@@ -136,6 +136,12 @@ GsToolOverlay >> onMouseMove: aBlock [
 ]
 
 { #category : #accessing }
+GsToolOverlay >> removeChildren [
+  super removeChildren.
+  self addChild: coords
+]
+
+{ #category : #accessing }
 GsToolOverlay >> resetFlags [
   mouseDown := false.
   mouseMoved := false.
