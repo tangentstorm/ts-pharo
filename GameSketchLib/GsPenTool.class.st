@@ -12,8 +12,9 @@ Class {
 
 { #category : #accessing }
 GsPenTool >> click: aPoint [
-  path
-    ifNil: [path := sceneBuilder shapeClass: GsPathShape; newAtPoint: aPoint]
-    ifNotNil: [ path addPoint: aPoint].
-  overlay addChild: path handleForLastPoint.
+  path ifNil: [
+    path := sceneBuilder shapeClass: GsPathShape;
+      newAtPoint: aPoint].
+  path addPoint: aPoint.
+  overlay removeChildren; addChildren: path gsHandles
 ]

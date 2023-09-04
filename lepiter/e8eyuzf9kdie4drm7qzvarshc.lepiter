@@ -879,7 +879,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-02T17:18:32.143-04:00"
+						"dateAndTimeString" : "2023-09-04T12:51:21.456-04:00"
 					}
 				},
 				"uid" : {
@@ -889,7 +889,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Draw Complex Paths with the Pen Tool]]"
+				"string" : "[[Draw Splines with the Pen Tool]]"
 			},
 			{
 				"__type" : "textSnippet",
