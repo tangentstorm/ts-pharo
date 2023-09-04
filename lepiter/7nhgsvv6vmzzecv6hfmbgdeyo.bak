@@ -34,14 +34,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:20:27.034-04:00"
+									"dateAndTimeString" : "2023-09-04T08:29:27.467-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "2N4BCDrADQCp1MNsAfZBgQ=="
 							},
-							"code" : "BlElement methodsInProtocol: '*GameSketchLib'"
+							"code" : "BlElement gtMethodsInClass\r  & '*GameSketchLib' gtMethodCategories"
 						}
 					]
 				},
@@ -64,7 +64,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:21:54.645-04:00"
+						"dateAndTimeString" : "2023-09-04T08:29:27.444-04:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +74,264 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There are several extensions to Bloc in {{gtClass:BlElement}} :"
+				"string" : "There are many extensions to Bloc in {{gtClass:BlElement}} :"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:11:22.409-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:12:23.16-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QKhEJenADQCiL3vaCnBAyw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Many  of these extensions deal with the bounding rectangle. In bloc, an element's size and position are normally determined by layout.  Thus you get the following  behavior:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:11:42.621-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:12:25.794-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eA15JunADQCjP0AfCnBAyw=="
+							},
+							"code" : "self assert: (BlElement new size: 50@50; size)\r     equals: 0@0."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:11:22.572-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:13:44.161-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+CRHJenADQCiNoQwCnBAyw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "It turns out setting a size or position creates some layout constraints, but does not actually update a value, because the parent element's layout might override our suggestions."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:07:54.117-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:29:51.279-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oF/aGOnADQCYYU70CnBAyw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "With shapes on a canvas, though, we want the objects to have the bounds we gave them right from the start - so that (for example) when we add a new object to the scene and select it, the selection doesn't have to wait for the layout to complete to recalculate its bounds."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:30:23.447-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T08:31:13.612-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8INHaenADQCKfcKdB3gkLQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "(The notable exception would be {{gtClass:GsEdgeShape}}, which depends almost entirely on layout constraints.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T09:27:41.78-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-04T09:31:04.154-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IFQ4NurADQCQeWMvB3gkLQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**note:** right now these extension methods in BlElement work from bloc's position and size ... it is an open design question whether to try to add this at the bloc level (potentially messy since it could become out of sync) or to force scenes to only contain shapes, and then force all shapes to use the wrapper accessors (which would then only be defined in {{gtClass:TGsShaped}}."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-04T08:07:46.174-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-04T08:07:52.394-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+OE3GOnADQCX1VWeCnBAyw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# bounding rectangles"
 			},
 			{
 				"__type" : "textSnippet",
@@ -106,7 +363,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-26T15:40:26.716-04:00"
+									"dateAndTimeString" : "2023-08-26T15:40:51.02-04:00"
 								}
 							},
 							"uid" : {
@@ -116,7 +373,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtMethod:BlElement>>gsHandles|label=gsHandles}}returns a set of elements that can be added to a {{gtClass:GsToolOverlay}} to allow editing the "
+							"string" : "{{gtMethod:BlElement>>gsHandles|label=gsHandles}}returns a set of elements that can be added to a {{gtClass:GsToolOverlay}} to allow interactive editing of the element with the mouse."
 						},
 						{
 							"__type" : "textSnippet",
@@ -239,7 +496,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:23:13.234-04:00"
+						"dateAndTimeString" : "2023-09-04T08:16:31.708-04:00"
 					}
 				},
 				"editEmail" : {
@@ -250,7 +507,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-26T15:23:28.819-04:00"
+						"dateAndTimeString" : "2023-09-04T08:29:27.538-04:00"
 					}
 				},
 				"uid" : {
@@ -260,7 +517,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The shape protocol:"
+				"string" : "# other extension methods"
 			}
 		]
 	},
