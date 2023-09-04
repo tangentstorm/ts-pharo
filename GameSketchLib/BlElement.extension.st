@@ -28,7 +28,9 @@ BlElement >> gsCenter: aPoint [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsContainsPoint: p [
-  ^ self bounds asRectangle containsPoint: p 
+  ^ (self bounds asRectangle containsPoint: p)
+    and: [self geometry 
+      containsPoint: p - self position in: self parent]
 ]
 
 { #category : #'*GameSketchLib' }
