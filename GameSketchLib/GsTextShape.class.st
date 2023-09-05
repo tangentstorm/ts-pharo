@@ -26,7 +26,8 @@ GsTextShape >> fontName [
 
 { #category : #accessing }
 GsTextShape >> fontName: aString [
-  self fullSpan fontName: (fontName := aString). 
+  self inUIProcessDo: [
+    self fullSpan fontName: (fontName := aString)]
 ]
 
 { #category : #accessing }
@@ -46,7 +47,8 @@ GsTextShape >> fontSize [
 
 { #category : #accessing }
 GsTextShape >> fontSize: aNumber [
-  self fullSpan fontSize: (fontSize := aNumber)
+  self inUIProcessDo: [
+    self fullSpan fontSize: (fontSize := aNumber)]
 ]
 
 { #category : #accessing }
@@ -119,8 +121,9 @@ GsTextShape >> textColor [
 
 { #category : #accessing }
 GsTextShape >> textColor: aHexString [
-  self fullSpan foreground: (
-    textColor := Color fromHexString: aHexString)
+  self inUIProcessDo: [
+    self fullSpan foreground: (
+      textColor := Color fromHexString: aHexString)]
 ]
 
 { #category : #accessing }
