@@ -15,18 +15,23 @@ GsCatmullRomExamples >> curve [
 { #category : #'example - connections' }
 GsCatmullRomExamples >> curveWithAnchors [
 	<gtExample>	
-	| curve handles colors |
+	| curve points handles |
 	
 	curve := self grayCurve.
-	colors := { #green. #blue. #blue. #red }.
-	handles := { 100@100 . 200@100 . 300@200. 400@200 }
-	  collectWithIndex: [:p :i| |el|
-	    el := self attachPoint
-	      relocate: p;
-	      background: (Color perform: (colors at: i));
-	      addChild: (GsTextShape new 
-	        text: (i asString);
-	        textColor: '#ffffff').
+
+	points := {100@100. 200@100. 300@200. 300@300.
+	            200@300. 200@200. 100@200. 100@300}.
+
+	handles := points collectWithIndex: [:p :i| |el color|
+	  color := Color blue.
+	  (i = 1) ifTrue: [color := Color green darker ].
+	  (i = points size) ifTrue: [color := Color red].
+	  el := self attachPoint
+	    relocate: p;
+	    background: color;
+	    addChild: (GsTextShape new 
+	      text: (i asString);
+	      textColor: '#ffffff').
 	    curve addAnchor: (BlElementCenterAnchor element: el).
 	    el ].
 

@@ -9,13 +9,20 @@ Class {
 
 { #category : #accessing }
 GsCatmullRomCurveGeometry >> buildPathOnSpartaCanvas: aCanvas [
-  |path p0 p1 p2 p3|
-  p0 := self points first.
-  p1 := self points second.
-  p2 := self points third.
-  p3 := self points fourth.
-  path := aCanvas path moveTo: p1.
-  self drawSegmentOn: path alpha: 0.5 p0: p0 p1: p1 p2: p2 p3:p3.
+  |path |
+  path := aCanvas path.
+  (points size > 3) ifTrue: [
+    | p0 p1 p2 p3 i |
+    p1 := points at: 1.
+    p2 := points at: 2.
+    p3 := points at: 3.
+    i := 4.
+    path moveTo: p2.
+    [i <= points size] whileTrue: [
+      p0 := p1. p1 := p2. p2 := p3.
+      p3 := points at: i. i := i + 1.
+      self drawSegmentOn: path
+        alpha: 0.5 p0: p0 p1: p1 p2: p2 p3:p3]].
   ^ path build
 ]
 
