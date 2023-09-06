@@ -47,6 +47,11 @@ GsSceneBuilder >> initialize [
   self shapeClass: GsRectShape
 ]
 
+{ #category : #accessing }
+GsSceneBuilder >> latestShape [
+  ^ shape
+]
+
 { #category : #'shape factories' }
 GsSceneBuilder >> line: aName from: p1 to: p2 [
   ^ self shapeClass: GsLineShape;

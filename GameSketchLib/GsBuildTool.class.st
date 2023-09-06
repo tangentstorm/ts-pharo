@@ -1,3 +1,6 @@
+"
+I tell my {{gtClass:GsToolApp}}'s {{gtClass:GsSceneBuilder}} to build new shapes.
+"
 Class {
 	#name : #GsBuildTool,
 	#superclass : #GsTool,
@@ -22,7 +25,6 @@ GsBuildTool >> click: aPoint [
 { #category : #'event handling' }
 GsBuildTool >> dragStart: aPoint [
   self click: aPoint.
-  overlay addChild: (GsHandle new point: aPoint)
 ]
 
 { #category : #'event handling' }
@@ -32,7 +34,7 @@ GsBuildTool >> dragStep: aPoint [
 
 { #category : #'event handling' }
 GsBuildTool >> dragStop: aPoint [
-  overlay removeChildren
+  selection reset; add: sceneBuilder latestShape
 ]
 
 { #category : #initialization }
