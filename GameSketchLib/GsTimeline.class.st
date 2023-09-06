@@ -97,7 +97,7 @@ GsTimeline >> makeScrollPane [
   ^ BrScrollPane new
     border: (Color darkGray);
     aptitude: BrScrollPaneAptitude
-      "+ BrGlamorousWithHorizontalScrollbarAptitude";
+      + BrGlamorousWithHorizontalScrollbarAptitude;
     content: self makeGrid
 ]
 
@@ -146,9 +146,9 @@ GsTimeline >> onPlayheadPull [
     ifNil: [ autoScrollTask := BlRepeatedTaskAction new delay: 10 milliseconds]
     ifNotNil: #stop.
   (playhead parent extent x - (playhead position x)) < activeZone
-      ifTrue: [ dxScroll := -0.25].
-  playhead position x < activeZone
       ifTrue: [ dxScroll := 0.25].
+  playhead position x < activeZone
+      ifTrue: [ dxScroll := -0.25].
   dxScroll ~= 0 ifTrue: [
     autoScrollTask action: [
       scrollPane scrollBy: (colW * dxScroll)@0.
