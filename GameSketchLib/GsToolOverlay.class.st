@@ -11,15 +11,9 @@ Class {
 		'scene',
 		'dragging',
 		'mouseDown',
-		'onDrag',
 		'startPoint',
-		'onClick',
-		'onMouseMove',
-		'onDragStart',
-		'onDragEnd',
-		'lastMousePosition',
-		'tool',
-		'coords'
+		'coords',
+		'buttonTool'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -27,30 +21,6 @@ Class {
 { #category : #accessing }
 GsToolOverlay class >> for: aScene [
   ^ self new scene: aScene
-]
-
-{ #category : #accessing }
-GsToolOverlay >> click: aPoint [
-  onClick cull: aPoint.
-  tool click: aPoint.
-]
-
-{ #category : #'event handling' }
-GsToolOverlay >> drag: aPoint [
-  onDrag value: aPoint.
-  tool dragStep: aPoint.
-]
-
-{ #category : #'event handling' }
-GsToolOverlay >> dragStart: aPoint [ 
-  onDragStart cull: aPoint.
-  tool dragStart: aPoint.
-]
-
-{ #category : #'event handling' }
-GsToolOverlay >> dragStop: aPoint [
-  onDragEnd cull: aPoint.
-  tool dragStop: aPoint.
 ]
 
 { #category : #debugging }
@@ -61,41 +31,46 @@ GsToolOverlay >> drawCoords: aPoint [
 ]
 
 { #category : #accessing }
-GsToolOverlay >> initCallbacks [
-  onClick := [:p|].
-  onMouseMove := [:p|].
-  onDragStart := [:p|].
-  onDrag := [:p|].
-  onDragEnd := [:p|]
-]
-
-{ #category : #accessing }
 GsToolOverlay >> initialize [
   super initialize.
-  tool := GsSelectTool new overlay: self.
+  buttonTool := {
+    BlMouseButton primary -> GsTool new.
+    BlMouseButton secondary -> GsTool new.
+    BlMouseButton middle -> GsTool new }
+    asDictionary.
+  mouseDown := buttonTool collect: [:b| false].
+  dragging := buttonTool collect: [:b| false].
+  startPoint := buttonTool collect: [:b| nil].
+
   self matchParent;
-    resetFlags;
-    initCallbacks; 
     addChild: self makeCoords;
-    when: BlMouseDownEvent do: [:e|  e consumed: true.
-      self resetFlags.
-      startPoint := e localPosition.
-      mouseDown := true];
-    when: BlMouseMoveEvent do: [:e|
-      |p| p:= e localPosition.
+    when: BlMouseDownEvent do: [:e| |b|
+      e consumed: true.  b := e button.
+      dragging at: b put: false.
+      startPoint at: b put: (
+        self pointInScene: e localPosition).
+      mouseDown at: b put: true];
+    when: BlMouseMoveEvent do: [:e| |p|
+      e consumed: true.
+      p:= self pointInScene: e localPosition.
       self drawCoords: p.
-      mouseDown ifTrue: [
-        dragging
-          ifFalse: [
-            dragging := true.
-            self dragStart: startPoint  ].
-        self drag:p. ]
-      ifFalse: [ self mouseMove: p]];
-    when: BlMouseUpEvent do: [:e|
-      |p| p := e localPosition.
-      mouseDown := false.
-      dragging ifTrue: [ dragging := false. self dragStop: p ]
-      ifFalse: [ self click: p ]].
+      mouseDown associationsDo: [:kv|
+        | b tool |
+        b := kv key. tool := buttonTool at: b.
+        kv value ifTrue: [
+          (dragging at: b) ifFalse: [
+            dragging at: b put: true.
+            tool dragStart: (startPoint  at: b) ].
+          tool dragStep: p ]
+        ifFalse: [ tool move: p]]];
+    when: BlMouseUpEvent do: [:e| |b p|
+      e consumed: true.  b := e button.
+      p := self pointInScene: e localPosition.
+      mouseDown at: b put: false.
+      (dragging at: b) ifTrue: [
+        dragging at: b put: false.
+        (buttonTool at: b) dragStop: p ]
+      ifFalse: [ (buttonTool at: b) click: p ]].
 ]
 
 { #category : #accessing }
@@ -106,33 +81,30 @@ GsToolOverlay >> makeCoords [
 ]
 
 { #category : #accessing }
-GsToolOverlay >> mouseMove: aPoint [
-  onMouseMove cull: aPoint 
-]
-
-{ #category : #initialization }
-GsToolOverlay >> onClick: aBlock [
-  onClick := aBlock 
+GsToolOverlay >> middleTool [
+  ^ buttonTool at: BlMouseButton middle
 ]
 
 { #category : #accessing }
-GsToolOverlay >> onDrag: aBlock [
-  onDrag := aBlock
+GsToolOverlay >> middleTool: aTool [
+  aTool overlay: self.
+  ^ buttonTool at: BlMouseButton middle put: aTool
 ]
 
 { #category : #accessing }
-GsToolOverlay >> onDragEnd: aBlock [
-  onDragEnd := aBlock
+GsToolOverlay >> pointInScene: aPoint [
+  ^ aPoint - scene position
 ]
 
 { #category : #accessing }
-GsToolOverlay >> onDragStart: aBlock [
-  onDragStart := aBlock
+GsToolOverlay >> primaryTool [
+  ^ buttonTool at: BlMouseButton primary
 ]
 
-{ #category : #initialization }
-GsToolOverlay >> onMouseMove: aBlock [
-  onMouseMove := aBlock
+{ #category : #accessing }
+GsToolOverlay >> primaryTool: aTool [
+  aTool overlay: self.
+  ^ buttonTool at: BlMouseButton primary put: aTool
 ]
 
 { #category : #accessing }
@@ -142,23 +114,27 @@ GsToolOverlay >> removeChildren [
 ]
 
 { #category : #accessing }
-GsToolOverlay >> resetFlags [
-  mouseDown := false.
-  mouseMoved := false.
-  dragging := false.
-]
-
-{ #category : #accessing }
 GsToolOverlay >> scene: aScene [
   scene := aScene.
 ]
 
 { #category : #accessing }
+GsToolOverlay >> secondaryTool [
+  ^ buttonTool at: BlMouseButton secondary
+]
+
+{ #category : #accessing }
+GsToolOverlay >> secondaryTool: aTool [
+  aTool overlay: self.
+  ^ buttonTool at: BlMouseButton secondary put: aTool
+]
+
+{ #category : #accessing }
 GsToolOverlay >> tool [
-  ^ tool
+  ^ self primaryTool
 ]
 
 { #category : #accessing }
 GsToolOverlay >> tool: aTool [
-  tool := aTool overlay: self.
+  self primaryTool: aTool
 ]

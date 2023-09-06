@@ -36,14 +36,15 @@ GsSelectTool >> dragStart: p [
   selectangle removeFromParent.
   (subject := self scene childAtPoint: p)
     ifNil: [overlay addChild:
-      (selectangle relocate:p; size:0@0)]
+      (selectangle relocate:p - self scene position; size:0@0)]
     ifNotNil: [ offset := subject gsPosition - p. ].
 ]
 
 { #category : #accessing }
 GsSelectTool >> dragStep: p [
   subject ifNil: [|rect|
-    rect := Rectangle point: startPoint point: p.
+    rect := (Rectangle point: startPoint point: p)
+      translateBy: self scene position.
     selectangle relocate: rect topLeft; size: rect extent]
   ifNotNil: [subject gsPosition: p + offset ]
 ]
@@ -52,7 +53,7 @@ GsSelectTool >> dragStep: p [
 GsSelectTool >> dragStop: p [
   |rect|
   subject ifNil: [
-    rect := selectangle bounds asRectangle.
+    rect := selectangle bounds asRectangle translateBy: (self scene position negated).
     self selectShapes: (self scene children select: [:x|
          x bounds asRectangle intersects: rect])]
     ifNotNil: [
@@ -64,7 +65,7 @@ GsSelectTool >> dragStop: p [
 GsSelectTool >> drawSelectionBox [
   selection ifNotEmpty: [
     |rect box startPosition|
-    rect := selection boundingRect.
+    rect := selection boundingRect translateBy: (self scene position).
     overlay addChild: (box := GsRectShape new
       border: (BlBorder paint: Color cyan);
       background: (Color cyan alpha: 0.2);

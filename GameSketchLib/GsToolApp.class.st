@@ -130,11 +130,21 @@ GsToolApp >> newDock [
 ]
 
 { #category : #accessing }
+GsToolApp >> overlay [
+  ^ overlay
+]
+
+{ #category : #accessing }
 GsToolApp >> scene: aScene [
   super scene: aScene.
   sceneBuilder scene: aScene.
   selection scene: aScene.
   overlay scene: aScene
+]
+
+{ #category : #accessing }
+GsToolApp >> sceneBuilder [
+  ^ sceneBuilder
 ]
 
 { #category : #ui }
