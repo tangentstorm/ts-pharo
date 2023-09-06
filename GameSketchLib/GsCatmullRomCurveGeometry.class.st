@@ -186,31 +186,3 @@ GsCatmullRomCurveGeometry >> points: aCollection [
 	points := aCollection.
 	self releaseCache
 ]
-
-{ #category : #accessing }
-GsCatmullRomCurveGeometry >> xdrawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
-  | t1 t2 t3 k0 k1 k2 k3 k4 k5 d31 d21 |
-
-  t1 := self getT:  0 alpha: alpha p0: p0 p1: p1.
-  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
-  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
-
-  k0 := p0 / t1.        k1 := p1 / t1.
-  k2 := p1 / (t2 - t1). k3 := p2 / (t2 - t1).
-  k4 := p2 / (t3 - t2). k5 := p3 / (t3 - t2).
-  d31 := t3 - t1. d21 := t2 - t1.
-  
-  0 to: 1 by: 0.05 do: [:i |
-    |t d3t d2t d1t A1 A2 A3 B1 B2 C|
-    t := (1-i * t1) + (i * t2).
-    d3t := t3 - t.  d2t := t2 - t.  d1t := t1 - t.
-  
-    A1 := d1t * k0 + (t   * k1).
-    A2 := d2t * k2 - (d1t * k3).
-    A3 := d3t * k4 - (d2t * k5).
-    B1 := d2t * A1 - (t   * A2) / t2.
-    B2 := d3t * A2 - (d1t * A3) / d31.
-    C  := d2t * B1 + (d1t * B2) / d21.
-
-    aPath lineTo: C ]
-]
