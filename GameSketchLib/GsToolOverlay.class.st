@@ -23,6 +23,19 @@ GsToolOverlay class >> for: aScene [
   ^ self new scene: aScene
 ]
 
+{ #category : #accessing }
+GsToolOverlay >> addGizmo: aGizmo [
+  self addGizmos: {aGizmo}
+]
+
+{ #category : #accessing }
+GsToolOverlay >> addGizmos: aCollection [
+  "gizmos are positioned relative to the scene's transformation"
+  | nudge | nudge := scene position.
+  self addChildren: (aCollection collect: [:h| 
+    h transformDo: [:t| t translateBy: nudge; apply]])
+]
+
 { #category : #debugging }
 GsToolOverlay >> drawCoords: aPoint [
   coords text: (aPoint rounded asString, ' ', 

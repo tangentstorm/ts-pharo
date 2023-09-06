@@ -12,9 +12,9 @@ Class {
 
 { #category : #accessing }
 GsPenTool >> click: aPoint [
+  |nudge | nudge := self scene position.
   path ifNil: [
-    path := sceneBuilder shapeClass: GsPathShape;
-      newAtPoint: aPoint].
+    path := sceneBuilder shapeClass: GsPathShape; newAtPoint: aPoint].
   path addPoint: aPoint.
-  overlay removeChildren; addChildren: path gsHandles
+  overlay removeChildren; addGizmos: path gsHandles.
 ]

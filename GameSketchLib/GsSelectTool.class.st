@@ -97,7 +97,7 @@ GsSelectTool >> redrawSelection [
   (selection size > 1)
     ifTrue: [self drawSelectionBox]
     ifFalse: [selection ifNotEmpty: [
-      overlay addChildren:
+      overlay addGizmos:
         (selection first gsHandles do:[:h|
           h when: BlPullEndEvent do: [
             self refreshToolsForSelection]];
