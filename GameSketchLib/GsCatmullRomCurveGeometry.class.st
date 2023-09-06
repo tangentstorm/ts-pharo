@@ -144,8 +144,9 @@ GsCatmullRomCurveGeometry >> drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2
 
 { #category : #accessing }
 GsCatmullRomCurveGeometry >> drawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
-  self drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3
-
+  [self drawSegmentOn3: aPath alpha: alpha
+     p0: p0 p1: p1 p2: p2 p3: p3]
+  onErrorDo: [ aPath lineTo: p2  ]
 ]
 
 { #category : #accessing }
