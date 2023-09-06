@@ -585,7 +585,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-04T10:15:20.542-04:00"
+						"dateAndTimeString" : "2023-09-06T10:52:00.445-04:00"
 					}
 				},
 				"uid" : {
@@ -595,7 +595,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsPathShapeExamples}} | {{gtClass:GsOldPathShape}}"
+				"string" : "{{gtClass:GsPathShapeExamples}} | {{gtClass:GsPathShape}} | {{gtClass:GsCatmullRomCurveElement}} | {{gtClass:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -730,7 +730,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-04T14:16:13.413-04:00"
+						"dateAndTimeString" : "2023-09-04T14:16:35.891-04:00"
 					}
 				},
 				"uid" : {
@@ -740,7 +740,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtMethod:GsPathShape>>rebuildPath}} {{gtMethod:GsPathShape>>rebuildPath}}"
+				"string" : "{{gtMethod:GsPathShape>>rebuildPath}} {{gtMethod:GsPathShape>>rebuildBounds}} (should only include anchors that are actually on the path)"
 			}
 		]
 	},

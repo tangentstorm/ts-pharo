@@ -585,7 +585,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-04T10:15:20.542-04:00"
+						"dateAndTimeString" : "2023-09-06T10:52:10.875-04:00"
 					}
 				},
 				"uid" : {
@@ -595,7 +595,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsPathShapeExamples}} | {{gtClass:GsOldPathShape}}"
+				"string" : "{{gtClass:GsPathShapeExamples}} | {{gtClass:GsPathShape}} | {{gtClass:GsCatmullRomCurveElement}} | {{gtClass:GsCatmullRomCurveGeometry}}"
 			},
 			{
 				"__type" : "pharoSnippet",

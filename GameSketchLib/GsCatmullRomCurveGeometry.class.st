@@ -2,12 +2,23 @@ Class {
 	#name : #GsCatmullRomCurveGeometry,
 	#superclass : #BlElementVectorGeometry,
 	#instVars : [
-		'points'
+		'points',
+		'alpha'
 	],
 	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #accessing }
+GsCatmullRomCurveGeometry >> alpha [
+	^ alpha
+]
+
+{ #category : #accessing }
+GsCatmullRomCurveGeometry >> alpha: anObject [
+	alpha := anObject
+]
+
+{ #category : #sparta }
 GsCatmullRomCurveGeometry >> buildPathOnSpartaCanvas: aCanvas [
   |path |
   path := aCanvas path.
@@ -21,12 +32,13 @@ GsCatmullRomCurveGeometry >> buildPathOnSpartaCanvas: aCanvas [
     [i <= points size] whileTrue: [
       p0 := p1. p1 := p2. p2 := p3.
       p3 := points at: i. i := i + 1.
-      self drawSegmentOn: path
-        alpha: 0.5 p0: p0 p1: p1 p2: p2 p3:p3]].
+      "error trap because of zero division (when p2=p3, for example)"
+      [self drawSegmentOn: path p0: p0 p1: p1 p2: p2 p3:p3]
+        onErrorDo: [path lineTo: p2] ]].
   ^ path build
 ]
 
-{ #category : #accessing }
+{ #category : #'geometry testing' }
 GsCatmullRomCurveGeometry >> containsPoint: aPoint in: anElement on: aSpartaCanvas [
 	"Note: I am a fallback method to determine if a point lies within a geometry path
 	when geometry is complex and it is mathematically difficult to compute manually.
@@ -41,7 +53,7 @@ GsCatmullRomCurveGeometry >> containsPoint: aPoint in: anElement on: aSpartaCanv
 		containsPoint: aPoint
 ]
 
-{ #category : #accessing }
+{ #category : #historical }
 GsCatmullRomCurveGeometry >> drawSegmentOn0: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
   "unoptimized version"
   | t0 t1 t2 t3 A1 A2 A3 B1 B2 C |
@@ -66,7 +78,7 @@ GsCatmullRomCurveGeometry >> drawSegmentOn0: aPath alpha: alpha p0: p0 p1: p1 p2
 
 ]
 
-{ #category : #accessing }
+{ #category : #historical }
 GsCatmullRomCurveGeometry >> drawSegmentOn1: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
   "remove t0"
   | t1 t2 t3 A1 A2 A3 B1 B2 C |
@@ -91,7 +103,7 @@ GsCatmullRomCurveGeometry >> drawSegmentOn1: aPath alpha: alpha p0: p0 p1: p1 p2
 
 ]
 
-{ #category : #accessing }
+{ #category : #historical }
 GsCatmullRomCurveGeometry >> drawSegmentOn2: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
   "name the diffs"
   | t1 t2 t3 d21 d32 d31 A1 A2 A3 B1 B2 C |
@@ -120,7 +132,7 @@ GsCatmullRomCurveGeometry >> drawSegmentOn2: aPath alpha: alpha p0: p0 p1: p1 p2
 
 ]
 
-{ #category : #accessing }
+{ #category : #historical }
 GsCatmullRomCurveGeometry >> drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
   "factor out common denominators"
   | t1 t2 t3 d21 d32 d31 A1 A2 A3 B1 B2 C |
@@ -149,14 +161,35 @@ GsCatmullRomCurveGeometry >> drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2
 
 ]
 
-{ #category : #accessing }
-GsCatmullRomCurveGeometry >> drawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
-  [self drawSegmentOn3: aPath alpha: alpha
-     p0: p0 p1: p1 p2: p2 p3: p3]
-  onErrorDo: [ aPath lineTo: p2  ]
+{ #category : #sparta }
+GsCatmullRomCurveGeometry >> drawSegmentOn: aPath p0: p0 p1: p1 p2: p2 p3: p3 [
+  | t1 t2 t3 d21 d32 d31 A1 A2 A3 B1 B2 C |
+  
+  t1 := self getT:  0 alpha: alpha p0: p0 p1: p1.
+  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
+  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
+  
+  d21 := t2 - t1.
+  d32 := t3 - t2.
+  d31 := t3 - t1.
+
+  0.0 to: 1 by: 0.05 do: [:i| |t|
+    t := (1-i * t1) + (i * t2).
+    
+    A1 := ((t1 - t) * p0) + ((t     ) * p1) / t1.
+    A2 := ((t2 - t) * p1) + ((t - t1) * p2) / d21.
+    A3 := ((t3 - t) * p2) + ((t - t2) * p3) / d32.
+    
+    B1 := ((t2 - t) * A1) + ((t     ) * A2) / t2.
+    B2 := ((t3 - t) * A2) + ((t - t1) * A3) / d31.
+    
+    C  := ((t2 - t) * B1) + ((t - t1) * B2) / d21.
+ 
+    aPath lineTo: C]
+
 ]
 
-{ #category : #accessing }
+{ #category : #'geometry bounds' }
 GsCatmullRomCurveGeometry >> geometryBounds: aBounds [
   ^ (aBounds rectangle: (self points
     ifEmpty: [ 0@0 extent: 0@0 ]
@@ -164,7 +197,7 @@ GsCatmullRomCurveGeometry >> geometryBounds: aBounds [
       Rectangle encompassing: thePoints ]))
 ]
 
-{ #category : #accessing }
+{ #category : #sparta }
 GsCatmullRomCurveGeometry >> getT: t alpha: alpha p0: p0 p1: p1 [
   | d a b |
   d := p1 - p0.
@@ -173,13 +206,14 @@ GsCatmullRomCurveGeometry >> getT: t alpha: alpha p0: p0 p1: p1 [
   ^ b + t.
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsCatmullRomCurveGeometry >> initialize [
   super initialize.
-  points := #()
+  points := #().
+  alpha := 0.5.
 ]
 
-{ #category : #accessing }
+{ #category : #geometry }
 GsCatmullRomCurveGeometry >> matchExtent: aPoint [
   extent := aPoint
 ]

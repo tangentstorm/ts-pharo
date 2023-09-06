@@ -28,9 +28,10 @@ GsCatmullRomCurveElement >> initialize [
 
 { #category : #accessing }
 GsCatmullRomCurveElement >> layoutBounds [
-	<return: #Rectangle>
-	
-	^ Rectangle encompassing: (anchors collect: [:a|a positionWithin: self]) 
+  <return: #Rectangle>
+  ^ anchors ifEmpty: [Rectangle origin: 0@0 extent: 0@0]
+	ifNotEmpty: [ Rectangle encompassing:
+	 (anchors collect: [:a|a positionWithin: self])]
 ]
 
 { #category : #accessing }
