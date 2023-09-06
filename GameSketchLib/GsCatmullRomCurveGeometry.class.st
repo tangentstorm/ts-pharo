@@ -35,26 +35,116 @@ GsCatmullRomCurveGeometry >> containsPoint: aPoint in: anElement on: aSpartaCanv
 ]
 
 { #category : #accessing }
+GsCatmullRomCurveGeometry >> drawSegmentOn0: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
+  "unoptimized version"
+  | t0 t1 t2 t3 A1 A2 A3 B1 B2 C |
+  
+  t1 := self getT: t0 alpha: alpha p0: p0 p1: p1.
+  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
+  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
+
+  0.0 to: 1 by: 0.05 do: [:i| |t|
+    t := (1-i * t1) + (i * t2).
+    
+    A1 := (((t1 - t) / (t1 - t0)) * p0) + ((t - t0) / (t1 - t0) * p1).
+    A2 := (((t2 - t) / (t2 - t1)) * p1) + ((t - t1) / (t2 - t1) * p2).
+    A3 := (((t3 - t) / (t3 - t2)) * p2) + ((t - t2) / (t3 - t2) * p3).
+    
+    B1 := (((t2 - t) / (t2 - t0)) * A1) + ((t - t0) / (t2 - t0) * A2).
+    B2 := (((t3 - t) / (t3 - t1)) * A2) + ((t - t1) / (t3 - t1) * A3).
+    
+    C := (((t2 - t) / (t2 - t1)) * B1) + ((t - t1) / (t2 - t1) * B2).
+ 
+    aPath lineTo: C]
+
+]
+
+{ #category : #accessing }
+GsCatmullRomCurveGeometry >> drawSegmentOn1: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
+  "remove t0"
+  | t1 t2 t3 A1 A2 A3 B1 B2 C |
+  
+  t1 := self getT:  0 alpha: alpha p0: p0 p1: p1.
+  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
+  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
+
+  0.0 to: 1 by: 0.05 do: [:i| |t|
+    t := (1-i * t1) + (i * t2).
+    
+    A1 := (((t1 - t) / (t1     )) * p0) + ((t     ) / (t1     ) * p1).
+    A2 := (((t2 - t) / (t2 - t1)) * p1) + ((t - t1) / (t2 - t1) * p2).
+    A3 := (((t3 - t) / (t3 - t2)) * p2) + ((t - t2) / (t3 - t2) * p3).
+    
+    B1 := (((t2 - t) / (t2     )) * A1) + ((t     ) / (t2     ) * A2).
+    B2 := (((t3 - t) / (t3 - t1)) * A2) + ((t - t1) / (t3 - t1) * A3).
+    
+    C := (((t2 - t) / (t2 - t1)) * B1) + ((t - t1) / (t2 - t1) * B2).
+ 
+    aPath lineTo: C]
+
+]
+
+{ #category : #accessing }
+GsCatmullRomCurveGeometry >> drawSegmentOn2: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
+  "name the diffs"
+  | t1 t2 t3 d21 d32 d31 A1 A2 A3 B1 B2 C |
+  
+  t1 := self getT:  0 alpha: alpha p0: p0 p1: p1.
+  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
+  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
+  
+  d21 := t2 - t1.
+  d32 := t3 - t2.
+  d31 := t3 - t1.
+
+  0.0 to: 1 by: 0.05 do: [:i| |t|
+    t := (1-i * t1) + (i * t2).
+    
+    A1 := (((t1 - t) / t1)  * p0) + ((t     ) / t1 * p1).
+    A2 := (((t2 - t) / d21) * p1) + ((t - t1) / d21 * p2).
+    A3 := (((t3 - t) / d32) * p2) + ((t - t2) / d32 * p3).
+    
+    B1 := (((t2 - t) / t2)  * A1) + ((t     ) / t2  * A2).
+    B2 := (((t3 - t) / d31) * A2) + ((t - t1) / d31 * A3).
+    
+    C := (((t2 - t) /  d21) * B1) + ((t - t1) / d21 * B2).
+ 
+    aPath lineTo: C]
+
+]
+
+{ #category : #accessing }
+GsCatmullRomCurveGeometry >> drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
+  "factor out common denominators"
+  | t1 t2 t3 d21 d32 d31 A1 A2 A3 B1 B2 C |
+  
+  t1 := self getT:  0 alpha: alpha p0: p0 p1: p1.
+  t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
+  t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
+  
+  d21 := t2 - t1.
+  d32 := t3 - t2.
+  d31 := t3 - t1.
+
+  0.0 to: 1 by: 0.05 do: [:i| |t|
+    t := (1-i * t1) + (i * t2).
+    
+    A1 := ((t1 - t) * p0) + ((t     ) * p1) / t1.
+    A2 := ((t2 - t) * p1) + ((t - t1) * p2) / d21.
+    A3 := ((t3 - t) * p2) + ((t - t2) * p3) / d32.
+    
+    B1 := ((t2 - t) * A1) + ((t     ) * A2) / t2.
+    B2 := ((t3 - t) * A2) + ((t - t1) * A3) / d31.
+    
+    C  := ((t2 - t) * B1) + ((t - t1) * B2) / d21.
+ 
+    aPath lineTo: C]
+
+]
+
+{ #category : #accessing }
 GsCatmullRomCurveGeometry >> drawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3 [
-   | t0 t1 t2 t3 A1 A2 A3 B1 B2 C |
-    t0 := 0.0.
-    t1 := self getT: t0 alpha: alpha p0: p0 p1: p1.
-    t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
-    t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
-    
-    0.0 to: 1 by: 0.05 do: [:i| |t|
-      t := (1-i * t1) + (i * t2).
-    
-      A1 := (((t1 - t) / (t1 - t0)) * p0) + ((t - t0) / (t1 - t0) * p1).
-      A2 := (((t2 - t) / (t2 - t1)) * p1) + ((t - t1) / (t2 - t1) * p2).
-      A3 := (((t3 - t) / (t3 - t2)) * p2) + ((t - t2) / (t3 - t2) * p3).
-    
-      B1 := (((t2 - t) / (t2 - t0)) * A1) + ((t - t0) / (t2 - t0) * A2).
-      B2 := (((t3 - t) / (t3 - t1)) * A2) + ((t - t1) / (t3 - t1) * A3).
-    
-      C := (((t2 - t) / (t2 - t1)) * B1) + ((t - t1) / (t2 - t1) * B2).
-      
-      aPath lineTo: C]
+  self drawSegmentOn3: aPath alpha: alpha p0: p0 p1: p1 p2: p2 p3: p3
 
 ]
 
@@ -110,8 +200,9 @@ GsCatmullRomCurveGeometry >> xdrawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2
   k4 := p2 / (t3 - t2). k5 := p3 / (t3 - t2).
   d31 := t3 - t1. d21 := t2 - t1.
   
-  0 to: 1 by: 0.05 do: [:t |
-    |d3t d2t d1t A1 A2 A3 B1 B2 C|
+  0 to: 1 by: 0.05 do: [:i |
+    |t d3t d2t d1t A1 A2 A3 B1 B2 C|
+    t := (1-i * t1) + (i * t2).
     d3t := t3 - t.  d2t := t2 - t.  d1t := t1 - t.
   
     A1 := d1t * k0 + (t   * k1).
