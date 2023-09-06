@@ -10,12 +10,11 @@ Class {
 { #category : #accessing }
 GsCatmullRomCurveGeometry >> buildPathOnSpartaCanvas: aCanvas [
   |path p0 p1 p2 p3|
-  path := aCanvas path.
   p0 := self points first.
   p1 := self points second.
   p2 := self points third.
   p3 := self points fourth.
-  path moveTo: p1.
+  path := aCanvas path moveTo: p1.
   self drawSegmentOn: path alpha: 0.5 p0: p0 p1: p1 p2: p2 p3:p3.
   ^ path build
 ]
@@ -43,18 +42,20 @@ GsCatmullRomCurveGeometry >> drawSegmentOn: aPath alpha: alpha p0: p0 p1: p1 p2:
     t2 := self getT: t1 alpha: alpha p0: p1 p1: p2.
     t3 := self getT: t2 alpha: alpha p0: p2 p1: p3.
     
-    0 to: 1 by: 0.05 do: [:i| |t|
-    t := (t1 - t2) * i + t1.
+    0.0 to: 1 by: 0.05 do: [:i| |t|
+      t := (1-i * t1) + (i * t2).
     
-    A1 := (((t1 - t) / (t1 - t0)) * p0) + ((t - t0) / (t1 - t0) * p1).
-    A2 := (((t2 - t) / (t2 - t1)) * p1) + ((t - t1) / (t2 - t1) * p2).
-    A3 := (((t3 - t) / (t3 - t2)) * p2) + ((t - t2) / (t3 - t2) * p3).
+      A1 := (((t1 - t) / (t1 - t0)) * p0) + ((t - t0) / (t1 - t0) * p1).
+      A2 := (((t2 - t) / (t2 - t1)) * p1) + ((t - t1) / (t2 - t1) * p2).
+      A3 := (((t3 - t) / (t3 - t2)) * p2) + ((t - t2) / (t3 - t2) * p3).
     
-    B1 := (((t2 - t) / (t2 - t0)) * A1) + ((t - t0) / (t2 - t0) * A2).
-    B2 := (((t3 - t) / (t3 - t1)) * A2) + ((t - t1) / (t3 - t1) * A3).
+      B1 := (((t2 - t) / (t2 - t0)) * A1) + ((t - t0) / (t2 - t0) * A2).
+      B2 := (((t3 - t) / (t3 - t1)) * A2) + ((t - t1) / (t3 - t1) * A3).
     
-    C := (((t2 - t) / (t2 - t1)) * B1) + ((t - t1) / (t2 - t1) * B2).
-    aPath lineTo: C ]
+      C := (((t2 - t) / (t2 - t1)) * B1) + ((t - t1) / (t2 - t1) * B2).
+      
+      aPath lineTo: C]
+
 ]
 
 { #category : #accessing }
@@ -70,7 +71,7 @@ GsCatmullRomCurveGeometry >> getT: t alpha: alpha p0: p0 p1: p1 [
   | d a b |
   d := p1 - p0.
   a := d dotProduct: d.
-  b := (a asFloat) raisedTo: alpha * 0.5.
+  b := a raisedTo: alpha * 0.5.
   ^ b + t.
 ]
 

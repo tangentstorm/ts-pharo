@@ -9,29 +9,36 @@ GsCatmullRomExamples >> curve [
 	<gtExample>
 	
 	^ GsCatmullRomCurveElement new
-		zIndex: 10;
 		yourself
 ]
 
 { #category : #'example - connections' }
 GsCatmullRomExamples >> curveWithAnchors [
 	<gtExample>	
-	| redCurve handles colors |
+	| curve handles colors |
 	
-	redCurve := self redCurve.
-	colors := { Color green. Color blue. Color blue. Color red. }.
-	handles := { 100@100 . 200@300 . 400@300. 200@100 }
+	curve := self grayCurve.
+	colors := { #green. #blue. #blue. #red }.
+	handles := { 100@100 . 200@100 . 300@200. 400@200 }
 	  collectWithIndex: [:p :i| |el|
-	  el := self attachPoint
-	    relocate: p;
-	    background: (colors at: i).
-	    
-	  redCurve addAnchor:
-	    (BlElementCenterAnchor element: el).
-	  el ].
+	    el := self attachPoint
+	      relocate: p;
+	      background: (Color perform: (colors at: i));
+	      addChild: (GsTextShape new 
+	        text: (i asString);
+	        textColor: '#ffffff').
+	    curve addAnchor: (BlElementCenterAnchor element: el).
+	    el ].
 
-	^ self container addChildren: handles; 
-	  addChild: redCurve 
+	^ self container addChildren: { curve }, handles.
+]
+
+{ #category : #'example - visual properties' }
+GsCatmullRomExamples >> grayCurve [
+	<gtExample>
+
+	^ self curve
+	  border: (BlBorder paint: Color lightGray width: 4)
 ]
 
 { #category : #'example - visual properties' }
