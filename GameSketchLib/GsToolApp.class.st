@@ -17,10 +17,16 @@ Class {
 		'inspector',
 		'leftDock',
 		'rightDock',
-		'dockHolder'
+		'dockHolder',
+		'stage'
 	],
 	#category : #'GameSketchLib-Apps'
 }
+
+{ #category : #accessing }
+GsToolApp >> addSceneChild: anElement as: aSymbol [
+  scene addChild: anElement as: aSymbol 
+]
 
 { #category : #accessing }
 GsToolApp >> addTool: aTool [
@@ -105,6 +111,28 @@ GsToolApp >> makePanelOverlay [
     relocate: 0@0
 ]
 
+{ #category : #initialization }
+GsToolApp >> makeSceneHolder [
+  ^ sceneHolder := BlElement new
+    constraintsDo: [:c| c vertical matchParent. c horizontal matchParent ];
+    background: Color veryDarkGray;
+    addChild: (scene
+      hExact: self stageSize x; vExact: self stageSize y;
+      border: Color darkGray;
+      clipChildren: false) as: #scene
+]
+
+{ #category : #initialization }
+GsToolApp >> makeStage [
+ ^ stage := BlElement new
+   size: self stageSize; 
+   clipChildren: false;
+   addChild: (BlElement new
+     size: self stageSize;
+     border: Color white)
+   as: #bounds
+]
+
 { #category : #'gsl - ui' }
 GsToolApp >> makeToolbar [
   toolbar := BrToolbar new
@@ -146,6 +174,11 @@ GsToolApp >> sceneBuilder [
 { #category : #ui }
 GsToolApp >> selection [
   ^ selection
+]
+
+{ #category : #accessing }
+GsToolApp >> stageSize [
+  ^ 640@480
 ]
 
 { #category : #accessing }

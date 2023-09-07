@@ -6,18 +6,12 @@ Class {
 	#name : #GsAnimator,
 	#superclass : #GsToolApp,
 	#instVars : [
-		'stage',
 		'timeline',
 		'frameCounter',
 		'trackSetters'
 	],
 	#category : #'GameSketchLib-Apps'
 }
-
-{ #category : #accessing }
-GsAnimator >> addSceneChild: anElement as: aSymbol [
-  scene addChild: anElement as: aSymbol 
-]
 
 { #category : #accessing }
 GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [ 
@@ -42,33 +36,6 @@ GsAnimator >> makeFrameCounter [
 ]
 
 { #category : #initialization }
-GsAnimator >> makeSceneHolder [
-  ^ BlZoomableElement new addChild: (sceneHolder :=
-    BlElement new
-      constraintsDo: [:c| c vertical matchParent. c horizontal matchParent ];
-      background: Color veryDarkGray;
-      addChild: (scene
-         hExact: 640; vExact: 480;
-         border: Color darkGray;
-         clipChildren: false) as: #scene)
-
-
-]
-
-{ #category : #initialization }
-GsAnimator >> makeStage [
- ^ stage := BlElement new
-   size: self stageSize; 
-   clipChildren: false;
-   addChild: (BlElement new
-     size: self stageSize;
-     border: Color white)
-   as: #bounds
-
-
-]
-
-{ #category : #initialization }
 GsAnimator >> makeTimeline [
   ^ timeline := GsTimeline new hMatchParent vExact: 120
 ]
@@ -85,11 +52,6 @@ GsAnimator >> makeUI [
   ui := super makeUI addChild: self makeTimeline as: #timeline.
   timeline when: GsFrameChangedEvent do: [ :e| self frameChanged: e].
   ^ ui
-]
-
-{ #category : #accessing }
-GsAnimator >> stageSize [
-  ^ 640@480
 ]
 
 { #category : #accessing }
