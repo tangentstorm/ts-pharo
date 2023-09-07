@@ -497,6 +497,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-06T16:04:58.737-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-06T16:06:05.242-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gCmy/hfBDQCHLTdRBJ2/Ng=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[Drawing Animations]]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-22T11:08:20.465-04:00"
 					}
 				},
@@ -879,7 +916,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-02T17:18:32.143-04:00"
+						"dateAndTimeString" : "2023-09-04T12:51:21.456-04:00"
 					}
 				},
 				"uid" : {
@@ -889,7 +926,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Draw Complex Paths with the Pen Tool]]"
+				"string" : "[[Draw Splines with the Pen Tool]]"
 			},
 			{
 				"__type" : "textSnippet",

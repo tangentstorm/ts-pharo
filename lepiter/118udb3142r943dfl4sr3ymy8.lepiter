@@ -523,7 +523,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-16T15:43:20.103-04:00"
+												"dateAndTimeString" : "2023-09-07T10:29:17.587-04:00"
 											}
 										},
 										"uid" : {
@@ -533,7 +533,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[GsTimeline]]"
+										"string" : "[[Animation Concepts]]"
 									},
 									{
 										"__type" : "textSnippet",

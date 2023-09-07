@@ -8,6 +8,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-07T10:29:51.175-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-07T10:32:20.014-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cH0IbifBDQCelgUVCW67hQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtClass:GsAnimation}} stores the data to describe an animation via its collection of {{gtClass:GsAnimationTrack}} objects.  {{gtClass:GsSketch}} is a compound {{gtClass:GsShape}} with a {{gtClass:GsAnimator}} that can play these animations."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "pharoSnippet",
@@ -34,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T12:18:39.239-04:00"
+									"dateAndTimeString" : "2023-09-07T09:34:01.753-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "SHXSOiC8DQCG6mvVAtcEwg=="
 							},
-							"code" : "GsTimeline new "
+							"code" : "GsTimelineElement new "
 						}
 					]
 				},
@@ -53,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T07:50:04.469-04:00"
+						"dateAndTimeString" : "2023-09-07T10:32:21.202-04:00"
 					}
 				},
 				"editEmail" : {
@@ -64,17 +101,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T07:50:37.595-04:00"
+						"dateAndTimeString" : "2023-09-07T10:39:28.048-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wJw3UYK8DQCO2bKtD9NdPg=="
+					"uidString" : "aLj5difBDQCL5HUECW67hQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here's a basic drawing of a timeline:"
+				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsAnimator}} can provide the rest of the UI."
 			},
 			{
 				"__type" : "textSnippet",
@@ -95,7 +132,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:09:59.999-04:00"
+									"dateAndTimeString" : "2023-09-07T11:23:22.102-04:00"
 								}
 							},
 							"editEmail" : {
@@ -106,7 +143,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:10:06.333-04:00"
+									"dateAndTimeString" : "2023-09-07T11:27:21.638-04:00"
 								}
 							},
 							"uid" : {
@@ -116,7 +153,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "todo: expalin how this works"
+							"string" : "Drag events on the timeline's playhead can emit a {{gtClass:GsFrameChangedEvent}} by way of  {{gtMethod:GsTimelineElement>>#checkFrameChange|expanded}}"
 						}
 					]
 				},
@@ -139,7 +176,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T18:09:59.404-04:00"
+						"dateAndTimeString" : "2023-09-07T11:28:17.109-04:00"
 					}
 				},
 				"uid" : {
@@ -149,7 +186,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## The Playhead"
+				"string" : "## The Playhead and Frame Events"
 			},
 			{
 				"__type" : "textSnippet",
@@ -170,7 +207,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:14:55.192-04:00"
+									"dateAndTimeString" : "2023-09-07T10:34:22.006-04:00"
 								}
 							},
 							"editEmail" : {
@@ -181,91 +218,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:14:55.192-04:00"
+									"dateAndTimeString" : "2023-09-07T10:38:01.367-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "wOOaDIu8DQCtE7k4C2rYKw=="
+								"uidString" : "CAstfifBDQCozKBUCW67hQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Sets a specific property on a specific object in the scene (both identified by name) to a specific value."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:13:54.4-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-10T18:15:16.554-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "mBxF/Iq8DQCp7jC+C2rYKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "- Set specific value at key frame"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-11T11:25:15.559-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-13T11:57:13.119-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2LHvDYu8DQCtpsXEC2rYKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"string" : "Each {{gtClass:GsAnimationTrack}} controls a single property by providing it with multiple time-stamped values called keyframes. Each keyframe has an `easing` property that specifies how one value blends into the next over time. The animation track generates a a cache of intermediate values from the keyframes, and uses this for rapid access to the values at each frame."
 						}
 					]
 				},
@@ -288,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T18:15:48.733-04:00"
+						"dateAndTimeString" : "2023-09-07T10:34:20.58-04:00"
 					}
 				},
 				"uid" : {
@@ -298,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Property Tracks: Key frames"
+				"string" : "## Tracks and Key frames"
 			},
 			{
 				"__type" : "textSnippet",
@@ -400,7 +363,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-10T17:51:25.932-04:00"
+						"dateAndTimeString" : "2023-09-07T10:38:16.507-04:00"
 					}
 				},
 				"uid" : {
@@ -410,13 +373,47 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Adding Tweens"
+				"string" : "## Easing"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-07T13:18:13.049-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-07T13:18:23.218-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qN4myCnBDQCTbH/2AsOuSw=="
+							},
+							"code" : "GsAnimatorExamples twoMovingSquares"
+						},
 						{
 							"__type" : "pharoSnippet",
 							"children" : {
@@ -442,14 +439,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-13T13:40:47.08-04:00"
+									"dateAndTimeString" : "2023-09-07T13:17:33.074-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GLSGs5i8DQCwJVLxC2rYKw=="
 							},
-							"code" : "app := GsAnimatorExamples bouncingSquare."
+							"code" : "GsSketchApp for: \r  GsAnimatorExamples twoMovingSquares scene removeFromParent"
 						}
 					]
 				},
@@ -505,12 +502,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-16T15:42:34.374-04:00"
+			"dateAndTimeString" : "2023-09-07T10:29:17.577-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsTimeline"
+		"title" : "Animation Concepts"
 	},
 	"uid" : {
 		"__type" : "uuid",

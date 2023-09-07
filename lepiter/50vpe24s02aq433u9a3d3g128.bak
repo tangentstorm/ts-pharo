@@ -393,7 +393,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T15:39:55.243-04:00"
+						"dateAndTimeString" : "2023-09-07T09:34:51.948-04:00"
 					}
 				},
 				"uid" : {
@@ -403,7 +403,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Animation]]"
+				"string" : "[[GsTimelineElement]]"
 			},
 			{
 				"__type" : "textSnippet",
