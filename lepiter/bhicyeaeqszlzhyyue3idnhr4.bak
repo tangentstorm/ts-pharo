@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-07T10:39:28.048-04:00"
+						"dateAndTimeString" : "2023-09-07T13:34:18.335-04:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsAnimator}} can provide the rest of the UI."
+				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsPlayerApp}} can provide the rest of the UI."
 			},
 			{
 				"__type" : "textSnippet",
@@ -380,6 +380,40 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-07T13:18:13.049-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-07T13:18:23.218-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qN4myCnBDQCTbH/2AsOuSw=="
+							},
+							"code" : "GsAnimatorExamples twoMovingSquares"
+						},
 						{
 							"__type" : "pharoSnippet",
 							"children" : {

@@ -3,23 +3,24 @@ I bind a {{gtClass:GsTimelineElement}}  to a {{gtClass:GsScene}} and update the 
 
 "
 Class {
-	#name : #GsAnimator,
+	#name : #GsPlayerApp,
 	#superclass : #GsToolApp,
 	#instVars : [
 		'timeline',
 		'frameCounter',
-		'trackSetters'
+		'trackSetters',
+		'animationPanel'
 	],
 	#category : #'GameSketchLib-Apps'
 }
 
 { #category : #accessing }
-GsAnimator >> addTrackFor: aNameAndProperty withKeys: aCollection [ 
+GsPlayerApp >> addTrackFor: aNameAndProperty withKeys: aCollection [ 
   timeline addTrackFor: aNameAndProperty withKeys: aCollection 
 ]
 
 { #category : #events }
-GsAnimator >> frameChanged: anEvent [
+GsPlayerApp >> frameChanged: anEvent [
   | frame propValues |
   frame := anEvent  frame.
   frameCounter text: ('frame: ', frame asString) asRopedText.
@@ -29,38 +30,47 @@ GsAnimator >> frameChanged: anEvent [
 ]
 
 { #category : #initialization }
-GsAnimator >> makeFrameCounter [
+GsPlayerApp >> makeAnimationPanel [
+  animationPanel := GsAnimationPanel new.
+  timeline := animationPanel timeline .
+  timeline when: GsFrameChangedEvent do: [ :e| self frameChanged: e].
+  ^ animationPanel
+]
+
+{ #category : #initialization }
+GsPlayerApp >> makeFrameCounter [
   ^ frameCounter := BlTextElement new 
     padding: (BlInsets all: 5);
     text: 'frame: 0' asRopedText.
 ]
 
 { #category : #initialization }
-GsAnimator >> makeTimeline [
+GsPlayerApp >> makeTimeline [
   ^ timeline := GsTimelineElement new hMatchParent vExact: 120
 ]
 
 { #category : #initialization }
-GsAnimator >> makeToolbar [
+GsPlayerApp >> makeToolbar [
   ^ BrHorizontalPane new hMatchParent vFitContent
      addChild: super makeToolbar;
      addChild:  self makeFrameCounter.
 ]
 
 { #category : #initialization }
-GsAnimator >> makeUI [
-  ui := super makeUI addChild: self makeTimeline as: #timeline.
-  timeline when: GsFrameChangedEvent do: [ :e| self frameChanged: e].
+GsPlayerApp >> makeUI [
+  ui := super makeUI.
+  dockHolder
+    addDockable: self makeAnimationPanel as: #animation in: #bottomDock.
   ^ ui
 ]
 
 { #category : #accessing }
-GsAnimator >> timeline [
+GsPlayerApp >> timeline [
   ^ timeline
 ]
 
 { #category : #accessing }
-GsAnimator >> trackSetters [
+GsPlayerApp >> trackSetters [
   "return a GsSetter for each track in the timeline, bound to a specific property on an element in the scene"
    ^ timeline viewModel trackSymbols
      collect: [:nameAndProp|

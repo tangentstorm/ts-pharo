@@ -63,9 +63,9 @@ GsAnimatorExamples class >> pathmapAnimation [
 { #category : #accessing }
 GsAnimatorExamples class >> pathmapScene [
   <gtExample>
-  <returns:#GsAnimator>
+  <returns:#GsPlayerApp>
   |demo gsa root|
-  gsa := GsAnimator new
+  gsa := GsPlayerApp new
     addSceneChild: (root := GsObject new
       relocate: 208@224;
       clipChildren: false)
@@ -88,7 +88,7 @@ GsAnimatorExamples class >> pathmapScene [
 { #category : #accessing }
 GsAnimatorExamples class >> sceneWithSquare [
   <gtExample>
-  <returns:#GsAnimator>
+  <returns:#GsPlayerApp>
   |square|
   square := GsRectShape new
     size: 50@50;
@@ -96,7 +96,7 @@ GsAnimatorExamples class >> sceneWithSquare [
     border: (Color  fromHexString: '990000' );
     relocate: -25@200.
   square transform rotateBy: 30; apply.
-  ^ GsAnimator new
+  ^ GsPlayerApp new
       addSceneChild: square as: #square
 ]
 

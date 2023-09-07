@@ -27,7 +27,7 @@ GsAnimationPanel >> beUndocked [
 GsAnimationPanel >> initialize [
   super initialize title: 'Animation'; hExact: 200.  
   workArea addChild:
-    GsTimelineElement new
+    (timeline := GsTimelineElement new)
 ]
 
 { #category : #ui }
@@ -38,4 +38,9 @@ GsAnimationPanel >> selection: aSelection [
 { #category : #ui }
 GsAnimationPanel >> sketch: aSketch [
   sketch := aSketch
+]
+
+{ #category : #initialization }
+GsAnimationPanel >> timeline [
+  ^ timeline
 ]

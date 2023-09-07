@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-07T10:39:28.048-04:00"
+						"dateAndTimeString" : "2023-09-07T13:34:18.335-04:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsAnimator}} can provide the rest of the UI."
+				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsPlayerApp}} can provide the rest of the UI."
 			},
 			{
 				"__type" : "textSnippet",
