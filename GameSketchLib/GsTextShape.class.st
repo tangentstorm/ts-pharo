@@ -79,7 +79,7 @@ GsTextShape >> gsText [
 
 { #category : #accessing }
 GsTextShape >> gsText: aString [
-  self text: aString
+  self inUIProcessDo: [self text: aString]
 ]
 
 { #category : #accessing }
