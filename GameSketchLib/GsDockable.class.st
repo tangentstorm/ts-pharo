@@ -11,7 +11,8 @@ Class {
 		'pullHandler',
 		'resizeHandle',
 		'plannedSize',
-		'workArea'
+		'workArea',
+		'dockContainer'
 	],
 	#category : #'GameSketchLib-UI - Docking'
 }
@@ -26,38 +27,50 @@ GsDockable >> beDocked [
 GsDockable >> beUndocked [
   docked ifTrue: [
     | newPosition | newPosition := self parent gsLeft @ self gsTop.
-    self parent parent addChild: (self removeFromParent relocate: newPosition )].
+    dockContainer addChild: (self removeFromParent relocate: newPosition )].
   docked := false.
   self constraints ignoreByLayout.
 ]
 
 { #category : #accessing }
-GsDockable >> dockIn: dockId [
-  self parent childNamed: dockId
-    ifFound: [:d|
-      d addChild: self beDocked removeFromParent]
-    ifNone: [ ]
+GsDockable >> dockContainer [
+	^ dockContainer
 ]
 
 { #category : #accessing }
-GsDockable >> ifAtLeft: leftBlock ifAtRight: rightBlock else: elseBlock [
+GsDockable >> dockContainer: anObject [
+	dockContainer := anObject
+]
+
+{ #category : #accessing }
+GsDockable >> dockIn: dockId [
+  | docks |
+  docks := (self parent query // dockId)
+    result ifEmpty: [
+      self error: 'no dock named ',dockId asString,' found'].
+  docks first addChild: self beDocked removeFromParent
+
+]
+
+{ #category : #accessing }
+GsDockable >> ifAtLeft: leftBlock ifAtRight: rightBlock ifAtBottom: bottomBlock else: elseBlock [
   (self position x < (self offerHolder gsLeft + self threshhold))
      ifTrue: leftBlock
      ifFalse: [
        (self gsRight > (self offerHolder gsRight - self threshhold))
          ifTrue: rightBlock
-         ifFalse: elseBlock ]
+         ifFalse: [
+           (self gsBottom > (self offerHolder gsBottom - self threshhold ))
+             ifTrue: bottomBlock
+             ifFalse: elseBlock] ]
 ]
 
 { #category : #accessing }
 GsDockable >> initialize [
   super initialize.
   docked := false.
-  self beUndocked.
-  self makeOfferElement.
+  self beUndocked makeOfferElement.
   self
-
-
     background: GsColor toolBg;
     border: (BlBorder builder
       paint: (GsColor toolBg darker darker);
@@ -76,11 +89,13 @@ GsDockable >> initialize [
     when: BlDragEvent do: [:e| 
       self ifAtLeft: [self offerLeftDock]
            ifAtRight:  [self offerRightDock]
+           ifAtBottom: [self offerBottomDock]
            else: [self rescindOffers]];
     when: BlDragEndEvent do: [:e|
       self rescindOffers.
       self ifAtLeft: [ self dockIn: #leftDock ]
       ifAtRight: [ self dockIn: #rightDock ]
+      ifAtBottom: [ self dockIn: #bottomDock ]
       else: []]
     )  as: #titleBar;
     addChild: self makeWorkArea as: #workArea;
@@ -92,8 +107,6 @@ GsDockable >> initialize [
 { #category : #accessing }
 GsDockable >> makeOfferElement [
   ^ offerElement := BrWidgetContainer new
-    hExact: self threshhold;
-    vMatchParent;
     background: (Color lightCyan alpha: 0.3).
 ]
 
@@ -136,19 +149,29 @@ GsDockable >> makeWorkArea [
 ]
 
 { #category : #accessing }
+GsDockable >> offerBottomDock [
+  self offerHolder addChild: (offerElement removeFromParent
+    vExact: self threshhold;  hMatchParent;
+    relocate: 0@(self offerHolder height - self threshhold))
+]
+
+{ #category : #accessing }
 GsDockable >> offerHolder [
   ^ self parent childNamed: #content
-    ifFound: #value ifNone: [self parent]
+    ifFound: #value ifNone: [dockContainer]
 ]
 
 { #category : #accessing }
 GsDockable >> offerLeftDock [
-  self offerHolder addChild: (offerElement removeFromParent relocate: 0@0)
+  self offerHolder addChild: (offerElement removeFromParent
+    hExact: self threshhold;  vMatchParent;
+    relocate: 0@0)
 ]
 
 { #category : #accessing }
 GsDockable >> offerRightDock [
   self offerHolder addChild: (offerElement removeFromParent
+    hExact: self threshhold;  vMatchParent;
     relocate: (self offerHolder width - self threshhold)@0)
 ]
 

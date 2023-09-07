@@ -12,9 +12,16 @@ GsDockContainer class >> around: anElement [
   ^ self basicNew initialize matchParent
     layout: BlLinearLayout horizontal;
     "aptitude: BrLayoutAlignmentStatelessAptitude new"
-    addChild: self newDock as: #leftDock;
-    addChild: anElement matchParent as: #content;
-    addChild: self newDock as: #rightDock
+    addChild: self vDock as: #leftDock;
+    addChild: (BrVerticalPane new matchParent
+      addChild: anElement matchParent as: #content;
+      addChild: self hDock as: #bottomDock);
+    addChild: self vDock as: #rightDock
+]
+
+{ #category : #creating }
+GsDockContainer class >> hDock [
+  ^ BrHorizontalPane new vFitContent hMatchParent
 ]
 
 { #category : #creating }
@@ -23,6 +30,24 @@ GsDockContainer class >> new [
 ]
 
 { #category : #creating }
-GsDockContainer class >> newDock [
+GsDockContainer class >> vDock [
   ^ BrVerticalPane new hFitContent vMatchParent
+]
+
+{ #category : #accessing }
+GsDockContainer >> addDockable: aDockable [
+  self addChild: aDockable.
+  aDockable dockContainer: self.
+]
+
+{ #category : #accessing }
+GsDockContainer >> addDockable: aDockable as: aSymbol [
+  self addDockable: aDockable.
+  aDockable id: aSymbol
+]
+
+{ #category : #accessing }
+GsDockContainer >> addDockable: aDockable as: aSymbol in: aDockId [
+  self addDockable: aDockable as: aSymbol.
+  aDockable dockIn: aDockId.
 ]
