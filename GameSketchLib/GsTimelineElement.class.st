@@ -2,7 +2,7 @@
 I provide a visual timeline for placing keyframes for animations.
 "
 Class {
-	#name : #GsTimeline,
+	#name : #GsTimelineElement,
 	#superclass : #GsObject,
 	#instVars : [
 		'scrollPane',
@@ -21,16 +21,16 @@ Class {
 }
 
 { #category : #accessing }
-GsTimeline >> addTrackFor: aNameAndProperty withKeys: aCollection [
+GsTimelineElement >> addTrackFor: aNameAndProperty withKeys: aCollection [
   viewModel addTrackFor: aNameAndProperty withKeys: aCollection.
   trackList items: viewModel trackNames.
-  grid addChild: (GsAnimationTrack new
+  grid addChild: (GsTrackElement new
     addFrames: aCollection;
     relocate: 0@ (20 * (viewModel trackCount - 1) + 16))
 ]
 
 { #category : #events }
-GsTimeline >> checkFrameChange [
+GsTimelineElement >> checkFrameChange [
   |frame|
   frame := self frameFromPlayhead.
   frame ~= currentFrame ifTrue: [
@@ -39,25 +39,25 @@ GsTimeline >> checkFrameChange [
 ]
 
 { #category : #accessing }
-GsTimeline >> colW [
+GsTimelineElement >> colW [
 	^ colW
 ]
 
 { #category : #accessing }
-GsTimeline >> frameFromPlayhead [
+GsTimelineElement >> frameFromPlayhead [
 	| offset |
 	offset := scrollPane children first scrollPosition negated x.
 	^ playhead position x + offset + (colW//2) // colW asInteger
 ]
 
 { #category : #initialization }
-GsTimeline >> initialize [
+GsTimelineElement >> initialize [
   super initialize.
   activeZone := 50.
   dxScroll := 0.
   curH := 16.
   colW := 20.
-  viewModel := GsTimelineModel new.
+  viewModel := GsAnimation new.
   scrollPane := self makeScrollPane.
   currentFrame := 0.
   self addChild: self makeUi as: #ui.
@@ -65,7 +65,7 @@ GsTimeline >> initialize [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeGrid [
+GsTimelineElement >> makeGrid [
    ^ grid := GsGridUi new
      addChild: (GsObject new
        border: (Color darkGray);
@@ -74,7 +74,7 @@ GsTimeline >> makeGrid [
 ]
 
 { #category : #initialization }
-GsTimeline >> makePlayhead [
+GsTimelineElement >> makePlayhead [
   |alpha |
   alpha := 0.5.
   playhead := BlElement new size: colW@curH;
@@ -93,7 +93,7 @@ GsTimeline >> makePlayhead [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeScrollPane [
+GsTimelineElement >> makeScrollPane [
   ^ BrScrollPane new
     border: (Color darkGray);
     aptitude: BrScrollPaneAptitude
@@ -102,7 +102,7 @@ GsTimeline >> makeScrollPane [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeScrollPaneHolder [
+GsTimelineElement >> makeScrollPaneHolder [
   ^ BrWidgetContainer new
     addChild: scrollPane as: #scrollPane;
     addChild: self makePlayhead as: #playhead;
@@ -110,7 +110,7 @@ GsTimeline >> makeScrollPaneHolder [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeTrackList [
+GsTimelineElement >> makeTrackList [
   ^ trackList := BrSimpleList vertical
     hExact: 100;
     itemType: [:aFactory :anItem :anIndex | String];
@@ -121,7 +121,7 @@ GsTimeline >> makeTrackList [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeTrackListHolder [
+GsTimelineElement >> makeTrackListHolder [
   ^ BrVerticalPane new 
     addChild: (BlElement new size: 16@16);
     addChild: self makeTrackList as: #trackList;
@@ -129,7 +129,7 @@ GsTimeline >> makeTrackListHolder [
 ]
 
 { #category : #initialization }
-GsTimeline >> makeUi [
+GsTimelineElement >> makeUi [
   ^ BrHorizontalPane new
     vExact: 100;
     hMatchParent;
@@ -139,7 +139,7 @@ GsTimeline >> makeUi [
 ]
 
 { #category : #events }
-GsTimeline >> onPlayheadPull [
+GsTimelineElement >> onPlayheadPull [
   "auto-scroll when cursor is dragged towards edge"
   dxScroll := 0.
   autoScrollTask
@@ -158,7 +158,7 @@ GsTimeline >> onPlayheadPull [
 ]
 
 { #category : #events }
-GsTimeline >> onPlayheadPullEnd [
+GsTimelineElement >> onPlayheadPullEnd [
   "snap cursor and scrollPane to a column (frame) boundary"
   autoScrollTask ifNotNil: #stop.
   playhead relocate: (self snapToColumn: playhead position).
@@ -166,7 +166,7 @@ GsTimeline >> onPlayheadPullEnd [
 ]
 
 { #category : #snapping }
-GsTimeline >> snapScrollpane [
+GsTimelineElement >> snapScrollpane [
   |sp sc xy0 xy1|  
   sp := self childNamed: #scrollPane.
   sc := (sp childNamed: #scrollable).
@@ -176,11 +176,11 @@ GsTimeline >> snapScrollpane [
 ]
 
 { #category : #snapping }
-GsTimeline >> snapToColumn: aPoint [
+GsTimelineElement >> snapToColumn: aPoint [
   ^ (colW * (aPoint x + (colW//2) // colW) asInteger) @ aPoint y
 ]
 
 { #category : #accessing }
-GsTimeline >> viewModel [
+GsTimelineElement >> viewModel [
   ^ viewModel
 ]

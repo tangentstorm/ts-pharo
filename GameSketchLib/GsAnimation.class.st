@@ -1,39 +1,39 @@
 "
-I contain a {{gtClass:GsTrackModel}} for each ({{gtClass:GsObject}}, property) pair to be animated.
+I contain a {{gtClass:GsAnimationTrack}} for each ({{gtClass:GsObject}}, property) pair to be animated.
 
 I am displayed by a {{gtClass:GsAnimator}}. When its playhead moves to a new frame, I return a list of closures - one per track - that the animator calls to update the actual scene elements.
 
 "
 Class {
-	#name : #GsTimelineModel,
+	#name : #GsAnimation,
 	#superclass : #Object,
 	#instVars : [
 		'trackData'
 	],
-	#category : #'GameSketchLib-UI - Models'
+	#category : #'GameSketchLib-Animation'
 }
 
 { #category : #accessing }
-GsTimelineModel >> addTrackFor: aNameAndProperty withKeys: aCollection [
+GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
   |track|  
-  track := (GsTrackModel new for: aNameAndProperty withKeys: aCollection).
+  track := (GsAnimationTrack new for: aNameAndProperty withKeys: aCollection).
   trackData at: track name put: track
   
 ]
 
 { #category : #inspecting }
-GsTimelineModel >> gtTreeFor: aView [
+GsAnimation >> gtTreeFor: aView [
   <gtView>
 	^ aView columnedTree
 		title: 'Tree';
 		priority: 100;
 		items: [ trackData values ];
 		children: [ :aNode | 
-		  (aNode isKindOf: GsTrackModel)
+		  (aNode isKindOf: GsAnimationTrack)
 		  ifTrue: [aNode keyFrames associations]
 		  ifFalse: [{}]];
 		column: 'track / frame'  text: [:aNode|
-		  ((aNode isKindOf: GsTrackModel)
+		  ((aNode isKindOf: GsAnimationTrack)
 		    ifTrue: [aNode name]
 		    ifFalse: [aNode key]) gtDisplayText];
 		column: 'value' text: [ :anAssoc | anAssoc value gtDisplayText ];
@@ -42,33 +42,33 @@ GsTimelineModel >> gtTreeFor: aView [
 ]
 
 { #category : #accessing }
-GsTimelineModel >> initialize [
+GsAnimation >> initialize [
   super initialize.
   trackData := OrderedDictionary new.
 ]
 
 { #category : #accessing }
-GsTimelineModel >> trackCount [
+GsAnimation >> trackCount [
   ^ trackData size
 ]
 
 { #category : #accessing }
-GsTimelineModel >> trackData [
+GsAnimation >> trackData [
   ^ trackData
 ]
 
 { #category : #accessing }
-GsTimelineModel >> trackNames [
+GsAnimation >> trackNames [
   ^ trackData keys
 ]
 
 { #category : #accessing }
-GsTimelineModel >> trackSymbols [
+GsAnimation >> trackSymbols [
   "the element name and property name for each track, as symbols"
   ^ trackData values  collect: [:x| {x elementName. x propertyName.}]
 ]
 
 { #category : #accessing }
-GsTimelineModel >> valuesForFrame: aNumber [
+GsAnimation >> valuesForFrame: aNumber [
   ^ trackData values collect: [:track | track valueAtFrame: aNumber+1]
 ]

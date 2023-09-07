@@ -1,5 +1,5 @@
 "
-I bind a {{gtClass:GsTimeline}}  to a {{gtClass:GsScene}} and update the scene when the timeline's playhead moves to a new frame.
+I bind a {{gtClass:GsTimelineElement}}  to a {{gtClass:GsScene}} and update the scene when the timeline's playhead moves to a new frame.
 
 "
 Class {
@@ -37,7 +37,7 @@ GsAnimator >> makeFrameCounter [
 
 { #category : #initialization }
 GsAnimator >> makeTimeline [
-  ^ timeline := GsTimeline new hMatchParent vExact: 120
+  ^ timeline := GsTimelineElement new hMatchParent vExact: 120
 ]
 
 { #category : #initialization }
