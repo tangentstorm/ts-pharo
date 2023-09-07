@@ -43,11 +43,16 @@ GsAnimator >> makeFrameCounter [
 
 { #category : #initialization }
 GsAnimator >> makeSceneHolder [
-  ^ sceneHolder :=
-    BrHorizontalPane new matchParent
-      background: GsColor defaultBg;
-      addChild: self makeStage as: #stage;
-      alignCenter
+  ^ BlZoomableElement new addChild: (sceneHolder :=
+    BlElement new
+      constraintsDo: [:c| c vertical matchParent. c horizontal matchParent ];
+      background: Color veryDarkGray;
+      addChild: (scene
+         hExact: 640; vExact: 480;
+         border: Color darkGray;
+         clipChildren: false) as: #scene)
+
+
 ]
 
 { #category : #initialization }
@@ -57,9 +62,9 @@ GsAnimator >> makeStage [
    clipChildren: false;
    addChild: (BlElement new
      size: self stageSize;
-     border: Color black)
-   as: #bounds;
-   addChild: (scene clipChildren: false) as: #scene
+     border: Color white)
+   as: #bounds
+
 
 ]
 
@@ -70,9 +75,9 @@ GsAnimator >> makeTimeline [
 
 { #category : #initialization }
 GsAnimator >> makeToolbar [
-  ^ super makeToolbar
-    addChild:  self makeFrameCounter.
-
+  ^ BrHorizontalPane new hMatchParent vFitContent
+     addChild: super makeToolbar;
+     addChild:  self makeFrameCounter.
 ]
 
 { #category : #initialization }
@@ -80,13 +85,6 @@ GsAnimator >> makeUI [
   ui := super makeUI addChild: self makeTimeline as: #timeline.
   timeline when: GsFrameChangedEvent do: [ :e| self frameChanged: e].
   ^ ui
-]
-
-{ #category : #accessing }
-GsAnimator >> scene: aScene [
-	scene := aScene.
-	sceneHolder removeChildNamed: #scene.
-	sceneHolder addChild: scene as: #scene.
 ]
 
 { #category : #accessing }
