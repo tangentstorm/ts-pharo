@@ -18,16 +18,8 @@ TsHomeStartPageSection >> create [
       self pileupCard.
       self gsDemosCard.
       self sketchAppCard.
-      self gsAnimatorCard.
+      self gsPlayerAppCard.
       self roassal3Card})
-]
-
-{ #category : #accessing }
-TsHomeStartPageSection >> gsAnimatorCard [
-  ^ self newCard: 'GsAnimator'
-	description: 'animator example'
-	content: [ GtInspector forObject:
-	  GsAnimatorExamples pathmapAnimation ]
 ]
 
 { #category : #accessing }
@@ -35,6 +27,14 @@ TsHomeStartPageSection >> gsDemosCard [
   ^ self newCard: 'GsDemos'
 	description: 'GameSketchLib Demos'
 	content: [ GtInspector forObject: GsDemos new ]
+]
+
+{ #category : #accessing }
+TsHomeStartPageSection >> gsPlayerAppCard [
+  ^ self newCard: 'GsPlayerApp'
+	description: 'animation player example'
+	content: [ GtInspector forObject:
+	  GsAnimatorExamples pathmapAnimation ]
 ]
 
 { #category : #accessing }

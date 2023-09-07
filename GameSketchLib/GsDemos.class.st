@@ -9,7 +9,7 @@ GsDemos >> gtAnimationDemoFor: aView [
   <gtView>
   ^ aView explicit
     priority: 50;
-    title: 'Animator';
+    title: 'PlayerApp';
     stencil: [GsAnimatorExamples twoMovingSquares  ];
     actionButtonIcon: BrGlamorousIcons inspect
     tooltip: 'Inspect Demo Class'
