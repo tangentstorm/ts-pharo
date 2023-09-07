@@ -23,9 +23,7 @@ GsPlayerApp >> addTrackFor: aNameAndProperty withKeys: aCollection [
 GsPlayerApp >> frameChanged: anEvent [
   | frame propValues |
   frame := anEvent  frame.
-  frameCounter text: ('frame: ', frame asString) asRopedText.
-  propValues := (timeline viewModel valuesForFrame: frame)
-    readStream.
+  propValues := (timeline viewModel valuesForFrame: frame) readStream.
   self trackSetters do: [:setter| setter set: propValues next].
 ]
 
@@ -38,22 +36,8 @@ GsPlayerApp >> makeAnimationPanel [
 ]
 
 { #category : #initialization }
-GsPlayerApp >> makeFrameCounter [
-  ^ frameCounter := BlTextElement new 
-    padding: (BlInsets all: 5);
-    text: 'frame: 0' asRopedText.
-]
-
-{ #category : #initialization }
 GsPlayerApp >> makeTimeline [
   ^ timeline := GsTimelineElement new hMatchParent vExact: 120
-]
-
-{ #category : #initialization }
-GsPlayerApp >> makeToolbar [
-  ^ BrHorizontalPane new hMatchParent vFitContent
-     addChild: super makeToolbar;
-     addChild:  self makeFrameCounter.
 ]
 
 { #category : #initialization }
