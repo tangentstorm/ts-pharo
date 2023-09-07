@@ -21,6 +21,7 @@ GsApp >> asElement [
 { #category : #'gt inspector' }
 GsApp >> gtLiveFor: aView [
   <gtView>
+  self ui hasParent ifTrue: [^ aView empty].
   ^ aView explicit
     title: 'Live';
     priority: -1;
