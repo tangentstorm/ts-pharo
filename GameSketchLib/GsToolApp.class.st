@@ -62,6 +62,7 @@ GsToolApp >> initialize [
   sceneBuilder scene: scene.
   selection scene: scene.
   self currentTool: tools first.
+  overlay middleTool: (GsViewportTool new sceneBuilder:sceneBuilder)
 ]
 
 { #category : #'gsl - ui' }
