@@ -132,13 +132,14 @@ GsDockable >> makeResizeHandle [
 
 { #category : #accessing }
 GsDockable >> makeTitleBar [
-  ^ titleBar := BrLabel new
-    aptitude: "(BrTextLabelAptitude new defaultFontName: 'Source Sans Pro');"
-      BrGlamorousLabelAptitude;
-    background: GsColor toolBg darker darker;
+  ^ titleBar := BrHorizontalPane new
     padding: (BlInsets all: 2);
-    hMatchParent;
-    text: 'A GsDockable'
+    hMatchParent; vFitContent;
+    background: GsColor toolBg darker darker;
+    addChild: (BrLabel new
+      aptitude: "(BrTextLabelAptitude new defaultFontName: 'Source Sans Pro');"
+      BrGlamorousLabelAptitude;
+      text: 'A GsDockable') as: #titleText
 ]
 
 { #category : #accessing }
@@ -203,5 +204,5 @@ GsDockable >> title [
 
 { #category : #accessing }
 GsDockable >> title: aString [
-  titleBar text: aString asText
+  titleBar children first text: aString asText
 ]

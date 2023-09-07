@@ -30,7 +30,7 @@ GsAnimation >> gtTreeFor: aView [
 		items: [ trackData values ];
 		children: [ :aNode | 
 		  (aNode isKindOf: GsAnimationTrack)
-		  ifTrue: [aNode keyFrames associations]
+		  ifTrue: [aNode keyframes associations]
 		  ifFalse: [{}]];
 		column: 'track / frame'  text: [:aNode|
 		  ((aNode isKindOf: GsAnimationTrack)

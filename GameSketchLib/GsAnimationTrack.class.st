@@ -23,7 +23,7 @@ GsAnimationTrack class >> for: aNameAndProperty withKeys: aCollection [
   ^ self basicNew for: aNameAndProperty withKeys: aCollection
 ]
 
-{ #category : #accessing }
+{ #category : #caching }
 GsAnimationTrack >> buildCache [
   |frames runs prev|
   frames := keyFrames keys.
@@ -49,11 +49,12 @@ GsAnimationTrack >> elementName: anObject [
 GsAnimationTrack >> elementNameDescription [
   <magritteDescription>
   ^ MASymbolDescription new
+    priority: 10;
     label: 'Element name';
     accessor: #elementName
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimationTrack >> for: aNameAndProperty withKeys: aCollection [
   elementName := aNameAndProperty  first.
   propertyName := aNameAndProperty second.
@@ -61,14 +62,14 @@ GsAnimationTrack >> for: aNameAndProperty withKeys: aCollection [
   self buildCache.
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsAnimationTrack >> initialize [
   super initialize.
-  valueClass := #Object
+  valueClass := #Number
 ]
 
 { #category : #accessing }
-GsAnimationTrack >> keyFrames [
+GsAnimationTrack >> keyframes [
 	^ keyFrames
 ]
 
@@ -77,7 +78,7 @@ GsAnimationTrack >> name [
   ^ elementName, '.', propertyName
 ]
 
-{ #category : #magritte }
+{ #category : #accessing }
 GsAnimationTrack >> propertyName [
 	^ propertyName
 ]
@@ -87,10 +88,11 @@ GsAnimationTrack >> propertyName: anObject [
 	^ propertyName := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsAnimationTrack >> propertyNameDescription [
   <magritteDescription>
   ^ MASymbolDescription new
+    priority: 20;
     label: 'Property';
     accessor: #propertyName
 ]
@@ -123,10 +125,12 @@ GsAnimationTrack >> valueClass: aClass [
   valueClass := aClass
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsAnimationTrack >> valueClassDescription [
   <magritteDescription>
-  ^ MAStringDescription new
+  ^ MASingleOptionDescription new
+    priority: 30;
     label: 'Value Class';
+    options: #(Number Color Point);
     accessor: #valueClass
 ]

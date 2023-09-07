@@ -34,7 +34,10 @@ GsTimelineElement >> checkFrameChange [
   |frame|
   frame := self frameFromPlayhead.
   frame ~= currentFrame ifTrue: [
-    self fireEvent: (GsFrameChangedEvent new old: currentFrame new: frame).
+    self fireEvent: (
+      GsFrameChangedEvent new 
+        old: currentFrame
+        new: frame).
     currentFrame := frame]
 ]
 

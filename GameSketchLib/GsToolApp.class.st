@@ -153,11 +153,6 @@ GsToolApp >> makeUI [
     as: #dockHolder.
 ]
 
-{ #category : #'gsl - ui' }
-GsToolApp >> newDock [
-  ^ BrVerticalFlow new hFitContent vMatchParent
-]
-
 { #category : #accessing }
 GsToolApp >> scene: aScene [
   super scene: aScene.

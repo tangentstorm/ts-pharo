@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 GsAnimatorExamples class >> blueSquare [
   <gtExample>
-  ^ BlElement new size: 32@32;
+  ^ GsRectShape new size: 32@32;
       background: Color blue;
       border: Color black;
       relocate: 320@ -16.
@@ -90,7 +90,7 @@ GsAnimatorExamples class >> sceneWithSquare [
   <gtExample>
   <returns:#GsAnimator>
   |square|
-  square := BlElement new
+  square := GsRectShape new
     size: 50@50;
     background: Color red;
     border: (Color  fromHexString: '990000' );
