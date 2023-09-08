@@ -18,6 +18,13 @@ Class {
 	#category : #'GameSketchLib-Props'
 }
 
+{ #category : #'*GameSketchLib' }
+GsProp class >> bottomRight [
+  ^ GsSelectorProp new
+    readSelector: #gsBottomRight;
+    writeSelector: #gsBottomRight:
+]
+
 { #category : #accessing }
 GsProp class >> for: anObject [
   ^ self new target: anObject
@@ -37,7 +44,9 @@ GsProp class >> lengthShown [
 
 { #category : #creating }
 GsProp class >> position [
-  ^ GsPositionProp new
+  ^ GsSelectorProp new
+    readSelector: #position;
+    writeSelector: #relocate: 
 ]
 
 { #category : #creating }

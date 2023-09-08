@@ -35,14 +35,6 @@ GsRectShape >> fromData: dict [
 ]
 
 { #category : #accessing }
-GsRectShape >> gsHandles [
-  |p2h|
-  ^ { p2h := GsHandle new for: self prop: self secondPointDescription.
-      (GsHandle new for: self prop: self xyDescription)
-      when: BlPullEvent do: [ p2h refresh] }
-]
-
-{ #category : #accessing }
 GsRectShape >> initialize [
   super initialize.
   xy := 0@0.

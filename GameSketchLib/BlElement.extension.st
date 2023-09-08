@@ -17,6 +17,17 @@ BlElement >> gsBottom: y [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsBottomRight [
+  "the bottom right corner of the bounding box"
+  ^ self position + self extent
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsBottomRight: aPoint [
+  ^ self gsMoveBy: (aPoint - self gsBottomRight) 
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsCenter [
   ^ self position + (self extent / 2)
 ]
@@ -68,8 +79,11 @@ BlElement >> gsFillDescription [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsHandles [
-  "return a collection of handles."
-  ^ { BlResizerElement new attachTo: self}
+  "return a collection of handles. by default, show top left and bottom right corners of bounding box."
+  |pbr|
+  ^ { pbr := GsHandle new for: self prop: GsProp bottomRight.
+      (GsHandle new for: self prop: GsProp position)
+      when: BlPullEvent do: [ pbr refresh] }
 ]
 
 { #category : #'*GameSketchLib' }
