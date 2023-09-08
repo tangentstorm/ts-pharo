@@ -7,7 +7,9 @@ Class {
 	#name : #GsViewportTool,
 	#superclass : #GsTool,
 	#instVars : [
-		'dragOffset'
+		'sceneHolder',
+		'dragStartPoint',
+		'initialOrigin'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -19,14 +21,37 @@ GsViewportTool >> dragEnd: aPoint [
 
 { #category : #accessing }
 GsViewportTool >> dragStart: aPoint [
-  dragOffset := aPoint.
+  dragStartPoint := aPoint.
+  initialOrigin := sceneHolder childOrigin
 ]
 
 { #category : #accessing }
 GsViewportTool >> dragStep: aPoint [
-  "the point is always relative to the scene's current position,
-   so the distance to move is how far that relative point has
-   moved from the original relative point, which is 'offset'"
-  self scene gsMoveBy: aPoint - dragOffset.
-  overlay gizmoTransformDo: [:t| t translateBy: self scene position]
+  sceneHolder childOrigin: 
+    (sceneHolder childOrigin + (aPoint - dragStartPoint)).
+  self updateOverlay
+]
+
+{ #category : #accessing }
+GsViewportTool >> mouseWheel: aPoint [
+  (aPoint y > 0)
+    ifTrue: [sceneHolder zoomIn]
+    ifFalse: [sceneHolder zoomOut].
+  self updateOverlay
+]
+
+{ #category : #initialization }
+GsViewportTool >> sceneHolder: aSceneHolder [
+  sceneHolder := aSceneHolder
+]
+
+{ #category : #accessing }
+GsViewportTool >> updateOverlay [
+   overlay gizmoTransformation:
+     sceneHolder childrenTransformation
+]
+
+{ #category : #initialization }
+GsViewportTool >> wantsWheel [
+  ^ true
 ]

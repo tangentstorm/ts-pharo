@@ -68,7 +68,9 @@ GsToolApp >> initialize [
   sceneBuilder scene: scene.
   selection scene: scene.
   self currentTool: tools first.
-  overlay middleTool: (GsViewportTool new sceneBuilder:sceneBuilder)
+  overlay middleTool: (GsViewportTool new
+    sceneBuilder:sceneBuilder;
+    sceneHolder: sceneHolder)
 ]
 
 { #category : #'gsl - ui' }
@@ -113,8 +115,7 @@ GsToolApp >> makePanelOverlay [
 
 { #category : #initialization }
 GsToolApp >> makeSceneHolder [
-  ^ sceneHolder := BlElement new
-    constraintsDo: [:c| c vertical matchParent. c horizontal matchParent ];
+  ^ sceneHolder := GsLayer new
     background: Color veryDarkGray;
     addChild: (scene
       hExact: self stageSize x; vExact: self stageSize y;

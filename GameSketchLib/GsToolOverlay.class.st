@@ -47,6 +47,16 @@ GsToolOverlay >> gizmoTransformDo: aBlock [
   gizmoLayer childrenTransformDo: aBlock
 ]
 
+{ #category : #gizmos }
+GsToolOverlay >> gizmoTransformation [
+  ^ gizmoLayer childrenTransformation
+]
+
+{ #category : #gizmos }
+GsToolOverlay >> gizmoTransformation: aTransformation [
+  gizmoLayer childrenTransformation: aTransformation
+]
+
 { #category : #initialization }
 GsToolOverlay >> initialize [
   super initialize.
@@ -142,7 +152,7 @@ GsToolOverlay >> onMouseWheel [
 
 { #category : #accessing }
 GsToolOverlay >> pointInScene: aPoint [
-  ^ aPoint - scene position
+  ^ gizmoLayer localPointToChildren: aPoint
 ]
 
 { #category : #accessing }
