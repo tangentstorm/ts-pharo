@@ -16,5 +16,5 @@ GsPenTool >> click: aPoint [
   path ifNil: [
     path := sceneBuilder shapeClass: GsPathShape; newAtPoint: aPoint].
   path addPoint: aPoint.
-  overlay removeChildren; addGizmos: path gsHandles.
+  overlay removeGizmos; addGizmos: path gsHandles.
 ]

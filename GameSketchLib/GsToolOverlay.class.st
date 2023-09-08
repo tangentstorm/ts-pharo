@@ -13,7 +13,8 @@ Class {
 		'mouseDown',
 		'startPoint',
 		'coords',
-		'buttonTool'
+		'buttonTool',
+		'gizmoLayer'
 	],
 	#category : #'GameSketchLib-Tools'
 }
@@ -23,17 +24,15 @@ GsToolOverlay class >> for: aScene [
   ^ self new scene: aScene
 ]
 
-{ #category : #accessing }
+{ #category : #gizmos }
 GsToolOverlay >> addGizmo: aGizmo [
   self addGizmos: {aGizmo}
 ]
 
-{ #category : #accessing }
+{ #category : #gizmos }
 GsToolOverlay >> addGizmos: aCollection [
-  "gizmos are positioned relative to the scene's transformation"
-  | nudge | nudge := scene position.
-  self addChildren: (aCollection collect: [:h| 
-    h transformDo: [:t| t translateBy: nudge; apply]])
+  "gizmos are positioned relative to the scene's transformation. currently that's handled by  a child transformation, but always use this method just in case."
+  gizmoLayer addChildren: aCollection
 ]
 
 { #category : #debugging }
@@ -43,7 +42,12 @@ GsToolOverlay >> drawCoords: aPoint [
        ifNotNil: #asString)) asRopedText
 ]
 
-{ #category : #accessing }
+{ #category : #gizmos }
+GsToolOverlay >> gizmoTransformDo: aBlock [
+  gizmoLayer childrenTransformDo: aBlock
+]
+
+{ #category : #initialization }
 GsToolOverlay >> initialize [
   super initialize.
   buttonTool := {
@@ -56,7 +60,8 @@ GsToolOverlay >> initialize [
   startPoint := buttonTool collect: [:b| nil].
 
   self matchParent;
-    addChild: self makeCoords;
+    addChild: self makeCoords as: #coords;
+    addChild: self makeGizmoLayer as: #gizmoLayer;
     when: BlMouseDownEvent do: [:e| |b|
       e consumed: true.  b := e button.
       dragging at: b put: false.
@@ -86,11 +91,16 @@ GsToolOverlay >> initialize [
       ifFalse: [ (buttonTool at: b) click: p ]].
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsToolOverlay >> makeCoords [
   ^ coords := BlTextElement new
     text:'' asRopedText;
     relocate: 5@5.
+]
+
+{ #category : #initialization }
+GsToolOverlay >> makeGizmoLayer [
+  ^ gizmoLayer := GsGizmoLayer new
 ]
 
 { #category : #accessing }
@@ -122,8 +132,12 @@ GsToolOverlay >> primaryTool: aTool [
 
 { #category : #accessing }
 GsToolOverlay >> removeChildren [
-  super removeChildren.
-  self addChild: coords
+  self error: 'Use #removeGizmos instead.'
+]
+
+{ #category : #gizmos }
+GsToolOverlay >> removeGizmos [
+  gizmoLayer removeChildren.
 ]
 
 { #category : #accessing }

@@ -13,6 +13,11 @@ Class {
 }
 
 { #category : #accessing }
+GsViewportTool >> dragEnd: aPoint [
+  self dragStep: aPoint
+]
+
+{ #category : #accessing }
 GsViewportTool >> dragStart: aPoint [
   dragOffset := aPoint.
 ]
@@ -23,4 +28,5 @@ GsViewportTool >> dragStep: aPoint [
    so the distance to move is how far that relative point has
    moved from the original relative point, which is 'offset'"
   self scene gsMoveBy: aPoint - dragOffset.
+  overlay gizmoTransformDo: [:t| t translateBy: self scene position]
 ]
