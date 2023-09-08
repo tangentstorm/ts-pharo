@@ -1,6 +1,12 @@
+"
+A little app where you drag scraps of text around on a canvas.
+
+Requires CouchDB.
+
+"
 Class {
 	#name : #PileUpApp,
-	#superclass : #GsApp,
+	#superclass : #GsToolApp,
 	#instVars : [
 		'db',
 		'homeId',
@@ -47,9 +53,6 @@ PileUpApp >> initialize [
   super initialize.
   scene background: (Color fromHexString: '5f9ea0'). "cadetblue"
   homeId := '@home'.
-  sceneHolder addChild: (GsToolOverlay new
-    scene: scene;
-    tool: GsSelectTool new)
 ]
 
 { #category : #accessing }
