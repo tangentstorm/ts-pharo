@@ -8,7 +8,9 @@ Class {
 	#instVars : [
 		'textColor',
 		'fontSize',
-		'fontName'
+		'fontName',
+		'lengthShown',
+		'fullString'
 	],
 	#category : #'GameSketchLib-Shapes'
 }
@@ -30,7 +32,7 @@ GsTextShape >> fontName: aString [
     self fullSpan fontName: (fontName := aString)]
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsTextShape >> fontNameDescription [
   <magritteDescription>
   ^ GsDescriptionWrapper new for:(
@@ -51,7 +53,7 @@ GsTextShape >> fontSize: aNumber [
     self fullSpan fontSize: (fontSize := aNumber)]
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsTextShape >> fontSizeDescription [
   <magritteDescription>
   ^ GsDescriptionWrapper new for:(
@@ -82,7 +84,7 @@ GsTextShape >> gsText: aString [
   self inUIProcessDo: [self text: aString]
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsTextShape >> gsTextDescription [
   <magritteDescription>
   ^ MAStringDescription new
@@ -90,7 +92,7 @@ GsTextShape >> gsTextDescription [
     accessor: #gsText
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 GsTextShape >> initialize [
   textColor := Color black.
   fontSize := 16.
@@ -103,12 +105,40 @@ GsTextShape >> initialize [
 ]
 
 { #category : #accessing }
+GsTextShape >> lengthShown [
+	^ lengthShown
+]
+
+{ #category : #accessing }
+GsTextShape >> lengthShown: aNumber [
+	lengthShown := aNumber.
+	self redecorate
+]
+
+{ #category : #accessing }
+GsTextShape >> positionDescription [
+  <magritteDescription>
+  ^ GsPointDescription new
+    priority: 100;
+    accessor: #gsPosition;
+    label: 'Position'
+    
+]
+
+{ #category : #accessing }
 GsTextShape >> redecorate [
-  self textColor: self textColor; fontSize: fontSize
+  super text: ((lengthShown = 0) ifTrue: ['']
+    ifFalse: [fullString 
+      copyFrom: 1 to: (fullString size min: lengthShown)]). 
+  self
+    textColor: self textColor;
+    fontSize: fontSize.
 ]
 
 { #category : #accessing }
 GsTextShape >> text: aString [
+  lengthShown := aString size.
+  fullString := aString.
   super text: aString.
   self redecorate.
  
@@ -126,7 +156,7 @@ GsTextShape >> textColor: aHexString [
       textColor := Color fromHexString: aHexString)]
 ]
 
-{ #category : #accessing }
+{ #category : #magritte }
 GsTextShape >> textColorDescription [
   <magritteDescription>
   ^ MAStringDescription new

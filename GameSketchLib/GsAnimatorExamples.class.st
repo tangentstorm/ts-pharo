@@ -111,3 +111,53 @@ GsAnimatorExamples class >> twoMovingSquares [
       20 -> {320@ 448. #linear}}
     
 ]
+
+{ #category : #accessing }
+GsAnimatorExamples >> titleCardScene [
+  <gtExample>
+  |scene |
+  scene := (GsJsonReader new read:
+'{"class":"GsScene", "fill":"#223344", "strokeColor":"", "children":[
+  {"class":"GsRectShape", "id":"stripe", "wh":"(800@100)", "xy":"(0@110)", "fill":"#005784", "strokeColor":"" },
+  {"class":"GsTextShape", "id":"text", "textColor":"#ffffff", "fontName":"Kulim Park", "gsText":"Hello, world!",
+    "gsPosition":"(128@254)", "fontSize":80 }]}').
+  scene inUIProcessDo: [ 
+    (scene childNamed: #text) fullSpan bold ].
+  scene size: 800@600.   
+  ^ scene
+]
+
+{ #category : #accessing }
+GsAnimatorExamples >> titleCardSceneWithAnimatedPosition [
+  <gtExample>
+  ^ (GsPlayerApp new scene: self titleCardScene)
+    addTrackFor: #( stripe position )
+    withKeys: {
+      00 -> {128@ -32. #linear}.
+      12 -> {128@ 256. #linear}.
+      18 -> {  0@ 256. #linear}}.
+]
+
+{ #category : #accessing }
+GsAnimatorExamples >> titleCardWithAnimatedPositionAndSize [
+  <gtExample>
+  ^ self titleCardSceneWithAnimatedPosition
+    addTrackFor: #( stripe size )
+    withKeys: {
+      00 -> { 32@ 32. #linear}.
+      12 -> { 32@136. #linear}.
+      "next one probably should be 1920"
+      20 -> { 800@136. #linear}}.
+]
+
+{ #category : #accessing }
+GsAnimatorExamples >> titleCardWithAnimatedPositionAndSizeAndText [
+  <gtExample>
+  ^ self titleCardWithAnimatedPositionAndSize
+    addTrackFor: #( text lengthShown )
+    withKeys: {
+      00 -> { 0. #linear}.
+      12 -> { 0. #linear}.
+      "next one probably should be 1920"
+      20 -> { 32. #linear}}.
+]

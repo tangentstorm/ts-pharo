@@ -28,6 +28,13 @@ GsProp class >> for: aSlotName on: anObject [
   ^ (GsProp perform: aSlotName) target: anObject
 ]
 
+{ #category : #accessing }
+GsProp class >> lengthShown [
+  ^ GsSelectorProp new
+    readSelector: #lengthShown;
+    writeSelector: #lengthShown: 
+]
+
 { #category : #creating }
 GsProp class >> position [
   ^ GsPositionProp new
@@ -36,6 +43,11 @@ GsProp class >> position [
 { #category : #creating }
 GsProp class >> rotation [
   ^ GsRotationProp new
+]
+
+{ #category : #creating }
+GsProp class >> size [
+  ^ GsSizeProp new
 ]
 
 { #category : #accessing }
@@ -54,6 +66,13 @@ GsProp >> printOn: aStream [
 { #category : #accessing }
 GsProp >> read: anObject [
   self subclassResponsibility
+]
+
+{ #category : #accessing }
+GsProp >> read: aReadSelector write: aWriteSelector [
+  ^ GsSelectorProp new
+    readSelector: aReadSelector;
+    writeSelector: aWriteSelector
 ]
 
 { #category : #accessing }
