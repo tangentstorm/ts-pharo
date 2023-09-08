@@ -1,3 +1,6 @@
+"
+I use a readSelector and a writeSelector to access a property on the target object.
+"
 Class {
 	#name : #GsSelectorProp,
 	#superclass : #GsProp,
