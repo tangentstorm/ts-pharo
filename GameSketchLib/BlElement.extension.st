@@ -24,7 +24,7 @@ BlElement >> gsBottomRight [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsBottomRight: aPoint [
-  ^ self gsMoveBy: (aPoint - self gsBottomRight) 
+  ^ self size: (aPoint - self gsPosition) 
 ]
 
 { #category : #'*GameSketchLib' }
