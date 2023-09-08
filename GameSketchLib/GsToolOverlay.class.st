@@ -62,33 +62,10 @@ GsToolOverlay >> initialize [
   self matchParent;
     addChild: self makeCoords as: #coords;
     addChild: self makeGizmoLayer as: #gizmoLayer;
-    when: BlMouseDownEvent do: [:e| |b|
-      e consumed: true.  b := e button.
-      dragging at: b put: false.
-      startPoint at: b put: (
-        self pointInScene: e localPosition).
-      mouseDown at: b put: true];
-    when: BlMouseMoveEvent do: [:e| |p|
-      e consumed: true.
-      p:= self pointInScene: e localPosition.
-      self drawCoords: p.
-      mouseDown associationsDo: [:kv|
-        | b tool |
-        b := kv key. tool := buttonTool at: b.
-        kv value ifTrue: [
-          (dragging at: b) ifFalse: [
-            dragging at: b put: true.
-            tool dragStart: (startPoint  at: b) ].
-          tool dragStep: p ]
-        ifFalse: [ tool move: p]]];
-    when: BlMouseUpEvent do: [:e| |b p|
-      e consumed: true.  b := e button.
-      p := self pointInScene: e localPosition.
-      mouseDown at: b put: false.
-      (dragging at: b) ifTrue: [
-        dragging at: b put: false.
-        (buttonTool at: b) dragStop: p ]
-      ifFalse: [ (buttonTool at: b) click: p ]].
+    when: BlMouseDownEvent do: self onMouseDown;
+    when: BlMouseMoveEvent do: self onMouseMove;
+    when: BlMouseUpEvent do: self onMouseUp;
+    when: BlMouseWheelEvent do: self onMouseWheel .
 ]
 
 { #category : #initialization }
@@ -112,6 +89,55 @@ GsToolOverlay >> middleTool [
 GsToolOverlay >> middleTool: aTool [
   aTool overlay: self.
   ^ buttonTool at: BlMouseButton middle put: aTool
+]
+
+{ #category : #accessing }
+GsToolOverlay >> onMouseDown [
+  ^ [:e| |b|
+      e consumed: true.  b := e button.
+      dragging at: b put: false.
+      startPoint at: b put: (
+      self pointInScene: e localPosition).
+      mouseDown at: b put: true]
+]
+
+{ #category : #initialization }
+GsToolOverlay >> onMouseMove [
+  ^ [:e| |p|
+      e consumed: true.
+      p:= self pointInScene: e localPosition.
+      self drawCoords: p.
+      mouseDown associationsDo: [:kv|
+        | b tool |
+        b := kv key. tool := buttonTool at: b.
+        kv value ifTrue: [
+          (dragging at: b) ifFalse: [
+            dragging at: b put: true.
+            tool dragStart: (startPoint  at: b) ].
+          tool dragStep: p ]
+        ifFalse: [ tool move: p]]]
+]
+
+{ #category : #initialization }
+GsToolOverlay >> onMouseUp [
+  ^ [:e| |b p|
+      e consumed: true.  b := e button.
+      p := self pointInScene: e localPosition.
+      mouseDown at: b put: false.
+      (dragging at: b) ifTrue: [
+        dragging at: b put: false.
+        (buttonTool at: b) dragStop: p ]
+      ifFalse: [ (buttonTool at: b) click: p ]]
+]
+
+{ #category : #initialization }
+GsToolOverlay >> onMouseWheel [
+  "the wheel is not button specific, so just tell everybody"
+  ^ [:e|
+       buttonTool detect: #wantsWheel
+         ifOne: [:tool |
+           tool mouseWheel: e vector.
+           e consumed: true]]
 ]
 
 { #category : #accessing }

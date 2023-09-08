@@ -45,6 +45,14 @@ GsTool >> label [
   ^ self class name splitCamelCase second asLowercase
 ]
 
+{ #category : #accessing }
+GsTool >> mouseWheel: aPoint [
+  "allows scrolling on both axes.
+   if you want your subclass to receive this,
+   make wantsWheel return true.
+   Only one tool can handle the mouse wheel."
+]
+
 { #category : #'event handling' }
 GsTool >> move: aPoint [
 ]
@@ -77,4 +85,9 @@ GsTool >> selection [
 { #category : #accessing }
 GsTool >> selection: aSelection [
   selection := aSelection.
+]
+
+{ #category : #initialization }
+GsTool >> wantsWheel [
+  ^ false
 ]
