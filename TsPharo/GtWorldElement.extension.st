@@ -4,7 +4,8 @@ Extension { #name : #GtWorldElement }
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newScaleUpButton.
-	anActionbar addItem: self newScaleDownButton.	
+	anActionbar addItem: self newScaleDownButton.
+	anActionbar addItem: self newWindowButton.
 	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newStatusButton.
@@ -29,4 +30,14 @@ GtWorldElement >> newScaleUpButton [
 		label: 'Scale up UI';
 		icon: BrGlamorousVectorIcons add;
 		action: [ :aButton :aModel :anEvent | BlGlutinHostSpace zoomFactor: BlGlutinHostSpace zoomFactor * 1.2 ]
+]
+
+{ #category : #'*TsPharo-Gt' }
+GtWorldElement >> newWindowButton [
+	^ BrButton new
+		aptitude: BrGlamorousButtonWithIconAptitude;
+		label: 'Scale up UI';
+		icon: BrGlamorousVectorIcons spawn;
+		action: [ :aButton :aModel :anEvent | 
+		  GtWorld open  ]
 ]
