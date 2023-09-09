@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-30T12:14:39.024-04:00"
+						"dateAndTimeString" : "2023-09-08T21:32:30.948-04:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:PileUpApp}} "
+				"string" : "{{gtClass:PileUpApp}}  | {{gtClass:PileupNavigateTool}}"
 			},
 			{
 				"__type" : "textSnippet",

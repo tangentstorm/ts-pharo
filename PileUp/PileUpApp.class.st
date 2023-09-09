@@ -49,6 +49,12 @@ PileUpApp >> getPileById: aCouchId [
 ]
 
 { #category : #accessing }
+PileUpApp >> initialTools [
+  ^ { PileupNavigateTool new app: self.
+      GsSelectTool new }
+]
+
+{ #category : #accessing }
 PileUpApp >> initialize [
   super initialize.
   scene background: (Color fromHexString: '5f9ea0'). "cadetblue"
