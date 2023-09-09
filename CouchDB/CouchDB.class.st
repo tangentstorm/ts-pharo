@@ -31,6 +31,15 @@ CouchDB >> db: anObject [
 ]
 
 { #category : #accessing }
+CouchDB >> fauxtonUrl [
+  |r| r := 'http://'.
+  (uid isNil)|(pwd isNil) ifFalse:[ r := r,uid,':',pwd,'@'].
+  r := r,host,':',port,'/'.
+  r := ZnUrl fromString: r.
+  ^ r / '_utils/'
+]
+
+{ #category : #accessing }
 CouchDB >> find: anArray [
   |json|
   json := { 'selector' -> (anArray asDictionary).
@@ -46,6 +55,20 @@ CouchDB >> find: anArray [
 { #category : #accessing }
 CouchDB >> get: aString [
   ^ STONJSON fromString: (ZnClient new get: url/aString)
+]
+
+{ #category : #accessing }
+CouchDB >> gtActionFauxtonFor: anAction [
+  <gtAction>
+  ^ anAction explicit
+	priority: 1;
+	stencil: [
+      BrButton new
+		aptitude: BrGlamorousButtonWithIconAptitude;
+		label: 'Log In';
+		icon: BrGlamorousVectorIcons link;
+		action: [ :aButton :aModel :anEvent | 
+		  WebBrowser openOn: self fauxtonUrl ]]
 ]
 
 { #category : #'gt inspector' }
