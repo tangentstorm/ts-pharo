@@ -8,8 +8,7 @@ Class {
 		'forces',
 		'pos',
 		'shape',
-		'radius',
-		'old'
+		'radius'
 	],
 	#category : #'GameSketchLib-Physics'
 }
@@ -46,7 +45,7 @@ GsPhysicsBody >> pos [
 
 { #category : #accessing }
 GsPhysicsBody >> pos: aPoint [
-  old := pos := aPoint
+  pos := aPoint
 ]
 
 { #category : #accessing }

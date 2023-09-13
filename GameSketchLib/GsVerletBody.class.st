@@ -1,8 +1,22 @@
 Class {
 	#name : #GsVerletBody,
 	#superclass : #GsPhysicsBody,
+	#instVars : [
+		'old'
+	],
 	#category : #'GameSketchLib-Physics'
 }
+
+{ #category : #accessing }
+GsVerletBody >> old: aPoint [
+  old := aPoint
+]
+
+{ #category : #accessing }
+GsVerletBody >> pos: aPoint [
+  old := pos.
+  pos := aPoint.
+]
 
 { #category : #accessing }
 GsVerletBody >> stayInBounds: bxy [

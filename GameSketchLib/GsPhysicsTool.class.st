@@ -16,6 +16,6 @@ GsPhysicsTool >> app: anApp [
 GsPhysicsTool >> click: aPoint [
   app addBody: (
     GsVerletBody new
-      pos: aPoint;
+      pos: aPoint; old: aPoint;
       shape: (sceneBuilder circle newAtPoint: aPoint; latestShape)).
 ]
