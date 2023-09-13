@@ -31,6 +31,11 @@ GsSceneBuilder >> background: anObject [
 	prototype background: anObject
 ]
 
+{ #category : #accessing }
+GsSceneBuilder >> circle [
+  self shapeClass: GsCircleShape
+]
+
 { #category : #'shape factories' }
 GsSceneBuilder >> circle: name at: center radius: r [
   ^ self shapeClass: GsCircleShape;
