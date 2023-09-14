@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-09T18:23:18.798-04:00"
+									"dateAndTimeString" : "2023-09-14T14:49:17.182-04:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The plot area has two sets of coordinates: the scene coordinates within the parent Elemen, and the \"data space\" coordinates. These are generally determined by min and max values along the axes. The axes themselves are generally drawn by dividing them into segments with nice labeled ticks."
+							"string" : "The plot area has two sets of coordinates: the scene coordinates within the parent Element, and the \"data space\" coordinates. These are generally determined by min and max values along the axes. The axes themselves are generally drawn by dividing them into segments with nice labeled ticks."
 						},
 						{
 							"__type" : "textSnippet",
