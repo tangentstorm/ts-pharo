@@ -1,0 +1,218 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:20:57.433-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:24:14.058-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kBf+T7jBDQCNz2L7C8S6EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Loading the library:\r\n```\r\nMetacello new\r\n  baseline: 'DataFrame';\r\n  repository: 'github://PolyMathOrg/DataFrame/src';\r\n  load.\r```"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:42:41.137-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:42:41.137-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CHVTV7jBDQCOPiHrC8S6EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:25:43.664-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:45:44.167-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gJ0NYbjBDQCPQKzcC8S6EQ=="
+				},
+				"code" : "\"https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size#Objects_with_radius_over_400_km\"\rsolar := DataFrame withRows: #(\r  (Sun star '' 696324 1414300000 1988550000 0)\r  (Jupiter planet Sun 69911 1431280 1898600 778300000)\r  (Saturn planet Sun 58232 827130 568460 1427000000)\r  (Uranus planet Sun 25362 68340 86832 2871000000)\r\n  (Neptune planet Sun 24622 62540 102430 4497100000)\r\n  (Earth planet Sun 6371 1083 59736 149600000)\r\n  (Venus planet Sun 6051 928 4868 108200000)\r\n  (Mars planet Sun 3389 163 6417 227900000)\r\n  (Ganymede moon Jupiter 2634 76 148 1070000)\r\n  (Titan moon Saturn 2576 71 134 1221850)\r\n  (Mercury planet Sun 2439 60 330 57900000)\r\n  (Callisto moon Jupiter 2410 58 108 1880000)\r\n  (Io moon Jupiter 1821 25 89 422000)\r\n  (Moon moon Earth 1737 21 74 385000)\r\n  (Europa moon Jupiter 1560 16 48 670900)\r\n  (Triton moon Neptune 1353 10 21 354759)\r\n  (Pluto 'dwarf planet' Sun 1186 7 13 5913000000)\r\n  (Eris 'dwarf planet' Sun 1163 6 17 14000000000)\r\n  (Titania moon Uranus 788 2 3 436000))\r  columnNames: #(name type orbits rkm vol mass dist)."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:42:44.971-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:42:44.971-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EILtnbjBDQCWLtsmC8S6EQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:24:22.871-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-14T15:24:57.519-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CMg8XLjBDQCOmBouC8S6EQ=="
+				},
+				"code" : "(1 to: 10) asDataSeries sin"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-09-14T15:21:06.259-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-09-14T15:21:06.259-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "working with dataframes"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "98ecfd4f-b8c1-0d00-8dce-66930bc4ba11"
+	}
+}
