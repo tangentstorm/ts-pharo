@@ -6,7 +6,10 @@ Class {
 		'frameCounter',
 		'playButton',
 		'selection',
-		'sketch'
+		'sketch',
+		'animationList',
+		'addAnimationButton',
+		'addTrackWidget'
 	],
 	#category : #'GameSketchLib-UI - Panels'
 }
@@ -39,6 +42,34 @@ GsAnimationPanel >> initialize [
 ]
 
 { #category : #accessing }
+GsAnimationPanel >> makeAddAnimationButton [
+  ^ addAnimationButton := GsTextShape new text: '[+]'
+]
+
+{ #category : #accessing }
+GsAnimationPanel >> makeAddTrackWidget [
+  | box |
+  ^ addTrackWidget := BrHorizontalPane new
+    addChild: (GsLabel new text: 'add track:');
+    addChild: (box := GsField new text: 'id prop');
+    addChild: (GsButton accept action: [
+      | pair|
+      pair := (box text asString splitOn: ' ') collect: #asSymbol.
+      pair size = 2 ifTrue: [
+        box border: Color veryDarkGray.
+        self halt. "this will fail if not a numeric property."
+        timeline addTrackFor: pair withKeys: {
+          0 -> {0. #linear}}]
+      ifFalse:  [ box border: Color red]]);
+    fitContent; transformDo: [:t | t scaleBy: 0.8]
+]
+
+{ #category : #accessing }
+GsAnimationPanel >> makeAnimationList [
+  ^ animationList := GsTextShape new text: '[animations]'
+]
+
+{ #category : #accessing }
 GsAnimationPanel >> makeFrameCounter [
   ^ frameCounter := BrLabel new 
     aptitude: BrGlamorousLabelAptitude;
@@ -51,10 +82,12 @@ GsAnimationPanel >> makeFrameCounter [
 GsAnimationPanel >> makeTitleBar [
   super makeTitleBar.
   titleBar
-     addChild: (BlElement new
-       constraintsDo: [:c|
-         c vertical exact: 0.
-         c horizontal matchParent]);
+     addChild: (GsObject new vExact:0; hMatchParent);
+     addChild: self makeAnimationList;
+     addChild: self makeAddAnimationButton;
+     addChild: (GsObject new vExact:0; hMatchParent);
+     addChild: self makeAddTrackWidget;
+     addChild: (GsObject new vExact:0; hMatchParent);
      addChild: self makeFrameCounter.
   ^ titleBar
 ]

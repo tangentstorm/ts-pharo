@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-14T16:14:54.43-04:00"
+						"dateAndTimeString" : "2023-09-14T15:24:14.058-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Loading the library:\r\n```\r\nMetacello new\r\n  baseline: 'DataFrame';\r\n  repository: 'github://PolyMathOrg/DataFrame/src';\r\n  load.\r```\r\n"
+				"string" : "# Loading the library:\r\n```\r\nMetacello new\r\n  baseline: 'DataFrame';\r\n  repository: 'github://PolyMathOrg/DataFrame/src';\r\n  load.\r```"
 			},
 			{
 				"__type" : "pharoSnippet",

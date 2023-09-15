@@ -7,7 +7,8 @@ Class {
 	#superclass : #GsObject,
 	#instVars : [
 		'keyFrames',
-		'trackH'
+		'trackH',
+		'ghost'
 	],
 	#category : #'GameSketchLib-UI'
 }
@@ -21,9 +22,18 @@ GsTrackElement >> addFrames: aCollection [
 
 { #category : #accessing }
 GsTrackElement >> initialize [
-  super initialize.
-  self hMatchParent vExact: (trackH := 20).
-  keyFrames := SortedCollection sortUsing: [:a :b |  a key < b key ].
+  super initialize
+    hMatchParent; vExact: (trackH := 20);
+    when: BlMouseOverEvent do: [:e |
+      |cw| cw := [self parent colW] onErrorDo: [20].
+      ghost gsShow size: cw@trackH;
+        relocate: ((e localPosition x / cw) floor * cw @0)];
+    when: BlClickEvent do: [:e |
+      self error: 'todo: add/remove keyframe'];
+    when: BlMouseOutEvent do: [:e | ghost gsHide ].
+
+  keyFrames := SortedCollection
+    sortUsing: [:a :b |  a key < b key ].
 ]
 
 { #category : #accessing }
@@ -34,5 +44,7 @@ GsTrackElement >> redrawFrames [
       vMatchParent hExact: cw ;
       background: Color white;
       border: Color veryVeryDarkGray;
-      relocate:  cw * kv key @ 0])
+      relocate:  cw * kv key @ 0]);
+    addChild: (ghost := BlElement new
+      border: Color cyan; gsHide)
 ]

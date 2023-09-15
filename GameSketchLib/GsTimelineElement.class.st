@@ -115,7 +115,7 @@ GsTimelineElement >> makeScrollPaneHolder [
 { #category : #initialization }
 GsTimelineElement >> makeTrackList [
   ^ trackList := BrSimpleList vertical
-    hExact: 100;
+    hExact: 100; vMatchParent;
     itemType: [:aFactory :anItem :anIndex | String];
     itemStencil: [:anItem|
       BrLabel new aptitude: BrGlamorousLabelAptitude];
@@ -128,7 +128,8 @@ GsTimelineElement >> makeTrackListHolder [
   ^ BrVerticalPane new 
     addChild: (BlElement new size: 16@16);
     addChild: self makeTrackList as: #trackList;
-    fitContent
+    hFitContent;
+    vMatchParent
 ]
 
 { #category : #initialization }
