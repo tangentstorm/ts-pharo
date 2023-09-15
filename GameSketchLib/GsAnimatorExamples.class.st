@@ -19,7 +19,7 @@ GsAnimatorExamples class >> blueSquare [
 { #category : #accessing }
 GsAnimatorExamples class >> bouncingSquare [
   <gtExample>
-  ^ self sceneWithSquare
+  ^ self sceneWithSquare currentAnimation
     addTrackFor: #( square position )
     withKeys: {
       00 -> {-25@200. #linear}.
@@ -35,7 +35,7 @@ GsAnimatorExamples class >> bouncingSquare [
 { #category : #examples }
 GsAnimatorExamples class >> pathmapAnimation [
   <gtExample>
-  ^ self pathmapScene
+  ^ self pathmapScene currentAnimation
   addTrackFor: #(root position) withKeys: {
     00 -> { 208 @224. #linear }.
     05 -> { 208 @224. #linear }.
@@ -63,10 +63,10 @@ GsAnimatorExamples class >> pathmapAnimation [
 { #category : #accessing }
 GsAnimatorExamples class >> pathmapScene [
   <gtExample>
-  <returns:#GsPlayerApp>
-  |demo gsa root|
-  gsa := GsPlayerApp new
-    addSceneChild: (root := GsObject new
+  <returns:#GsScene>
+  |demo scene root|
+  scene := GsScene new 
+    addChild: (root := GsObject new
       relocate: 208@224;
       clipChildren: false)
     as: #root.
@@ -82,34 +82,34 @@ GsAnimatorExamples class >> pathmapScene [
       constraintsDo: [:c | c ignoreByLayout ];
       zIndex: -1].
   demo makeGraph: true layout: #horizontal.
-  ^gsa
+  ^scene
 ]
 
 { #category : #accessing }
 GsAnimatorExamples class >> sceneWithSquare [
   <gtExample>
-  <returns:#GsPlayerApp>
-  |square|
-  square := GsRectShape new
-    size: 50@50;
-    background: Color red;
-    border: (Color  fromHexString: '990000' );
-    relocate: -25@200.
-  square transform rotateBy: 30; apply.
-  ^ GsPlayerApp new
-      addSceneChild: square as: #square
+  <returns:#GsScene>
+  ^ GsScene new size: 640@480;
+    addChild:(GsRectShape new
+      size: 50@50;
+      background: Color red;
+      border: (Color  fromHexString: '990000' );
+      relocate: -25@200;
+      transformDo: [:t | t rotateBy: 30; apply ])
+    as: #square.
 ]
 
 { #category : #accessing }
 GsAnimatorExamples class >> twoMovingSquares [
   <gtExample>
-  ^ self bouncingSquare
-    addSceneChild: self blueSquare as: #blueSquare;
-    addTrackFor: #( blueSquare position )
-    withKeys: {
-      00 -> {320@ -16. #bounceOut}.
-      20 -> {320@ 448. #linear}}
-    
+  |scene|
+  scene := self bouncingSquare sketch.
+  scene addChild: self blueSquare as: #blueSquare.
+  ^ scene currentAnimation
+      addTrackFor: #( blueSquare position )
+      withKeys: {
+        00 -> {320@ -16. #bounceOut}.
+        20 -> {320@ 448. #linear}}.
 ]
 
 { #category : #accessing }
@@ -130,7 +130,7 @@ GsAnimatorExamples >> titleCardScene [
 { #category : #accessing }
 GsAnimatorExamples >> titleCardSceneWithAnimatedPosition [
   <gtExample>
-  ^ (GsPlayerApp new scene: self titleCardScene)
+  ^ (self titleCardScene currentAnimation)
     addTrackFor: #( stripe position )
     withKeys: {
       00 -> {128@ -32. #linear}.

@@ -8,17 +8,11 @@ Class {
 	#instVars : [
 		'keyFrames',
 		'trackH',
-		'ghost'
+		'ghost',
+		'track'
 	],
 	#category : #'GameSketchLib-UI'
 }
-
-{ #category : #accessing }
-GsTrackElement >> addFrames: aCollection [
-  "should be list of key -> value associations"
-  keyFrames addAll: aCollection.
-  self redrawFrames
-]
 
 { #category : #accessing }
 GsTrackElement >> initialize [
@@ -31,20 +25,24 @@ GsTrackElement >> initialize [
     when: BlClickEvent do: [:e |
       self error: 'todo: add/remove keyframe'];
     when: BlMouseOutEvent do: [:e | ghost gsHide ].
-
-  keyFrames := SortedCollection
-    sortUsing: [:a :b |  a key < b key ].
 ]
 
 { #category : #accessing }
 GsTrackElement >> redrawFrames [
   |cw| cw := [self parent colW] onErrorDo: [20].
-  self removeChildren addChildren: (keyFrames collect: [:kv|
-    GsObject new
+  self removeChildren
+    addChild: (ghost := BlElement new
+        border: Color cyan; gsHide).
+  track framesDo: [:i :v :t|
+    self addChild: (GsObject new
       vMatchParent hExact: cw ;
       background: Color white;
       border: Color veryVeryDarkGray;
-      relocate:  cw * kv key @ 0]);
-    addChild: (ghost := BlElement new
-      border: Color cyan; gsHide)
+      relocate:  cw * i @ 0)].
+]
+
+{ #category : #accessing }
+GsTrackElement >> track: aTrack [ 
+  track := aTrack.
+  self redrawFrames
 ]

@@ -1,8 +1,9 @@
 "
-I am sent by  {{gtClass:GsTimeline}} when its playhead moves to a new frame.
+I am sent by  {{gtClass:GsTimelineElement}} when its playhead moves to a new frame.
+
 "
 Class {
-	#name : #GsFrameChangedEvent,
+	#name : #GsPlayheadMovedEvent,
 	#superclass : #BlEvent,
 	#instVars : [
 		'frame',
@@ -12,17 +13,17 @@ Class {
 }
 
 { #category : #accessing }
-GsFrameChangedEvent >> frame [
+GsPlayheadMovedEvent >> frame [
 	^ frame
 ]
 
 { #category : #accessing }
-GsFrameChangedEvent >> frame: anObject [
+GsPlayheadMovedEvent >> frame: anObject [
 	frame := anObject
 ]
 
 { #category : #events }
-GsFrameChangedEvent >> old: frame0 new: frame1 [
+GsPlayheadMovedEvent >> old: frame0 new: frame1 [
   oldFrame := frame0.
   frame := frame1.
 ]

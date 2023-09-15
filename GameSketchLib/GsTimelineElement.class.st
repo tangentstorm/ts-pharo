@@ -15,30 +15,41 @@ Class {
 		'playhead',
 		'grid',
 		'currentFrame',
-		'viewModel'
+		'animation',
+		'trackElements'
 	],
 	#category : #'GameSketchLib-UI'
 }
 
 { #category : #accessing }
+GsTimelineElement >> addTrackElementFor: aTrack [
+  | el| 
+  el := GsTrackElement new track: aTrack.
+  trackElements add: el.
+  grid addChild: (el relocate: 0@(16 * trackElements size)).
+]
+
+{ #category : #accessing }
 GsTimelineElement >> addTrackFor: aNameAndProperty withKeys: aCollection [
-  viewModel addTrackFor: aNameAndProperty withKeys: aCollection.
-  trackList items: viewModel trackNames.
-  grid addChild: (GsTrackElement new
-    addFrames: aCollection;
-    relocate: 0@ (20 * (viewModel trackCount - 1) + 16))
+  | track |
+  track := animation
+    addTrackFor: aNameAndProperty withKeys: aCollection.
+  trackList items: animation trackNames.
+  self addTrackElementFor: track
+]
+
+{ #category : #accessing }
+GsTimelineElement >> animation: anAnimation [
+  animation := anAnimation.
+  trackList items: animation trackNames.
+  self rebuildTracks.
+  currentFrame := -1. "force event to fire."
+  self gotoFrame: 0.
 ]
 
 { #category : #events }
 GsTimelineElement >> checkFrameChange [
-  |frame|
-  frame := self frameFromPlayhead.
-  frame ~= currentFrame ifTrue: [
-    self fireEvent: (
-      GsFrameChangedEvent new 
-        old: currentFrame
-        new: frame).
-    currentFrame := frame]
+  self gotoFrame: self frameFromPlayhead.
 ]
 
 { #category : #accessing }
@@ -53,14 +64,26 @@ GsTimelineElement >> frameFromPlayhead [
 	^ playhead position x + offset + (colW//2) // colW asInteger
 ]
 
+{ #category : #events }
+GsTimelineElement >> gotoFrame: frame [
+  frame ~= currentFrame ifTrue: [
+    animation gotoFrame: frame.
+    self fireEvent: (
+      GsPlayheadMovedEvent new 
+        old: currentFrame
+        new: frame).
+    currentFrame := frame]
+]
+
 { #category : #initialization }
 GsTimelineElement >> initialize [
+  trackElements := OrderedCollection new.
   super initialize.
   activeZone := 50.
   dxScroll := 0.
   curH := 16.
   colW := 20.
-  viewModel := GsAnimation new.
+  animation := GsAnimation new.
   scrollPane := self makeScrollPane.
   currentFrame := 0.
   self addChild: self makeUi as: #ui.
@@ -169,6 +192,14 @@ GsTimelineElement >> onPlayheadPullEnd [
   self snapScrollpane.
 ]
 
+{ #category : #accessing }
+GsTimelineElement >> rebuildTracks [
+  trackElements do: [:o| o removeFromParent].
+  trackElements := OrderedCollection new.
+  animation tracksDo: [:track |
+    self addTrackElementFor: track]
+]
+
 { #category : #snapping }
 GsTimelineElement >> snapScrollpane [
   |sp sc xy0 xy1|  
@@ -182,9 +213,4 @@ GsTimelineElement >> snapScrollpane [
 { #category : #snapping }
 GsTimelineElement >> snapToColumn: aPoint [
   ^ (colW * (aPoint x + (colW//2) // colW) asInteger) @ aPoint y
-]
-
-{ #category : #accessing }
-GsTimelineElement >> viewModel [
-  ^ viewModel
 ]

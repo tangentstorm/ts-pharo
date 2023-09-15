@@ -1,5 +1,5 @@
 "
-I hold an ordered list of keyframes for a particular property in a {{gtClass:GsTimeline}} animation.
+I hold an ordered list of keyframes for a particular property in a {{gtClass:GsAnimation}}.
 From these, I generate a cached value for each frame of the animation.
 
 I can be rendered by a  {{gtClass:GsTrackElement}}
@@ -62,6 +62,13 @@ GsAnimationTrack >> for: aNameAndProperty withKeys: aCollection [
   self buildCache.
 ]
 
+{ #category : #accessing }
+GsAnimationTrack >> framesDo: aBlock [
+  "block takes key, val, transition"
+  keyFrames associationsDo: [:kv|
+    aBlock value: kv key value: kv value first value value: kv value second]
+]
+
 { #category : #initialization }
 GsAnimationTrack >> initialize [
   super initialize.
@@ -70,7 +77,7 @@ GsAnimationTrack >> initialize [
 
 { #category : #accessing }
 GsAnimationTrack >> keyframes [
-	^ keyFrames
+  ^ keyFrames
 ]
 
 { #category : #accessing }

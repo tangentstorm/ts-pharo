@@ -1,14 +1,15 @@
 "
 I contain a {{gtClass:GsAnimationTrack}} for each ({{gtClass:GsObject}}, property) pair to be animated.
 
-I am displayed by a {{gtClass:GsAnimator}}. When its playhead moves to a new frame, I return a list of closures - one per track - that the animator calls to update the actual scene elements.
+My tracks and keyframes can be rendered with a {{gtClass:GsTimelineElement}}. When its playhead moves to a new frame, I return a list of closures - one per track - that the animator calls to update the actual scene elements.
 
 "
 Class {
 	#name : #GsAnimation,
-	#superclass : #Object,
+	#superclass : #BlAnimation,
 	#instVars : [
-		'trackData'
+		'trackData',
+		'sketch'
 	],
 	#category : #'GameSketchLib-Animation'
 }
@@ -19,6 +20,33 @@ GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
   track := (GsAnimationTrack new for: aNameAndProperty withKeys: aCollection).
   trackData at: track name put: track
   
+]
+
+{ #category : #accessing }
+GsAnimation >> animatedProps [
+  ^ self trackSymbols collect: [:ep |
+      GsProp for: ep second
+        on: (sketch childNamed: ep first)]
+]
+
+{ #category : #accessing }
+GsAnimation >> asElement [
+  ^ sketch
+]
+
+{ #category : #animation }
+GsAnimation >> gotoFrame: i [
+  | values |
+  values  := (self valuesForFrame: i) readStream.
+  self animatedProps do: [:prop| prop set: values next]
+]
+
+{ #category : #'gt - inspector' }
+GsAnimation >> gtLiveFor: aView [
+  <gtView>
+  ^ aView explicit
+    title: 'Live';
+    stencil: [GsPlayerApp new scene: self sketch]
 ]
 
 { #category : #inspecting }
@@ -48,6 +76,16 @@ GsAnimation >> initialize [
 ]
 
 { #category : #accessing }
+GsAnimation >> sketch [
+  ^ sketch
+]
+
+{ #category : #accessing }
+GsAnimation >> sketch: aSketch [
+  sketch := aSketch
+]
+
+{ #category : #accessing }
 GsAnimation >> trackCount [
   ^ trackData size
 ]
@@ -66,6 +104,11 @@ GsAnimation >> trackNames [
 GsAnimation >> trackSymbols [
   "the element name and property name for each track, as symbols"
   ^ trackData values  collect: [:x| {x elementName. x propertyName.}]
+]
+
+{ #category : #accessing }
+GsAnimation >> tracksDo: aBlock [
+  trackData values do: aBlock
 ]
 
 { #category : #accessing }

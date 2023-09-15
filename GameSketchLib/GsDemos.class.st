@@ -10,11 +10,13 @@ GsDemos >> gtAnimationDemoFor: aView [
   ^ aView explicit
     priority: 50;
     title: 'PlayerApp';
-    stencil: [GsAnimatorExamples twoMovingSquares  ];
+    stencil: [
+      GsPlayerApp new scene: 
+        GsAnimatorExamples twoMovingSquares sketch  ];
     actionButtonIcon: BrGlamorousIcons inspect
     tooltip: 'Inspect Demo Class'
     action: [:btn| btn phlow spawnObject:
-      GsAnimatorExamples twoMovingSquares]
+        GsAnimatorExamples twoMovingSquares]
 ]
 
 { #category : #accessing }

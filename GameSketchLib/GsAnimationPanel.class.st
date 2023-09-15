@@ -37,7 +37,7 @@ GsAnimationPanel >> frameChanged: anEvent [
 GsAnimationPanel >> initialize [
   super initialize title: 'Animation'; hExact: 200.  
   workArea addChild: (timeline := GsTimelineElement new
-    when: GsFrameChangedEvent do: [ :e|
+    when: GsPlayheadMovedEvent do: [ :e|
       self frameChanged: e]).
 ]
 
@@ -99,7 +99,8 @@ GsAnimationPanel >> selection: aSelection [
 
 { #category : #ui }
 GsAnimationPanel >> sketch: aSketch [
-  sketch := aSketch
+  sketch := aSketch.
+  timeline animation: aSketch currentAnimation
 ]
 
 { #category : #initialization }
