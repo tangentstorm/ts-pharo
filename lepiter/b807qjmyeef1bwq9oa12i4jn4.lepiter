@@ -1920,10 +1920,10 @@
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Chart Scales"
+		"title" : "GSL Chart Scales (new)"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "70666fee-b5c1-0d00-89d2-834f03438fbd"
+		"uuid" : "70636fee-b5c1-0d00-89d2-834f03438fbd"
 	}
 }

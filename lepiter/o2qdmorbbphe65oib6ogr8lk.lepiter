@@ -738,7 +738,7 @@
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GSL Chart Scales"
+		"title" : "GSL Chart Scales (old)"
 	},
 	"uid" : {
 		"__type" : "uuid",
