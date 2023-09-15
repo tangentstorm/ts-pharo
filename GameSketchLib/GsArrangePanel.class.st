@@ -1,9 +1,6 @@
 Class {
 	#name : #GsArrangePanel,
 	#superclass : #GsDockable,
-	#instVars : [
-		'selection'
-	],
 	#category : #'GameSketchLib-UI - Panels'
 }
 
@@ -16,9 +13,4 @@ GsArrangePanel >> initialize [
         aptitude: BrGlamorousButtonWithLabelAptitude new;
         label: method selector;
         action: [selection perform: method selector])]
-]
-
-{ #category : #accessing }
-GsArrangePanel >> selection: anObject [
-  selection := anObject
 ]

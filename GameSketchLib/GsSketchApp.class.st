@@ -59,3 +59,9 @@ GsSketchApp >> makeUI [
   toolbar addChild: (self makePalette).
   ^ ui
 ]
+
+{ #category : #accessing }
+GsSketchApp >> scene: aScene [
+  super scene: aScene.
+  animationPanel sketch: aScene.
+]

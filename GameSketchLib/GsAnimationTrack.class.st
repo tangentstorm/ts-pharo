@@ -13,19 +13,38 @@ Class {
 		'propertyName',
 		'keyFrames',
 		'cache',
-		'valueClass'
+		'valueClass',
+		'sketch'
 	],
 	#category : #'GameSketchLib-Animation'
 }
 
-{ #category : #initialization }
-GsAnimationTrack class >> for: aNameAndProperty withKeys: aCollection [
-  ^ self basicNew for: aNameAndProperty withKeys: aCollection
+{ #category : #creating }
+GsAnimationTrack class >> for: sketch at: n prop: p keys: aCollection [
+  ^ self basicNew initialize
+    for: sketch at: n prop: p keys: aCollection
+]
+
+{ #category : #accessing }
+GsAnimationTrack class >> new [
+  self error: 'use for:at:prop:keys:'
+]
+
+{ #category : #accessing }
+GsAnimationTrack >> at: k put: v [
+  ^ self at: k put: v easing: #linear.
+]
+
+{ #category : #accessing }
+GsAnimationTrack >> at: k put: v easing: e [
+  keyFrames at: k put: { v. e }.
+  self buildCache.
 ]
 
 { #category : #caching }
 GsAnimationTrack >> buildCache [
   |frames runs prev|
+  keyFrames sortKeys.
   frames := keyFrames keys.
   frames first ~= 0 ifTrue: [ frames error: 'must have key for frame 0' ].
   runs := OrderedCollection new.
@@ -33,6 +52,11 @@ GsAnimationTrack >> buildCache [
   frames allButFirstDo: [:x| runs add: x - prev. prev := x].
   runs add: 1. "(we'll clamp to this number of frames)"
   cache := RunArray runs: runs values: keyFrames values.
+]
+
+{ #category : #initialization }
+GsAnimationTrack >> currentValueFromSketch [
+  ^ (GsProp for: propertyName on: (sketch childWithId: elementName)) get
 ]
 
 { #category : #accessing }
@@ -55,10 +79,13 @@ GsAnimationTrack >> elementNameDescription [
 ]
 
 { #category : #initialization }
-GsAnimationTrack >> for: aNameAndProperty withKeys: aCollection [
-  elementName := aNameAndProperty  first.
-  propertyName := aNameAndProperty second.
+GsAnimationTrack >> for: aSketch at: aChildName prop: aPropName keys: aCollection [
+  sketch := aSketch.
+  elementName := aChildName.
+  propertyName := aPropName.
   keyFrames := aCollection asOrderedDictionary.
+  keyFrames at: 0 ifAbsentPut: [
+    {self currentValueFromSketch. #linear}].
   self buildCache.
 ]
 

@@ -16,10 +16,13 @@ Class {
 
 { #category : #accessing }
 GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
-  |track|  
-  track := (GsAnimationTrack new for: aNameAndProperty withKeys: aCollection).
-  trackData at: track name put: track
-  
+  |track n p|
+  n := aNameAndProperty first.
+  p := aNameAndProperty second.
+  track := (GsAnimationTrack
+    for: sketch at: n prop: p keys: aCollection).
+  trackData at: track name put: track.
+  self fireEvent: GsAnimationTracksChanged new.  
 ]
 
 { #category : #accessing }

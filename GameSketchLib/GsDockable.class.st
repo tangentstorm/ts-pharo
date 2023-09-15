@@ -12,7 +12,8 @@ Class {
 		'resizeHandle',
 		'plannedSize',
 		'workArea',
-		'dockContainer'
+		'dockContainer',
+		'selection'
 	],
 	#category : #'GameSketchLib-UI - Docking'
 }
@@ -190,6 +191,11 @@ GsDockable >> relocate: aPoint [
 { #category : #accessing }
 GsDockable >> rescindOffers [
   offerElement removeFromParent
+]
+
+{ #category : #accessing }
+GsDockable >> selection: anObject [
+  selection := anObject
 ]
 
 { #category : #accessing }

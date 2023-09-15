@@ -30,12 +30,8 @@ GsTimelineElement >> addTrackElementFor: aTrack [
 ]
 
 { #category : #accessing }
-GsTimelineElement >> addTrackFor: aNameAndProperty withKeys: aCollection [
-  | track |
-  track := animation
-    addTrackFor: aNameAndProperty withKeys: aCollection.
-  trackList items: animation trackNames.
-  self addTrackElementFor: track
+GsTimelineElement >> animation [
+  ^ animation
 ]
 
 { #category : #accessing }
@@ -43,6 +39,9 @@ GsTimelineElement >> animation: anAnimation [
   animation := anAnimation.
   trackList items: animation trackNames.
   self rebuildTracks.
+  animation when: GsAnimationTracksChanged do: [
+    trackList items: animation trackNames.
+    self rebuildTracks].
   currentFrame := -1. "force event to fire."
   self gotoFrame: 0.
 ]

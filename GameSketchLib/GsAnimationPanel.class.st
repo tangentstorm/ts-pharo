@@ -5,7 +5,6 @@ Class {
 		'timeline',
 		'frameCounter',
 		'playButton',
-		'selection',
 		'sketch',
 		'animationList',
 		'addAnimationButton',
@@ -13,6 +12,11 @@ Class {
 	],
 	#category : #'GameSketchLib-UI - Panels'
 }
+
+{ #category : #accessing }
+GsAnimationPanel >> animation [
+  ^ self timeline animation
+]
 
 { #category : #accessing }
 GsAnimationPanel >> beDocked [
@@ -51,15 +55,13 @@ GsAnimationPanel >> makeAddTrackWidget [
   | box |
   ^ addTrackWidget := BrHorizontalPane new
     addChild: (GsLabel new text: 'add track:');
-    addChild: (box := GsField new text: 'id prop');
+    addChild: (box := GsField new text: 'id prop') as: #field;
     addChild: (GsButton accept action: [
       | pair|
       pair := (box text asString splitOn: ' ') collect: #asSymbol.
       pair size = 2 ifTrue: [
         box border: Color veryDarkGray.
-        self halt. "this will fail if not a numeric property."
-        timeline addTrackFor: pair withKeys: {
-          0 -> {0. #linear}}]
+        self animation addTrackFor: pair withKeys: {}]
       ifFalse:  [ box border: Color red]]);
     fitContent; transformDo: [:t | t scaleBy: 0.8]
 ]
@@ -92,9 +94,14 @@ GsAnimationPanel >> makeTitleBar [
   ^ titleBar
 ]
 
-{ #category : #ui }
+{ #category : #accessing }
 GsAnimationPanel >> selection: aSelection [
-  selection := aSelection
+  super selection: aSelection.
+  selection whenChangedDo:  [:e|
+    selection ifNotEmpty: [
+      selection first id ifNotNil: [:id|
+        (addTrackWidget childNamed: #field)
+          text: id asSymbol asString, ' position']]]
 ]
 
 { #category : #ui }

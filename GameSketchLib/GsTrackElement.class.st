@@ -15,15 +15,23 @@ Class {
 }
 
 { #category : #accessing }
+GsTrackElement >> colW [
+  ^ [self parent colW] onErrorDo: [20].
+]
+
+{ #category : #accessing }
 GsTrackElement >> initialize [
   super initialize
     hMatchParent; vExact: (trackH := 20);
     when: BlMouseOverEvent do: [:e |
-      |cw| cw := [self parent colW] onErrorDo: [20].
+      | cw | cw := self colW.
       ghost gsShow size: cw@trackH;
         relocate: ((e localPosition x / cw) floor * cw @0)];
     when: BlClickEvent do: [:e |
-      self error: 'todo: add/remove keyframe'];
+      |frame|
+      frame :=  (e localPosition x / self colW) floor asInteger.
+      track at: frame put: track currentValueFromSketch.
+      self redrawFrames];
     when: BlMouseOutEvent do: [:e | ghost gsHide ].
 ]
 
