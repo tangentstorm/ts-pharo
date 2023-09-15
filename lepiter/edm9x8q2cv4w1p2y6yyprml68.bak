@@ -158,7 +158,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-16T15:41:37.748-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-16T15:41:53.572-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IEhxmwG9DQC04eFDBOPd8g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- use GsFrameChangedEvent instead of onFrameChanged\r\n- auto-play from start to end frame, with optional loop\r\n- advanced animation controls (speed/reverse/etc)\r\n- click to set playhead\r\n- click a track to highlight and select it\r\n- don't scroll when the pull STARTS in the zone (unless you drag all the way to other side OR you drag away from edge and then back towards the edge).\r\n- vertical scroll of timeline: keep left and right sides in sync"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -190,43 +228,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#### future"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T15:41:37.748-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T15:41:53.572-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "IEhxmwG9DQC04eFDBOPd8g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "- use GsFrameChangedEvent instead of onFrameChanged\r\n- auto-play from start to end frame, with optional loop\r\n- advanced animation controls (speed/reverse/etc)\r\n- click to set playhead\r\n- click a track to highlight and select it\r\n- don't scroll when the pull STARTS in the zone (unless you drag all the way to other side OR you drag away from edge and then back towards the edge).\r\n- vertical scroll of timeline: keep left and right sides in sync"
 			}
 		]
 	},

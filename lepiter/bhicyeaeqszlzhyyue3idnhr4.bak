@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-07T10:32:20.014-04:00"
+						"dateAndTimeString" : "2023-09-15T18:34:19.862-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsAnimation}} stores the data to describe an animation via its collection of {{gtClass:GsAnimationTrack}} objects.  {{gtClass:GsSketch}} is a compound {{gtClass:GsShape}} with a {{gtClass:GsAnimator}} that can play these animations."
+				"string" : "{{gtClass:GsAnimation}} stores the data to describe an animation via its collection of {{gtClass:GsAnimationTrack}} objects.  {{gtClass:GsSketch}} is a compound {{gtClass:GsShape}}  with a collection of these ."
 			},
 			{
 				"__type" : "textSnippet",
@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-07T13:34:18.335-04:00"
+						"dateAndTimeString" : "2023-09-15T18:35:31.242-04:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At authoring time, animations can be edited (*or at least previewed - editing is still to do*) with the help of a {{gtClass:GsTimelineElement}}. A  {{gtClass:GsPlayerApp}} can provide the rest of the UI."
+				"string" : "At authoring time, animations can be edited  with the help of a {{gtClass:GsTimelineElement}}. Both   {{gtClass:GsPlayerApp}} and {{gtClass:GsSketchApp}} provide a {{gtClass:GsAnimationPanel}} with a timeline bound to the current animation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -143,7 +143,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-07T11:27:21.638-04:00"
+									"dateAndTimeString" : "2023-09-15T18:35:47.893-04:00"
 								}
 							},
 							"uid" : {
@@ -153,7 +153,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Drag events on the timeline's playhead can emit a {{gtClass:GsFrameChangedEvent}} by way of  {{gtMethod:GsTimelineElement>>#checkFrameChange|expanded}}"
+							"string" : "Drag events on the timeline's playhead can emit a {{gtClass:GsPlayheadMovedEvent}} by way of  {{gtMethod:GsTimelineElement>>#checkFrameChange|expanded}}"
 						}
 					]
 				},
@@ -405,14 +405,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-07T13:18:23.218-04:00"
+									"dateAndTimeString" : "2023-09-15T18:35:58.162-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "qN4myCnBDQCTbH/2AsOuSw=="
 							},
-							"code" : "GsAnimatorExamples twoMovingSquares"
+							"code" : "GsAnimationExamples twoMovingSquares"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -439,14 +439,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-07T13:17:33.074-04:00"
+									"dateAndTimeString" : "2023-09-15T18:36:10.054-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GLSGs5i8DQCwJVLxC2rYKw=="
 							},
-							"code" : "GsSketchApp for: \r  GsAnimatorExamples twoMovingSquares scene removeFromParent"
+							"code" : "GsSketchApp for: \r  GsAnimationExamples twoMovingSquares "
 						}
 					]
 				},

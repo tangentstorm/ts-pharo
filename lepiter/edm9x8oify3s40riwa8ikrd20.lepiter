@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:32:23.561-04:00"
+						"dateAndTimeString" : "2023-09-15T18:31:43.515-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To handle mupltiple tracks, we need to \"zip\" the list of property values for the current frame (from {{gtMethod:GsTimelineModel>>valuesForFrame:}}) with the actual setters from {{gtMethod:GsAnimator>>trackSetters}}."
+				"string" : "To handle mupltiple tracks, we need to \"zip\" the list of property values for the current frame (from {{gtMethod:GsAnimation>>valuesForFrame:}}) with the accessor objects (\"props\") from {{gtMethod:GsAnimation>>animatedProps}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:36:18.165-04:00"
+						"dateAndTimeString" : "2023-09-15T18:32:06.861-04:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Track setters don't necessarily correspond directly to an actual setter name. For example, {{gtMethod:GsRotationSetter>>set:}}uses an intermediate builder object, and {{gtMethod:BlElement>>position:}} is explicitly deprecated in favor of {{gtMethod:BlElement>>relocate:}}, which makes for a weird track name."
+				"string" : "Track setters don't necessarily correspond directly to an actual setter name. For example, {{gtMethod:GsRotationProp>>write:to:}}uses an intermediate builder object, and {{gtMethod:BlElement>>position:}} is explicitly deprecated in favor of {{gtMethod:BlElement>>relocate:}}, which makes for a weird track name."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:36:59.781-04:00"
+						"dateAndTimeString" : "2023-09-15T18:32:34.208-04:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Also smalltalk doesn't actually have a `zip` function, but we can instead use a `readStream` on one of the collections to iterate through both in parallel."
+				"string" : "To combine the two lists, smalltalk doesn't have a `zip` function, but we can instead use a `readStream` on one of the collections to iterate through both in parallel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:37:22.648-04:00"
+						"dateAndTimeString" : "2023-09-15T18:33:34.964-04:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "All of this logic is performed in {{gtMethod:GsAnimator>>frameChanged:}}"
+				"string" : "This \"zipping\" logic is performed in {{gtMethod:GsAnimation>>gotoFrame:}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,14 +214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T13:33:08.985-04:00"
+						"dateAndTimeString" : "2023-09-15T18:33:16.33-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UJ/q7f68DQC1e1XiBOPd8g=="
 				},
-				"code" : "GsAnimatorExamples twoMovingSquares."
+				"code" : "GsAnimationExamples twoMovingSquares."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -248,14 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:27:32.473-04:00"
+						"dateAndTimeString" : "2023-09-15T18:33:20.658-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "mL5gYca9DQCOlyk/CTnb6A=="
 				},
-				"code" : "GsAnimatorExamples pathmapAnimation"
+				"code" : "GsAnimationExamples pathmapAnimation"
 			},
 			{
 				"__type" : "textSnippet",
@@ -353,12 +353,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-14T08:19:49.654-04:00"
+			"dateAndTimeString" : "2023-09-15T18:31:05.668-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GsAnimator: multiple tracks"
+		"title" : "GsAnimation: multiple tracks"
 	},
 	"uid" : {
 		"__type" : "uuid",

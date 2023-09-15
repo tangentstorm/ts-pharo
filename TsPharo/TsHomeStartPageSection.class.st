@@ -34,7 +34,7 @@ TsHomeStartPageSection >> gsPlayerAppCard [
   ^ self newCard: 'GsPlayerApp'
 	description: 'animation player example'
 	content: [ GtInspector forObject:
-	  GsAnimatorExamples pathmapAnimation ]
+	  GsAnimationExamples pathmapAnimation ]
 ]
 
 { #category : #accessing }

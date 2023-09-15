@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-16T15:41:56.604-04:00"
+									"dateAndTimeString" : "2023-09-15T18:31:05.688-04:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- [ x ]  draw keyframes in timeline\r\n- [ x ] add tracks to timeline (with code)\r\n- [ x ] click/ drag playhead  to preview animation (and reconfigure scene for that point in time)\r\n- [ x ] tweens (interpolation)\r\n- [ x ] [[GsAnimator: multiple tracks]]"
+							"string" : "- [ x ]  draw keyframes in timeline\r\n- [ x ] add tracks to timeline (with code)\r\n- [ x ] click/ drag playhead  to preview animation (and reconfigure scene for that point in time)\r\n- [ x ] tweens (interpolation)\r\n- [ x ] [[GsAnimation: multiple tracks]]"
 						}
 					]
 				},
@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-16T15:41:52.383-04:00"
+									"dateAndTimeString" : "2023-09-15T17:04:06.836-04:00"
 								}
 							},
 							"uid" : {
@@ -184,7 +184,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-16T15:41:53.572-04:00"
+									"dateAndTimeString" : "2023-09-15T17:04:06.84-04:00"
 								}
 							},
 							"uid" : {

@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:57:13.151-04:00"
+						"dateAndTimeString" : "2023-09-15T18:38:35.068-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Builds on {{gtClass:GsSceneEditor}} by adding a node tree and an inpsector"
+				"string" : "{{gtClass:GsSketchApp}} contains an inspector and an animation timeline panel for building animations. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T11:45:32.224-04:00"
+						"dateAndTimeString" : "2023-09-15T18:39:22.34-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:04:23.362-04:00"
+						"dateAndTimeString" : "2023-09-15T18:40:12.192-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AGqW9cG8DQCGYEWJDK/W9Q=="
+					"uidString" : "oOprM8/BDQC6lE5RAhKIbA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsTimeline}}owns the {{gtClass:GsTimelineModel}}, which contains {{gtClass:GsTrackModel}} objects that specifiy property changes for any {{gtClass:BlElement}}  on each frame. The elements should be named objects in a {{gtClass:GsScene}}."
+				"string" : "A {{gtClass:GsSketch}} can have any number of attached {{gtClass:GsAnimation}} objects, each of which contains some number of {{gtClass:GsAnimationTrack}} objects, which define keyframes for a particular property on a particular object in the sketch."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:04:30.141-04:00"
+						"dateAndTimeString" : "2023-09-15T18:41:43.753-04:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : " {{gtClass:GsAnimator}} has the responsibility to display the {{gtClass:GsTimeline}} and the {{gtClass:GsScene}} and to update the scene when the playhead moves on the timeline."
+				"string" : "A {{gtClass:GsAnimationPanel}} provides an interactive visualization for editing and previewing animations."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:06:00.755-04:00"
+						"dateAndTimeString" : "2023-09-15T18:42:01.007-04:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GsTrackModel}}contains the complete timeline for a single property on a single object across the entire timeline. The timeline represents a single animation."
+				"string" : "{{gtClass:GsAnimationTrack}}contains the complete timeline for a single property on a single object across the entire timeline. The timeline represents a single animation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:07:41.261-04:00"
+						"dateAndTimeString" : "2023-09-15T18:42:22.191-04:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The trackmodel maintains a cache of the poperty's value at any given frame. It builds the cache (in {{gtMethod:GsTrackModel>>buildCache}}) by looping through the track's associated keyframes."
+				"string" : "The track  maintains a cache of the poperty's value at any given frame. It builds the cache (in {{gtMethod:GsAnimationTrack>>buildCache}}) by looping through the track's associated keyframes."
 			},
 			{
 				"__type" : "textSnippet",
@@ -288,48 +288,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-13T12:15:27.693-04:00"
+						"dateAndTimeString" : "2023-09-15T18:42:36.975-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "GC+pX8K8DQCVBf5ECxM/Cg=="
 				},
-				"code" : "GsAnimatorExamples bouncingSquare"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T15:41:24.705-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T15:41:24.705-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6EKqmgG9DQC0aO6CBOPd8g=="
-				},
-				"code" : ""
+				"code" : "GsAnimationExamples bouncingSquare"
 			},
 			{
 				"__type" : "textSnippet",
