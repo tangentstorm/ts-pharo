@@ -1,6 +1,8 @@
 Class {
 	#name : #GsPolygonShape,
 	#superclass : #BlPolygonElement,
+	#traits : 'TGsShaped',
+	#classTraits : 'TGsShaped classTrait',
 	#category : #'GameSketchLib-Shapes'
 }
 

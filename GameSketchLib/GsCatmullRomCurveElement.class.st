@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'anchors'
 	],
-	#category : #'GameSketchLib-Shapes'
+	#category : #'GameSketchLib-Curves'
 }
 
 { #category : #accessing }

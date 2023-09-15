@@ -10,7 +10,7 @@ Class {
 		'bg',
 		'item'
 	],
-	#category : #'GameSketchLib-Shapes'
+	#category : #'GameSketchLib-Deprecated'
 }
 
 { #category : #'instance creation' }

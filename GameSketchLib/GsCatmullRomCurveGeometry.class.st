@@ -5,7 +5,7 @@ Class {
 		'points',
 		'alpha'
 	],
-	#category : #'GameSketchLib-Shapes'
+	#category : #'GameSketchLib-Curves'
 }
 
 { #category : #accessing }

@@ -5,6 +5,8 @@ I represent a text string, rendered with a particular font at a particular locat
 Class {
 	#name : #GsTextShape,
 	#superclass : #BrEditableLabel,
+	#traits : 'TGsShaped',
+	#classTraits : 'TGsShaped classTrait',
 	#instVars : [
 		'textColor',
 		'fontSize',

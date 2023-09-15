@@ -15,6 +15,8 @@ I should probably be a trait instead.
 Class {
 	#name : #GsShape,
 	#superclass : #GsObject,
+	#traits : 'TGsShaped',
+	#classTraits : 'TGsShaped classTrait',
 	#category : #'GameSketchLib-Shapes'
 }
 
@@ -119,4 +121,9 @@ GsShape >> gtWidgetGraphFor: aView [
 GsShape >> initialize [
   super initialize.
   visuals := GsStyle default.
+]
+
+{ #category : #traversing }
+GsShape >> withAllSubShapes [
+  ^ { self }
 ]

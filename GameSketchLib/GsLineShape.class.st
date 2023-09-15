@@ -5,6 +5,8 @@ I represent a simple line segment.
 Class {
 	#name : #GsLineShape,
 	#superclass : #BlLineElement,
+	#traits : 'TGsShaped',
+	#classTraits : 'TGsShaped classTrait',
 	#instVars : [
 		'p1',
 		'p2'

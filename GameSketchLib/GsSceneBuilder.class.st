@@ -1,7 +1,7 @@
 "
 I provide a stateful builder for GsScene objects.
 
-I can be used either with  {{gtClass:GtBuildTool}} inside a {{gtClass:GsToolApp}} for adding new shapes interactively, or invoked directly from smalltalk code.
+I can be used either with  {{gtClass:GsBuildTool}} inside a {{gtClass:GsToolApp}} for adding new shapes interactively, or invoked directly from smalltalk code.
 "
 Class {
 	#name : #GsSceneBuilder,
@@ -87,13 +87,19 @@ GsSceneBuilder >> rect: name at: topLeft size: aSize [
 ]
 
 { #category : #accessing }
+GsSceneBuilder >> resetNames [
+  scene withAllSubShapesDo: [:x | x id]
+]
+
+{ #category : #accessing }
 GsSceneBuilder >> scene [
 	^ scene
 ]
 
 { #category : #accessing }
 GsSceneBuilder >> scene: anObject [
-	scene := anObject
+  scene := anObject.
+  self resetNames
 ]
 
 { #category : #accessing }

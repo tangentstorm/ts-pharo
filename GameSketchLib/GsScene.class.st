@@ -7,7 +7,7 @@ My instances can be chained together to make complex games or presentations.
 Class {
 	#name : #GsScene,
 	#superclass : #GsSketch,
-	#category : #'GameSketchLib-Core'
+	#category : #'GameSketchLib-Shapes'
 }
 
 { #category : #accessing }
