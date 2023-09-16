@@ -14,7 +14,8 @@ Class {
 		'keyFrames',
 		'cache',
 		'valueClass',
-		'sketch'
+		'sketch',
+		'valDescription'
 	],
 	#category : #'GameSketchLib-Animation'
 }
@@ -27,7 +28,7 @@ GsAnimationTrack class >> for: sketch at: n prop: p keys: aCollection [
 
 { #category : #accessing }
 GsAnimationTrack class >> new [
-  self error: 'use for:at:prop:keys:'
+  ^ super new "self error: 'use for:at:prop:keys:'"
 ]
 
 { #category : #accessing }
@@ -102,9 +103,30 @@ GsAnimationTrack >> initialize [
   valueClass := #Number
 ]
 
+{ #category : #magritte }
+GsAnimationTrack >> keyframeData [
+  "helper for magritte"
+  |res| res := OrderedCollection new.
+  keyFrames sortKeys.
+  self framesDo: [:k :v :e|
+    res add: (
+      GsKeyframeData new
+        key: k; val: v; easing: e;
+        valDescription: self valDescription) ].
+  ^ res
+]
+
 { #category : #accessing }
 GsAnimationTrack >> keyframes [
   ^ keyFrames
+]
+
+{ #category : #accessing }
+GsAnimationTrack >> keyframesDescription [
+  <magritteDescription>
+  ^ MAToManyRelationDescription new
+    label: 'Keyframes';
+    accessor: #keyframeData
 ]
 
 { #category : #accessing }
@@ -131,6 +153,24 @@ GsAnimationTrack >> propertyNameDescription [
     accessor: #propertyName
 ]
 
+{ #category : #magritte }
+GsAnimationTrack >> valDescription [
+  "this builds a magritte description to be shared by all the keyframeData objects in this track."
+  ^ valDescription ifNil: [|c d|
+      d := {
+        #position -> GsPointDescription.
+        #bottomRight -> GsPointDescription.
+        #rotation -> MANumberDescription.
+        #fillColor -> MAColorDescription.
+        #lengthShown -> MANumberDescription.
+      } asDictionary.
+      c := d at: self propertyName
+             ifAbsent: MANumberDescription.
+      valDescription := c new
+        label: 'val';
+        accessor: #val ]
+]
+
 { #category : #accessing }
 GsAnimationTrack >> valueAtFrame: aNumber [
   |ix|
@@ -147,24 +187,4 @@ GsAnimationTrack >> valueAtFrame: aNumber [
         fraction := easing interpolate: (offset / (cache runs at: run)).
         ^ NSNumberInterpolator new start: thisKey; stop: nextKey;
           interpolate: fraction]]
-]
-
-{ #category : #accessing }
-GsAnimationTrack >> valueClass [
-  ^ valueClass
-]
-
-{ #category : #accessing }
-GsAnimationTrack >> valueClass: aClass [
-  valueClass := aClass
-]
-
-{ #category : #magritte }
-GsAnimationTrack >> valueClassDescription [
-  <magritteDescription>
-  ^ MASingleOptionDescription new
-    priority: 30;
-    label: 'Value Class';
-    options: #(Number Color Point);
-    accessor: #valueClass
 ]

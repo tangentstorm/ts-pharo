@@ -46,12 +46,26 @@ GsSketch >> animationNames [
 ]
 
 { #category : #accessing }
+GsSketch >> animations [
+  ^ animations
+]
+
+{ #category : #magritte }
+GsSketch >> animationsDescription [
+  <magritteDescription>
+  ^ MAToManyRelationDescription new
+    label: 'Animations';
+    accessor: #animations
+]
+
+{ #category : #accessing }
 GsSketch >> asScene [
   ^ self
 ]
 
 { #category : #accessing }
 GsSketch >> currentAnimation [
+  <returns:#GsAnimation>
   ^ currentAnimation ifNil: [
     currentAnimation := self newAnimationNamed:  #default]
 ]
@@ -64,7 +78,7 @@ GsSketch >> gotoFrame: i [
 { #category : #initialization }
 GsSketch >> initialize [
   super initialize.
-  animations := Dictionary new.
+  animations := OrderedDictionary new.
 ]
 
 { #category : #animations }

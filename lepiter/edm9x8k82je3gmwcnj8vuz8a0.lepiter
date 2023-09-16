@@ -8,7 +8,156 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:43:56.763-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:49:08.363-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kHepdNPBDQCCRIUIBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- Sketches may have any number of predefined, named animations, so {{gtMethod:GsSketch>>#animations}} returns a dictionary mapping symbols to animations."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:43:07.605-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:44:04.291-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IGC7cdPBDQCA2OOFBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- An animation is a collection of tracks for a scene."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:43:33.663-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:45:34.217-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MP1Ic9PBDQCBxYAjBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- A track contains the id of an element in a sketch, a property name for that element, and a list of keyframes."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:45:34.571-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:46:14.272-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+Ol9etPBDQCGQSyABvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- A keyframe tracks ( frame number , value , easing strategy ) "
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +167,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-15T19:14:42.148-04:00"
+						"dateAndTimeString" : "2023-09-15T23:53:10.312-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +178,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-15T19:14:42.148-04:00"
+						"dateAndTimeString" : "2023-09-15T23:55:07.817-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +188,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "The data model for animations is simple enough:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +204,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:11:54.539-04:00"
+						"dateAndTimeString" : "2023-09-15T23:55:17.268-04:00"
 					}
 				},
 				"editEmail" : {
@@ -66,23 +215,422 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:12:04.219-04:00"
+						"dateAndTimeString" : "2023-09-15T23:58:59.461-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+E+7BwK9DQC8JTRBBOPd8g=="
+					"uidString" : "cKKwbNPBDQC/aRssBvesTg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "- [  ] load / save the scene"
+				"string" : "Serializing this structure to JSON and back ought to be easy. It wouldn't be hard to write by hand, but I'm stubbornly expecting Magritte to do the work for me. Only I feel like I don't know how."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:26:10.224-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:26:10.224-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yJ8+4tTBDQCTIuahBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:12:22.632-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:18:00.182-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+Odh2dPBDQCcTA50BvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "It's tempting to try building the serialization scheme from the ground up - to serialize and then parse a single number, for example, but Magritte descriptions do not describe values - they describe the properties of an object."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:31:27.965-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:38:25.212-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YFubHtTBDQC4u9cOBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For example,  {{gtClass:MAColorDescription}} does not describe a *Color*, but rather a slot for a color in some class of object. Often this \"class\" is an actual Pharo {{gtClass:Class}}, and the \"slot\" refers to a pair of accessor methods, but there are many types of  {{gtClass:MAAccessor|show=gtSubclassesFor:|expanded|label=accessor:}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:27:32.949-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:39:02.522-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CFCZENTBDQCzWDO5BvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : " So, if we want to describe a single color, we could use the {{gtClass:MAIdentityAccessor}}"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:39:26.388-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:40:42.335-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aHsfO9TBDQCAEBx/BvesTg=="
+							},
+							"code" : "d := MAColorDescription new\r  accessor: MAIdentityAccessor new.\rself assert: (d read: Color red)\r     equals: Color red"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:52:19.271-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:03:10.375-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qOgYOtTBDQC/79poBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is probably not terribly valuable for \"primitive\" values like colors, except perhaps to generate a top-level string containing only that primitive:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:41:42.84-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:45:51.742-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8JZBQ9TBDQCH0QPiBvesTg=="
+							},
+							"code" : "MAStringWriter write: Color red description:(\r  MAColorDescription new\r    accessor: MAIdentityAccessor new)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:55:35.044-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:57:59.592-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kDNvQtTBDQCHivvXBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "... but it's exactly what we need when visiting a container for other properties. Hence {{gtMethod:MAContainer class>>defaultAccessor|expanded|label=:}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T00:15:59.461-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:09:34.741-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oIJD59PBDQClssj1BvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that for generating JSON, we can't just output the color string at the top level like we can with a plain string. That's because we're generally building a dictionary structure, so we're really writing both a key and a value."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-15T23:59:10.835-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:09:08.954-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aBUlq9PBDQCVfT2TBvesTg=="
+							},
+							"code" : "GsJsonWriter write: Color purple  description:\r  (MAContainer new \r    add: (MAColorDescription new accessor: #asHexString))."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:11:19.959-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:17:00.842-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MISMp9TBDQCFE+F1BvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Instead of reading and writing JSON directly, it might make sense to translate into simple k-style structured data, and then translate that data structure to JSON with STON."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -92,7 +640,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:12:04.734-04:00"
+						"dateAndTimeString" : "2023-09-16T00:12:06.41-04:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +651,588 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T16:12:04.734-04:00"
+						"dateAndTimeString" : "2023-09-16T01:26:03.024-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MOBWCAK9DQC86Ny+BOPd8g=="
+					"uidString" : "EHNf2dPBDQCcSDBiBvesTg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "##Magritte exploration"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-09-16T01:35:00.283-04:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-09-16T01:56:09.456-04:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "eD1+5tTBDQCVv8F5BvesTg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The only similar thing I've implemented is {{gtMethod:GsJsonWriter>>visitRelationDescription:}}"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T01:26:24.382-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:07:02.586-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SLAW49TBDQCThqqKBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To serialize the collection of animations, we either need to be able to serialize a dictionary, or just use {{gtClass:MAToManyRelationDescription}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:06:26.374-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:07:28.122-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yDBHa9XBDQCdJOGdBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A single animation is just a name + list of tracks. This is another to-many relation."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:08:10.381-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:41:17.925-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OImec9XBDQCh2FbzBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A track is a to-many for simple property values. There is {{gtClass:MAToManyScalarRelationDescription}}. I'm not sure strings and points and colors are actually \"scalars\", but I think what it actually means is that we're not dealing with property containers."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:41:19.187-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:41:46.846-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UPj/7tXBDQCwCM3pBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "I would say then, that it **probably is not hard**."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-16T01:17:01.125-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-16T02:03:56.946-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oBGEwdTBDQCSEQIYBvesTg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##So. Is this actually hard (in magritte)?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:56.79-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:56.79-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UIY5IdfBDQChalqcBvesTg=="
+							},
+							"code" : "scn := GsScene new\r  addChild: GsCircleShape new as: #circle."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:07:14.53-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:07:17.603-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0EZIItfBDQChlZ5GBvesTg=="
+							},
+							"code" : "scn gsJson"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T03:00:17.271-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:56.795-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8MDVMtbBDQCHWhYcBvesTg=="
+							},
+							"code" : "ani := scn currentAnimation\r  addTrackFor: #(circle position) withKeys: {\r    00 -> {100@100. #linear}.\r    05 -> {210@150. #linear}.\r    10 -> {200@200. #linear}}"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T03:35:46.091-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:07.612-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EPi4sdbBDQCNxZEPBvesTg=="
+							},
+							"code" : "ani  gsJson"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:39.098-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:06:39.098-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wJgrINfBDQChGlMdBvesTg=="
+							},
+							"code" : "ani trackData first ."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T03:50:15.62-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T04:33:21.411-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uO2M5dbBDQCYOKulBvesTg=="
+							},
+							"code" : "ani trackData first keyframeData first"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:42:16.286-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T03:00:18.517-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YDdn8tXBDQCxk60CBvesTg=="
+							},
+							"code" : "ani gsJson"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:58:39.051-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T03:27:46.909-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KAX7LNbBDQCFri9GBvesTg=="
+							},
+							"code" : "GsAnimation.\rGsAnimationTrack.\rGsJsonWriter"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:42:05.319-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-16T02:42:05.319-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cOO/8dXBDQCxX95jBvesTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-16T02:41:55.849-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-16T02:42:12.318-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WF8v8dXBDQCxAtsKBvesTg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Visiting Tracks"
 			}
 		]
 	},

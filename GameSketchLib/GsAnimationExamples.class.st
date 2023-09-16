@@ -1,9 +1,12 @@
 "
-I provide some examples for using {{gtClass:GsAnimator}}.
+I provide some tests and examples for {{gtClass:GsAnimation}}.
 "
 Class {
 	#name : #GsAnimationExamples,
 	#superclass : #Object,
+	#classInstVars : [
+		'dsc2'
+	],
 	#category : #'GameSketchLib-Examples'
 }
 
@@ -30,6 +33,21 @@ GsAnimationExamples class >> bouncingSquare [
       00 -> {30. #linear}.
       10 -> {90. #linear}.
       20 -> {120. #linear}}      
+]
+
+{ #category : #accessing }
+GsAnimationExamples class >> magritteExample [
+  <gtExample>
+  | ani dsc scn gjw jsn md| 
+  ani := self bouncingSquare.
+  scn := ani sketch.
+  dsc := scn animationsDescription.
+  md := scn magritteDescription.
+  ^ md
+"  self assert: ((dsc read: scn) at: #default)  equals: ani.
+  gjw := GsJsonWriter new.
+  gjw write: scn.
+  ^ jsn := gjw stream contents."
 ]
 
 { #category : #examples }

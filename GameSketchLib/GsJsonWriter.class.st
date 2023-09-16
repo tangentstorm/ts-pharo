@@ -35,14 +35,18 @@ GsJsonWriter >> putKey: aKey stringVal: aVal [
 
 { #category : #accessing }
 GsJsonWriter >> visitContainer: aDescription [
-  stream nextPutAll: indent.
+  | oldSkipped |
+	stream nextPutAll: indent.
   stream nextPut: ${.
   self putKey: #class stringVal: object class name.
+  oldSkipped := skipped.
+  skipped := false.
   aDescription children do: [:cd|
     skipped  ifFalse: [stream nextPutAll: ', ']
       ifTrue: [skipped := false].
     self visit: cd].
   stream nextPut: $}.
+  skipped := oldSkipped.
 ]
 
 { #category : #accessing }
@@ -62,6 +66,7 @@ GsJsonWriter >> visitRelationDescription: d [
   |key vals|
   key := d asGsDescription jsonKey.
   vals := d read: object.
+  vals ifEmpty: [skipped := true].
   vals ifNotEmpty: [ |first oldIndent|
     first := true.
     self putKey: key.

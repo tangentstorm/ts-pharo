@@ -8,8 +8,8 @@ Class {
 	#name : #GsAnimation,
 	#superclass : #BlAnimation,
 	#instVars : [
-		'trackData',
-		'sketch'
+		'sketch',
+		'tracks'
 	],
 	#category : #'GameSketchLib-Animation'
 }
@@ -21,7 +21,7 @@ GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
   p := aNameAndProperty second.
   track := (GsAnimationTrack
     for: sketch at: n prop: p keys: aCollection).
-  trackData at: track name put: track.
+  tracks at: track name put: track.
   self fireEvent: GsAnimationTracksChanged new.  
 ]
 
@@ -58,7 +58,7 @@ GsAnimation >> gtTreeFor: aView [
 	^ aView columnedTree
 		title: 'Tree';
 		priority: 100;
-		items: [ trackData values ];
+		items: [ tracks values ];
 		children: [ :aNode | 
 		  (aNode isKindOf: GsAnimationTrack)
 		  ifTrue: [aNode keyframes associations]
@@ -75,7 +75,7 @@ GsAnimation >> gtTreeFor: aView [
 { #category : #accessing }
 GsAnimation >> initialize [
   super initialize.
-  trackData := OrderedDictionary new.
+  tracks := OrderedDictionary new.
 ]
 
 { #category : #accessing }
@@ -90,31 +90,44 @@ GsAnimation >> sketch: aSketch [
 
 { #category : #accessing }
 GsAnimation >> trackCount [
-  ^ trackData size
+  ^ tracks size
 ]
 
 { #category : #accessing }
 GsAnimation >> trackData [
-  ^ trackData
+  ^ tracks values asOrderedCollection
 ]
 
 { #category : #accessing }
 GsAnimation >> trackNames [
-  ^ trackData keys
+  ^ tracks keys
 ]
 
 { #category : #accessing }
 GsAnimation >> trackSymbols [
   "the element name and property name for each track, as symbols"
-  ^ trackData values  collect: [:x| {x elementName. x propertyName.}]
+  ^ tracks values  collect: [:x| {x elementName. x propertyName.}]
+]
+
+{ #category : #accessing }
+GsAnimation >> tracks [
+  ^ tracks
+]
+
+{ #category : #accessing }
+GsAnimation >> tracksDescription [
+  <magritteDescription>
+  ^ MAToManyRelationDescription new
+      label: 'Tracks';
+      accessor: #trackData
 ]
 
 { #category : #accessing }
 GsAnimation >> tracksDo: aBlock [
-  trackData values do: aBlock
+  tracks values do: aBlock
 ]
 
 { #category : #accessing }
 GsAnimation >> valuesForFrame: aNumber [
-  ^ trackData values collect: [:track | track valueAtFrame: aNumber+1]
+  ^ tracks values collect: [:track | track valueAtFrame: aNumber+1]
 ]

@@ -132,22 +132,6 @@ BlElement >> gsInspectorButtons [
 ]
 
 { #category : #'*GameSketchLib' }
-BlElement >> gsJson [
-  | ws |
-  ws := WriteStream on: String new.
-  self gsJsonOn: ws.
-  ^ ws contents
-]
-
-{ #category : #'*GameSketchLib' }
-BlElement >> gsJsonOn: aStream [
-  GsJsonWriter
-    write: self
-    description: self magritteDescription
-    to: aStream
-]
-
-{ #category : #'*GameSketchLib' }
 BlElement >> gsLeft [
   ^ self position x
 ]
