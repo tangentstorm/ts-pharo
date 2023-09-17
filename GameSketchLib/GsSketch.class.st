@@ -24,8 +24,8 @@ GsSketch >> addAnimation: x [
 ]
 
 { #category : #animations }
-GsSketch >> addAnimation: anAnimation as: aSymbol [
-  animations at: aSymbol put: (anAnimation sketch: self).
+GsSketch >> addAnimation: anAnimation as: aName [
+  animations at: aName asSymbol put: (anAnimation sketch: self).
   super addAnimation: anAnimation.
   ^ anAnimation
 ]
@@ -51,16 +51,45 @@ GsSketch >> animations [
 ]
 
 { #category : #magritte }
+GsSketch >> animationsData [
+  ^ animations collect: [:o | o asData]
+]
+
+{ #category : #accessing }
+GsSketch >> animationsData: aDictionary [
+  animations := OrderedDictionary new.
+  aDictionary associationsDo: [:kv|
+    self addAnimation: (GsAnimation new fromData: kv value) as:kv key]
+]
+
+{ #category : #accessing }
 GsSketch >> animationsDescription [
   <magritteDescription>
-  ^ MAToManyRelationDescription new
-    label: 'Animations';
-    accessor: #animations
+  ^ GsDescriptionWrapper new for: 
+    (GsAnimationsDescription new
+      label: 'Animations';
+      accessor: #animationsData);
+    jsonKey: #animations
+
+]
+
+{ #category : #accessing }
+GsSketch >> animationsJson [
+  ^ GsAnimationsDescription new
+    accessor: #animationsData
 ]
 
 { #category : #accessing }
 GsSketch >> asScene [
   ^ self
+]
+
+{ #category : #magritte }
+GsSketch >> brokenAnimationsDescription [
+  "<magritteDescription> !! browse senders to see example of how it's broken."
+  ^ MAToManyRelationDescription new
+    label: 'Animations';
+    accessor: #animations
 ]
 
 { #category : #accessing }

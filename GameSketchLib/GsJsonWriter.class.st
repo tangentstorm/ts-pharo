@@ -33,7 +33,13 @@ GsJsonWriter >> putKey: aKey stringVal: aVal [
   stream nextPutAll: (aVal asString surroundedBy: '"')
 ]
 
-{ #category : #accessing }
+{ #category : #visiting }
+GsJsonWriter >> visitAnimationsDescription: d [
+  self putKey: #animations.
+  stream nextPutAll: (STONJSON toString: (d read: object)).
+]
+
+{ #category : #visiting }
 GsJsonWriter >> visitContainer: aDescription [
   | oldSkipped |
 	stream nextPutAll: indent.
@@ -49,19 +55,19 @@ GsJsonWriter >> visitContainer: aDescription [
   skipped := oldSkipped.
 ]
 
-{ #category : #accessing }
+{ #category : #visiting }
 GsJsonWriter >> visitElementDescription: d [
   self putKey: d asGsDescription jsonKey stringVal: (d read: object).
 ]
 
-{ #category : #accessing }
+{ #category : #visiting }
 GsJsonWriter >> visitNumberDescription: d [
   self putKey: d asGsDescription jsonKey.
   "don't quote the number"
   stream nextPutAll: (d read: object) asString.
 ]
 
-{ #category : #accessing }
+{ #category : #visiting }
 GsJsonWriter >> visitRelationDescription: d [
   |key vals|
   key := d asGsDescription jsonKey.
@@ -81,7 +87,7 @@ GsJsonWriter >> visitRelationDescription: d [
     stream nextPut: $]. ].
 ]
 
-{ #category : #accessing }
+{ #category : #visiting }
 GsJsonWriter >> visitStringDescription: d [
   (d read: object)
     ifEmpty: [ skipped := true ]

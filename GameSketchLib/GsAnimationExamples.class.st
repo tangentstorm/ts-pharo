@@ -41,7 +41,7 @@ GsAnimationExamples class >> magritteExample [
   | ani dsc scn gjw jsn md| 
   ani := self bouncingSquare.
   scn := ani sketch.
-  dsc := scn animationsDescription.
+  dsc := scn brokenAnimationsDescription.
   md := scn magritteDescription.
   ^ md
 "  self assert: ((dsc read: scn) at: #default)  equals: ani.

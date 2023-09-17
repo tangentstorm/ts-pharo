@@ -13,22 +13,35 @@ Class {
 		'propertyName',
 		'keyFrames',
 		'cache',
-		'valueClass',
 		'sketch',
-		'valDescription'
+		'valDescription',
+		'typeName'
 	],
 	#category : #'GameSketchLib-Animation'
 }
 
 { #category : #creating }
 GsAnimationTrack class >> for: sketch at: n prop: p keys: aCollection [
-  ^ self basicNew initialize
-    for: sketch at: n prop: p keys: aCollection
+  ^ self new for: sketch at: n prop: p keys: aCollection
 ]
 
 { #category : #accessing }
-GsAnimationTrack class >> new [
-  ^ super new "self error: 'use for:at:prop:keys:'"
+GsAnimationTrack class >> fromData: aDict [
+  | res type | type := aDict at: #type.
+  res := self new.
+  
+  ^ res
+]
+
+{ #category : #accessing }
+GsAnimationTrack >> asData [
+  "returns a list of [int, str(value), str(easingSymbol)] triples"
+  ^ { #el -> self elementName asString.
+      #prop -> self propertyName asString.
+      #type -> self typeName asString.
+      #keys -> (keyFrames sortKeys associations collect: [:kv|
+        { kv key. kv value first asString. kv value second asString. }]) asArray
+    } asOrderedDictionary.
 ]
 
 { #category : #accessing }
@@ -81,9 +94,7 @@ GsAnimationTrack >> elementNameDescription [
 
 { #category : #initialization }
 GsAnimationTrack >> for: aSketch at: aChildName prop: aPropName keys: aCollection [
-  sketch := aSketch.
-  elementName := aChildName.
-  propertyName := aPropName.
+  self withoutKeysfor: aSketch at: aChildName prop: aPropName.
   keyFrames := aCollection asOrderedDictionary.
   keyFrames at: 0 ifAbsentPut: [
     {self currentValueFromSketch. #linear}].
@@ -97,10 +108,16 @@ GsAnimationTrack >> framesDo: aBlock [
     aBlock value: kv key value: kv value first value value: kv value second]
 ]
 
-{ #category : #initialization }
-GsAnimationTrack >> initialize [
-  super initialize.
-  valueClass := #Number
+{ #category : #accessing }
+GsAnimationTrack >> fromData: aDict [
+  "inverse of asData"
+  | type| type := (aDict at: #type) asClass.
+  self elementName: (aDict at: #el).
+  self propertyName: (aDict at: #prop).
+  (aDict at: #keys) do: [:keyData|
+    self at: (keyData at: #key)
+        put: (type readFrom: (keyData at: #value))
+        easing: (keyData at: #easing)].
 ]
 
 { #category : #magritte }
@@ -153,6 +170,16 @@ GsAnimationTrack >> propertyNameDescription [
     accessor: #propertyName
 ]
 
+{ #category : #accessing }
+GsAnimationTrack >> typeName [
+	^ typeName
+]
+
+{ #category : #accessing }
+GsAnimationTrack >> typeName: aSymbol [
+	typeName := aSymbol
+]
+
 { #category : #magritte }
 GsAnimationTrack >> valDescription [
   "this builds a magritte description to be shared by all the keyframeData objects in this track."
@@ -187,4 +214,12 @@ GsAnimationTrack >> valueAtFrame: aNumber [
         fraction := easing interpolate: (offset / (cache runs at: run)).
         ^ NSNumberInterpolator new start: thisKey; stop: nextKey;
           interpolate: fraction]]
+]
+
+{ #category : #initialization }
+GsAnimationTrack >> withoutKeysfor: aSketch at: aChildName prop: aPropName [ 
+  sketch := aSketch.
+  elementName := aChildName.
+  propertyName := aPropName.
+  keyFrames := OrderedDictionary new.
 ]

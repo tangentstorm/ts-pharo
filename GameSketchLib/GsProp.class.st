@@ -13,7 +13,8 @@ Class {
 	#name : #GsProp,
 	#superclass : #Object,
 	#instVars : [
-		'target'
+		'target',
+		'parser'
 	],
 	#category : #'GameSketchLib-Props'
 }
@@ -43,10 +44,16 @@ GsProp class >> lengthShown [
 ]
 
 { #category : #creating }
+GsProp class >> pointParser [
+  ^ [:s| Point readFrom: s ]
+]
+
+{ #category : #creating }
 GsProp class >> position [
   ^ GsSelectorProp new
     readSelector: #position;
-    writeSelector: #relocate: 
+    writeSelector: #relocate:;
+    parser: self pointParser
 ]
 
 { #category : #creating }
@@ -56,12 +63,28 @@ GsProp class >> rotation [
 
 { #category : #creating }
 GsProp class >> size [
-  ^ GsSizeProp new
+  ^ GsSelectorProp new
+    readSelector: #extent;
+    writeSelector: #size:;
+    parser: self pointParser
 ]
 
 { #category : #accessing }
 GsProp >> get [
   ^ self read: target 
+]
+
+{ #category : #accessing }
+GsProp >> parse: aString [
+  "this parses a value of the given type from the string"
+  ^ (parser ifNil: [self notify: 'no parser defined.'])
+      value: aString
+]
+
+{ #category : #accessing }
+GsProp >> parser: aBlock [
+  "this is for converting the property to a string. should be a block that takes a string and returns the data"
+  parser := aBlock
 ]
 
 { #category : #accessing }
@@ -74,6 +97,7 @@ GsProp >> printOn: aStream [
 
 { #category : #accessing }
 GsProp >> read: anObject [
+  "this reads the property from the given object"
   self subclassResponsibility
 ]
 

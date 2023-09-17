@@ -15,14 +15,19 @@ Class {
 }
 
 { #category : #accessing }
-GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
-  |track n p|
-  n := aNameAndProperty first.
-  p := aNameAndProperty second.
-  track := (GsAnimationTrack
-    for: sketch at: n prop: p keys: aCollection).
+GsAnimation >> addTrackFor: anId prop: prop withKeys: keys [
+  | track |
+  track := GsAnimationTrack
+    for: sketch at: anId prop: prop keys: keys.
   tracks at: track name put: track.
-  self fireEvent: GsAnimationTracksChanged new.  
+  self fireEvent: GsAnimationTracksChanged new.
+  ^ track
+]
+
+{ #category : #accessing }
+GsAnimation >> addTrackFor: aNameAndProperty withKeys: aCollection [
+  ^ self addTrackFor: aNameAndProperty first
+     prop: aNameAndProperty second withKeys: aCollection.
 ]
 
 { #category : #accessing }
@@ -32,9 +37,26 @@ GsAnimation >> animatedProps [
         on: (sketch childNamed: ep first)]
 ]
 
+{ #category : #magritte }
+GsAnimation >> asData [
+  ^ (self trackData collect: #asData) asArray
+]
+
 { #category : #accessing }
 GsAnimation >> asElement [
   ^ sketch
+]
+
+{ #category : #accessing }
+GsAnimation >> fromData: trackDicts [
+  "data should be a list of dicts corresponding to tracks. see asData method."
+  trackDicts do: [:t | |track prop|
+    prop := GsProp perform: (t at: #prop) asSymbol.
+    track := self
+      addTrackFor: (t at: #el)
+      prop: (t at: #prop) asSymbol
+      withKeys: ((t at: #keys) collect: [:o|
+        (o first) -> { prop parse: (o second). o third asSymbol }])].
 ]
 
 { #category : #animation }

@@ -893,7 +893,7 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -906,7 +906,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T04:06:56.79-04:00"
+									"dateAndTimeString" : "2023-09-16T14:08:54.366-04:00"
 								}
 							},
 							"editEmail" : {
@@ -917,17 +917,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T04:06:56.79-04:00"
+									"dateAndTimeString" : "2023-09-16T14:41:49.879-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "UIY5IdfBDQChalqcBvesTg=="
+								"uidString" : "2PVYid/BDQCMxrHGB3DtXA=="
 							},
-							"code" : "scn := GsScene new\r  addChild: GsCircleShape new as: #circle."
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Even though it shouldn't be hard, I {{gtMethod:GsJsonExamples>>brokenAnimationsDescription|label=couldn't get magritte to work}}."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -940,7 +943,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T04:07:14.53-04:00"
+									"dateAndTimeString" : "2023-09-16T14:09:02.871-04:00"
 								}
 							},
 							"editEmail" : {
@@ -951,17 +954,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T04:07:17.603-04:00"
+									"dateAndTimeString" : "2023-09-16T14:42:47.716-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0EZIItfBDQChlZ5GBvesTg=="
+								"uidString" : "8NGBit/BDQCOaQLRB3DtXA=="
 							},
-							"code" : "scn gsJson"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "So instead, I'll just directly build the json myself, by converting it into raw data and then serializing that as JSON."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -974,7 +980,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T03:00:17.271-04:00"
+									"dateAndTimeString" : "2023-09-16T14:42:16.113-04:00"
 								}
 							},
 							"editEmail" : {
@@ -985,14 +991,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T04:06:56.795-04:00"
+									"dateAndTimeString" : "2023-09-16T14:42:16.113-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "8MDVMtbBDQCHWhYcBvesTg=="
+								"uidString" : "gEdQAeDBDQCjdS4tB3DtXA=="
 							},
-							"code" : "ani := scn currentAnimation\r  addTrackFor: #(circle position) withKeys: {\r    00 -> {100@100. #linear}.\r    05 -> {210@150. #linear}.\r    10 -> {200@200. #linear}}"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1155,14 +1164,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-16T03:27:46.909-04:00"
+									"dateAndTimeString" : "2023-09-16T14:43:04.284-04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "KAX7LNbBDQCFri9GBvesTg=="
 							},
-							"code" : "GsAnimation.\rGsAnimationTrack.\rGsJsonWriter"
+							"code" : "GsSketch.\rGsAnimation.\rGsAnimationTrack.\rGsJsonWriter"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1222,7 +1231,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-16T02:42:12.318-04:00"
+						"dateAndTimeString" : "2023-09-16T14:08:52.127-04:00"
 					}
 				},
 				"uid" : {
@@ -1232,7 +1241,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Visiting Tracks"
+				"string" : "##And yet..."
 			}
 		]
 	},

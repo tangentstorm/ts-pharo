@@ -30,6 +30,11 @@ GsJsonReader >> read: aString [
 ]
 
 { #category : #accessing }
+GsJsonReader >> visitAnimationsDescription: d [
+  self visitElementDescription: d
+]
+
+{ #category : #accessing }
 GsJsonReader >> visitContainer: mc [
   "At this point, we have a class with default values and need to fill in the properties
    from the parsed json. To know what keys to look for and what to do with the values, we
