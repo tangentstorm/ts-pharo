@@ -32,7 +32,8 @@ GsAnimationExamples class >> bouncingSquare [
     withKeys: {
       00 -> {30. #linear}.
       10 -> {90. #linear}.
-      20 -> {120. #linear}}      
+      20 -> {120. #linear}};
+    yourself 
 ]
 
 { #category : #accessing }
@@ -153,7 +154,8 @@ GsAnimationExamples >> titleCardSceneWithAnimatedPosition [
     withKeys: {
       00 -> {128@ -32. #linear}.
       12 -> {128@ 256. #linear}.
-      18 -> {  0@ 256. #linear}}.
+      18 -> {  0@ 256. #linear}};
+    yourself
 ]
 
 { #category : #accessing }
@@ -165,7 +167,8 @@ GsAnimationExamples >> titleCardWithAnimatedPositionAndSize [
       00 -> { 32@ 32. #linear}.
       12 -> { 32@136. #linear}.
       "next one probably should be 1920"
-      20 -> { 800@136. #linear}}.
+      20 -> { 800@136. #linear}};
+    yourself.
 ]
 
 { #category : #accessing }
@@ -177,5 +180,6 @@ GsAnimationExamples >> titleCardWithAnimatedPositionAndSizeAndText [
       00 -> { 0. #linear}.
       12 -> { 0. #linear}.
       "next one probably should be 1920"
-      20 -> { 32. #linear}}.
+      20 -> { 32. #linear}};
+    yourself
 ]

@@ -12,8 +12,8 @@ GsMagritteExamples class >> circleShape [
   <gtExample>
   |c|
   c := GsCircleShape new id: #shape001.
-  self assert: c gsJson
-     equals: '{"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0.0@0.0)", "radius":10}'.
+  self assert: (STONJSON fromString: (c gsJson))
+     equals: (STONJSON fromString: '{"class":"GsCircleShape", "id":"shape001", "strokeColor":"#000000", "fill":"#FFFFFF", "center":"(0.0@0.0)", "radius":10}').
   ^ c
 ]
 
@@ -29,12 +29,18 @@ GsMagritteExamples class >> pointDescriptionExample [
 { #category : #accessing }
 GsMagritteExamples class >> sceneWithCircle [
   <gtExample>
-  |c s |
-  c := self circleShape.
-  s := GsScene new addChild: c. "Note that scenes have a default background color."
-  self assert: s gsJson
-     equals: '{"class":"GsScene", "fill":"#9F9F9F", "children":[
-  {"class":"GsCircleShape", "id":"shape001", "fill":"#FFFFFF", "center":"(0.0@0.0)", "radius":10}]}'
+  |c s data|
+  s := GsScene new addChild: self circleShape. 
+  data := (STONJSON fromString: s gsJson).
+  self assert: (data at: #class) equals: 'GsScene'.
+  self assert: (data at: #fill) equals: '#9F9F9F'.
+  c := (data at: #children) first.
+  self assert: (c at: #class) equals: 'GsCircleShape'.
+  self assert: (c at: #id) equals: 'shape001'.
+  self assert: (c at: #fill) equals: '#FFFFFF'.
+  self assert: (c at: #center) equals: '(0.0@0.0)'.
+  self assert: (c at: #radius) equals: 10.
+  ^ s
   
 ]
 

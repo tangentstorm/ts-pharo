@@ -115,6 +115,7 @@ GsPathShape >> handleForPointAt: anIndex [
 GsPathShape >> initialize [
   super initialize.
   origin := 0@0.
+  stroke := Color black.
   points := OrderedCollection new.
   isRebuilding := false.
   self when: BlElementPositionChangedEvent do: [:e|
