@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T22:40:00.227-04:00"
+						"dateAndTimeString" : "2023-09-18T20:22:32.103-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "kKY/iMe4DQC2qgniAHWuQg=="
 				},
-				"code" : "\"coming soon: variables with click handlers\"\rBexVar stencil\r\naddEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r  el background: (bitColor at: (1 + (val := 1-val)))])].\r\n"
+				"code" : "\"coming soon: variables with click handlers\"\rBexVar stencil\r\naddEventHandler: (BlEventHandler on: BlMouseUpEvent do: [:e|\r  el background: (bitColor at: (1 + (val := 1-val)))].\r\n"
 			}
 		]
 	},
@@ -96,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-05-23T20:43:02.234-04:00"
+			"dateAndTimeString" : "2023-05-24T21:02:19.501-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Drawing Input Variables for Bex"
+		"title" : "Drawing Constants for Bex"
 	},
 	"uid" : {
 		"__type" : "uuid",

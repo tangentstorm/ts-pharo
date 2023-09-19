@@ -523,7 +523,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-16T15:45:30.138-04:00"
+												"dateAndTimeString" : "2023-09-15T18:31:05.68-04:00"
 											}
 										},
 										"uid" : {
@@ -533,7 +533,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[GsAnimator: multiple tracks]]"
+										"string" : "[[GsAnimation: multiple tracks]]"
 									}
 								]
 							},
@@ -606,6 +606,43 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-19T13:58:18.228-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-19T13:58:18.233-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6EZuvRvCDQCpxfSuAjZaXQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Icons for Boolean Expressions]]"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {

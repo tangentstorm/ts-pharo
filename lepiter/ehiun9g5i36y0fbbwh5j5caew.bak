@@ -1,0 +1,110 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-19T13:42:54.656-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-19T13:51:06.94-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MN6OhhvCDQCkPwXpAjZaXQ=="
+				},
+				"code" : "icons := {\r  {'x₀'. '#ffffff'.  '#597dce'. 0}.\r  {'x₁'. '#ffffff'.  '#597dce'. 0}.\r  {'x₂'. '#ffffff'.  '#597dce'. 0}.\r  {'x₃'. '#ffffff'.  '#597dce'. 0}.\r  {'x₄'. '#ffffff'.  '#597dce'. 0}.\r  {'⊥' asRopedText bold.  '#ffffff'.  '#222222'. 0}.\r  {'⊤' asRopedText bold.  '#000000'.  '#eeeeee'. 0}.\r  {'≠'.  '#000000'. '#d2aa99'. 20}.\r  {'∧' asRopedText bold.  '#000000'. '#d27d2c'. 20}.\r  {'∨' asRopedText bold.  '#000000'. '#dad45e'. 20}}.\r\rBrHorizontalPane new \r  gsFill: '#323d7d';\r  matchParent; alignCenter; \r  cellSpacing: 10;   \"<-- this breaks alignCenter\"    \r  addChildren: (icons collect: [:o|\r    BrFrame new\r      size: 40@40;\r      gsFill: o third;\r      \"margin: (BlInsets right: 10);  <-- this works okay\"\r      border: Color black;\r      geometry: (BlRoundedRectangleGeometry\r        cornerRadius: o fourth);\r      addChild:(GsTextShape new\r        constraintsDo: [:c |\r          c frame vertical alignCenter.\r          c frame horizontal alignCenter ];\r        text: o first;\r        textColor: o second;\r        padding: (BlInsets all: 0; bottom: 4);\r        fontName: 'Consolas'; fontSize: 20)])"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-18T20:28:53.432-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-18T20:28:53.432-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wPKcFA3CDQC2PJnjD+yy9A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-09-18T20:29:10.678-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-09-19T13:46:13.71-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Icons for Boolean Expressions"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "b8a09c14-0dc2-0d00-b63b-2aa00fecb2f4"
+	}
+}

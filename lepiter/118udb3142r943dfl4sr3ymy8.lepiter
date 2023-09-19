@@ -620,6 +620,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-19T13:58:18.228-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-19T13:58:18.233-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6EZuvRvCDQCpxfSuAjZaXQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Icons for Boolean Expressions]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-05-23T22:48:58.583-04:00"
 								}
 							},
@@ -631,7 +668,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T21:02:19.519-04:00"
+									"dateAndTimeString" : "2023-09-19T13:58:47.829-04:00"
 								}
 							},
 							"uid" : {
@@ -641,7 +678,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Drawing Constants for Bex]]"
+							"string" : "[[Drawing Input Variables for Bex]]"
 						},
 						{
 							"__type" : "textSnippet",
