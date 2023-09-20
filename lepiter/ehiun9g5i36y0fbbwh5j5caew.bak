@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T13:51:06.94-04:00"
+						"dateAndTimeString" : "2023-09-19T15:17:29.695-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "MN6OhhvCDQCkPwXpAjZaXQ=="
 				},
-				"code" : "icons := {\r  {'x₀'. '#ffffff'.  '#597dce'. 0}.\r  {'x₁'. '#ffffff'.  '#597dce'. 0}.\r  {'x₂'. '#ffffff'.  '#597dce'. 0}.\r  {'x₃'. '#ffffff'.  '#597dce'. 0}.\r  {'x₄'. '#ffffff'.  '#597dce'. 0}.\r  {'⊥' asRopedText bold.  '#ffffff'.  '#222222'. 0}.\r  {'⊤' asRopedText bold.  '#000000'.  '#eeeeee'. 0}.\r  {'≠'.  '#000000'. '#d2aa99'. 20}.\r  {'∧' asRopedText bold.  '#000000'. '#d27d2c'. 20}.\r  {'∨' asRopedText bold.  '#000000'. '#dad45e'. 20}}.\r\rBrHorizontalPane new \r  gsFill: '#323d7d';\r  matchParent; alignCenter; \r  cellSpacing: 10;   \"<-- this breaks alignCenter\"    \r  addChildren: (icons collect: [:o|\r    BrFrame new\r      size: 40@40;\r      gsFill: o third;\r      \"margin: (BlInsets right: 10);  <-- this works okay\"\r      border: Color black;\r      geometry: (BlRoundedRectangleGeometry\r        cornerRadius: o fourth);\r      addChild:(GsTextShape new\r        constraintsDo: [:c |\r          c frame vertical alignCenter.\r          c frame horizontal alignCenter ];\r        text: o first;\r        textColor: o second;\r        padding: (BlInsets all: 0; bottom: 4);\r        fontName: 'Consolas'; fontSize: 20)])"
+				"code" : "icons := {\r  {'x₀'. '#ffffff'.  '#597dce'. 0}.\r  {'x₁'. '#ffffff'.  '#597dce'. 0}.\r  {'x₂'. '#ffffff'.  '#597dce'. 0}.\r  {'x₃'. '#ffffff'.  '#597dce'. 0}.\r  {'x₄'. '#ffffff'.  '#597dce'. 0}.\r  {'⊥' asRopedText bold.  '#ffffff'.  '#222222'. 0}.\r  {'⊤' asRopedText bold.  '#000000'.  '#eeeeee'. 0}.\r  {'≠'.  '#000000'. '#d2aa99'. 20}.\r  {'∧' asRopedText bold.  '#000000'. '#d27d2c'. 20}.\r  {'∨' asRopedText bold.  '#000000'. '#dad45e'. 20}}.\r\rBrHorizontalPane new \r  background: (BlPaintBackground new paint: (\r    BlLinearGradientPaint vertical stops: {\r        0.0 -> (Color fromHexString: '323d7d').\r        0.5 -> (Color fromHexString: '323d7d').\r        0.8 -> (Color fromHexString: '101b5b').\r}));\r  matchParent; alignCenter; \r  addChildren: (icons collect: [:o|\r    BrFrame new\r      size: 40@40;\r      gsFill: o third;\r      margin: (BlInsets right: 10);\r      border: Color black;\r      geometry: (BlRoundedRectangleGeometry\r        cornerRadius: o fourth);\r      addChild:(GsTextShape new\r        constraintsDo: [:c |\r          c frame vertical alignCenter.\r          c frame horizontal alignCenter ];\r        text: o first;\r        textColor: o second;\r        padding: (BlInsets all: 0; bottom: 4);\r        fontName: 'Consolas'; fontSize: 20)])"
 			},
 			{
 				"__type" : "textSnippet",
