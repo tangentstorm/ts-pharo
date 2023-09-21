@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T15:17:29.695-04:00"
+						"dateAndTimeString" : "2023-09-21T10:59:34.972-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "MN6OhhvCDQCkPwXpAjZaXQ=="
 				},
-				"code" : "icons := {\r  {'x₀'. '#ffffff'.  '#597dce'. 0}.\r  {'x₁'. '#ffffff'.  '#597dce'. 0}.\r  {'x₂'. '#ffffff'.  '#597dce'. 0}.\r  {'x₃'. '#ffffff'.  '#597dce'. 0}.\r  {'x₄'. '#ffffff'.  '#597dce'. 0}.\r  {'⊥' asRopedText bold.  '#ffffff'.  '#222222'. 0}.\r  {'⊤' asRopedText bold.  '#000000'.  '#eeeeee'. 0}.\r  {'≠'.  '#000000'. '#d2aa99'. 20}.\r  {'∧' asRopedText bold.  '#000000'. '#d27d2c'. 20}.\r  {'∨' asRopedText bold.  '#000000'. '#dad45e'. 20}}.\r\rBrHorizontalPane new \r  background: (BlPaintBackground new paint: (\r    BlLinearGradientPaint vertical stops: {\r        0.0 -> (Color fromHexString: '323d7d').\r        0.5 -> (Color fromHexString: '323d7d').\r        0.8 -> (Color fromHexString: '101b5b').\r}));\r  matchParent; alignCenter; \r  addChildren: (icons collect: [:o|\r    BrFrame new\r      size: 40@40;\r      gsFill: o third;\r      margin: (BlInsets right: 10);\r      border: Color black;\r      geometry: (BlRoundedRectangleGeometry\r        cornerRadius: o fourth);\r      addChild:(GsTextShape new\r        constraintsDo: [:c |\r          c frame vertical alignCenter.\r          c frame horizontal alignCenter ];\r        text: o first;\r        textColor: o second;\r        padding: (BlInsets all: 0; bottom: 4);\r        fontName: 'Consolas'; fontSize: 20)])"
+				"code" : "symbols := #( x0 x1 x2 x3 x4 O I xor and or ).\r\rBrHorizontalPane new \r  background: (BlPaintBackground new paint: (\r    BlLinearGradientPaint vertical stops: {\r        0.0 -> (Color fromHexString: '323d7d').\r        0.5 -> (Color fromHexString: '323d7d').\r        0.85 -> (Color fromHexString: '101b5b').\r        1.0 -> (Color black)}));\r  matchParent; alignCenter; \r  addChildren: (symbols collect: [:sym|\r    BexShape for: sym])"
 			},
 			{
 				"__type" : "textSnippet",
@@ -74,6 +74,40 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-21T10:25:45.559-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-21T10:27:16.28-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8O8rAUHCDQCaGfjrDRya4Q=="
+				},
+				"code" : "shapes := #( x0 x1 x2 x3 x4 O I xor and or ) collect:[:sym|\r  BexShape for: sym]"
 			}
 		]
 	},

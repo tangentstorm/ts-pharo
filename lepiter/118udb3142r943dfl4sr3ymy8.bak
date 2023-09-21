@@ -668,7 +668,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-24T21:02:19.519-04:00"
+									"dateAndTimeString" : "2023-09-19T13:58:47.829-04:00"
 								}
 							},
 							"uid" : {
@@ -678,7 +678,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Drawing Constants for Bex]]"
+							"string" : "[[Drawing Input Variables for Bex]]"
 						},
 						{
 							"__type" : "textSnippet",

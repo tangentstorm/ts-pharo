@@ -1,0 +1,61 @@
+Class {
+	#name : #BexSketchApp,
+	#superclass : #GsToolApp,
+	#instVars : [
+		'graphTool'
+	],
+	#category : #'Bex-Apps'
+}
+
+{ #category : #accessing }
+BexSketchApp >> initialTools [
+  ^ { GsSelectTool new.
+  	graphTool := BexGraphTool new symbol: #x0. }
+]
+
+{ #category : #accessing }
+BexSketchApp >> initialize [
+  super initialize.
+  self currentTool: graphTool.
+  self scene gsFill: '#323d7d'
+]
+
+{ #category : #accessing }
+BexSketchApp >> makeSymbolDropdown [
+  | button |
+  ^ button := BrButton new
+      aptitude: BrGlamorousButtonWithLabelAndIconAptitude +
+        (BrGlamorousWithDropdownAptitude
+          handle: [BrButton new
+            aptitude:
+              BrGlamorousButtonRectangularAptitude +
+              BrGlamorousButtonIconAptitude;
+            icon: BrGlamorousIcons menu ]
+          content: [
+            BrSimpleList new fitContent
+              stencil: [:o | BrLabel new
+                aptitude: BrGlamorousLabelAptitude +
+                  (BrStyleCommonAptitude new
+                    default: [:s| s background: Color transparent];
+                    hovered: [:s| s background: Color cyan]);
+                text: o;
+                when: BlClickEvent do: [:e |
+                  e consumed: true.
+                  button label: o asText.
+                  graphTool symbol: o.
+                  e currentTarget fireEvent:
+                    BrDropdownHideWish new ]];
+              items: BexShape symbols;
+		      padding: (BlInsets all: 10) ]);
+		  icon: BrGlamorousIcons menu;
+		  label: graphTool symbol.
+]
+
+{ #category : #accessing }
+BexSketchApp >> makeUI [
+  ui := super makeUI.
+  dockHolder
+    addDockable: self makeInspector as: #inspector in: #rightDock.
+  toolbar addChild: (self makeSymbolDropdown).
+  ^ ui
+]

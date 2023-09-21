@@ -631,7 +631,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-19T13:58:18.233-04:00"
+									"dateAndTimeString" : "2023-09-21T11:00:03.143-04:00"
 								}
 							},
 							"uid" : {
@@ -641,7 +641,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Icons for Boolean Expressions]]"
+							"string" : "[[Shapes for Boolean Expressions]]"
 						},
 						{
 							"__type" : "textSnippet",
