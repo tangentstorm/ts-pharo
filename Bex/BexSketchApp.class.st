@@ -2,7 +2,8 @@ Class {
 	#name : #BexSketchApp,
 	#superclass : #GsToolApp,
 	#instVars : [
-		'graphTool'
+		'graphTool',
+		'arranger'
 	],
 	#category : #'Bex-Apps'
 }
@@ -18,6 +19,12 @@ BexSketchApp >> initialize [
   super initialize.
   self currentTool: graphTool.
   self scene gsFill: '#323d7d'
+]
+
+{ #category : #accessing }
+BexSketchApp >> makeArranger [
+  ^ arranger := GsArrangePanel new
+    selection: selection.
 ]
 
 { #category : #accessing }
@@ -55,7 +62,8 @@ BexSketchApp >> makeSymbolDropdown [
 BexSketchApp >> makeUI [
   ui := super makeUI.
   dockHolder
-    addDockable: self makeInspector as: #inspector in: #rightDock.
+    addDockable: self makeInspector as: #inspector in: #rightDock;
+    addDockable: self makeArranger as: #arranger in: #rightDock.
   toolbar addChild: (self makeSymbolDropdown).
   ^ ui
 ]
