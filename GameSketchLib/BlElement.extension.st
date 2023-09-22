@@ -158,6 +158,15 @@ BlElement >> gsPosition: aPoint [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsRebuildStroke [
+  |builder|
+  builder := BlBorder builder
+    paint: (userData at: #strokeColor ifAbsent: [self border paint color]).
+  (self gsStrokeStyle = #dashed) ifTrue: [builder dashed].
+  self border: builder build.
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsRight [
   ^ self position x + self extent x
 ]
@@ -174,9 +183,9 @@ BlElement >> gsShow [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsStrokeColor [
+  |c| c := userData at: #strokeColor ifAbsentPut: [self border paint color].
   "returns stroke color as hex. !!TODO: add alpha if not opaque.
    (Color fromHexString: can already handle this)"
-  |c| c := self border paint color.
   ^ (c = Color transparent)
     ifTrue: [''] ifFalse: [c asHTMLColor]
 ]
@@ -188,7 +197,8 @@ BlElement >> gsStrokeColor: aHexString [
   c := ((aHexString = '' or:[aHexString isNil])
     ifTrue: [Color transparent]
     ifFalse:[Color fromHexString: aHexString]).
-  self border: (BlBorder builder paint: c; width: b width; build)
+  userData at: #strokeColor put: c.
+  self gsRebuildStroke
 ]
 
 { #category : #'*GameSketchLib' }
@@ -199,6 +209,26 @@ BlElement >> gsStrokeColorDescription [
       label: 'Stroke color';
       priority: 10;
       jsonKey: 'strokeColor'
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeStyle [
+  ^ userData at: #gsStrokeStyle ifAbsentPut: [#solid]
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeStyle: aSymbol [
+  userData at: #gsStrokeStyle put: aSymbol.
+  self gsRebuildStroke
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsStrokeStyleDescription [
+  <magritteDescription>
+  ^ MASingleOptionDescription new
+    label: 'stroke style';
+    accessor: #gsStrokeStyle;
+    options: #(solid dashed)
 ]
 
 { #category : #'*GameSketchLib' }

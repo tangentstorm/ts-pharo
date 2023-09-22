@@ -490,6 +490,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "GsAnimationTrack should probably not know anything about the concept of a scene. The `prop` field should probably be an actual `GsProp` rather than just a name... This would make it much simpler to retrieve one from data. (Having a rich literal syntax for data would help too.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-22T12:29:11.638-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-22T12:29:52.451-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8B9z2FbCDQCaUZsoDRya4Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- gsStrokeColor should probably take an actual color, and there should be an extra accessor for gsStrokeColorHex (same for fill?)"
 						}
 					]
 				},

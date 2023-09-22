@@ -52,3 +52,22 @@ BexShape class >> settingsFor: sym [
 BexShape class >> symbols [
   ^ #(x0 x1 x2 x3 x4 I O and or xor)
 ]
+
+{ #category : #accessing }
+BexShape >> cornerRadius [
+  ^ self geometry cornerRadii topLeft
+]
+
+{ #category : #accessing }
+BexShape >> cornerRadius: aNumber [
+  self geometry: (BlRoundedRectangleGeometry
+    cornerRadius: aNumber)
+]
+
+{ #category : #accessing }
+BexShape >> cornerRadiusDescription [
+  <magritteDescription>
+  ^ MANumberDescription new
+    label: 'corner radius';
+    accessor: #cornerRadius
+]
