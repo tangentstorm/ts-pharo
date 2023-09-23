@@ -24,7 +24,7 @@ BexGraphTool >> initialize [
 BexGraphTool >> newNodeAt: aPoint [
   | node |
   node := BexShape symbol: sym.
-  self scene addChild: node.
+  self scene addChild: node as: sceneBuilder nextId.
   ^ node relocate: aPoint - (20@20).
 ]
 

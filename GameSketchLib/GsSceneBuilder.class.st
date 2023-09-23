@@ -11,7 +11,8 @@ Class {
 		'counts',
 		'shape',
 		'shapeClass',
-		'prototype'
+		'prototype',
+		'counter'
 	],
 	#category : #'GameSketchLib-Core'
 }
@@ -49,6 +50,7 @@ GsSceneBuilder >> initialize [
   super initialize.
   scene := GsScene new.
   prototype := GsShape new.
+  counter := 0.
   self shapeClass: GsRectShape
 ]
 
@@ -74,8 +76,16 @@ GsSceneBuilder >> named: name [
 GsSceneBuilder >> newAtPoint: aPoint [
   shape := (shapeClass newAtPoint: aPoint)
     buildVisuals: prototype.
-  scene addChild: shape.
+  scene addChild: shape as: self nextId.
   ^ shape
+]
+
+{ #category : #accessing }
+GsSceneBuilder >> nextId [
+  | r |
+  r :=  ('id', (counter printStringLength: 4 padded: true)) asSymbol.
+  counter := counter + 1.
+  ^ r
 ]
 
 { #category : #'shape factories' }

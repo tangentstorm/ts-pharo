@@ -43,7 +43,7 @@ GsGraphTool >> ensureNodeAt: aPoint [
 { #category : #accessing }
 GsGraphTool >> makeHandleAt: aPoint [
   handle := GsHandle new relocate: aPoint.
-  overlay addChild: handle.
+  overlay addGizmo: handle.
   ^ handle
 ]
 
@@ -52,13 +52,13 @@ GsGraphTool >> makeNewEdgeFrom: aNodeShape [
   newEdge := GsEdgeShape new
     src: aNodeShape;
     dst: handle.
-  self scene addChild: newEdge.
+  self scene addChild: newEdge as: sceneBuilder nextId.
 ]
 
 { #category : #accessing }
 GsGraphTool >> newNodeAt: aPoint [ 
   |node|
   node := GsNodeShape new gsPosition: aPoint.
-  self scene addChild: node.
+  self scene addChild: node as: sceneBuilder nextId.
   ^ node
 ]
