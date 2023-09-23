@@ -9,6 +9,26 @@ Class {
 }
 
 { #category : #accessing }
+BexRpnBuilder >> and [
+  | x y |
+  y := stack pop.
+  x := stack pop.
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> branch [
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> branch: aSymbol [
+
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> dup [
+]
+
+{ #category : #accessing }
 BexRpnBuilder >> initialize [
   super initialize.
   stack := Stack new.
@@ -18,6 +38,14 @@ BexRpnBuilder >> initialize [
 { #category : #accessing }
 BexRpnBuilder >> push: aSymbol [
   stack push: (BexShape new symbol: aSymbol)
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> simpHi [
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> simpLo [
 ]
 
 { #category : #accessing }
@@ -48,4 +76,8 @@ BexRpnBuilder >> x3 [
 { #category : #accessing }
 BexRpnBuilder >> x4 [
   self push: #x4
+]
+
+{ #category : #accessing }
+BexRpnBuilder >> xor [
 ]

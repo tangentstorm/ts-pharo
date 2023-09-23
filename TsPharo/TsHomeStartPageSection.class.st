@@ -8,15 +8,23 @@ Class {
 }
 
 { #category : #accessing }
+TsHomeStartPageSection >> bexSketchAppCard [
+  ^ self newCard: 'BexSketchApp'
+	description: 'drawing logical diagrams'
+	content: [ GtInspector forObject:BexSketchApp new ]
+]
+
+{ #category : #accessing }
 TsHomeStartPageSection >> create [
   cardContainer := self newCardsContainer.
   ^ self newSectionContainer
     addChild: (self newSectionTitle: self sectionTitle);
     addChild: (cardContainer addChildren: {
       self gslFeaturesCard.
-      self lepiterCard.
+      self bexSketchAppCard.
       self pileupCard.
       self gsDemosCard.
+      self lepiterCard.
       self sketchAppCard.
       self gsPlayerAppCard.
       self roassal3Card})
