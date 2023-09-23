@@ -10,27 +10,6 @@ Class {
 }
 
 { #category : #accessing }
-BexShape class >> for: sym [ 
-  | o |
-  o := self settingsFor: sym.
-  ^ self new
-      size: 40@40;
-      gsFill: o third;
-      margin: (BlInsets right: 10);
-      border: Color black;
-        geometry: (BlRoundedRectangleGeometry
-          cornerRadius: o fourth);
-      addChild:(GsTextShape new
-        constraintsDo: [:c |
-          c frame vertical alignCenter.
-          c frame horizontal alignCenter ];
-      text: o first;
-      textColor: o second;
-      padding: (BlInsets all: 0; bottom: 4);
-        fontName: 'Consolas'; fontSize: 20)
-]
-
-{ #category : #accessing }
 BexShape class >> settingsFor: sym [
   ^ {
   #x0 -> {'x₀'. '#ffffff'.  '#597dce'. 0}.
@@ -46,6 +25,11 @@ BexShape class >> settingsFor: sym [
   } asDictionary at: sym ifAbsent: [
     self error:
       'Don''t know how to make BexShape for: ', sym asString].
+]
+
+{ #category : #accessing }
+BexShape class >> symbol: aSymbol [
+  ^ self new symbol: aSymbol
 ]
 
 { #category : #accessing }
@@ -70,4 +54,27 @@ BexShape >> cornerRadiusDescription [
   ^ MANumberDescription new
     label: 'corner radius';
     accessor: #cornerRadius
+]
+
+{ #category : #accessing }
+BexShape >> symbol: aSymbol [
+  | o |
+  o := self class settingsFor: aSymbol.
+  sym := aSymbol.
+  self
+    size: 40@40;
+    gsFill: o third;
+    margin: (BlInsets right: 10);
+    border: Color black;
+      geometry: (BlRoundedRectangleGeometry
+        cornerRadius: o fourth);
+    removeChildren;
+    addChild:(GsTextShape new
+      constraintsDo: [:c |
+        c frame vertical alignCenter.
+        c frame horizontal alignCenter ];
+    text: o first;
+    textColor: o second;
+    padding: (BlInsets all: 0; bottom: 4);
+      fontName: 'Consolas'; fontSize: 20)
 ]

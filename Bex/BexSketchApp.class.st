@@ -50,6 +50,7 @@ BexSketchApp >> makeSymbolDropdown [
                   e consumed: true.
                   button label: o asText.
                   graphTool symbol: o.
+                  selection do: [:each|  [each symbol: o] onErrorDo: []].
                   e currentTarget fireEvent:
                     BrDropdownHideWish new ]];
               items: BexShape symbols;

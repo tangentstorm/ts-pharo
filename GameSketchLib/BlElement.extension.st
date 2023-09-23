@@ -218,7 +218,7 @@ BlElement >> gsStrokeStyle [
 
 { #category : #'*GameSketchLib' }
 BlElement >> gsStrokeStyle: aSymbol [
-  userData at: #gsStrokeStyle put: aSymbol.
+  self userData at: #gsStrokeStyle put: aSymbol.
   self gsRebuildStroke
 ]
 

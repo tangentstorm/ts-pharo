@@ -96,10 +96,5 @@ Bex >> size [
 
 { #category : #accessing }
 Bex >> stencil [
-  ^ BrVerticalPane new
-    alignCenter;
-    size: self size;
-    geometry: self geometry;
-    background: self color;
-    addChild: (BlTextElement new text: self nodeText).
+  ^ BexShape new symbol: op
 ]

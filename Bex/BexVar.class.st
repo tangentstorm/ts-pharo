@@ -18,6 +18,11 @@ BexVar >> printString [
 ]
 
 { #category : #accessing }
+BexVar >> stencil [
+  ^ BexShape new symbol: self printString asSymbol
+]
+
+{ #category : #accessing }
 BexVar >> vid: aNat [
   vid := aNat
 ]

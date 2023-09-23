@@ -13,9 +13,6 @@ BexDef >> asNodes [
   args do: [:each|
     res addAll: each asNodes].
   ^ res
-
-  
-  
 ]
 
 { #category : #accessing }

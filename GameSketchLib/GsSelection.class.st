@@ -140,6 +140,18 @@ GsSelection >> hAlignCenters [
 
 ]
 
+{ #category : #alignment }
+GsSelection >> makeRow [
+  <gsArrangeCmd>
+  "make a row horizontally"
+  |start left |
+  self sort: [:a :b| (a gsPosition x) <= (b gsPosition x)].
+  start := self first gsPosition. 
+  left := start x.
+  self inject: left into: [:a :o | o gsPosition: a @ (start y). a + o width ].
+  self updateBounds
+]
+
 { #category : #accessing }
 GsSelection >> reset [
   super reset.
