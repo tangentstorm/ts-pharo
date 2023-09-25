@@ -1,5 +1,5 @@
 "
-I (will be) a tool for building graphs.
+I (will be) a tool for building graphs, using {{gtClass:GsEdgeShape}}
 "
 Class {
 	#name : #GsGraphTool,
@@ -30,6 +30,8 @@ GsGraphTool >> dragStep: aPoint [
 { #category : #accessing }
 GsGraphTool >> dragStop: aPoint [
   newEdge dst: (self ensureNodeAt: aPoint).
+  (newEdge src = newEdge dst) ifTrue: [ newEdge removeFromParent ]
+    ifFalse: [self scene add: newEdge toList: #edges].
   handle removeFromParent.
 ]
 

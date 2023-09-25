@@ -16,6 +16,11 @@ GsEdgeShape class >> markerNames [
 ]
 
 { #category : #accessing }
+GsEdgeShape >> dst [
+  ^ dst
+]
+
+{ #category : #accessing }
 GsEdgeShape >> dst: aNodeShape [
   dst := aNodeShape.
   self rebuildShape.

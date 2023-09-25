@@ -6,7 +6,8 @@ Class {
 	#superclass : #GsShape,
 	#instVars : [
 		'animations',
-		'currentAnimation'
+		'currentAnimation',
+		'lists'
 	],
 	#category : #'GameSketchLib-Shapes'
 }
@@ -15,6 +16,12 @@ Class {
 GsSketch class >> fromJSON: aString [ 
   "build a scene from a json string"
   ^ GsJsonReader new read: aString
+]
+
+{ #category : #accessing }
+GsSketch >> add: aShape toList: aName [
+  (lists at: aName ifAbsentPut: [GsList new])
+    add: aShape
 ]
 
 { #category : #animations }
@@ -108,6 +115,18 @@ GsSketch >> gotoFrame: i [
 GsSketch >> initialize [
   super initialize.
   animations := OrderedDictionary new.
+  lists := OrderedDictionary new.
+]
+
+{ #category : #accessing }
+GsSketch >> listData [
+  ^ lists collect: [:o| o asData select: [:id|
+      self childNamed:id ifFound: [true] ifNone: [false]]]
+]
+
+{ #category : #accessing }
+GsSketch >> listNames [
+  ^ lists keys
 ]
 
 { #category : #animations }
