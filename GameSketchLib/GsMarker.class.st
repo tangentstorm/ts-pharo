@@ -12,10 +12,7 @@ GsMarker class >> arrow [
 
 { #category : #accessing }
 GsMarker class >> circle [
-  ^ BlArrowheadCircle new
-    " redundant due to bug in bloc:"
-    geometry: BlCircleGeometry new;
-    scale: 10
+  ^ BlArrowheadCircle new scale: 10
 ]
 
 { #category : #accessing }
@@ -25,9 +22,7 @@ GsMarker class >> none [
 
 { #category : #accessing }
 GsMarker class >> square [
-  "!! this is a bug in Bloc."
-  ^ BlArrowheadCircle new
-    scale: 10
+  ^ BlArrowheadRectangle new scale: 3.15
 ]
 
 { #category : #accessing }
