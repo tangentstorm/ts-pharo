@@ -75,6 +75,12 @@ GsEdgeShape >> gsFill: aFill [
 ]
 
 { #category : #accessing }
+GsEdgeShape >> gsHandles [
+  <todo: 'make handles that allow re-connecting to other shapes'>
+  ^ #()
+]
+
+{ #category : #accessing }
 GsEdgeShape >> gsIsPositionable [
   ^ false
 ]

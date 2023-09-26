@@ -37,7 +37,9 @@ GsSelectTool >> dragStart: p [
   (subject := self scene childAtPoint: p)
     ifNil: [overlay addGizmo:
       (selectangle relocate:p; size:0@0)]
-    ifNotNil: [ offset := subject gsPosition - p].
+    ifNotNil: [
+      subject gsIsPositionable ifTrue:[
+        offset := subject gsPosition - p]].
 ]
 
 { #category : #accessing }
@@ -45,7 +47,9 @@ GsSelectTool >> dragStep: p [
   subject ifNil: [|rect|
     rect := (Rectangle point: startPoint point: p).
     selectangle relocate: rect topLeft; size: rect extent]
-  ifNotNil: [subject gsPosition: p + offset ]
+  ifNotNil: [
+    subject gsIsPositionable ifTrue: [
+      subject gsPosition: p + offset ]]
 ]
 
 { #category : #accessing }
