@@ -57,6 +57,19 @@ BexShape >> cornerRadiusDescription [
 ]
 
 { #category : #accessing }
+BexShape >> positionDescription [
+  <magritteDescription>
+  ^ GsPointDescription new
+    label: 'position';
+    accessor: #gsPosition
+]
+
+{ #category : #accessing }
+BexShape >> symbol [
+  ^ sym
+]
+
+{ #category : #accessing }
 BexShape >> symbol: aSymbol [
   | o |
   o := self class settingsFor: aSymbol.
@@ -77,4 +90,13 @@ BexShape >> symbol: aSymbol [
     textColor: o second;
     padding: (BlInsets all: 0; bottom: 4);
       fontName: 'Consolas'; fontSize: 20)
+]
+
+{ #category : #accessing }
+BexShape >> symbolDescription [
+  <magritteDescription>
+  ^ MASingleOptionDescription new
+    label: 'symbol';
+    accessor: #symbol;
+    options: self class symbols
 ]
