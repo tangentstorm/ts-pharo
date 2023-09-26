@@ -18,7 +18,7 @@ BexSketchApp >> initialTools [
 BexSketchApp >> initialize [
   super initialize.
   self currentTool: graphTool.
-  self scene gsFill: '#323d7d'
+  self scene size: 1920@1080; gsFill: '#5588bb'
 ]
 
 { #category : #accessing }
