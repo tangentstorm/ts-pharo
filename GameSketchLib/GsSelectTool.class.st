@@ -80,7 +80,7 @@ GsSelectTool >> drawSelectionBox [
           selection boundingRect: box bounds asRectangle.
           diff := e source gsPosition - startPosition.
           startPosition := e source gsPosition.
-          selection do: [:x | x gsPosition: x gsPosition + diff]]])]
+          selection positionableShapes do: [:x | x gsPosition: x gsPosition + diff]]])]
 ]
 
 { #category : #initialization }

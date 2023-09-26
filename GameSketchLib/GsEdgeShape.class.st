@@ -55,19 +55,8 @@ GsEdgeShape >> gsFill: aFill [
 ]
 
 { #category : #accessing }
-GsEdgeShape >> gsMoveBy: aPoint [
-  "no. position is calculated"
-]
-
-{ #category : #accessing }
-GsEdgeShape >> gsPosition [
-  "edges are always positioned based on the attached nodes"
-  ^ 0@0
-]
-
-{ #category : #accessing }
-GsEdgeShape >> gsPosition: aPoint [
-  "position is calculated, so ignore"
+GsEdgeShape >> gsIsPositionable [
+  ^ false
 ]
 
 { #category : #accessing }

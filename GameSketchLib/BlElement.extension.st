@@ -132,6 +132,11 @@ BlElement >> gsInspectorButtons [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsIsPositionable [
+  ^ true
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsLeft [
   ^ self position x
 ]

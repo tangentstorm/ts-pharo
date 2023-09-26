@@ -36,25 +36,29 @@ GsSelection >> addLast: aShape [
 { #category : #alignment }
 GsSelection >> alignBottoms [
   <gsArrangeCmd>
-  self do: [:x | x gsBottom: self boundingRect bottom]; updateBounds
+  self positionableShapes do: [:x | x gsBottom: self boundingRect bottom].
+  self updateBounds
 ]
 
 { #category : #alignment }
 GsSelection >> alignLefts [
   <gsArrangeCmd>
-  self do: [:x | x gsLeft: self boundingRect left]; updateBounds
+  self positionableShapes do: [:x | x gsLeft: self boundingRect left].
+  self updateBounds
 ]
 
 { #category : #alignment }
 GsSelection >> alignRights [
   <gsArrangeCmd>
-  self do: [:x | x gsRight: self boundingRect right]; updateBounds
+  self positionableShapes do: [:x | x gsRight: self boundingRect right].
+  self updateBounds
 ]
 
 { #category : #alignment }
 GsSelection >> alignTops [
   <gsArrangeCmd>
-  self do: [:x | x gsTop: self boundingRect top]; updateBounds
+  self positionableShapes do: [:x | x gsTop: self boundingRect top].
+  self updateBounds
 ]
 
 { #category : #initialization }
@@ -96,14 +100,16 @@ GsSelection >> delete [
 GsSelection >> distributeH [
   <gsArrangeCmd>
   "distribute horizontally"
-  |offset elementsWidth spacing |
-  elementsWidth := self sum: [:x | x gsRight - x gsLeft].
-  spacing := (self boundingRect width - elementsWidth) / (self size -1).
+  |offset elementsWidth spacing items |
+  items := self positionableShapes.
+  (items size < 2) ifTrue: [^ self].
+  elementsWidth := items sum: [:x | x gsRight - x gsLeft].
+  spacing := (self boundingRect width - elementsWidth) / (items size -1).
   offset := 0.
-  self do: [:x | 
+  items do: [:x | 
       x gsLeft: self boundingRect left+offset.
-      offset := offset+spacing + x width]; 
-      updateBounds
+      offset := offset+spacing + x width].
+  self updateBounds
 ]
 
 { #category : #alignment }
@@ -136,20 +142,26 @@ GsSelection >> hAlignCenters [
   <gsArrangeCmd>
   "align centers horizontally"
   |cx| cx := self boundingRect center x.
-  self do: [:o| o gsCenter: cx@(o gsCenter y)]; updateBounds
-
+  self positionableShapes do: [:o| o gsCenter: cx@(o gsCenter y)].
+  self updateBounds
 ]
 
 { #category : #alignment }
 GsSelection >> makeRow [
   <gsArrangeCmd>
   "make a row horizontally"
-  |start left |
-  self sort: [:a :b| (a gsPosition x) <= (b gsPosition x)].
-  start := self first gsPosition. 
+  |start left items|
+  items := self positionableShapes.
+  items sort: [:a :b| (a gsPosition x) <= (b gsPosition x)].
+  start := items first gsPosition. 
   left := start x.
-  self inject: left into: [:a :o | o gsPosition: a @ (start y). a + o width ].
+  items inject: left into: [:a :o | o gsPosition: a @ (start y). a + o width ].
   self updateBounds
+]
+
+{ #category : #accessing }
+GsSelection >> positionableShapes [
+  ^ self select: [:o| o gsIsPositionable]
 ]
 
 { #category : #accessing }
@@ -194,7 +206,8 @@ GsSelection >> vAlignCenters [
   <gsArrangeCmd>
   "align centers vertically"
   |cy| cy := self boundingRect center y.
-  self do: [:o| o gsCenter: (o gsCenter x) @ cy]; updateBounds
+  self positionableShapes do: [:o| o gsCenter: (o gsCenter x) @ cy].
+  self updateBounds
 ]
 
 { #category : #accessing }
