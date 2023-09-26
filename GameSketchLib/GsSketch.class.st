@@ -7,7 +7,8 @@ Class {
 	#instVars : [
 		'animations',
 		'currentAnimation',
-		'lists'
+		'lists',
+		'idCounter'
 	],
 	#category : #'GameSketchLib-Shapes'
 }
@@ -111,9 +112,27 @@ GsSketch >> gotoFrame: i [
   currentAnimation gotoFrame: i
 ]
 
+{ #category : #accessing }
+GsSketch >> idCounter [
+	^ idCounter
+]
+
+{ #category : #accessing }
+GsSketch >> idCounter: anObject [
+	idCounter := anObject
+]
+
+{ #category : #accessing }
+GsSketch >> idCounterDescription [
+  ^ MANumberDescription new
+    label: 'id counter';
+    accessor: #idCounter
+]
+
 { #category : #initialization }
 GsSketch >> initialize [
   super initialize.
+  idCounter := 0.
   animations := OrderedDictionary new.
   lists := OrderedDictionary new.
 ]
@@ -135,4 +154,12 @@ GsSketch >> newAnimationNamed: aSymbol [
     ifPresent: [ self error:
       'Duplicate animation name: ', aSymbol asString].
   ^ self addAnimation: GsAnimation new as: aSymbol
+]
+
+{ #category : #accessing }
+GsSketch >> nextId [
+  | r |
+  r :=  ('id', (idCounter printStringLength: 4 padded: true)) asSymbol.
+  idCounter := idCounter + 1.
+  ^ r
 ]

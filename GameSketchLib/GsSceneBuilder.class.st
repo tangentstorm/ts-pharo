@@ -11,8 +11,7 @@ Class {
 		'counts',
 		'shape',
 		'shapeClass',
-		'prototype',
-		'counter'
+		'prototype'
 	],
 	#category : #'GameSketchLib-Core'
 }
@@ -82,10 +81,7 @@ GsSceneBuilder >> newAtPoint: aPoint [
 
 { #category : #accessing }
 GsSceneBuilder >> nextId [
-  | r |
-  r :=  ('id', (counter printStringLength: 4 padded: true)) asSymbol.
-  counter := counter + 1.
-  ^ r
+  ^ scene nextId
 ]
 
 { #category : #'shape factories' }
