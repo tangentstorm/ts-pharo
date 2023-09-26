@@ -51,6 +51,12 @@ BlElement >> gsCopy [
 ]
 
 { #category : #'*GameSketchLib' }
+BlElement >> gsDependencies [
+  "return a list of ids on which this shape depends" 
+  ^ #()
+]
+
+{ #category : #'*GameSketchLib' }
 BlElement >> gsFill [
   "returns fill color as hex. !!TODO: add alpha if not opaque.
    (Color fromHexString: can already handle this)"
@@ -244,4 +250,11 @@ BlElement >> gsTop [
 { #category : #'*GameSketchLib' }
 BlElement >> gsTop: y [
   self gsMoveBy: 0 @ (y - self gsTop)
+]
+
+{ #category : #'*GameSketchLib' }
+BlElement >> gsUpdateDependencies: idMap [
+  "update dependencies when their ids change (either due to rename or duplicate).
+  idMap maps id symbol to new object"
+  ^ self
 ]

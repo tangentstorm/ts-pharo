@@ -115,11 +115,19 @@ GsSelection >> distributeH [
 { #category : #alignment }
 GsSelection >> duplicate [
   <gsArrangeCmd>
-  |dupes| dupes := self collect: #gsCopy.
+  |dupes idMap| 
+  idMap := Dictionary new.
+  dupes := self collect: [:o||c|
+    c := o gsCopy id: scene nextId.
+    idMap at: o id asSymbol put: c.
+    c].
   self reset.
-  scene
-    addChildren: dupes;
-    when: BlElementLayoutComputedEvent doOnce: [self addAll: dupes]
+  scene addChildren: dupes;
+    when: BlElementLayoutComputedEvent doOnce: [
+      dupes do: [:o | o gsUpdateDependencies: idMap].
+      scene when: BlElementLayoutComputedEvent doOnce: [
+        self addAll: dupes.
+        self updateBounds]].
 ]
 
 { #category : #alignment }
@@ -199,6 +207,8 @@ GsSelection >> species [
 GsSelection >> updateBounds [
   |items| items := self copy.
   self reset; addAll: items.
+  scene when: BlElementLayoutComputedEvent doOnce: [
+    self reset; addAll: items.]
 ]
 
 { #category : #alignment }

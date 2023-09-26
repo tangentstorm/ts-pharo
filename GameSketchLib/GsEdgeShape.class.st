@@ -5,7 +5,9 @@ Class {
 		'dst',
 		'src',
 		'srcMarker',
-		'dstMarker'
+		'dstMarker',
+		'srcId',
+		'dstId'
 	],
 	#category : #'GameSketchLib-Shapes'
 }
@@ -23,7 +25,26 @@ GsEdgeShape >> dst [
 { #category : #accessing }
 GsEdgeShape >> dst: aNodeShape [
   dst := aNodeShape.
-  self rebuildShape.
+  dstId := dst id asSymbol.
+  src ifNotNil: [self rebuildShape].
+]
+
+{ #category : #accessing }
+GsEdgeShape >> dstId [
+  ^ dstId
+]
+
+{ #category : #accessing }
+GsEdgeShape >> dstId: aSymbol [
+  dstId := aSymbol
+]
+
+{ #category : #magritte }
+GsEdgeShape >> dstIdDescription [
+  <magritteDescription>
+  ^ MASymbolDescription new
+    label: 'dest. node id';
+    accessor: #dstId
 ]
 
 { #category : #accessing }
@@ -33,7 +54,7 @@ GsEdgeShape >> dstMarker [
 
 { #category : #accessing }
 GsEdgeShape >> dstMarker: aSymbol [
-  dstMarker := aSymbol.
+  dstMarker := aSymbol asSymbol.
   self rebuildShape
 ]
 
@@ -44,8 +65,7 @@ GsEdgeShape >> dstMarkerDescription [
     group: 'source';
     label: 'dst marker';
     options: GsEdgeShape markerNames;
-    accessor: #dstMarker
-  
+    accessor: #dstMarker  
 ]
 
 { #category : #accessing }
@@ -60,6 +80,12 @@ GsEdgeShape >> gsIsPositionable [
 ]
 
 { #category : #accessing }
+GsEdgeShape >> gsUpdateDependencies: idMap [
+  idMap at: self srcId ifPresent: [:o| self src: o].
+  idMap at: self dstId ifPresent: [:o| self dst: o].
+]
+
+{ #category : #accessing }
 GsEdgeShape >> initialize [
   srcMarker := #none.
   dstMarker := #triangle.
@@ -69,6 +95,7 @@ GsEdgeShape >> initialize [
 
 { #category : #accessing }
 GsEdgeShape >> rebuildShape [
+  ((src isNil) or: [dst isNil]) ifTrue: [^self].
   self
     fromAnchor: (BlNearestPositionBoundsAnchor
       nearestTo: dst from: src);
@@ -90,7 +117,26 @@ GsEdgeShape >> src [
 { #category : #accessing }
 GsEdgeShape >> src: aNodeShape [
   src := aNodeShape.
+  srcId := src id asSymbol.
   dst ifNotNil: [ self rebuildShape ]
+]
+
+{ #category : #accessing }
+GsEdgeShape >> srcId [
+  ^ srcId
+]
+
+{ #category : #accessing }
+GsEdgeShape >> srcId: aSymbol [
+  srcId := aSymbol
+]
+
+{ #category : #magritte }
+GsEdgeShape >> srcIdDescription [
+  <magritteDescription>
+  ^ MASymbolDescription new
+    label: 'source node id';
+    accessor: #srcId
 ]
 
 { #category : #accessing }
@@ -100,7 +146,7 @@ GsEdgeShape >> srcMarker [
 
 { #category : #accessing }
 GsEdgeShape >> srcMarker: aSymbol [
-  srcMarker := aSymbol.
+  srcMarker := aSymbol asSymbol.
   self rebuildShape
 ]
 
