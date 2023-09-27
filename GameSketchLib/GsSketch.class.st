@@ -101,6 +101,14 @@ GsSketch >> brokenAnimationsDescription [
 ]
 
 { #category : #accessing }
+GsSketch >> clear [
+  self removeChildren.
+  idCounter := 0.
+  animations := OrderedDictionary new.
+  lists := OrderedDictionary new.
+]
+
+{ #category : #accessing }
 GsSketch >> currentAnimation [
   <returns:#GsAnimation>
   ^ currentAnimation ifNil: [
@@ -132,9 +140,7 @@ GsSketch >> idCounterDescription [
 { #category : #initialization }
 GsSketch >> initialize [
   super initialize.
-  idCounter := 0.
-  animations := OrderedDictionary new.
-  lists := OrderedDictionary new.
+  self clear.
 ]
 
 { #category : #accessing }

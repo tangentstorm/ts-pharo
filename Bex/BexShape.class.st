@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'sym',
 		'symNext',
-		'lerpVal'
+		'lerpVal',
+		'pos'
 	],
 	#category : #'Bex-Drawing'
 }
@@ -57,11 +58,29 @@ BexShape >> cornerRadiusDescription [
 ]
 
 { #category : #accessing }
+BexShape >> initialize [
+  super initialize.
+  pos := 0@0
+]
+
+{ #category : #accessing }
+BexShape >> intendedPosition [
+  "the intended position, even before layout"
+  ^ pos
+]
+
+{ #category : #accessing }
 BexShape >> positionDescription [
   <magritteDescription>
   ^ GsPointDescription new
     label: 'position';
     accessor: #gsPosition
+]
+
+{ #category : #accessing }
+BexShape >> relocate: aPoint [
+  super relocate: aPoint.
+  pos := aPoint
 ]
 
 { #category : #accessing }

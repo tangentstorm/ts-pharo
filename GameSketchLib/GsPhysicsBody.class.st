@@ -29,6 +29,11 @@ GsPhysicsBody >> initialize [
 ]
 
 { #category : #accessing }
+GsPhysicsBody >> intendedPosition [
+  ^ pos
+]
+
+{ #category : #accessing }
 GsPhysicsBody >> mass [
 	^ mass
 ]
