@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-27T12:38:44.003-04:00"
+						"dateAndTimeString" : "2023-09-27T12:41:19.344-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "wBGBj7vCDQCBPy5qCDizog=="
 				},
-				"code" : "app := BexSketchApp new.\r\rBexRpnBuilder new\r  base: (BexSceneBase new scene: app scene clear);\r  x0; x1; x2; xor; and.\r\rapp"
+				"code" : "app := BexSketchApp new.\r\rBexRpnBuilder new\r  base: (BexSceneBase new scene: app scene clear);\r  \r  x0; x1; x2; xor; and.\r\rapp"
 			}
 		]
 	},

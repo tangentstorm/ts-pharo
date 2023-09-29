@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-27T12:36:58.489-04:00"
+						"dateAndTimeString" : "2023-09-27T12:38:39.513-04:00"
 					}
 				},
 				"editEmail" : {
@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-27T12:38:03.436-04:00"
+						"dateAndTimeString" : "2023-09-27T12:41:02.135-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qJR7ibvCDQC/mCdbCDizog=="
+					"uidString" : "wBGBj7vCDQCBPy5qCDizog=="
 				},
-				"code" : "app := BexSketchApp new.\rBexRpnBuilder new\r  base: (BexSceneBase new scene: app scene clear);\r  x0; x1; x2; xor; and.\rapp\r"
+				"code" : "app := BexSketchApp new.\r\rBexRpnBuilder new\r  base: (BexSceneBase new scene: app scene clear);\r  x0; x1; x2; xor; and.\r\rapp"
 			}
 		]
 	},

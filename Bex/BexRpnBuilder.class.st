@@ -11,9 +11,7 @@ Class {
 
 { #category : #accessing }
 BexRpnBuilder >> and [
-  | x y |
-  y := stack pop. x := stack pop.
-  self push: (base op: #and x: x y: y)
+  ^ self binOp: #and
 ]
 
 { #category : #accessing }
@@ -22,16 +20,27 @@ BexRpnBuilder >> base: aBase [
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> branch [
+BexRpnBuilder >> binOp: aSymbol [
+  | x y |
+  y := stack pop. x := stack pop.
+  ^ self push: (base op: aSymbol x: x y: y)
 ]
 
 { #category : #accessing }
 BexRpnBuilder >> branch: aSymbol [
-
+  | x y o e |
+  y := stack pop. x := stack pop.
+  o := base op: aSymbol x: x y: y.
+  o cornerRadius: 25.
+  e := o userData at: #incoming.
+  e first gsStrokeStyle: #dashed; dstMarker: #none.
+  e second gsStrokeStyle: #solid; dstMarker: #none.
+  ^ self push: o
 ]
 
 { #category : #accessing }
 BexRpnBuilder >> dup [
+  self push: base dup.
 ]
 
 { #category : #accessing }
@@ -87,7 +96,5 @@ BexRpnBuilder >> x4 [
 
 { #category : #accessing }
 BexRpnBuilder >> xor [
-  | x y |
-  y := stack pop. x := stack pop.
-  self push: (base op: #xor x: x y: y)
+  ^ self binOp: #xor
 ]

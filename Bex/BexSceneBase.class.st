@@ -23,6 +23,7 @@ BexSceneBase >> addShape: aSymbol [
   scene addChild: (this := BexShape new 
     symbol: aSymbol; gsPosition: here;
     id: scene nextId).
+  this userData at: #valence put: 0.
   here := here + (50@0).
   ^ this
 ]
@@ -33,26 +34,82 @@ BexSceneBase >> base: aBase [
 ]
 
 { #category : #accessing }
+BexSceneBase >> dagFor: node [
+  | res udata|
+  res := OrderedCollection new.
+  res add: node.
+  udata := node userData.
+  (udata at: #args ifPresent: [:args |
+    res := res, (udata at: #incoming).
+    args do: [:arg |
+      res := res, (self dagFor: arg)]]).
+  ^ res
+]
+
+{ #category : #accessing }
+BexSceneBase >> dup [
+  | sel idMap dupes dx newVersion rs|
+  sel := GsSelection new scene: scene.
+  sel addAll: (self dagFor: self last).
+
+  "GsScene >> duplicate, but don't wait for layout."
+  idMap := Dictionary new.
+  dupes := sel collect: [:o||c|
+    c := o gsCopy id: scene nextId.
+    [c cornerRadius: o cornerRadius] onErrorDo: [].
+    idMap at: o id asSymbol put: c.
+    c].
+    
+  dx := sel boundingRect width + 50.
+  scene addChildren: dupes.
+  dupes do: [:o | o gsUpdateDependencies: idMap].
+  dupes select: #gsIsPositionable thenDo: [:o |
+    o gsPosition: o intendedPosition + (dx@0)].
+
+  newVersion := [:o | idMap at: o id asSymbol].
+  
+  rs := ReadStream on: dupes.
+  sel do: [:o | |c uo uc| c := rs next.
+    uo := o userData.
+    uo at: #args ifPresent: [:args |
+      uc := c userData.
+      uc at: #args put: (args collect: newVersion).
+      uc at: #incoming put: ((uo at: #incoming) collect: newVersion)]].
+
+  ^ this := (newVersion value: self last).
+]
+
+{ #category : #accessing }
 BexSceneBase >> initialize [
   super initialize.
   base := BexBase new.
   scene := GsScene new.
   this := nil.
-  here := 200@300.
+  here := 200@600.
+]
+
+{ #category : #accessing }
+BexSceneBase >> last [
+  ^ this
 ]
 
 { #category : #accessing }
 BexSceneBase >> op: anOp x: xNode y: yNode [
-  | xpos ypos |
+  | xpos ypos e0 e1|
   xpos := xNode intendedPosition.
   ypos := yNode intendedPosition.
   this := BexShape new symbol: anOp;
     id: scene nextId;
     gsPosition: ((xpos x + ypos x) / 2)
                @((xpos y min: ypos y) - 70).
-  scene addChild: this.
-  scene addChild: (GsEdgeShape new src: xNode; dst: this).
-  scene addChild: (GsEdgeShape new src: yNode; dst: this).
+  scene addChildren: {
+    this.
+    e0 := GsEdgeShape new src: xNode; dst: this; id: scene nextId.
+    e1 := GsEdgeShape new src: yNode; dst: this; id: scene nextId}.
+  this userData
+    at: #valence put: 2;
+    at: #incoming put: { e0. e1 };
+    at: #args put: { xNode. yNode }.
   ^ this
 ]
 
