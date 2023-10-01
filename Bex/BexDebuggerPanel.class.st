@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'rpn',
 		'buttons',
-		'stackFrame'
+		'stackFrame',
+		'ip'
 	],
 	#category : #'Bex-Apps'
 }
@@ -12,38 +13,49 @@ Class {
 { #category : #accessing }
 BexDebuggerPanel >> initialize [
   super initialize title: 'Debugger'.
-  workArea addChild:
-   (BrVerticalPane new addChildren: {
-      self makeButtons.
-      self makeStackFrame}).
+  ip := 1.
 ]
 
 { #category : #accessing }
 BexDebuggerPanel >> makeButtons [
-  buttons := BlTextElement new text: '[step]' asRopedText.
+  ^ buttons := BrHorizontalPane new hMatchParent vFitContent;
+    padding: (BlInsets all: 2);
+    background: Color veryVeryLightGray;
+    addChild: (BlTextElement new text: '[step]' asRopedText).
 ]
 
 { #category : #accessing }
 BexDebuggerPanel >> makeStackFrame [
-  stackFrame := BrHorizontalFlow new
-    addChild: (
-       BlTextElement new text: '(stackframe)' asRopedText)
+  ^ stackFrame := BrHorizontalFlow new matchParent
+    padding: (BlInsets all: 2);
+    addChild: (BlTextElement new text: '(stackframe)' asRopedText)
+]
+
+{ #category : #accessing }
+BexDebuggerPanel >> makeWorkArea [
+  ^ workArea := BrVerticalPane new matchParent  
+    background: Color white;
+    addChildren: {
+      self makeButtons.
+      self makeStackFrame }.
 ]
 
 { #category : #accessing }
 BexDebuggerPanel >> redrawStackFrame [
-  | toks |
+  | toks current|
   toks := rpn currentTokens.
   stackFrame removeChildren
     addChildren: (toks collect: [:tok |
       GsTextShape new
         text: tok asString;
-        gsStrokeColor: 'eeeeee' ])
+        gsStrokeColor: 'eeeeee' ]).
+  current := stackFrame children at: ip ifAbsent: [nil].
+  current ifNotNil: [:c |c gsFill: 'eeeeee' ].
 ]
 
 { #category : #accessing }
 BexDebuggerPanel >> rpn: anRpnBuilder [
   rpn := anRpnBuilder 
-    when: BexStackFrameChangedEvent
-    do: [self redrawStackFrame]
+    when: BexInterpreterEvent
+    do: [:e | ip := e ip. self redrawStackFrame]
 ]

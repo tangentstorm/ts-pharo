@@ -18,7 +18,7 @@ BexSketchApp >> initialTools [
 
 { #category : #accessing }
 BexSketchApp >> initialize [
-  rpn := BexRpnBuilder new.
+  rpn := BexRpnInterpreter new.
   super initialize.
   self currentTool: graphTool.
   self scene size: 1920@1080; gsFill: '#5588bb'.

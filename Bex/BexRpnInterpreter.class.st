@@ -1,5 +1,9 @@
+"
+Interpreter for a small stack-based language that builds diagrams for boolean expressions.
+
+"
 Class {
-	#name : #BexRpnBuilder,
+	#name : #BexRpnInterpreter,
 	#superclass : #Object,
 	#instVars : [
 		'base',
@@ -18,49 +22,49 @@ Class {
 }
 
 { #category : #ops }
-BexRpnBuilder >> and [
+BexRpnInterpreter >> and [
   ^ self binOp: #and
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> base: aBase [
+BexRpnInterpreter >> base: aBase [
   base := aBase.
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> binOp: aSymbol [
+BexRpnInterpreter >> binOp: aSymbol [
   | x y |
   y := data pop. x := data pop.
   ^ self push: (base op: aSymbol x: x y: y)
 ]
 
 { #category : #ops }
-BexRpnBuilder >> br0 [
+BexRpnInterpreter >> br0 [
   self branch: #x0
 ]
 
 { #category : #ops }
-BexRpnBuilder >> br1 [
+BexRpnInterpreter >> br1 [
   self branch: #x1
 ]
 
 { #category : #ops }
-BexRpnBuilder >> br2 [
+BexRpnInterpreter >> br2 [
   self branch: #x2
 ]
 
 { #category : #ops }
-BexRpnBuilder >> br3 [
+BexRpnInterpreter >> br3 [
   self branch: #x3
 ]
 
 { #category : #ops }
-BexRpnBuilder >> br4 [
+BexRpnInterpreter >> br4 [
   self branch: #x4
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> branch: varSymbol [
+BexRpnInterpreter >> branch: varSymbol [
   | o e |
   branchVar := varSymbol.
   hi := data pop. lo := data pop.
@@ -73,119 +77,134 @@ BexRpnBuilder >> branch: varSymbol [
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> currentTokens [
+BexRpnInterpreter >> currentTokens [
   ^ toks
 ]
 
 { #category : #execution }
-BexRpnBuilder >> doToken: aString [
+BexRpnInterpreter >> doToken: aString [
   self perform: aString asSymbol
 ]
 
 { #category : #ops }
-BexRpnBuilder >> dup [
+BexRpnInterpreter >> dup [
   self push: base dup.
 ]
 
 { #category : #ops }
-BexRpnBuilder >> i [
+BexRpnInterpreter >> i [
   self push: base i
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> initialize [
+BexRpnInterpreter >> initialize [
   super initialize.
-  "the base builds the actual data structures"
+  "make ourselves observable to BexDebuggerPanel"
+  announcer := Announcer new.
+  "the base builds the actual data structures."
+  "(BexSketchApp replaces this with a BexSceneBase)"
   base := BexBase new.
   "the rest is our forthlike interpreter."
-  data := Stack new.
-  ctrl := Stack new.
   defs := Dictionary new.
-  "make ourselves observable to the debugger"
-  announcer := Announcer new.  self reset.
+  self reset.
 
 ]
 
+{ #category : #execution }
+BexRpnInterpreter >> load: aString [
+  self reset.
+  toks := aString substrings collect: #asSymbol.
+  announcer announce: (BexStackFrameChangedEvent new ip: ip)
+]
+
 { #category : #ops }
-BexRpnBuilder >> o [
+BexRpnInterpreter >> o [
   self push: base o
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> push: aNode [
+BexRpnInterpreter >> push: aNode [
   data push: aNode
 ]
 
 { #category : #execution }
-BexRpnBuilder >> reset [
+BexRpnInterpreter >> reset [
   "destroy all context about the running program"
-  ip := 0.
+  ip := 1.
   ctx := #'(top)'.
   toks := #().
-  announcer announce: BexStackFrameChangedEvent new
+  ctrl := Stack new.
+  data := Stack new.
+  announcer announce: (BexStackFrameChangedEvent new ip: ip)
 ]
 
 { #category : #execution }
-BexRpnBuilder >> run: aString [
-  self reset.
-  toks := aString substrings collect: #asSymbol.
-  announcer announce: BexStackFrameChangedEvent new
+BexRpnInterpreter >> return [
 ]
 
 { #category : #ops }
-BexRpnBuilder >> simpHi [
+BexRpnInterpreter >> simpHi [
 ]
 
 { #category : #ops }
-BexRpnBuilder >> simpLo [
+BexRpnInterpreter >> simpLo [
+]
+
+{ #category : #execution }
+BexRpnInterpreter >> step [
+  ""
+  (ip > toks size) ifTrue: [self return]
+  ifFalse: [ self doToken: (toks at: ip)].
+  ip := ip + 1.
+  announcer announce: (BexInstructionPointerChangedEvent new ip: ip)
 ]
 
 { #category : #ops }
-BexRpnBuilder >> swapHi [
+BexRpnInterpreter >> swapHi [
   base set: branchVar to: #I in: hi
 ]
 
 { #category : #ops }
-BexRpnBuilder >> swapLo [
+BexRpnInterpreter >> swapLo [
   base set: branchVar to: #O in: lo
 ]
 
 { #category : #accessing }
-BexRpnBuilder >> tos [
+BexRpnInterpreter >> tos [
   ^ data top
 ]
 
 { #category : #events }
-BexRpnBuilder >> when: anEvent do: aBlock [
+BexRpnInterpreter >> when: anEvent do: aBlock [
   announcer when: anEvent do: aBlock
 ]
 
 { #category : #ops }
-BexRpnBuilder >> x0 [
+BexRpnInterpreter >> x0 [
   self push: base x0
 ]
 
 { #category : #ops }
-BexRpnBuilder >> x1 [
+BexRpnInterpreter >> x1 [
   self push: base x1
 ]
 
 { #category : #ops }
-BexRpnBuilder >> x2 [
+BexRpnInterpreter >> x2 [
   self push: base x2
 ]
 
 { #category : #ops }
-BexRpnBuilder >> x3 [
+BexRpnInterpreter >> x3 [
   self push: base x3
 ]
 
 { #category : #ops }
-BexRpnBuilder >> x4 [
+BexRpnInterpreter >> x4 [
   self push: base x4
 ]
 
 { #category : #ops }
-BexRpnBuilder >> xor [
+BexRpnInterpreter >> xor [
   ^ self binOp: #xor
 ]
