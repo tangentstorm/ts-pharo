@@ -81,9 +81,19 @@ BexRpnInterpreter >> currentTokens [
   ^ toks
 ]
 
+{ #category : #accessing }
+BexRpnInterpreter >> defs [
+  ^ defs
+]
+
 { #category : #execution }
-BexRpnInterpreter >> doToken: aString [
-  self perform: aString asSymbol
+BexRpnInterpreter >> doToken: aSymbol [
+  defs at: aSymbol
+    ifPresent: [:def | ctrl push: { ip. ctx }. 
+      "set ip to zero because we're called from step, which increments it."
+      ctx :=  aSymbol. ip := 0. toks := def. 
+      self frameChanged]
+    ifAbsent: [ self perform: aSymbol ]
 ]
 
 { #category : #ops }
@@ -91,9 +101,19 @@ BexRpnInterpreter >> dup [
   self push: base dup.
 ]
 
+{ #category : #events }
+BexRpnInterpreter >> frameChanged [
+  announcer announce: (BexStackFrameChangedEvent new ip: ip)
+]
+
 { #category : #ops }
 BexRpnInterpreter >> i [
   self push: base i
+]
+
+{ #category : #ops }
+BexRpnInterpreter >> initialCtx [
+  ^ #'(top)'
 ]
 
 { #category : #accessing }
@@ -112,9 +132,26 @@ BexRpnInterpreter >> initialize [
 
 { #category : #execution }
 BexRpnInterpreter >> load: aString [
+  | state actions def |
   self reset.
-  toks := aString substrings collect: #asSymbol.
-  announcer announce: (BexStackFrameChangedEvent new ip: ip)
+  state := #eval. "eval | define | compile"
+  toks := OrderedCollection new.
+  actions := {
+    #eval -> [:tok |
+      (tok = #':')
+        ifTrue: [ state := #define ]
+        ifFalse: [ toks add: tok ]].
+    #define  -> [:tok |
+      defs at: tok put: (def := OrderedCollection new).
+      state := #compile].
+    #compile -> [:tok |
+      (tok = #';')
+        ifTrue: [ state := #eval ]
+        ifFalse: [ def add: tok ]]} asDictionary.
+  (aString substrings collect: #asSymbol) do: [:tok |
+    (actions at: state) value: tok].
+  defs at: self initialCtx put: toks.
+  self frameChanged
 ]
 
 { #category : #ops }
@@ -131,15 +168,20 @@ BexRpnInterpreter >> push: aNode [
 BexRpnInterpreter >> reset [
   "destroy all context about the running program"
   ip := 1.
-  ctx := #'(top)'.
+  ctx := self initialCtx.
   toks := #().
   ctrl := Stack new.
   data := Stack new.
   announcer announce: (BexStackFrameChangedEvent new ip: ip)
 ]
 
-{ #category : #execution }
+{ #category : #ops }
 BexRpnInterpreter >> return [
+  | frame |
+  frame := ctrl pop.
+  ip := frame first.
+  ctx := frame second.
+  toks := defs at: ctx
 ]
 
 { #category : #ops }
