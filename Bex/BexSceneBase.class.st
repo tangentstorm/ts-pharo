@@ -80,6 +80,11 @@ BexSceneBase >> dup [
 ]
 
 { #category : #accessing }
+BexSceneBase >> i [
+  ^ self addShape: #I
+]
+
+{ #category : #accessing }
 BexSceneBase >> initialize [
   super initialize.
   base := BexBase new.
@@ -91,6 +96,11 @@ BexSceneBase >> initialize [
 { #category : #accessing }
 BexSceneBase >> last [
   ^ this
+]
+
+{ #category : #accessing }
+BexSceneBase >> o [
+  ^ self addShape: #O
 ]
 
 { #category : #accessing }
@@ -116,6 +126,14 @@ BexSceneBase >> op: anOp x: xNode y: yNode [
 { #category : #accessing }
 BexSceneBase >> scene: aScene [
   scene := aScene
+]
+
+{ #category : #accessing }
+BexSceneBase >> set: aVarSymbol to: aNewSymbol in: anExprNode [
+  "perform a simple literal substitution in the expression"
+  (self dagFor: anExprNode) select: [:o|
+    (o isKindOf: BexShape) and: [o symbol = aVarSymbol]]
+  thenDo: [:o | o symbol: aNewSymbol]
 ]
 
 { #category : #accessing }

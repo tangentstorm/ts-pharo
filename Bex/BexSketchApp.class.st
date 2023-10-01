@@ -3,7 +3,9 @@ Class {
 	#superclass : #GsToolApp,
 	#instVars : [
 		'graphTool',
-		'arranger'
+		'arranger',
+		'debugger',
+		'rpn'
 	],
 	#category : #'Bex-Apps'
 }
@@ -16,15 +18,22 @@ BexSketchApp >> initialTools [
 
 { #category : #accessing }
 BexSketchApp >> initialize [
+  rpn := BexRpnBuilder new.
   super initialize.
   self currentTool: graphTool.
-  self scene size: 1920@1080; gsFill: '#5588bb'
+  self scene size: 1920@1080; gsFill: '#5588bb'.
+  rpn base: (BexSceneBase new scene: scene)
 ]
 
 { #category : #accessing }
 BexSketchApp >> makeArranger [
   ^ arranger := GsArrangePanel new
     selection: selection.
+]
+
+{ #category : #accessing }
+BexSketchApp >> makeDebugger [
+  ^ debugger := BexDebuggerPanel new rpn: rpn
 ]
 
 { #category : #accessing }
@@ -63,6 +72,7 @@ BexSketchApp >> makeSymbolDropdown [
 BexSketchApp >> makeUI [
   ui := super makeUI.
   dockHolder
+    addDockable: self makeDebugger as: #debugger in: #rightDock;
     addDockable: self makeInspector as: #inspector in: #rightDock;
     addDockable: self makeArranger as: #arranger in: #rightDock.
   toolbar addChild: (self makeSymbolDropdown).
