@@ -66,13 +66,6 @@ BexRpnInterpreter >> call: aCtx toks: aToks [
 ]
 
 { #category : #execution }
-BexRpnInterpreter >> case: anAssocArray [
-  anAssocArray detect: [:kv | kv key = #else or: kv key]
-    ifFound: [:kv | ^ kv value value ]
-    ifNone: [ ^ nil ]
-]
-
-{ #category : #execution }
 BexRpnInterpreter >> cond: anAssocArray [
   anAssocArray detect: [:kv | kv key = #else or: kv key]
     ifFound: [:kv | ^ kv value value ]
