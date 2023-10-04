@@ -39,6 +39,11 @@ BexShape class >> symbols [
 ]
 
 { #category : #accessing }
+BexShape >> asString [
+  ^ self symbol asString, self id asString
+]
+
+{ #category : #accessing }
 BexShape >> cornerRadius [
   ^ self geometry cornerRadii topLeft
 ]

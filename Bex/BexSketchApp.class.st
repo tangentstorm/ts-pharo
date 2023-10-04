@@ -78,3 +78,14 @@ BexSketchApp >> makeUI [
   toolbar addChild: (self makeSymbolDropdown).
   ^ ui
 ]
+
+{ #category : #accessing }
+BexSketchApp >> reset [
+  self scene removeChildren.
+  rpn reset base: (BexSceneBase new scene: scene)
+]
+
+{ #category : #accessing }
+BexSketchApp >> rpn [
+  ^ rpn
+]
