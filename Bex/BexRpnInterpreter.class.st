@@ -16,7 +16,10 @@ Class {
 		'ip',
 		'toks',
 		'ctx',
-		'announcer'
+		'announcer',
+		'running',
+		'animation',
+		'paused'
 	],
 	#category : #'Bex-RPN'
 }
@@ -119,6 +122,12 @@ BexRpnInterpreter >> dup [
   self push: base dup.
 ]
 
+{ #category : #accessing }
+BexRpnInterpreter >> end [
+  self reset.
+  announcer announce: (BexInterpreterDoneEvent new)
+]
+
 { #category : #events }
 BexRpnInterpreter >> frameChanged [
   announcer announce: (BexStackFrameChangedEvent new ip: ip)
@@ -166,9 +175,10 @@ BexRpnInterpreter >> initialCtx [
   ^ #'(top)'
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 BexRpnInterpreter >> initialize [
   super initialize.
+  paused := false.
   "make ourselves observable to BexDebuggerPanel"
   announcer := Announcer new.
   "the base builds the actual data structures."
@@ -220,6 +230,16 @@ BexRpnInterpreter >> o [
   self push: base o
 ]
 
+{ #category : #accessing }
+BexRpnInterpreter >> pause [
+  paused := true
+]
+
+{ #category : #execution }
+BexRpnInterpreter >> play [
+  paused := false
+]
+
 { #category : #ops }
 BexRpnInterpreter >> pop [
   data push: ctrl pop
@@ -241,7 +261,7 @@ BexRpnInterpreter >> replace [
   | sym val |
   val := data pop.
   sym := data pop.
-  self inform: 'sym:', sym asString, ' -> ', val asString.
+  "self inform: 'sym:', sym asString, ' -> ', val asString."
   base set: sym to: val in: self tos
 ]
 
@@ -265,6 +285,12 @@ BexRpnInterpreter >> return [
   toks := defs at: ctx
 ]
 
+{ #category : #accessing }
+BexRpnInterpreter >> run: aString [
+  self load: aString.
+  self play.
+]
+
 { #category : #ops }
 BexRpnInterpreter >> simp [
   "(o - q| return a quotation with steps of how to draw the simplification)"
@@ -275,7 +301,10 @@ BexRpnInterpreter >> simp [
 { #category : #execution }
 BexRpnInterpreter >> step [
   ""
-  (ip > toks size) ifTrue: [self return]
+  paused ifTrue: [^ self].
+  (ip > toks size) ifTrue: [
+    (ctrl size > 0) ifTrue: [self return]
+    ifFalse: [self end]]
   ifFalse: [ self doToken: (toks at: ip)].
   ip := ip + 1.
   announcer announce: (BexInstructionPointerChangedEvent new ip: ip)

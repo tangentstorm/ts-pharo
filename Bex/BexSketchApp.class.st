@@ -5,10 +5,19 @@ Class {
 		'graphTool',
 		'arranger',
 		'debugger',
-		'rpn'
+		'rpn',
+		'runButton',
+		'bexAnimation',
+		'makeBexAnimation',
+		'pauseButton'
 	],
 	#category : #'Bex-Apps'
 }
+
+{ #category : #accessing }
+BexSketchApp >> bexAnimation [
+  ^ bexAnimation
+]
 
 { #category : #accessing }
 BexSketchApp >> initialTools [
@@ -20,9 +29,9 @@ BexSketchApp >> initialTools [
 BexSketchApp >> initialize [
   rpn := BexRpnInterpreter new.
   super initialize.
-  self currentTool: graphTool.
-  self scene size: 1920@1080; gsFill: '#5588bb'.
-  rpn base: (BexSceneBase new scene: scene)
+  ui addAnimation: self makeBexAnimation.
+  rpn base: (BexSceneBase new scene: scene).
+  self scene size: 1920@1080; gsFill: '#5588bb'
 ]
 
 { #category : #accessing }
@@ -32,8 +41,33 @@ BexSketchApp >> makeArranger [
 ]
 
 { #category : #accessing }
+BexSketchApp >> makeBexAnimation [
+  ^ bexAnimation := (BlAnimation new 
+      when: BlAnimationStepEvent do: [:e | rpn step ];
+      beInfinite).
+]
+
+{ #category : #accessing }
 BexSketchApp >> makeDebugger [
   ^ debugger := BexDebuggerPanel new rpn: rpn
+]
+
+{ #category : #accessing }
+BexSketchApp >> makePauseButton [
+  ^ pauseButton := BrButton new 
+    aptitude: BrGlamorousButtonWithIconAptitude;
+    icon: BrGlamorousVectorIcons pause;
+    label: 'pause';
+    action: [ rpn pause ].
+]
+
+{ #category : #accessing }
+BexSketchApp >> makeRunButton [
+  ^ runButton := BrButton new 
+    aptitude: BrGlamorousButtonWithIconAptitude;
+    icon: BrGlamorousVectorIcons play;
+    label: 'run';
+    action: [ rpn play ].
 ]
 
 { #category : #accessing }
@@ -75,7 +109,10 @@ BexSketchApp >> makeUI [
     addDockable: self makeDebugger as: #debugger in: #rightDock;
     addDockable: self makeInspector as: #inspector in: #rightDock;
     addDockable: self makeArranger as: #arranger in: #rightDock.
-  toolbar addChild: (self makeSymbolDropdown).
+  toolbar addChildren: {
+    self makeSymbolDropdown.
+    self makeRunButton.
+    self makePauseButton}.
   ^ ui
 ]
 
