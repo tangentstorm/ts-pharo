@@ -8,6 +8,11 @@ Class {
 }
 
 { #category : #accessing }
+BexGraphTool >> edgeClass [
+  ^ BexEdgeShape
+]
+
+{ #category : #accessing }
 BexGraphTool >> ensureNodeAt: aPoint [
   ^ self scene childAtPoint: aPoint where: [:child|
       child isKindOf: BexShape] 

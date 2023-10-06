@@ -34,6 +34,18 @@ BexSceneBase >> base: aBase [
 ]
 
 { #category : #accessing }
+BexSceneBase >> branch: varSymbol hi: hi lo: lo [
+  | res e sym|
+  sym := ('br' , varSymbol allButFirst) asSymbol.
+  res := self op: varSymbol x: lo y: hi.
+  res cornerRadius: 25.
+  e := res userData at: #incoming.
+  e first gsStrokeStyle: #dashed; dstMarker: #none.
+  e second gsStrokeStyle: #solid; dstMarker: #none.
+  ^ res
+]
+
+{ #category : #accessing }
 BexSceneBase >> dagFor: node [
   | res udata|
   res := OrderedCollection new.
@@ -134,6 +146,12 @@ BexSceneBase >> set: aVarSymbol to: aNewSymbol in: anExprNode [
   (self dagFor: anExprNode) select: [:o|
     (o isKindOf: BexShape) and: [o symbol = aVarSymbol]]
   thenDo: [:o | o symbol: aNewSymbol]
+]
+
+{ #category : #accessing }
+BexSceneBase >> simp: aNode [
+  |res | 
+  res := OrderedCollection new.
 ]
 
 { #category : #accessing }

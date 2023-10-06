@@ -20,3 +20,9 @@ BexBase >> initialize [
 { #category : #accessing }
 BexBase >> op: anOp x: xNode y: yNode [
 ]
+
+{ #category : #accessing }
+BexBase >> simp [
+  "returns a quotation for animations"
+  ^ OrderedCollection new
+]

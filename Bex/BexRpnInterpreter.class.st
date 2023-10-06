@@ -52,15 +52,10 @@ BexRpnInterpreter >> branch [
 
 { #category : #accessing }
 BexRpnInterpreter >> branch: varSymbol [
-  | o e |
   branchVar := varSymbol.
   hi := data pop. lo := data pop.
-  o := base op: varSymbol x: lo y: hi.
-  o cornerRadius: 25.
-  e := o userData at: #incoming.
-  e first gsStrokeStyle: #dashed; dstMarker: #none.
-  e second gsStrokeStyle: #solid; dstMarker: #none.
-  ^ self push: o
+  branchNode := base branch: varSymbol hi: hi lo: lo.
+  ^ self push: branchNode
 ]
 
 { #category : #accessing }

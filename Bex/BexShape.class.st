@@ -18,6 +18,11 @@ BexShape class >> settingsFor: sym [
   #x2 -> {'x₂'. '#ffffff'.  '#597dce'. 0}.
   #x3 -> {'x₃'. '#ffffff'.  '#597dce'. 0}.
   #x4 -> {'x₄'. '#ffffff'.  '#597dce'. 0}.
+  #br0 -> {'x₀'. '#ffffff'.  '#597dce'. 20}.
+  #br1 -> {'x₁'. '#ffffff'.  '#597dce'. 20}.
+  #br2 -> {'x₂'. '#ffffff'.  '#597dce'. 20}.
+  #br3 -> {'x₃'. '#ffffff'.  '#597dce'. 20}.
+  #br4 -> {'x₄'. '#ffffff'.  '#597dce'. 20}.
   #O -> {'⊥' asRopedText bold.  '#ffffff'.  '#222222'. 0}.
   #I -> {'⊤' asRopedText bold.  '#000000'.  '#eeeeee'. 0}.
   #xor -> {'≠'.  '#000000'. '#d2aa99'. 20}.
@@ -35,7 +40,7 @@ BexShape class >> symbol: aSymbol [
 
 { #category : #accessing }
 BexShape class >> symbols [
-  ^ #(x0 x1 x2 x3 x4 I O and or xor)
+  ^ #(x0 x1 x2 x3 x4 I O and or xor br0 br1 br2 br3 br4)
 ]
 
 { #category : #accessing }

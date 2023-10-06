@@ -33,6 +33,12 @@ GsGraphTool >> dragStop: aPoint [
   (newEdge src = newEdge dst) ifTrue: [ newEdge removeFromParent ]
     ifFalse: [self scene add: newEdge toList: #edges].
   handle removeFromParent.
+  selection reset add: newEdge
+]
+
+{ #category : #accessing }
+GsGraphTool >> edgeClass [
+  ^ GsEdgeShape
 ]
 
 { #category : #accessing }
