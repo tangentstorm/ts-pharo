@@ -51,7 +51,7 @@ GsGraphTool >> makeHandleAt: aPoint [
 
 { #category : #accessing }
 GsGraphTool >> makeNewEdgeFrom: aNodeShape [
-  newEdge := GsEdgeShape new
+  newEdge := self edgeClass new
     src: aNodeShape;
     dst: handle.
   self scene addChild: newEdge as: sceneBuilder nextId.

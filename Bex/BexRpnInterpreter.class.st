@@ -5,6 +5,8 @@ Interpreter for a small stack-based language that builds diagrams for boolean ex
 Class {
 	#name : #BexRpnInterpreter,
 	#superclass : #Object,
+	#traits : 'TCondMethod',
+	#classTraits : 'TCondMethod classTrait',
 	#instVars : [
 		'base',
 		'hi',
@@ -19,7 +21,8 @@ Class {
 		'announcer',
 		'running',
 		'animation',
-		'paused'
+		'paused',
+		'branchNode'
 	],
 	#category : #'Bex-RPN'
 }
@@ -66,13 +69,6 @@ BexRpnInterpreter >> call: aCtx toks: aToks [
   "set ip to zero because step increments it at end of each op."
   ctx := aCtx. ip := 0. toks := aToks.
   self frameChanged.
-]
-
-{ #category : #execution }
-BexRpnInterpreter >> cond: anAssocArray [
-  anAssocArray detect: [:kv | kv key = #else or: kv key]
-    ifFound: [:kv | ^ kv value value ]
-    ifNone: [ ^ nil ]
 ]
 
 { #category : #accessing }
@@ -294,8 +290,7 @@ BexRpnInterpreter >> run: aString [
 { #category : #ops }
 BexRpnInterpreter >> simp [
   "(o - q| return a quotation with steps of how to draw the simplification)"
-  | node| node := data pop.
-  data push: OrderedCollection new
+  data push: (base simp: data pop).
 ]
 
 { #category : #execution }
