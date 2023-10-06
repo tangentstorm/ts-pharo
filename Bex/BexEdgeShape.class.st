@@ -22,8 +22,22 @@ BexEdgeShape >> initialize [
 ]
 
 { #category : #accessing }
+BexEdgeShape >> isInverted [
+  ^ isInverted
+]
+
+{ #category : #accessing }
 BexEdgeShape >> isInverted: aBit [
-  isInverted := aBit
+  isInverted := aBit.
+  self rebuildEdge
+]
+
+{ #category : #accessing }
+BexEdgeShape >> isInvertedDescription [
+  <magritteDescription>
+  ^ MABooleanDescription new
+    label: 'is inverted';
+    accessor: #isInverted
 ]
 
 { #category : #accessing }
