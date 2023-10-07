@@ -44,6 +44,21 @@ BexShape class >> symbols [
 ]
 
 { #category : #accessing }
+BexShape >> argSymbols [
+  ^ self args collect: #symbol
+]
+
+{ #category : #accessing }
+BexShape >> args [
+  ^ self userData at: #args
+]
+
+{ #category : #accessing }
+BexShape >> args: anArray [
+  self userData at: #args put: anArray
+]
+
+{ #category : #accessing }
 BexShape >> asString [
   ^ self symbol asString, self id asString
 ]
@@ -101,8 +116,8 @@ BexShape >> symbol [
 { #category : #accessing }
 BexShape >> symbol: aSymbol [
   | o |
-  o := self class settingsFor: aSymbol.
-  sym := aSymbol.
+  sym := aSymbol asSymbol.
+  o := self class settingsFor: sym.
   self
     size: 40@40;
     gsFill: o third;

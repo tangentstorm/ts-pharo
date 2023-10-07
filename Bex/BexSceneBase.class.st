@@ -8,6 +8,8 @@ While a base often returns the same node for the same request (especially for si
 Class {
 	#name : #BexSceneBase,
 	#superclass : #Object,
+	#traits : 'TCaseMethod',
+	#classTraits : 'TCaseMethod classTrait',
 	#instVars : [
 		'scene',
 		'here',
@@ -111,6 +113,11 @@ BexSceneBase >> last [
 ]
 
 { #category : #accessing }
+BexSceneBase >> node: aNode toArg: ix [
+  ^ OrderedCollection new
+]
+
+{ #category : #accessing }
 BexSceneBase >> o [
   ^ self addShape: #O
 ]
@@ -136,6 +143,11 @@ BexSceneBase >> op: anOp x: xNode y: yNode [
 ]
 
 { #category : #accessing }
+BexSceneBase >> scene [
+  ^ scene
+]
+
+{ #category : #accessing }
 BexSceneBase >> scene: aScene [
   scene := aScene
 ]
@@ -150,8 +162,24 @@ BexSceneBase >> set: aVarSymbol to: aNewSymbol in: anExprNode [
 
 { #category : #accessing }
 BexSceneBase >> simp: aNode [
-  |res | 
-  res := OrderedCollection new.
+  | tick syms ixI ixO hasI hasO other |
+  tick := [:i | ('`' ,(scene idFromNumber: i) asString) asSymbol ].
+  syms := aNode argSymbols.
+  ixI := syms indexOf: #I. hasI := ixI > 0.
+  ixO := syms indexOf: #O. hasO := ixO > 0.
+  other := [:i| 2-(i-1)]. "other:2->1 and vice versa"
+  self case: aNode symbol of:{
+    #and -> [
+      hasO ifTrue: [^ self node: aNode toArg: ixO ].
+      hasI ifTrue: [^ self node: aNode toArg: (other value: ixO)].
+      "TODO: x and x, x and ~x"].
+    #or -> [
+      hasI ifTrue: [^ self node: aNode toArg: ixI].
+      hasO ifTrue: [^ self node: aNode toArg: (other value: ixO)]].
+    #xor -> [
+      hasO ifTrue: [^ self node: aNode toArg: (other value: ixO)].
+      hasI ifTrue: [^ self node: aNode toArg: (other value: ixI) negated]]}.
+  ^ OrderedCollection new.
 ]
 
 { #category : #accessing }

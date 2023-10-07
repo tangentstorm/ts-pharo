@@ -43,7 +43,7 @@ BexSketchApp >> makeArranger [
 { #category : #accessing }
 BexSketchApp >> makeBexAnimation [
   ^ bexAnimation := (BlAnimation new 
-      when: BlAnimationStepEvent do: [:e | rpn step ];
+      when: BlAnimationStepEvent do: [:e | rpn autoStep ];
       beInfinite).
 ]
 
@@ -118,7 +118,7 @@ BexSketchApp >> makeUI [
 
 { #category : #accessing }
 BexSketchApp >> reset [
-  self scene removeChildren.
+  self scene clear.
   rpn reset base: (BexSceneBase new scene: scene)
 ]
 

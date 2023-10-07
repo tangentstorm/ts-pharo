@@ -33,6 +33,12 @@ BexRpnInterpreter >> and [
   ^ self binOp: #and
 ]
 
+{ #category : #execution }
+BexRpnInterpreter >> autoStep [
+  "response to the animation events"
+  paused ifFalse: [self step]
+]
+
 { #category : #accessing }
 BexRpnInterpreter >> base: aBase [
   base := aBase.
@@ -60,9 +66,9 @@ BexRpnInterpreter >> branch: varSymbol [
 
 { #category : #accessing }
 BexRpnInterpreter >> call: aCtx toks: aToks [
-  ctrl push: { ip. ctx }.
+  ctrl push: { ip. ctx. toks }.
   "set ip to zero because step increments it at end of each op."
-  ctx := aCtx. ip := 0. toks := aToks.
+  ctx := aCtx. ip := 0. self toks:aToks.
   self frameChanged.
 ]
 
@@ -88,14 +94,14 @@ BexRpnInterpreter >> do [
   | q | q := data pop.
   self cond: {
     [q isSymbol] -> [self doToken:q].
-    [q isSequenceable] -> [ self call: #'(quote)' toks: q ].
+    [q isKindOf: OrderedCollection] -> [ self call: #'(quote)' toks: q ].
     #else -> [self error: 'don''t know how to "do" ', q asString]}
 ]
 
 { #category : #execution }
 BexRpnInterpreter >> doToken: aToken [
   self cond: {
-    [aToken isNumber] -> [ data push: aToken ].
+    [aToken isNumber or: [aToken isKindOf: OrderedCollection]] -> [ data push: aToken ].
     ['`!@' includes: aToken first] -> [|h t|
       h := aToken first. t := aToken allButFirst asSymbol.
       self cond: {
@@ -104,7 +110,10 @@ BexRpnInterpreter >> doToken: aToken [
         [h = $@] -> [ data push: (defs at: t) ]}]. "@x fetches x"
     #else -> [
       defs at: aToken
-        ifPresent: [:def | self call: aToken toks: def ]
+        ifPresent: [:def |
+          (def isArray or: [def isKindOf: OrderedCollection])
+            ifTrue:[self call: aToken toks: def ]
+            ifFalse: [self error: aToken asString, ' is not an executable word']]
         ifAbsent: [ self perform: aToken ]]}.
 ]
 
@@ -156,9 +165,19 @@ BexRpnInterpreter >> hi [
   data push: hi
 ]
 
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> hide [
+  (base scene childWithId: data pop) gsHide.
+]
+
 { #category : #ops }
 BexRpnInterpreter >> i [
   self push: base i
+]
+
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> id [
+  data push: (base scene idFromNumber: data pop)
 ]
 
 { #category : #execution }
@@ -216,6 +235,13 @@ BexRpnInterpreter >> load: aString [
   self frameChanged
 ]
 
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> mov [
+  | p|
+  p := data pop.
+  (base scene childWithId: data pop) gsPosition: p
+]
+
 { #category : #ops }
 BexRpnInterpreter >> o [
   self push: base o
@@ -234,6 +260,13 @@ BexRpnInterpreter >> play [
 { #category : #ops }
 BexRpnInterpreter >> pop [
   data push: ctrl pop
+]
+
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> pos [
+  |o|
+  o := base scene childWithId: data pop.
+  data push: o gsPosition
 ]
 
 { #category : #ops }
@@ -273,13 +306,20 @@ BexRpnInterpreter >> return [
   frame := ctrl pop.
   ip := frame first.
   ctx := frame second.
-  toks := defs at: ctx
+  self toks: frame third.
 ]
 
 { #category : #accessing }
 BexRpnInterpreter >> run: aString [
   self load: aString.
   self play.
+]
+
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> setSymbol [
+  | s|
+  s := data pop.
+  (base scene childWithId: data pop) symbol: s.
 ]
 
 { #category : #ops }
@@ -290,14 +330,19 @@ BexRpnInterpreter >> simp [
 
 { #category : #execution }
 BexRpnInterpreter >> step [
-  ""
-  paused ifTrue: [^ self].
+  "manual step or called by autostep"
   (ip > toks size) ifTrue: [
     (ctrl size > 0) ifTrue: [self return]
     ifFalse: [self end]]
   ifFalse: [ self doToken: (toks at: ip)].
   ip := ip + 1.
   announcer announce: (BexInstructionPointerChangedEvent new ip: ip)
+]
+
+{ #category : #ops }
+BexRpnInterpreter >> toks: anObject [
+  self assert: (anObject isArray or: [anObject isKindOf: OrderedCollection]).
+  toks := anObject.
 ]
 
 { #category : #accessing }

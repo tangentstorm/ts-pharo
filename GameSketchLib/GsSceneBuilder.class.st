@@ -93,11 +93,6 @@ GsSceneBuilder >> rect: name at: topLeft size: aSize [
 ]
 
 { #category : #accessing }
-GsSceneBuilder >> resetNames [
-  scene withAllSubShapesDo: [:x | x id]
-]
-
-{ #category : #accessing }
 GsSceneBuilder >> scene [
 	^ scene
 ]
@@ -105,7 +100,6 @@ GsSceneBuilder >> scene [
 { #category : #accessing }
 GsSceneBuilder >> scene: anObject [
   scene := anObject.
-  self resetNames
 ]
 
 { #category : #accessing }

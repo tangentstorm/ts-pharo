@@ -137,6 +137,11 @@ GsSketch >> idCounterDescription [
     accessor: #idCounter
 ]
 
+{ #category : #accessing }
+GsSketch >> idFromNumber: aNumber [ 
+  ^ ('id', (aNumber printStringLength: 4 padded: true)) asSymbol.
+]
+
 { #category : #initialization }
 GsSketch >> initialize [
   super initialize.
@@ -165,7 +170,12 @@ GsSketch >> newAnimationNamed: aSymbol [
 { #category : #accessing }
 GsSketch >> nextId [
   | r |
-  r :=  ('id', (idCounter printStringLength: 4 padded: true)) asSymbol.
+  r :=  self idFromNumber: idCounter.
   idCounter := idCounter + 1.
   ^ r
+]
+
+{ #category : #accessing }
+GsSketch >> nextId: aNumber [
+  idCounter := aNumber
 ]
