@@ -41,7 +41,7 @@ BexSceneBase >> branch: varSymbol hi: hi lo: lo [
   sym := ('br' , varSymbol allButFirst) asSymbol.
   res := self op: varSymbol x: lo y: hi.
   res cornerRadius: 25.
-  e := res userData at: #incoming.
+  e := res userData at: #childEdges.
   e first gsStrokeStyle: #dashed; dstMarker: #none.
   e second gsStrokeStyle: #solid; dstMarker: #none.
   ^ res
@@ -54,7 +54,7 @@ BexSceneBase >> dagFor: node [
   res add: node.
   udata := node userData.
   (udata at: #args ifPresent: [:args |
-    res := res, (udata at: #incoming).
+    res := res, (udata at: #childEdges).
     args do: [:arg |
       res := res, (self dagFor: arg)]]).
   ^ res
@@ -88,7 +88,7 @@ BexSceneBase >> dup [
     uo at: #args ifPresent: [:args |
       uc := c userData.
       uc at: #args put: (args collect: newVersion).
-      uc at: #incoming put: ((uo at: #incoming) collect: newVersion)]].
+      uc at: #childEdges put: ((uo at: #childEdges) collect: newVersion)]].
 
   ^ this := (newVersion value: self last).
 ]
@@ -113,11 +113,6 @@ BexSceneBase >> last [
 ]
 
 { #category : #accessing }
-BexSceneBase >> node: aNode toArg: ix [
-  ^ OrderedCollection new
-]
-
-{ #category : #accessing }
 BexSceneBase >> o [
   ^ self addShape: #O
 ]
@@ -137,9 +132,40 @@ BexSceneBase >> op: anOp x: xNode y: yNode [
     e1 := GsEdgeShape new src: yNode; dst: this; id: scene nextId}.
   this userData
     at: #valence put: 2;
-    at: #incoming put: { e0. e1 };
+    at: #childEdges put: { e0. e1 };
     at: #args put: { xNode. yNode }.
   ^ this
+]
+
+{ #category : #accessing }
+BexSceneBase >> otherBranch: ix [
+  "given one branch index (1 or 2), return the other"
+  ^ 2-(ix-1)
+]
+
+{ #category : #accessing }
+BexSceneBase >> replaceNode: aNode withArg: ix [
+  | udata edges nodes tick kept res toHide|
+  udata := aNode userData.
+  edges := udata at: #childEdges.
+  nodes := udata at: #args.
+  kept := nodes at: ix. "the node to 'keep'"
+  tick := [:sym | ('`', sym asString) asSymbol].
+  res := OrderedCollection new.
+  res addAll: {
+    "move the kept node over the current slot"
+    kept quoteId. aNode quoteId. #pos. #mov.
+    "replace the symbol"
+    aNode quoteId. kept symbol quoteForRpn. #setSymbol}.
+  "hide the old children"
+  toHide := (self dagFor: aNode) allButFirst asSet.
+  toHide := toHide difference: (self dagFor: kept).
+  res add: toHide asArray.
+  res add: #hideAll.  
+  "disconnect the old children"
+  udata at: #childEdges put: (kept userData at: #childEdges ifAbsentPut:[{}]).
+  udata at: #args put: (kept userData at: #args ifAbsentPut: [{}]).
+  ^ res
 ]
 
 { #category : #accessing }
@@ -166,19 +192,18 @@ BexSceneBase >> simp: aNode [
   tick := [:i | ('`' ,(scene idFromNumber: i) asString) asSymbol ].
   syms := aNode argSymbols.
   ixI := syms indexOf: #I. hasI := ixI > 0.
-  ixO := syms indexOf: #O. hasO := ixO > 0.
-  other := [:i| 2-(i-1)]. "other:2->1 and vice versa"
+  ixO := syms indexOf: #O. hasO := ixO > 0.  
   self case: aNode symbol of:{
     #and -> [
-      hasO ifTrue: [^ self node: aNode toArg: ixO ].
-      hasI ifTrue: [^ self node: aNode toArg: (other value: ixO)].
+      hasO ifTrue: [^ self replaceNode: aNode withArg: ixO ].
+      hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch:ixI)].
       "TODO: x and x, x and ~x"].
     #or -> [
-      hasI ifTrue: [^ self node: aNode toArg: ixI].
-      hasO ifTrue: [^ self node: aNode toArg: (other value: ixO)]].
+      hasI ifTrue: [^ self replaceNode: aNode withArg: ixI].
+      hasO ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixO)]].
     #xor -> [
-      hasO ifTrue: [^ self node: aNode toArg: (other value: ixO)].
-      hasI ifTrue: [^ self node: aNode toArg: (other value: ixI) negated]]}.
+      hasO ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixO)].
+      hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixI) negated]]}.
   ^ OrderedCollection new.
 ]
 

@@ -103,6 +103,11 @@ BexShape >> positionDescription [
 ]
 
 { #category : #accessing }
+BexShape >> quoteId [
+  ^ self id asSymbol quoteForRpn
+]
+
+{ #category : #accessing }
 BexShape >> relocate: aPoint [
   super relocate: aPoint.
   pos := aPoint

@@ -101,7 +101,9 @@ BexRpnInterpreter >> do [
 { #category : #execution }
 BexRpnInterpreter >> doToken: aToken [
   self cond: {
-    [aToken isNumber or: [aToken isKindOf: OrderedCollection]] -> [ data push: aToken ].
+    [(aToken isNumber | aToken isArray) or:
+     [aToken isKindOf: OrderedCollection]]
+    -> [ data push: aToken ].
     ['`!@' includes: aToken first] -> [|h t|
       h := aToken first. t := aToken allButFirst asSymbol.
       self cond: {
@@ -168,6 +170,11 @@ BexRpnInterpreter >> hi [
 { #category : #'ops - drawing' }
 BexRpnInterpreter >> hide [
   (base scene childWithId: data pop) gsHide.
+]
+
+{ #category : #accessing }
+BexRpnInterpreter >> hideAll [
+  data pop do: #gsHide
 ]
 
 { #category : #ops }
