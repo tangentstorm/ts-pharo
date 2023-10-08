@@ -31,7 +31,7 @@ GsGraphTool >> dragStep: aPoint [
 GsGraphTool >> dragStop: aPoint [
   newEdge dst: (self ensureNodeAt: aPoint).
   (newEdge src = newEdge dst) ifTrue: [ newEdge removeFromParent ]
-    ifFalse: [self scene add: newEdge toList: #edges].
+    ifFalse: [self onNewEdgeComplete].
   handle removeFromParent.
   selection reset add: newEdge
 ]
@@ -69,4 +69,9 @@ GsGraphTool >> newNodeAt: aPoint [
   node := GsNodeShape new gsPosition: aPoint.
   self scene addChild: node as: sceneBuilder nextId.
   ^ node
+]
+
+{ #category : #accessing }
+GsGraphTool >> onNewEdgeComplete [
+  self scene add: newEdge toList: #edges
 ]
