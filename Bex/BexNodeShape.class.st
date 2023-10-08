@@ -1,5 +1,5 @@
 Class {
-	#name : #BexShape,
+	#name : #BexNodeShape,
 	#superclass : #BrFrame,
 	#instVars : [
 		'sym',
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : #accessing }
-BexShape class >> settingsFor: sym [
+BexNodeShape class >> settingsFor: sym [
   ^ {
   #x0 -> {'x₀'. '#ffffff'.  '#597dce'. 0}.
   #x1 -> {'x₁'. '#ffffff'.  '#597dce'. 0}.
@@ -34,48 +34,48 @@ BexShape class >> settingsFor: sym [
 ]
 
 { #category : #accessing }
-BexShape class >> symbol: aSymbol [
+BexNodeShape class >> symbol: aSymbol [
   ^ self new symbol: aSymbol
 ]
 
 { #category : #accessing }
-BexShape class >> symbols [
+BexNodeShape class >> symbols [
   ^ #(x0 x1 x2 x3 x4 I O and or xor br0 br1 br2 br3 br4)
 ]
 
 { #category : #accessing }
-BexShape >> argSymbols [
+BexNodeShape >> argSymbols [
   ^ self args collect: #symbol
 ]
 
 { #category : #accessing }
-BexShape >> args [
+BexNodeShape >> args [
   ^ self userData at: #args
 ]
 
 { #category : #accessing }
-BexShape >> args: anArray [
+BexNodeShape >> args: anArray [
   self userData at: #args put: anArray
 ]
 
 { #category : #accessing }
-BexShape >> asString [
+BexNodeShape >> asString [
   ^ self symbol asString, self id asString
 ]
 
 { #category : #accessing }
-BexShape >> cornerRadius [
+BexNodeShape >> cornerRadius [
   ^ self geometry cornerRadii topLeft
 ]
 
 { #category : #accessing }
-BexShape >> cornerRadius: aNumber [
+BexNodeShape >> cornerRadius: aNumber [
   self geometry: (BlRoundedRectangleGeometry
     cornerRadius: aNumber)
 ]
 
 { #category : #accessing }
-BexShape >> cornerRadiusDescription [
+BexNodeShape >> cornerRadiusDescription [
   <magritteDescription>
   ^ MANumberDescription new
     label: 'corner radius';
@@ -83,19 +83,19 @@ BexShape >> cornerRadiusDescription [
 ]
 
 { #category : #accessing }
-BexShape >> initialize [
+BexNodeShape >> initialize [
   super initialize.
   pos := 0@0
 ]
 
 { #category : #accessing }
-BexShape >> intendedPosition [
+BexNodeShape >> intendedPosition [
   "the intended position, even before layout"
   ^ pos
 ]
 
 { #category : #accessing }
-BexShape >> positionDescription [
+BexNodeShape >> positionDescription [
   <magritteDescription>
   ^ GsPointDescription new
     label: 'position';
@@ -103,23 +103,23 @@ BexShape >> positionDescription [
 ]
 
 { #category : #accessing }
-BexShape >> quoteId [
+BexNodeShape >> quoteId [
   ^ self id asSymbol quoteForRpn
 ]
 
 { #category : #accessing }
-BexShape >> relocate: aPoint [
+BexNodeShape >> relocate: aPoint [
   super relocate: aPoint.
   pos := aPoint
 ]
 
 { #category : #accessing }
-BexShape >> symbol [
+BexNodeShape >> symbol [
   ^ sym
 ]
 
 { #category : #accessing }
-BexShape >> symbol: aSymbol [
+BexNodeShape >> symbol: aSymbol [
   | o |
   sym := aSymbol asSymbol.
   o := self class settingsFor: sym.
@@ -142,7 +142,7 @@ BexShape >> symbol: aSymbol [
 ]
 
 { #category : #accessing }
-BexShape >> symbolDescription [
+BexNodeShape >> symbolDescription [
   <magritteDescription>
   ^ MASingleOptionDescription new
     label: 'symbol';

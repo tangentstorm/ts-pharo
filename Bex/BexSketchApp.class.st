@@ -96,7 +96,7 @@ BexSketchApp >> makeSymbolDropdown [
                   selection do: [:each|  [each symbol: o] onErrorDo: []].
                   e currentTarget fireEvent:
                     BrDropdownHideWish new ]];
-              items: BexShape symbols;
+              items: BexNodeShape symbols;
 		      padding: (BlInsets all: 10) ]);
 		  icon: BrGlamorousIcons menu;
 		  label: graphTool symbol.

@@ -19,7 +19,7 @@ BexVar >> printString [
 
 { #category : #accessing }
 BexVar >> stencil [
-  ^ BexShape new symbol: self printString asSymbol
+  ^ BexNodeShape new symbol: self printString asSymbol
 ]
 
 { #category : #accessing }

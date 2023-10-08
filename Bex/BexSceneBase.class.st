@@ -22,7 +22,7 @@ Class {
 
 { #category : #accessing }
 BexSceneBase >> addShape: aSymbol [
-  scene addChild: (this := BexShape new 
+  scene addChild: (this := BexNodeShape new 
     symbol: aSymbol; gsPosition: here;
     id: scene nextId).
   this userData at: #valence put: 0.
@@ -122,7 +122,7 @@ BexSceneBase >> op: anOp x: xNode y: yNode [
   | xpos ypos e0 e1|
   xpos := xNode intendedPosition.
   ypos := yNode intendedPosition.
-  this := BexShape new symbol: anOp;
+  this := BexNodeShape new symbol: anOp;
     id: scene nextId;
     gsPosition: ((xpos x + ypos x) / 2)
                @((xpos y min: ypos y) - 70).
@@ -182,13 +182,13 @@ BexSceneBase >> scene: aScene [
 BexSceneBase >> set: aVarSymbol to: aNewSymbol in: anExprNode [
   "perform a simple literal substitution in the expression"
   (self dagFor: anExprNode) select: [:o|
-    (o isKindOf: BexShape) and: [o symbol = aVarSymbol]]
+    (o isKindOf: BexNodeShape) and: [o symbol = aVarSymbol]]
   thenDo: [:o | o symbol: aNewSymbol]
 ]
 
 { #category : #accessing }
 BexSceneBase >> simp: aNode [
-  | tick syms ixI ixO hasI hasO other |
+  | tick syms ixI ixO hasI hasO |
   tick := [:i | ('`' ,(scene idFromNumber: i) asString) asSymbol ].
   syms := aNode argSymbols.
   ixI := syms indexOf: #I. hasI := ixI > 0.

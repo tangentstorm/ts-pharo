@@ -96,5 +96,5 @@ Bex >> size [
 
 { #category : #accessing }
 Bex >> stencil [
-  ^ BexShape new symbol: op
+  ^ BexNodeShape new symbol: op
 ]

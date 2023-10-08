@@ -15,7 +15,7 @@ BexGraphTool >> edgeClass [
 { #category : #accessing }
 BexGraphTool >> ensureNodeAt: aPoint [
   ^ self scene childAtPoint: aPoint where: [:child|
-      child isKindOf: BexShape] 
+      child isKindOf: BexNodeShape] 
     ifNone: [ self newNodeAt: aPoint ]
 ]
 
@@ -28,7 +28,7 @@ BexGraphTool >> initialize [
 { #category : #accessing }
 BexGraphTool >> newNodeAt: aPoint [
   | node |
-  node := BexShape symbol: sym.
+  node := BexNodeShape symbol: sym.
   self scene addChild: node as: sceneBuilder nextId.
   ^ node relocate: aPoint - (20@20).
 ]
