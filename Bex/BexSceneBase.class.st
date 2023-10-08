@@ -207,7 +207,13 @@ BexSceneBase >> simp: aNode [
   ixI := syms indexOf: #I. hasI := ixI > 0.
   ixO := syms indexOf: #O. hasO := ixO > 0.  
   self case: aNode symbol of:{
-    [:x | x isBexLiteral ] -> [^ OrderedCollection new].
+    [:x | x isBexConstant ] -> [
+      aNode parentEdge isInverted
+        ifTrue: [(aNode symbol = #I)
+          ifTrue: [ ^{ aNode quoteId. #'`O'. #setSymbol. aNode parentEdge quoteId. #invert }]
+          ifFalse: [ ^{aNode quoteId. #'`I'. #setSymbol. aNode parentEdge quoteId. #invert }]]
+        ifFalse: [^ {}]].
+    [:x | x isBexLiteral ] -> [ ^{} ].
     #and -> [
       hasO ifTrue: [^ self replaceNode: aNode withArg: ixO ].
       hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch:ixI)].
