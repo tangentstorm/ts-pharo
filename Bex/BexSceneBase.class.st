@@ -3,7 +3,10 @@ I am a wrapper for BexBase that draws my contents in a GsScene.
 
 While a base often returns the same node for the same request (especially for simple variabes and constants), I create a new BexViewModel for each part of the expression, so that each copy of the expression can be drawn and animated independently.
 
-
+Collaborators:
+  {{gtClass:BexNodeShape}}
+  {{gtClass:BexEdgeShape}}
+  {{gtClass:BexRpnInterpreter}}
 "
 Class {
 	#name : #BexSceneBase,
@@ -39,7 +42,7 @@ BexSceneBase >> base: aBase [
 BexSceneBase >> branch: varSymbol hi: hi lo: lo [
   | res e sym|
   sym := ('br' , varSymbol allButFirst) asSymbol.
-  res := self op: varSymbol x: lo y: hi.
+  res := self op: sym x: lo y: hi.
   res cornerRadius: 25.
   e := res userData at: #childEdges.
   e first gsStrokeStyle: #dashed; dstMarker: #none.
@@ -83,12 +86,12 @@ BexSceneBase >> dup [
   newVersion := [:o | idMap at: o id asSymbol].
   
   rs := ReadStream on: dupes.
-  sel do: [:o | |c uo uc| c := rs next.
-    uo := o userData.
-    uo at: #args ifPresent: [:args |
-      uc := c userData.
-      uc at: #args put: (args collect: newVersion).
-      uc at: #childEdges put: ((uo at: #childEdges) collect: newVersion)]].
+  sel do: [:o | |child |
+    child := rs next.
+    o userData at: #args ifPresent: [:args |
+      child args: (args collect: newVersion).
+      child childEdges: (o childEdges collect: newVersion).
+      child parentEdges: (o parentEdges collect: newVersion)]].
 
   ^ this := (newVersion value: self last).
 ]
@@ -128,12 +131,11 @@ BexSceneBase >> op: anOp x: xNode y: yNode [
                @((xpos y min: ypos y) - 70).
   scene addChildren: {
     this.
-    e0 := GsEdgeShape new src: xNode; dst: this; id: scene nextId.
-    e1 := GsEdgeShape new src: yNode; dst: this; id: scene nextId}.
-  this userData
-    at: #valence put: 2;
-    at: #childEdges put: { e0. e1 };
-    at: #args put: { xNode. yNode }.
+    e0 := BexEdgeShape new src: xNode; dst: this; id: scene nextId.
+    e1 := BexEdgeShape new src: yNode; dst: this; id: scene nextId}.
+  this userData at: #valence put: 2.
+  this addEdge: e0 to: xNode.
+  this addEdge: e1 to: yNode.
   ^ this
 ]
 
@@ -149,7 +151,7 @@ BexSceneBase >> replaceNode: aNode withArg: ix [
   udata := aNode userData.
   edges := udata at: #childEdges.
   nodes := udata at: #args.
-  kept := nodes at: ix. "the node to 'keep'"
+  kept := nodes at: ix abs. "the node to 'keep'"
   tick := [:sym | ('`', sym asString) asSymbol].
   res := OrderedCollection new.
   res addAll: {
@@ -157,14 +159,25 @@ BexSceneBase >> replaceNode: aNode withArg: ix [
     kept quoteId. aNode quoteId. #pos. #mov.
     "replace the symbol"
     aNode quoteId. kept symbol quoteForRpn. #setSymbol}.
-  "hide the old children"
-  toHide := (self dagFor: aNode) allButFirst asSet.
-  toHide := toHide difference: (self dagFor: kept).
-  res add: toHide asArray.
-  res add: #hideAll.  
+  "prepare to hide the old children (but wait until we see what grandchildren we keep)"
+  toHide := (self dagFor: aNode).
   "disconnect the old children"
-  udata at: #childEdges put: (kept userData at: #childEdges ifAbsentPut:[{}]).
+  udata at: #childEdges put: ((kept userData at: #childEdges ifAbsentPut:[{}])
+    collect: [:edge|
+      "TODO: changing the src/dst screws up the animation because it happens before the nodes move and hide. fix this."
+      (edge src = kept) ifTrue: [edge dst: aNode. "res addAll: { edge quoteId. aNode quoteId. #src }"].
+      (edge dst = kept) ifTrue: [edge dst: aNode] ]).
   udata at: #args put: (kept userData at: #args ifAbsentPut: [{}]).
+  "now hide, but keep the shapes that are still connected:"
+  res addAll: { toHide difference: (self dagFor: aNode). #hideAll }.
+  ^ res
+]
+
+{ #category : #accessing }
+BexSceneBase >> replaceNode: aNode withArg: ix andNegate: anEdge [
+  | res | 
+  res := self replaceNode: aNode withArg: ix .
+  res addAll: { anEdge quoteId. #invert }.
   ^ res
 ]
 
@@ -194,6 +207,7 @@ BexSceneBase >> simp: aNode [
   ixI := syms indexOf: #I. hasI := ixI > 0.
   ixO := syms indexOf: #O. hasO := ixO > 0.  
   self case: aNode symbol of:{
+    [:x | x isBexLiteral ] -> [^ OrderedCollection new].
     #and -> [
       hasO ifTrue: [^ self replaceNode: aNode withArg: ixO ].
       hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch:ixI)].
@@ -203,8 +217,9 @@ BexSceneBase >> simp: aNode [
       hasO ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixO)]].
     #xor -> [
       hasO ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixO)].
-      hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixI) negated]]}.
-  ^ OrderedCollection new.
+      hasI ifTrue: [^ self replaceNode: aNode withArg: (self otherBranch: ixI) andNegate: aNode parentEdge]].
+    [:x | x beginsWith: 'br'] -> [^ aNode args flatCollect: [:o | self simp: o]].
+    [:x | true ] -> [self error: 'unhandled case: ',(aNode symbol asString)]}.
 ]
 
 { #category : #accessing }

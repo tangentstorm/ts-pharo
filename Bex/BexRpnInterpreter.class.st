@@ -94,7 +94,7 @@ BexRpnInterpreter >> do [
   | q | q := data pop.
   self cond: {
     [q isSymbol] -> [self doToken:q].
-    [q isKindOf: OrderedCollection] -> [ self call: #'(quote)' toks: q ].
+    [q isArray or: [q isKindOf: OrderedCollection]] -> [ self call: #'(quote)' toks: q ].
     #else -> [self error: 'don''t know how to "do" ', q asString]}
 ]
 
@@ -205,6 +205,13 @@ BexRpnInterpreter >> initialize [
   defs := Dictionary new.
   self reset.
 
+]
+
+{ #category : #'ops - drawing' }
+BexRpnInterpreter >> invert [
+  | edge |
+  edge := base scene childWithId: data pop.
+  edge isInverted: (edge isInverted not)
 ]
 
 { #category : #ops }

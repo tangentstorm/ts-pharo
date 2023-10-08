@@ -34,6 +34,12 @@ BexGraphTool >> newNodeAt: aPoint [
 ]
 
 { #category : #accessing }
+BexGraphTool >> onNewEdgeComplete [
+  super onNewEdgeComplete.
+  (newEdge src) addEdge: newEdge to: (newEdge dst)
+]
+
+{ #category : #accessing }
 BexGraphTool >> symbol [
   ^ sym
 ]

@@ -15,9 +15,9 @@ BexEdgeShape class >> kinds [
 
 { #category : #accessing }
 BexEdgeShape >> initialize [
-  super initialize.
-  kind := #arrow.
   isInverted := false.
+  kind := #arrow.
+  super initialize.
   self rebuildEdge
 ]
 
@@ -28,7 +28,9 @@ BexEdgeShape >> isInverted [
 
 { #category : #accessing }
 BexEdgeShape >> isInverted: aBit [
-  isInverted := aBit.
+  isInverted := aBit isBoolean
+    ifTrue: [ aBit ]
+    ifFalse: [ aBit = 'true' ] .
   self rebuildEdge
 ]
 
@@ -58,6 +60,11 @@ BexEdgeShape >> kindDescription [
     label: 'kind';
     accessor: #kind;
     options: self class kinds
+]
+
+{ #category : #accessing }
+BexEdgeShape >> quoteId [
+  ^ self id asSymbol quoteForRpn
 ]
 
 { #category : #accessing }

@@ -44,13 +44,26 @@ BexNodeShape class >> symbols [
 ]
 
 { #category : #accessing }
+BexNodeShape >> addEdge: anEdge to: aNode [
+  self childEdges: (self childEdges, {anEdge}).
+  self args: (self args, {aNode}).
+  aNode addParentEdge: anEdge from: self.
+]
+
+{ #category : #accessing }
+BexNodeShape >> addParentEdge: anEdge from: aNode [
+  self parentEdges: (self parentEdges, {anEdge}).
+  self bexParents: (self bexParents, {aNode}).
+]
+
+{ #category : #accessing }
 BexNodeShape >> argSymbols [
   ^ self args collect: #symbol
 ]
 
 { #category : #accessing }
 BexNodeShape >> args [
-  ^ self userData at: #args
+  ^ self userData at: #args ifAbsentPut: [{}]
 ]
 
 { #category : #accessing }
@@ -61,6 +74,26 @@ BexNodeShape >> args: anArray [
 { #category : #accessing }
 BexNodeShape >> asString [
   ^ self symbol asString, self id asString
+]
+
+{ #category : #accessing }
+BexNodeShape >> bexParents [
+  ^ self userData at: #bexParents ifAbsent: [{}]
+]
+
+{ #category : #accessing }
+BexNodeShape >> bexParents: anArray [
+  self userData at: #bexParents put: anArray
+]
+
+{ #category : #accessing }
+BexNodeShape >> childEdges [
+  ^ self userData at: #childEdges ifAbsent: [{}]
+]
+
+{ #category : #accessing }
+BexNodeShape >> childEdges: anArray [
+  ^ self userData at: #childEdges put: anArray
 ]
 
 { #category : #accessing }
@@ -92,6 +125,21 @@ BexNodeShape >> initialize [
 BexNodeShape >> intendedPosition [
   "the intended position, even before layout"
   ^ pos
+]
+
+{ #category : #accessing }
+BexNodeShape >> parentEdge [
+  ^ self parentEdges ifEmpty: [nil] ifNotEmpty: [:xs| xs first]
+]
+
+{ #category : #accessing }
+BexNodeShape >> parentEdges [
+  ^ self userData at: #parentEdges ifAbsent: [{}]
+]
+
+{ #category : #accessing }
+BexNodeShape >> parentEdges: anArray [
+  self userData at: #parentEdges put: anArray
 ]
 
 { #category : #accessing }
