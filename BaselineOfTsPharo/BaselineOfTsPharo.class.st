@@ -23,5 +23,10 @@ BaselineOfTsPharo class >> loadLepiter [
 BaselineOfTsPharo >> baseline: spec [
   <baseline>
   ^ spec for: #common do: [
-  	spec package: 'TsPharo' ]
+  	spec package: 'TsPharo' ;
+  	     package: 'Tangentstorm';
+  	     package: 'GameSketchLib';
+  	     package: 'CouchDB';
+  	     package: 'Pheresy';
+  	     package: 'Bex' ]
 ]
