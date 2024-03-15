@@ -149,37 +149,40 @@ GsAnimationExamples >> titleCardScene [
 { #category : #accessing }
 GsAnimationExamples >> titleCardSceneWithAnimatedPosition [
   <gtExample>
-  ^ (self titleCardScene currentAnimation)
+  |s| s := self titleCardScene.
+  s currentAnimation
     addTrackFor: #( stripe position )
     withKeys: {
       00 -> {128@ -32. #linear}.
       12 -> {128@ 256. #linear}.
-      18 -> {  0@ 256. #linear}};
-    yourself
+      18 -> {  0@ 256. #linear}}.
+  ^ s
 ]
 
 { #category : #accessing }
 GsAnimationExamples >> titleCardWithAnimatedPositionAndSize [
   <gtExample>
-  ^ self titleCardSceneWithAnimatedPosition
+  |s| s := self titleCardSceneWithAnimatedPosition.
+  s currentAnimation
     addTrackFor: #( stripe size )
     withKeys: {
       00 -> { 32@ 32. #linear}.
       12 -> { 32@136. #linear}.
       "next one probably should be 1920"
-      20 -> { 800@136. #linear}};
-    yourself.
+      20 -> { 800@136. #linear}}.
+  ^ s
 ]
 
 { #category : #accessing }
 GsAnimationExamples >> titleCardWithAnimatedPositionAndSizeAndText [
   <gtExample>
-  ^ self titleCardWithAnimatedPositionAndSize
+  |s| s := self titleCardWithAnimatedPositionAndSize.
+  s currentAnimation
     addTrackFor: #( text lengthShown )
     withKeys: {
       00 -> { 0. #linear}.
       12 -> { 0. #linear}.
       "next one probably should be 1920"
-      20 -> { 32. #linear}};
-    yourself
+      20 -> { 32. #linear}}.
+  ^ s
 ]
