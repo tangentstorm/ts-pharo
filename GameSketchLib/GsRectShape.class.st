@@ -35,6 +35,20 @@ GsRectShape >> fromData: dict [
 ]
 
 { #category : #accessing }
+GsRectShape >> gsSvgOn: aStream [
+  | x y w h|
+  x := (xy x roundTo: 0.001) asString.
+  y := (xy y roundTo: 0.001) asString.
+  w := (wh x roundTo: 0.001) asString.
+  h := (wh y roundTo: 0.001) asString.
+  aStream
+    nextPutAll: '<rect x="', x, '" y="', y, '"';
+    nextPutAll: ' width="',w, '" height="',h,'"'.
+  self gsSvgStyleOn: aStream.
+  aStream nextPutAll: '/>'
+]
+
+{ #category : #accessing }
 GsRectShape >> initialize [
   super initialize.
   xy := 0@0.

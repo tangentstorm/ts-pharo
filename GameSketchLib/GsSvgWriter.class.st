@@ -1,5 +1,5 @@
 Class {
-	#name : #GsJsonWriter,
+	#name : #GsSvgWriter,
 	#superclass : #MAWriter,
 	#instVars : [
 		'skipped',
@@ -9,38 +9,38 @@ Class {
 }
 
 { #category : #accessing }
-GsJsonWriter >> defaultWriteStream [
+GsSvgWriter >> defaultWriteStream [
   ^ WriteStream on: String new
 ]
 
 { #category : #accessing }
-GsJsonWriter >> initialize [
+GsSvgWriter >> initialize [
   super initialize.
   indent := ''.
   skipped := false.
 ]
 
 { #category : #accessing }
-GsJsonWriter >> putKey: aKey [ 
+GsSvgWriter >> putKey: aKey [ 
   stream nextPut: $".
   stream nextPutAll: aKey asString.
   stream nextPutAll: '":'.
 ]
 
 { #category : #accessing }
-GsJsonWriter >> putKey: aKey stringVal: aVal [
+GsSvgWriter >> putKey: aKey stringVal: aVal [
   self putKey: aKey.
   stream nextPutAll: (aVal asString surroundedBy: '"')
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitAnimationsDescription: d [
+GsSvgWriter >> visitAnimationsDescription: d [
   self putKey: #animations.
   stream nextPutAll: (STONJSON toString: (d read: object)).
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitContainer: aDescription [
+GsSvgWriter >> visitContainer: aDescription [
   | oldSkipped |
 	stream nextPutAll: indent.
   stream nextPut: ${.
@@ -56,19 +56,19 @@ GsJsonWriter >> visitContainer: aDescription [
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitElementDescription: d [
+GsSvgWriter >> visitElementDescription: d [
   self putKey: d asGsDescription jsonKey stringVal: (d read: object).
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitNumberDescription: d [
+GsSvgWriter >> visitNumberDescription: d [
   self putKey: d asGsDescription jsonKey.
   "don't quote the number"
   stream nextPutAll: (d read: object) asString.
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitRelationDescription: d [
+GsSvgWriter >> visitRelationDescription: d [
   |key vals|
   key := d asGsDescription jsonKey.
   vals := d read: object.
@@ -88,7 +88,7 @@ GsJsonWriter >> visitRelationDescription: d [
 ]
 
 { #category : #visiting }
-GsJsonWriter >> visitStringDescription: d [
+GsSvgWriter >> visitStringDescription: d [
   (d read: object)
     ifEmpty: [ skipped := true ]
     ifNotEmpty: [:val | self putKey: d asGsDescription jsonKey stringVal: val].

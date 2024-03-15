@@ -61,6 +61,16 @@ GsCircleShape >> gsPosition: aPoint [
 ]
 
 { #category : #accessing }
+GsCircleShape >> gsSvgOn: aStream [
+	aStream
+		nextPutAll: '<circle id="' , self id asString , '"';
+		nextPutAll: ' cx="' , center x asString , '" cy="' , center y asString , '"';
+		nextPutAll: ' r="' , (radius roundTo: 0.001) asString , '"'.
+	self gsSvgStyleOn: aStream.
+	aStream nextPutAll: '/>'
+]
+
+{ #category : #accessing }
 GsCircleShape >> gsTop [
   ^ center y - radius
 ]

@@ -29,6 +29,13 @@ GsShape >> buildVisuals: anElement [
  
 ]
 
+{ #category : #accessing }
+GsShape >> gsSvgStyleOn: aStream [
+	aStream
+		nextPutAll: ' stroke="' , self gsStrokeColor asString , '"';
+		nextPutAll: ' fill="' , self gsFill asString , '"'
+]
+
 { #category : #'gt-extensions' }
 GsShape >> gtChildrenShortcutsFor: aView [
   <gtView>

@@ -77,6 +77,21 @@ GsTextShape >> gsHandles [
 ]
 
 { #category : #accessing }
+GsTextShape >> gsSvgOn: aStream [
+  | base tbounds| 
+  tbounds := self children first bounds.
+  base := (self gsPosition x + tbounds left @ (self gsTop + tbounds height)) roundTo: 0.001.
+  aStream
+    nextPutAll: '<text id="',self id asString,'"';
+    nextPutAll: ' x="', base x asString,'"';
+    nextPutAll: ' y="', base y asString,'"';
+    nextPutAll: ' font-family="', self fontName,'"';
+    nextPutAll: ' font-size="', self fontSize asString,'px"';
+    nextPutAll: ' fill="', self textColor,'"';
+    nextPutAll: '>', self gsText, '</text>'
+]
+
+{ #category : #accessing }
 GsTextShape >> gsText [
   ^ self text asString
 ]
