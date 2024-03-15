@@ -80,7 +80,8 @@ GsTextShape >> gsHandles [
 GsTextShape >> gsSvgOn: aStream [
   | base tbounds| 
   tbounds := self children first bounds.
-  base := (self gsPosition x + tbounds left @ (self gsTop + tbounds height)) roundTo: 0.001.
+  "why is 5 the magic number here?"
+  base := (self gsPosition + (5@self fontSize)) roundTo: 0.001.
   aStream
     nextPutAll: '<text id="',self id asString,'"';
     nextPutAll: ' x="', base x asString,'"';
