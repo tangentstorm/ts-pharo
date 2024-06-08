@@ -74,40 +74,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-21T10:25:45.559-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-21T10:27:16.28-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8O8rAUHCDQCaGfjrDRya4Q=="
-				},
-				"code" : "shapes := #( x0 x1 x2 x3 x4 O I xor and or ) collect:[:sym|\r  BexShape for: sym]"
 			}
 		]
 	},
@@ -130,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-09-19T13:46:13.71-04:00"
+			"dateAndTimeString" : "2023-09-21T11:00:03.13-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Icons for Boolean Expressions"
+		"title" : "Shapes for Boolean Expressions"
 	},
 	"uid" : {
 		"__type" : "uuid",

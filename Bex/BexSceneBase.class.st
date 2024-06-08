@@ -35,7 +35,7 @@ BexSceneBase >> addShape: aSymbol [
 
 { #category : #accessing }
 BexSceneBase >> base: aBase [
-  base := aBase.
+  self error: 'deprecated'
 ]
 
 { #category : #accessing }
@@ -104,7 +104,6 @@ BexSceneBase >> i [
 { #category : #accessing }
 BexSceneBase >> initialize [
   super initialize.
-  base := BexBase new.
   scene := GsScene new.
   this := nil.
   here := 200@600.

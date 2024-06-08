@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-23T12:22:10.476-04:00"
+						"dateAndTimeString" : "2024-06-06T13:17:34.039-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "yCx3L13CDQC3n5XnDQzHhg=="
 				},
-				"code" : "BexRpnBuilder new\r  x1 x2 and\r  tos"
+				"code" : "BexRpnInterpreter new\r  x1 x2 and\r  tos"
 			},
 			{
 				"__type" : "textSnippet",

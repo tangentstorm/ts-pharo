@@ -1,5 +1,8 @@
+"
+Sent when the interpreter stops.
+"
 Class {
 	#name : #BexInterpreterDoneEvent,
-	#superclass : #Announcement,
+	#superclass : #BexInterpreterEvent,
 	#category : #'Bex-Apps'
 }

@@ -200,7 +200,7 @@ BexRpnInterpreter >> initialize [
   announcer := Announcer new.
   "the base builds the actual data structures."
   "(BexSketchApp replaces this with a BexSceneBase)"
-  base := BexBase new.
+  base := BexSceneBase new.
   "the rest is our forthlike interpreter."
   defs := Dictionary new.
   self reset.
