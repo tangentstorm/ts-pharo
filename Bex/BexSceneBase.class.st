@@ -17,13 +17,12 @@ Class {
 		'scene',
 		'here',
 		'this',
-		'rpn',
-		'base'
+		'rpn'
 	],
 	#category : #'Bex-Drawing'
 }
 
-{ #category : #accessing }
+{ #category : #'scene building' }
 BexSceneBase >> addShape: aSymbol [
   scene addChild: (this := BexNodeShape new 
     symbol: aSymbol; gsPosition: here;
@@ -33,12 +32,7 @@ BexSceneBase >> addShape: aSymbol [
   ^ this
 ]
 
-{ #category : #accessing }
-BexSceneBase >> base: aBase [
-  self error: 'deprecated'
-]
-
-{ #category : #accessing }
+{ #category : #op }
 BexSceneBase >> branch: varSymbol hi: hi lo: lo [
   | res e sym|
   sym := ('br' , varSymbol allButFirst) asSymbol.
@@ -63,7 +57,7 @@ BexSceneBase >> dagFor: node [
   ^ res
 ]
 
-{ #category : #accessing }
+{ #category : #op }
 BexSceneBase >> dup [
   | sel idMap dupes dx newVersion rs|
   sel := GsSelection new scene: scene.
@@ -96,7 +90,7 @@ BexSceneBase >> dup [
   ^ this := (newVersion value: self last).
 ]
 
-{ #category : #accessing }
+{ #category : #op }
 BexSceneBase >> i [
   ^ self addShape: #I
 ]

@@ -27,7 +27,7 @@ Class {
 	#category : #'Bex-RPN'
 }
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> and [
   "(xy-z)"
   ^ self binOp: #and
@@ -51,7 +51,7 @@ BexRpnInterpreter >> binOp: aSymbol [
   ^ self push: (base op: aSymbol x: x y: y)
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> branch [
   self branch: data pop
 ]
@@ -119,7 +119,7 @@ BexRpnInterpreter >> doToken: aToken [
         ifAbsent: [ self perform: aToken ]]}.
 ]
 
-{ #category : #ops }
+{ #category : #'ops - drawing' }
 BexRpnInterpreter >> dup [
   self push: base dup.
 ]
@@ -161,7 +161,7 @@ BexRpnInterpreter >> gtDebuggerFor: aView [
         h1 value: 'defs' }]
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> hi [
   "( - o)" 
   data push: hi
@@ -177,7 +177,7 @@ BexRpnInterpreter >> hideAll [
   data pop do: #gsHide
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> i [
   self push: base i
 ]
@@ -214,7 +214,7 @@ BexRpnInterpreter >> invert [
   edge isInverted: (edge isInverted not)
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> lo [
   "( - o)" 
   data push: lo
@@ -256,7 +256,7 @@ BexRpnInterpreter >> mov [
   (base scene childWithId: data pop) gsPosition: p
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> o [
   self push: base o
 ]
@@ -293,7 +293,7 @@ BexRpnInterpreter >> push: aNode [
   data push: aNode
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> replace [
   "( osv - O )"
   | sym val |
@@ -336,7 +336,7 @@ BexRpnInterpreter >> setSymbol [
   (base scene childWithId: data pop) symbol: s.
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> simp [
   "(o - q| return a quotation with steps of how to draw the simplification)"
   data push: (base simp: data pop).
@@ -353,7 +353,7 @@ BexRpnInterpreter >> step [
   announcer announce: (BexInstructionPointerChangedEvent new ip: ip)
 ]
 
-{ #category : #ops }
+{ #category : #accessing }
 BexRpnInterpreter >> toks: anObject [
   self assert: (anObject isArray or: [anObject isKindOf: OrderedCollection]).
   toks := anObject.
@@ -369,32 +369,32 @@ BexRpnInterpreter >> when: anEvent do: aBlock [
   announcer when: anEvent do: aBlock
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> x0 [
   self push: base x0
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> x1 [
   self push: base x1
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> x2 [
   self push: base x2
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> x3 [
   self push: base x3
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> x4 [
   self push: base x4
 ]
 
-{ #category : #ops }
+{ #category : #'ops - bex' }
 BexRpnInterpreter >> xor [
   ^ self binOp: #xor
 ]
