@@ -61,6 +61,19 @@ GsSelection >> alignTops [
   self updateBounds
 ]
 
+{ #category : #distribution }
+GsSelection >> distributeHorizontally [
+  <gsArrangeCmd>
+  |offset elementsWidth spacing |
+  elementsWidth := self sum: [:x | x gsRight - x gsLeft].
+  spacing := (self boundingRect width - elementsWidth) / (self size -1).
+  offset := 0.
+  self do: [:x | 
+      x gsLeft: self boundingRect left+offset.
+      offset := offset+spacing + x width]; 
+      updateBounds
+]
+      
 { #category : #initialization }
 GsSelection >> basicInitialize [
   "OrderedCollection never calls initialize"
